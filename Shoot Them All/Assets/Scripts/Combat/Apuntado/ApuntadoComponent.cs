@@ -5,6 +5,13 @@ using UnityEngine.InputSystem;
 
 public class ApuntadoComponent : MonoBehaviour
 {
+    #region parameters
+
+    [Tooltip("Mide la distancia del centro al arma")]
+    [SerializeField] private float _distance; 
+
+    #endregion
+
 
     #region properties
 
@@ -16,13 +23,13 @@ public class ApuntadoComponent : MonoBehaviour
 
     #endregion
 
-
+    #region methods
     public void Apuntado(InputAction.CallbackContext contex)
     {
         _direction = contex.ReadValue<Vector2>();
     }
 
-
+    #endregion
 
 
 
@@ -33,6 +40,7 @@ public class ApuntadoComponent : MonoBehaviour
         _playerInput= GetComponent<PlayerInput>();
         _layer = LayerMask.GetMask("AreaApuntado");
         _rotarArma = transform.GetChild(1).GetComponent<RotarArma>();
+        transform.GetChild(1).transform.GetChild(0).transform.position = new Vector3 (_distance, 0, 0);
     }
 
     // Update is called once per frame
