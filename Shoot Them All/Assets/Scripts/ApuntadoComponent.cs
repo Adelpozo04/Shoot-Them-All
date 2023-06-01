@@ -12,9 +12,15 @@ public class ApuntadoComponent : MonoBehaviour
     private Vector2 _direction;
     private LayerMask _layer;
     private RaycastHit2D _weaponPosition;
+    private RotarArma _rotarArma;
 
     #endregion
 
+
+    public void Apuntado(InputAction.CallbackContext contex)
+    {
+        _direction = contex.ReadValue<Vector2>();
+    }
 
 
 
@@ -26,19 +32,20 @@ public class ApuntadoComponent : MonoBehaviour
     {
         _playerInput= GetComponent<PlayerInput>();
         _layer = LayerMask.GetMask("AreaApuntado");
+        _rotarArma = transform.GetChild(1).GetComponent<RotarArma>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        _direction = _playerInput.actions["Apuntado"].ReadValue<Vector2>();
-        Debug.Log(_direction);
 
         if(_direction != Vector2.zero)
         {
-            Debug.Log("Pilla el input");
-            transform.GetChild(1).GetComponent<RotarArma>().RotarLaArma(_direction);
+            _rotarArma.RotarLaArma(_direction);
+        }
+        else
+        {
+            _rotarArma.RotarLaArma(Vector2.right);
         }
         
 

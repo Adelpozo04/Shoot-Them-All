@@ -173,8 +173,8 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 138097611}
-        m_TargetAssemblyTypeName: InputTest, Assembly-CSharp
-        m_MethodName: TuVieja
+        m_TargetAssemblyTypeName: JumpComponent, Assembly-CSharp
+        m_MethodName: Jump
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -191,7 +191,19 @@ MonoBehaviour:
     m_ActionId: 499b892c-918a-48fb-9a8f-1462c8e6078d
     m_ActionName: InGame/New action
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 138097616}
+        m_TargetAssemblyTypeName: ApuntadoComponent, Assembly-CSharp
+        m_MethodName: Apuntado
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 3fa8f65c-3c47-44ac-a6f1-6844f36a2cc0
     m_ActionName: Battle/Apuntado
   m_NeverAutoSwitchControlSchemes: 0
@@ -212,16 +224,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _foot: {fileID: 1577708554}
-  _minimumMaxHeith: 0.5
+  _minimumMaxHeith: 0.7
   _middleJump: 0.5
   _initialSpeed: 4
   _horizontalSpeedInAir: 0.31
   _maxAdditionalSpeedTime: 0.5
-  _additionalJumpProportion: 0.615
+  _additionalJumpProportion: 0.594
   _additionalJumps: 2
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 64
   _floor: 0
 --- !u!212 &138097612
 SpriteRenderer:
