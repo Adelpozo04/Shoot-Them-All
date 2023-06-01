@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public class InputTest : MonoBehaviour
+public class JumpComponent : MonoBehaviour
 {
     [SerializeField]
     Transform _foot;

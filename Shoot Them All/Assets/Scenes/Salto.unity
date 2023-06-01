@@ -185,6 +185,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 0f379bb3-a796-4cac-ad7e-6059e06ec63a
     m_ActionName: InGame/Jump[/XInputControllerWindows/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 499b892c-918a-48fb-9a8f-1462c8e6078d
+    m_ActionName: InGame/New action
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: InGame
@@ -206,7 +210,7 @@ MonoBehaviour:
   _minimumMaxHeith: 0.5
   _middleJump: 0.5
   _initialSpeed: 4
-  _horizontalSpeedInAir: 1
+  _horizontalSpeedInAir: 0.31
   _maxAdditionalSpeedTime: 0.5
   _additionalJumpProportion: 0.615
   _additionalJumps: 2
