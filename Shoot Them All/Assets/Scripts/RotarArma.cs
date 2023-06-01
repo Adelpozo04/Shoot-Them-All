@@ -16,12 +16,10 @@ public class RotarArma : MonoBehaviour
             k += 360;
         }
 
-        transform.Rotate(new Vector3(0f, 0f, k));
-
+        transform.rotation = Quaternion.Euler(0f, 0f, k);
     }
 
     #endregion
-
 
     void Start()
     {
