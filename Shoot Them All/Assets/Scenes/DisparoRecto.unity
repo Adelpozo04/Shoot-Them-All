@@ -206,6 +206,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3fa8f65c-3c47-44ac-a6f1-6844f36a2cc0
     m_ActionName: Battle/Apuntado
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 728000731}
+        m_TargetAssemblyTypeName: DisparoRecto, Assembly-CSharp
+        m_MethodName: AtaquePrincipal
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c2aee510-ec64-4896-aa54-832553eeacdb
+    m_ActionName: Battle/PrincipalAttack[/DualShock4GamepadHID/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 728000731}
+        m_TargetAssemblyTypeName: DisparoRecto, Assembly-CSharp
+        m_MethodName: AtaqueSecundario
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e1281ef9-f743-4237-a97f-d914a2b46a07
+    m_ActionName: Battle/SecondaryAttack[/DualShock4GamepadHID/leftShoulder]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Battle
@@ -360,6 +392,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distance: 1.2
+--- !u!1 &344381943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 344381944}
+  m_Layer: 0
+  m_Name: "Ca\xF1on"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &344381944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344381943}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.434, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 728000729}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &728000728
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,6 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 728000729}
   - component: {fileID: 728000730}
+  - component: {fileID: 728000731}
   m_Layer: 0
   m_Name: Arma1
   m_TagString: Untagged
@@ -388,7 +452,8 @@ Transform:
   m_LocalPosition: {x: 1.29, y: 0, z: 0}
   m_LocalScale: {x: 0.1844, y: 0.82866675, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 344381944}
   m_Father: {fileID: 2021330948}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.822}
@@ -432,9 +497,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8490566, g: 0.123353474, b: 0.123353474, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -444,6 +509,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &728000731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728000728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a3896b996ce8c843a7c16faed19b574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxBalas: 2
+  _bulletPrefab: {fileID: 8045010264843042468, guid: dee240b6ded548b4c8463faa531be77e, type: 3}
 --- !u!1 &999195665
 GameObject:
   m_ObjectHideFlags: 0
