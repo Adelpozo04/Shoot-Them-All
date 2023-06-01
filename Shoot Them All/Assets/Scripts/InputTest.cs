@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class InputTest : MonoBehaviour
@@ -8,55 +9,78 @@ public class InputTest : MonoBehaviour
     Transform _foot;
     Rigidbody2D cuerpoRigido;
     [SerializeField]
-    float _jumpHeith = 4;
+    float _minimumMaxHeith = 1;
     [SerializeField]
-    float _maxJumpHeith = 4;
-    float _initialHeith;
+    float _middleJump = 1;
+    [SerializeField]
+    float _initialSpeed = 4;
+    [SerializeField]
+    float _horizontalSpeedInAir = 3;
+    [SerializeField]
+    float _maxAdditionalSpeedTime;
+    float _additionalSpeedTime;
+    [Range(0.0f, 1)]
+    [SerializeField]
+    float _additionalJumpProportion;
+    [SerializeField]
+    int _additionalJumps;
+    
+    [SerializeField]
+    LayerMask _layerMask;
+
     Transform _myTransform;
 
-    Vector2 _verticalSpeedVector;
-
-    bool salto;
+    bool _salto;
+    [SerializeField]
     bool _floor;
     // Start is called before the first frame update
     void Start()
     {
         _myTransform = transform;
         cuerpoRigido = GetComponent<Rigidbody2D>();
+        Debug.Log(Physics2D.gravity);
+        Debug.Log(cuerpoRigido.position);
+        _layerMask = LayerMask.GetMask("Floor");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (salto && _myTransform.position.y - _initialHeith < _maxJumpHeith)
+        
+        _initialSpeed = (2 * _minimumMaxHeith * _horizontalSpeedInAir) / _middleJump;
+        Physics2D.gravity = Vector2.up * -_initialSpeed * (_horizontalSpeedInAir / _middleJump);
+        if (!_floor)
         {
-            Debug.Log("TU Vieja");
-            //_verticalSpeedVector += Vector2.up * _jumpHeith;
+            Debug.Log("Hola" + _floor);
+            cuerpoRigido.position += cuerpoRigido.velocity * Time.fixedDeltaTime + 0.5f * Physics2D.gravity * Time.fixedDeltaTime * Time.fixedDeltaTime;
+            cuerpoRigido.velocity += Vector2.up * Physics2D.gravity * Time.fixedDeltaTime;
         }
-        if (_myTransform.position.y - _initialHeith >= _maxJumpHeith)
+
+        //Ajuste de Salto
+        if (_salto && _additionalSpeedTime < _maxAdditionalSpeedTime && _additionalJumps == 1)
         {
-            Debug.Log("Me mato");
-            _verticalSpeedVector = Vector2.zero;
+            cuerpoRigido.velocity += -Vector2.up * Physics2D.gravity * Time.fixedDeltaTime * _additionalJumpProportion;
+            _additionalSpeedTime += Time.fixedDeltaTime;
         }
-        cuerpoRigido.velocity += _verticalSpeedVector;
     }
     public void TuVieja(InputAction.CallbackContext context)
     {
-        if (context.started && _floor)
+        if (context.started && _additionalJumps > 0)
         {
-            _initialHeith = _myTransform.position.y;
-            _verticalSpeedVector = Vector2.up * _jumpHeith;
+            cuerpoRigido.velocity = Vector2.up * _initialSpeed;
             _floor = false;
+            _salto = true;
+            _additionalJumps--;
         }
         if (context.canceled)
         {
-            _verticalSpeedVector = Vector2.zero;
+            _additionalSpeedTime = 0;
+            _salto = false;
         }
-        salto = context.ReadValueAsButton();
-        Debug.Log( context.ReadValueAsButton());
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         _floor = true;
+        _additionalJumps = 2;
     }
 }
