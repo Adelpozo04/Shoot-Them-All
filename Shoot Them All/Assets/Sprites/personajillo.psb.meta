@@ -107,7 +107,7 @@ ScriptedImporter:
     - name: Body
       guid: a1c8fdc3fcc4a45438ddbbc5fec95a92
       position: {x: 9, y: 7, z: 2}
-      rotation: {x: 0, y: 0, z: 0.24623737, w: 0.96920955}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
       length: 0.3143475
       parentId: -1
       color:
@@ -731,7 +731,7 @@ ScriptedImporter:
     - name: Body
       guid: a1c8fdc3fcc4a45438ddbbc5fec95a92
       position: {x: 8.998046, y: -4.0043945, z: 2}
-      rotation: {x: 0, y: 0, z: 0.24600074, w: 0.9692697}
+      rotation: {x: 0, y: 0, z: -0.00024414068, w: 1}
       length: 0.3143475
       parentId: 0
       color:
@@ -962,7 +962,7 @@ ScriptedImporter:
     - name: Body
       guid: a1c8fdc3fcc4a45438ddbbc5fec95a92
       position: {x: 8.998046, y: -4.004395, z: 2}
-      rotation: {x: 0, y: 0, z: 0.24600072, w: 0.96926963}
+      rotation: {x: 0, y: 0, z: -0.00024414068, w: 1}
       length: 0.3143475
       parentId: 0
       color:
