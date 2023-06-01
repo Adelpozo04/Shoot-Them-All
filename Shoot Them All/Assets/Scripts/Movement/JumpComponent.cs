@@ -5,30 +5,42 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public class JumpComponent : MonoBehaviour
 {
+    #region References
     [SerializeField]
     Transform _foot;
     Rigidbody2D _rigidBody;
+    #endregion
+
+    #region Parameters
+    [Tooltip("Altura maxima del salto con una sola pulsacion")]
     [SerializeField]
     float _minimumMaxHeith = 1;
+    [Tooltip("Distancia horizontal a la que se encuetra el punto medio de la parabola")]
     [SerializeField]
     float _middleJump = 1;
-    [SerializeField]
-    float _initialSpeed = 4;
+    [Tooltip("Supuesta velocidad a la que se desplaza el objeto en el aire")]
     [SerializeField]
     float _horizontalSpeedInAir = 3;
+    [Tooltip("Tiempo que se permite mantener el boton impulsando al jugador")]
     [SerializeField]
     float _maxAdditionalSpeedTime;
+    [Tooltip("Proporcion de la gravedad que se añade al salto para ampliarlo")]
     [Range(0.0f, 1)]
     [SerializeField]
     float _additionalJumpProportion;
+    [Tooltip("Numero de saltos adicionales")]
     [SerializeField]
     int _additionalJumps;
-    [SerializeField]
+    [SerializeField] //Serializado para comprobar el correcto funcionamiento
     bool _floor;
+    #endregion
 
+    #region Properties
+    float _initialSpeed = 4;
     LayerMask _layerMask;
     float _additionalSpeedTime;
     bool _salto;
+    #endregion
 
     #region UnityMethods
 
@@ -70,6 +82,8 @@ public class JumpComponent : MonoBehaviour
         }
     }
     #endregion
+
+    #region ProperMethods
     /// <summary>
     /// Al pulsar el boton el personaje recibe un impulso inicial y acciona los 
     /// </summary>
@@ -93,4 +107,5 @@ public class JumpComponent : MonoBehaviour
     {
         return _floor;
     }
+    #endregion
 }
