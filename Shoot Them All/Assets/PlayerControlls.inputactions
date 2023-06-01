@@ -2,7 +2,7 @@
     "name": "PlayerControlls",
     "maps": [
         {
-            "name": "InGame",
+            "name": "Battle",
             "id": "9cf47319-8ac4-4d62-9cb3-7ddbaf605ac2",
             "actions": [
                 {
@@ -18,6 +18,15 @@
                     "name": "HorizonralMovement",
                     "type": "Value",
                     "id": "499b892c-918a-48fb-9a8f-1462c8e6078d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Apuntado",
+                    "type": "Value",
+                    "id": "3fa8f65c-3c47-44ac-a6f1-6844f36a2cc0",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -90,6 +99,17 @@
                     "action": "HorizonralMovement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "a2023fc0-daf1-45a5-bd10-28625b2a442e",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Apuntado",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
