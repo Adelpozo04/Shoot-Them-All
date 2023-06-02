@@ -52,6 +52,7 @@ public class AtaqueMelee : MonoBehaviour
         int vertexIndex = 1, triangleIndex = 0;
         Vector3 vertex;
 
+        //mierda de meshes
         for (int i = 0; i <= meshRays; i++)
         {   
             RaycastHit2D raycast = Physics2D.Raycast(gameObject.transform.position, GetVectorFromAngle(_currentAngle), _distance, _myLayerMask);
@@ -110,6 +111,7 @@ public class AtaqueMelee : MonoBehaviour
     {
         _myRotation = gameObject.GetComponent<RotarArma>();
         _myWeapon = transform.GetChild(1).gameObject;
+        _weaponMesh = new Mesh();
     }
 
     // Update is called once per frame

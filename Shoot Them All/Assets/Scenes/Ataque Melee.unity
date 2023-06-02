@@ -207,7 +207,19 @@ MonoBehaviour:
     m_ActionId: 3fa8f65c-3c47-44ac-a6f1-6844f36a2cc0
     m_ActionName: Battle/Apuntado
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2021330950}
+        m_TargetAssemblyTypeName: AtaqueMelee, Assembly-CSharp
+        m_MethodName: Attack
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c2aee510-ec64-4896-aa54-832553eeacdb
     m_ActionName: Battle/PrincipalAttack
   - m_PersistentCalls:
@@ -1282,7 +1294,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 6eee684302dc61b46ab83f673f534a25, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
