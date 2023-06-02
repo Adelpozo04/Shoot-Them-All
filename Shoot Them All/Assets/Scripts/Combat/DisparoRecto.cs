@@ -21,14 +21,18 @@ public class DisparoRecto : MonoBehaviour
 
     [SerializeField] private GameObject _bulletPrefab;
 
+    [SerializeField] private Transform _bulletSpawnPoint;
     #endregion
 
     #region properties
 
-    private Transform _cañon;
     private GameObject bullet;
-    private int _cartucho;
+    private int _currentBullets;
     private float _elapsedTime;
+
+    /// <summary>
+    /// Indica si se puede disparar en relacion al ENFRIAMIENTO
+    /// </summary>
     private bool _canShot = true;
 
 
@@ -38,11 +42,11 @@ public class DisparoRecto : MonoBehaviour
 
     public void AtaquePrincipal(InputAction.CallbackContext contex)
     {
-        if (contex.performed && _cartucho > 0 && _canShot)
+        if (contex.performed && _currentBullets > 0 && _canShot)
         {
-            bullet = Instantiate(_bulletPrefab, _cañon.position, Quaternion.identity);
+            bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
             bullet.transform.rotation = transform.rotation;
-            _cartucho--;
+            _currentBullets--;
             _canShot = false;
             _elapsedTime = 0;
         }
@@ -57,9 +61,9 @@ public class DisparoRecto : MonoBehaviour
         }
     }
 
-    public void Recargar()
+    private void Recargar()
     {
-        _cartucho = _maxBalas;
+        _currentBullets = _maxBalas;
     }
 
     #endregion
@@ -67,8 +71,10 @@ public class DisparoRecto : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _cañon = transform.GetChild(0);
-        _cartucho = _maxBalas;
+        //cambiado por asignacion serializada mediante prefab, asi es mas escalable
+        //_cañon = transform.GetChild(0);
+        
+        _currentBullets = _maxBalas;
     }
 
     // Update is called once per frame
@@ -82,7 +88,8 @@ public class DisparoRecto : MonoBehaviour
             }
             else
             {
-                _elapsedTime = 0;
+                //juraria que no hace falta pq ya se pone a 0 en ataque principal
+                //_elapsedTime = 0;
                 _canShot = true;
             }
         }
