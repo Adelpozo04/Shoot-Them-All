@@ -132,4 +132,4 @@ MonoBehaviour:
   _maxBalas: 2
   _enfriamiento: 1
   _bulletPrefab: {fileID: 8045010264843042468, guid: dee240b6ded548b4c8463faa531be77e, type: 3}
-  "_ca\xF1on": {fileID: 3890155791255964499}
+  _bulletSpawnPoint: {fileID: 3890155791255964499}
