@@ -1231,6 +1231,7 @@ GameObject:
   - component: {fileID: 1821117588}
   - component: {fileID: 1821117590}
   - component: {fileID: 1821117589}
+  - component: {fileID: 1821117591}
   m_Layer: 0
   m_Name: ArmaHitbox
   m_TagString: Untagged
@@ -1303,6 +1304,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1821117591
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821117587}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &2009553126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,6 +1412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2021330948}
   - component: {fileID: 2021330949}
+  - component: {fileID: 2021330950}
   m_Layer: 0
   m_Name: Arma (Core)
   m_TagString: Untagged
@@ -1433,3 +1449,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44ccd35e75e74f74b8fe10bb621826a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2021330950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021330947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e820f92bd9fe7374887b4406415d96d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 90
+  attackSpeed: 1
+  meshRays: 4
+  _myLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
