@@ -15,7 +15,7 @@ public class KnockbackComponent : MonoBehaviour
     /// <returns></returns>
     private Vector2 ConvertDirection(GameObject collision)
     {
-        return collision.GetComponent<Rigidbody2D>().velocity;
+        return collision.GetComponent<Rigidbody2D>().velocity.normalized;
     }
 
     /// <summary>
@@ -35,6 +35,8 @@ public class KnockbackComponent : MonoBehaviour
     /// <param name="percentage"></param>
     public void Knockback(GameObject collision, int percentage)
     {
+        //Se puede usar el modo impulso para esto (LUIS)
+        //igual hace falta quitar el delta time
         _myRigidBody2D.AddForce(ConvertDirection(collision) * ConvertPercentageToPower(percentage) * Time.deltaTime);
         // Desactivar Input (por un periodo de tiempo) TODO
         // iFrames (por un periodo de tiempo) TODO

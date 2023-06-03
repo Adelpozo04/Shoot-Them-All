@@ -1092,6 +1092,7 @@ GameObject:
   - component: {fileID: 728216690}
   - component: {fileID: 728216689}
   - component: {fileID: 728216688}
+  - component: {fileID: 728216692}
   - component: {fileID: 728216687}
   - component: {fileID: 728216686}
   - component: {fileID: 728216685}
@@ -1195,9 +1196,21 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 499b892c-918a-48fb-9a8f-1462c8e6078d
     m_ActionName: InGame/New action
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3fa8f65c-3c47-44ac-a6f1-6844f36a2cc0
+    m_ActionName: Battle/Apuntado[/XInputControllerWindows/rightStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c2aee510-ec64-4896-aa54-832553eeacdb
+    m_ActionName: Battle/PrincipalAttack[/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e1281ef9-f743-4237-a97f-d914a2b46a07
+    m_ActionName: Battle/SecondaryAttack[/XInputControllerWindows/leftShoulder]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: InGame
+  m_DefaultActionMap: Battle
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &728216688
@@ -1215,14 +1228,10 @@ MonoBehaviour:
   _foot: {fileID: 651308569}
   _minimumMaxHeith: 0.5
   _middleJump: 0.5
-  _initialSpeed: 4
   _horizontalSpeedInAir: 0.31
   _maxAdditionalSpeedTime: 0.5
   _additionalJumpProportion: 0.615
   _additionalJumps: 2
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 64
   _floor: 0
 --- !u!212 &728216689
 SpriteRenderer:
@@ -1305,3 +1314,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerRegulator: 60
+--- !u!114 &728216692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728216684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 677458e26c3d71045807677f0eec6319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _timeToAcelerate: 0.2
+  _timeToDecelerate: 0.1
+  _speedToAcelerate: 3
+  _wallDetectorBox: {x: 1.1, y: 0.5}
+  _speed: 0

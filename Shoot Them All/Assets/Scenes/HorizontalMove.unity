@@ -134,10 +134,10 @@ GameObject:
   - component: {fileID: 138097613}
   - component: {fileID: 138097612}
   - component: {fileID: 138097611}
+  - component: {fileID: 138097616}
   - component: {fileID: 138097610}
   - component: {fileID: 138097614}
   - component: {fileID: 138097615}
-  - component: {fileID: 138097616}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -206,6 +206,30 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 3fa8f65c-3c47-44ac-a6f1-6844f36a2cc0
     m_ActionName: Battle/Apuntado[/XInputControllerWindows/rightStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c2aee510-ec64-4896-aa54-832553eeacdb
+    m_ActionName: Battle/PrincipalAttack[/XInputControllerWindows/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e1281ef9-f743-4237-a97f-d914a2b46a07
+    m_ActionName: Battle/SecondaryAttack[/XInputControllerWindows/leftShoulder]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 138097616}
+        m_TargetAssemblyTypeName: HorizontalComponent, Assembly-CSharp
+        m_MethodName: Sprint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9bd4c0e1-6ff9-4e24-897c-18bcd5846d03
+    m_ActionName: Battle/Sprint[/XInputControllerWindows/leftStick/right]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Battle
@@ -225,11 +249,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _foot: {fileID: 1577708554}
   _minimumMaxHeith: 0.75
-  _middleJump: 0.5
-  _initialSpeed: 4
+  _middleJump: 1.5
   _horizontalSpeedInAir: 1
   _maxAdditionalSpeedTime: 0.5
-  _additionalJumpProportion: 0.615
+  _additionalJumpProportion: 0.332
   _additionalJumps: 2
   _floor: 0
 --- !u!212 &138097612
@@ -359,9 +382,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 677458e26c3d71045807677f0eec6319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToAcelerate: 0
-  _speedToAcelerate: 0
-  _maxSpeed: 3
+  _timeToAcelerate: 0.7
+  _timeToDecelerate: 2
+  _speedToAcelerate: 5
+  _wallDetectorBox: {x: 1.1, y: 0.5}
+  _speed: 0
 --- !u!1 &999195665
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +942,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: c68a4ce9fde449e40ab452ba58b5afa8, type: 2}
   - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 0827323ca7a352a4e84df64f5420e116, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 6
     m_Data: {fileID: 1766228153, guid: 23bf24d5d2d1f504ea058ba108590978, type: 3}
@@ -932,6 +959,8 @@ Tilemap:
     m_Data: {fileID: 8556498, guid: 23bf24d5d2d1f504ea058ba108590978, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -1944361944, guid: 23bf24d5d2d1f504ea058ba108590978, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
   - m_RefCount: 40
     m_Data:

@@ -6,7 +6,9 @@ using TMPro.EditorUtilities;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 
+[RequireComponent(typeof(JumpComponent))]
 public class HorizontalComponent : MonoBehaviour
 {
     #region References
@@ -25,6 +27,13 @@ public class HorizontalComponent : MonoBehaviour
     [Tooltip("Velocidad máxima que alcanza el jugador")]
     [SerializeField]
     private float _speedToAcelerate;
+    public float SpeedToAcelerate
+    {
+        get { return _speedToAcelerate; }
+    }
+    [Tooltip("Tamaño de la caja para detectar muros")]
+    [SerializeField]
+    Vector2 _wallDetectorBox = new Vector2(1.1f, 0.5f);
     #endregion
 
     #region Properties
@@ -35,10 +44,10 @@ public class HorizontalComponent : MonoBehaviour
     private float _lastDirecciton;
     private float _horizontalDirecction; //propiedad determinada por input
     LayerMask _layerMask;
+    RaycastHit2D _wallBox;
     #endregion
 
     #region UnityMethods
-
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +57,7 @@ public class HorizontalComponent : MonoBehaviour
         _deceleration = _speedToAcelerate / _timeToDecelerate;
         _layerMask = LayerMask.GetMask("Floor");
         _jumpComponent = GetComponent<JumpComponent>();
+        
     }
 
     // Update is called once per frame
@@ -55,10 +65,16 @@ public class HorizontalComponent : MonoBehaviour
     {
         //Es posible que haya que cambiar el comportamiento en función de si se esta en el aire o no
         SetSpeed();
-        if (_jumpComponent.OnFloor() || !Physics2D.BoxCast(_myTransform.position, new Vector2(1.1f,0.5f), 0,Vector2.zero,0, _layerMask))
+        _wallBox = Physics2D.BoxCast(_myTransform.position, _wallDetectorBox, 0, Vector2.zero, 0, _layerMask);
+        if (Math.Sign(_wallBox.normal.x) == Math.Sign(_lastDirecciton) || _wallBox.normal.x == 0)
         {
             _rigidbody.position += Vector2.right * Time.fixedDeltaTime * _speed;
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(transform.position, _wallDetectorBox);
     }
     #endregion
 
@@ -70,6 +86,7 @@ public class HorizontalComponent : MonoBehaviour
     /// </summary>
     private void SetSpeed()
     {
+        
         //aceleración
         if(_speed < _speedToAcelerate && _speed > -_speedToAcelerate && _horizontalDirecction !=0)
         {
@@ -77,18 +94,40 @@ public class HorizontalComponent : MonoBehaviour
             _lastDirecciton = _horizontalDirecction;
         }
         //deceleracion
-        if(_horizontalDirecction == 0 && Math.Abs(_speed) > 0.0001f)
+        if(_horizontalDirecction == 0 && _speed != 0)
         {
-            _speed -= _lastDirecciton * _deceleration * Time.fixedDeltaTime;
+            _speed -= _lastDirecciton*_deceleration*Time.fixedDeltaTime;
+            if (Math.Abs(_speed) < 0.1f)
+            {
+                _speed = 0;
+            }
         }
+
+
         //Mecanismos de seguridad para ajustar la velocidad debido a las operaciones con coma flotante
         _speed = Math.Clamp(_speed, -_speedToAcelerate, _speedToAcelerate);
-        _speed = (float) Math.Round(_speed,3);
+        //Parada del personaje si se encuentra contra un muro
+        if (Math.Sign(_speed) != Math.Sign(_wallBox.normal.x) && _wallBox.normal.x != 0)
+        {
+            _speed = 0;
+        }
     }
 
     public void HorizontalMovement(InputAction.CallbackContext context)
     {
         _horizontalDirecction = context.ReadValue<Vector2>().x;
+        if (Math.Sign(_horizontalDirecction) != Math.Sign(_lastDirecciton) && _horizontalDirecction != 0)
+        {
+            _speed = 0;
+        }
+    }
+    public void Sprint(InputAction.CallbackContext context)
+    {
+        if (context.performed && context.interaction is TapInteraction)
+        {
+            Debug.Log("Corre por tu vieja");
+        }
     }
     #endregion
+
 }
