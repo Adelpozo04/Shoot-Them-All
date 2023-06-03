@@ -191,8 +191,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
+      propertyPath: _dashingTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: _dashingPower
-      value: 5
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
+      propertyPath: _enfriamiento
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7993799162126593841, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
