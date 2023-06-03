@@ -7,6 +7,9 @@ public class KnockbackComponent : MonoBehaviour
     private Rigidbody2D _myRigidBody2D;
 
     [SerializeField] private float powerRegulator;
+    private Vector2 _impulseForce;
+    private float _verticalImpulse;
+    [Range(0f, 1f)] [SerializeField] float _proportionPercentagePerVerticalImpulse;     // Se puede cambiar a int
 
     /// <summary>
     /// Se pasa el enemigo/arma que nos daña para retornar la velocidad del mismo
@@ -25,6 +28,7 @@ public class KnockbackComponent : MonoBehaviour
     /// <returns></returns>
     private float ConvertPercentageToPower(int percentage)
     {
+        _verticalImpulse = _proportionPercentagePerVerticalImpulse * percentage;
         return powerRegulator * percentage;
     }
 
@@ -38,7 +42,8 @@ public class KnockbackComponent : MonoBehaviour
         //Se puede usar el modo impulso para esto (LUIS)
         //igual hace falta quitar el delta time
         Debug.Log("Hay knockback");
-        _myRigidBody2D.AddForce(ConvertDirection(collision) * ConvertPercentageToPower(percentage) * Time.deltaTime);
+        _impulseForce = ConvertDirection(collision) * ConvertPercentageToPower(percentage) + Vector2.up * _verticalImpulse;
+        _myRigidBody2D.AddForce(_impulseForce, ForceMode2D.Impulse);
         // Desactivar Input (por un periodo de tiempo) TODO
         // iFrames (por un periodo de tiempo) TODO
 

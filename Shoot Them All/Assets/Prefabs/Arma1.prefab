@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3896b996ce8c843a7c16faed19b574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxBalas: 10
-  _enfriamiento: 1
+  _maxBalas: 20
+  _enfriamiento: 0.25
   _bulletPrefab: {fileID: 8045010264843042468, guid: dee240b6ded548b4c8463faa531be77e, type: 3}
   _bulletSpawnPoint: {fileID: 3890155791255964499}

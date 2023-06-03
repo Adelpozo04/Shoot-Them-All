@@ -101,7 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93facb91d5eb7a343a11e04e43b9ed66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerRegulator: 200
+  powerRegulator: 2
+  verticalImpulse: 5
 --- !u!50 &2749357364514193865
 Rigidbody2D:
   serializedVersion: 4
