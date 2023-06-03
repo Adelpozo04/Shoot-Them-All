@@ -5,14 +5,23 @@ using UnityEngine;
 public class ChoqueBalaComponent : MonoBehaviour
 {
 
+    #region Properties
+
+    private LayerMask _floor;
+    private LayerMask _limit;
+
+    #endregion
+
+
     #region methods
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        LayerMask aux = collision.gameObject.layer;
 
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Floor") || collision.gameObject.layer == LayerMask.NameToLayer("Limit"))
+        if (aux ==  _floor || aux == _limit )
         {
-            Debug.Log("Choco con suelo");
+            //Debug.Log("Choco con suelo");
             Destroy(gameObject);
         }
     }
@@ -23,12 +32,9 @@ public class ChoqueBalaComponent : MonoBehaviour
 
     void Start()
     {
-        
+        _floor = LayerMask.NameToLayer("Floor");
+        _limit = LayerMask.NameToLayer("Limit");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

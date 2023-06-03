@@ -70,10 +70,7 @@ public class DisparoRecto : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        //cambiado por asignacion serializada mediante prefab, asi es mas escalable
-        //_cañon = transform.GetChild(0);
-        
+    {              
         _currentBullets = _maxBalas;
     }
 
