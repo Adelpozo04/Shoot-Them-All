@@ -10,7 +10,6 @@ public class AtaqueMelee : MonoBehaviour
     #region references
     private GameObject _myWeapon;
     private Mesh _weaponMesh;
-    private RotarArma _myRotation;
     #endregion
 
     #region parameters
@@ -125,7 +124,6 @@ public class AtaqueMelee : MonoBehaviour
 
     void Start()
     {
-        _myRotation = gameObject.GetComponent<RotarArma>();
         _myWeapon = transform.GetChild(1).gameObject;
         _weaponMesh = new Mesh();
         _myWeapon.GetComponent<MeshFilter>().mesh = _weaponMesh;
