@@ -40,9 +40,9 @@ public class DisparoRecto : AttackGeneral
 
     #region methods
 
-    public override void AtaquePrincipal(InputAction.CallbackContext contex)
+    public override void AtaquePrincipal()
     {
-        if (contex.performed && _currentBullets > 0 && _canShot)
+        if (_currentBullets > 0 && _canShot)
         {
             bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
             bullet.transform.rotation = transform.rotation;
@@ -53,12 +53,9 @@ public class DisparoRecto : AttackGeneral
         
     }
 
-    public override void AtaqueSecundario(InputAction.CallbackContext contex)
+    public override void AtaqueSecundario()
     {
-        if (contex.performed)
-        {
             Recargar();
-        }
     }
 
     private void Recargar()

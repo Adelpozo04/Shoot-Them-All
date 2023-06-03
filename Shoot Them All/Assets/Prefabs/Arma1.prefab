@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 3890155791971203698}
   - component: {fileID: 3890155791971203697}
   - component: {fileID: 3890155791971203696}
+  - component: {fileID: 987585325476132591}
   m_Layer: 0
   m_Name: Arma1
   m_TagString: Untagged
@@ -133,3 +134,15 @@ MonoBehaviour:
   _enfriamiento: 1
   _bulletPrefab: {fileID: 8045010264843042468, guid: dee240b6ded548b4c8463faa531be77e, type: 3}
   _bulletSpawnPoint: {fileID: 3890155791255964499}
+--- !u!114 &987585325476132591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3890155791971203699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc70cbe590fc3a4393db4b4541548ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
