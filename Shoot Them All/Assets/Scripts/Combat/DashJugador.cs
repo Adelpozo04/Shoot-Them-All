@@ -33,8 +33,7 @@ public class DashJugador : MonoBehaviour
 
     public void HacerDash(Vector2 direction)
     {
-
-
+        //Llamada a la corrutina
         if (_canDash)
         {
             Debug.Log("Deberia hacerlo");
@@ -59,6 +58,8 @@ public class DashJugador : MonoBehaviour
         
     }
 
+    //Corrutina que realiza el funcionamiento del dash, aplicando la fuerza sin gravedad por un tiempo limitado
+    //e impidiendo volver ha hacer otro hasta el enfriamiento
     private IEnumerator Dash(Vector2 direction)
     {
         _canDash = false;
