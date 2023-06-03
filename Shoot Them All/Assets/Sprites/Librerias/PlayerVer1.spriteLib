@@ -46,24 +46,8 @@ MonoBehaviour:
       m_SpriteOverride: {fileID: -285540776764190404, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
     m_FromMain: 0
     m_EntryOverrideCount: 1
-  - m_Name: Foot_Left
-    m_Hash: -296394561
-    m_CategoryList: []
-    m_OverrideEntries:
-    - m_Name: 1
-      m_Hash: -2082672713
-      m_Sprite: {fileID: 646944026544536809, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
-      m_FromMain: 0
-      m_SpriteOverride: {fileID: 646944026544536809, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
-    - m_Name: 2
-      m_Hash: 450215437
-      m_Sprite: {fileID: 2824634083859674194, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
-      m_FromMain: 0
-      m_SpriteOverride: {fileID: 2824634083859674194, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
-    m_FromMain: 0
-    m_EntryOverrideCount: 2
-  - m_Name: Foot_Right
-    m_Hash: -1394016028
+  - m_Name: Foot
+    m_Hash: 1774032557
     m_CategoryList: []
     m_OverrideEntries:
     - m_Name: 1

@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class DisparoRecto : MonoBehaviour
+public class DisparoRecto : AttackGeneral
 {
 
     #region parameters
@@ -40,7 +40,7 @@ public class DisparoRecto : MonoBehaviour
 
     #region methods
 
-    public void AtaquePrincipal(InputAction.CallbackContext contex)
+    public override void AtaquePrincipal(InputAction.CallbackContext contex)
     {
         if (contex.performed && _currentBullets > 0 && _canShot)
         {
@@ -53,7 +53,7 @@ public class DisparoRecto : MonoBehaviour
         
     }
 
-    public void AtaqueSecundario(InputAction.CallbackContext contex)
+    public override void AtaqueSecundario(InputAction.CallbackContext contex)
     {
         if (contex.performed)
         {
@@ -85,8 +85,6 @@ public class DisparoRecto : MonoBehaviour
             }
             else
             {
-                //juraria que no hace falta pq ya se pone a 0 en ataque principal
-                //_elapsedTime = 0;
                 _canShot = true;
             }
         }
