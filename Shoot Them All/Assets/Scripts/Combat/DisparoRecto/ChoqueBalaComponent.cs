@@ -15,17 +15,17 @@ public class ChoqueBalaComponent : MonoBehaviour
 
     #region methods
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         LayerMask aux = collision.gameObject.layer;
 
-        if (aux ==  _floor || aux == _limit )
+        if (aux == _floor || aux == _limit)
         {
             //Debug.Log("Choco con suelo");
             Destroy(gameObject);
         }
     }
-
+    
     #endregion
 
 
