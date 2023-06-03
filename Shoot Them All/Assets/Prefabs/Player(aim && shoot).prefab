@@ -190,7 +190,7 @@ MonoBehaviour:
       - m_Target: {fileID: 6562643957805159035}
         m_TargetAssemblyTypeName: DisparoRecto, Assembly-CSharp
         m_MethodName: AtaquePrincipal
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -206,7 +206,7 @@ MonoBehaviour:
       - m_Target: {fileID: 6562643957805159035}
         m_TargetAssemblyTypeName: DisparoRecto, Assembly-CSharp
         m_MethodName: AtaqueSecundario
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
