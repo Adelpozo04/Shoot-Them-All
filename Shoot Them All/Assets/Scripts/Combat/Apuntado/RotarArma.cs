@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +16,6 @@ public class RotarArma : MonoBehaviour
         {
             k += 360;
         }
-
         transform.rotation = Quaternion.Euler(0f, 0f, k);
     }
 

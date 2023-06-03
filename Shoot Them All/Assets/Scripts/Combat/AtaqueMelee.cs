@@ -1,6 +1,7 @@
 using Mono.Cecil;
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,6 +15,7 @@ public class AtaqueMelee : MonoBehaviour
 
     #region parameters
     private bool _isAttacking;
+    private bool _endAttack;
     private float _currentAngle;
     private float _nextAngle;
     private float _endAngle;
@@ -25,7 +27,11 @@ public class AtaqueMelee : MonoBehaviour
 
     [SerializeField]
     private int meshRays;
+    [SerializeField]
+    private float _attackWidth;
+    private float _meshAngle;
     private float _variation;
+    [SerializeField]
     private float _distance;
     [SerializeField]
     private LayerMask _myLayerMask;
@@ -45,9 +51,12 @@ public class AtaqueMelee : MonoBehaviour
         int[] triangles = new int[meshRays * 3];
 
         _currentAngle = _nextAngle;
-        _nextAngle += attackSpeed * Time.deltaTime;
+        _nextAngle -= attackSpeed * Time.deltaTime;
         transform.rotation = Quaternion.Euler(0, 0, _nextAngle);
-        _variation = (_nextAngle - _currentAngle) / meshRays;
+        _variation = _attackWidth / meshRays;
+        _meshAngle = _attackWidth;
+
+        vertices[0] = Vector3.zero;
 
         int vertexIndex = 1, triangleIndex = 0;
         Vector3 vertex;
@@ -55,15 +64,15 @@ public class AtaqueMelee : MonoBehaviour
         //mierda de meshes
         for (int i = 0; i <= meshRays; i++)
         {   
-            RaycastHit2D raycast = Physics2D.Raycast(gameObject.transform.position, GetVectorFromAngle(_currentAngle), _distance, _myLayerMask);
+            RaycastHit2D raycast = Physics2D.Raycast(Vector3.zero, GetVectorFromAngle(_meshAngle), _distance, _myLayerMask);
 
             if (raycast.collider == null)
             {
-                vertex = GetVectorFromAngle(_currentAngle) * _distance;
+                vertex = GetVectorFromAngle(_meshAngle) * _distance;
             }
             else
             {
-                vertex = GetVectorFromAngle(_currentAngle) * raycast.distance;
+                vertex = GetVectorFromAngle(_meshAngle) * raycast.distance;
             }
 
             vertices[vertexIndex] = vertex;
@@ -78,19 +87,20 @@ public class AtaqueMelee : MonoBehaviour
             }
 
             vertexIndex++;
-            _currentAngle += _variation;
+            _meshAngle -= _variation;
         }
 
         _weaponMesh.vertices = vertices;
         _weaponMesh.uv = uv;
         _weaponMesh.triangles = triangles;
 
-        _myWeapon.GetComponent<MeshFilter>().mesh = _weaponMesh;
-        _myWeapon.GetComponent<MeshCollider>().sharedMesh = _weaponMesh;
+        
+        //_myWeapon.GetComponent<MeshCollider>().sharedMesh = _weaponMesh;
 
-        if (_nextAngle > _endAngle)
+        if (_nextAngle < _endAngle)
         {
             _isAttacking = false;
+            _endAttack = true;
         }
     }
 
@@ -98,11 +108,17 @@ public class AtaqueMelee : MonoBehaviour
     {
         if (contex.performed)
         {
-            _nextAngle = transform.rotation.z - attackRange / 2;
-            transform.rotation = Quaternion.Euler(0, 0, _nextAngle);
-            _endAngle = transform.rotation.z + attackRange / 2;
+            _nextAngle = transform.rotation.z + attackRange / 2;
+            Debug.Log(_nextAngle);
+            _endAngle = transform.rotation.z - attackRange / 2;
+            Debug.Log(_endAngle);
+            Debug.Log(transform.rotation.z);
+            if (_endAngle > _nextAngle)
+            {
+                _endAngle -= 360;
+            }
+            transform.rotation = Quaternion.Euler(0, 0, _nextAngle);           
             _isAttacking = true;
-            _myRotation.enabled = false;
         }    
     }
     #endregion
@@ -112,14 +128,21 @@ public class AtaqueMelee : MonoBehaviour
         _myRotation = gameObject.GetComponent<RotarArma>();
         _myWeapon = transform.GetChild(1).gameObject;
         _weaponMesh = new Mesh();
+        _myWeapon.GetComponent<MeshFilter>().mesh = _weaponMesh;
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (_isAttacking) 
-        {
+        { 
             UpdateMesh();
+        }
+        else if (_endAttack)
+        {
+            _endAttack = false;
+            _weaponMesh = new Mesh();
+            _myWeapon.GetComponent<MeshFilter>().mesh = _weaponMesh;
         }
     }
 }
