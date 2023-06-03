@@ -69,7 +69,7 @@ public class ApuntadoComponent : MonoBehaviour
     void Start()
     {
         //para separar el arma del centro
-        _armaTranform.position = new Vector3 (_distance, 0, 0);
+        _armaTranform.localPosition = new Vector3 (_distance, 0, 0);
     }
 
     // Update is called once per frame

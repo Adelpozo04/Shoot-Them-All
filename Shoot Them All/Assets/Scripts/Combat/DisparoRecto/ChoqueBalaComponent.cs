@@ -24,6 +24,13 @@ public class ChoqueBalaComponent : MonoBehaviour
             //Debug.Log("Choco con suelo");
             Destroy(gameObject);
         }
+        if (collision.gameObject.GetComponent<KnockbackComponent>() != null)
+        {
+            collision.gameObject.GetComponent<PercentageComponent>().AddDamage(5);
+            collision.gameObject.GetComponent<KnockbackComponent>().
+                Knockback(gameObject, collision.gameObject.GetComponent<PercentageComponent>().Percentage);
+            Destroy(gameObject);
+        }
     }
     
     #endregion
