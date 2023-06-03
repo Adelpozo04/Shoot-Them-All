@@ -6,6 +6,8 @@ using TMPro.EditorUtilities;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
+
 [RequireComponent(typeof(JumpComponent))]
 public class HorizontalComponent : MonoBehaviour
 {
@@ -46,7 +48,6 @@ public class HorizontalComponent : MonoBehaviour
     #endregion
 
     #region UnityMethods
-
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +57,7 @@ public class HorizontalComponent : MonoBehaviour
         _deceleration = _speedToAcelerate / _timeToDecelerate;
         _layerMask = LayerMask.GetMask("Floor");
         _jumpComponent = GetComponent<JumpComponent>();
+        
     }
 
     // Update is called once per frame
@@ -114,6 +116,18 @@ public class HorizontalComponent : MonoBehaviour
     public void HorizontalMovement(InputAction.CallbackContext context)
     {
         _horizontalDirecction = context.ReadValue<Vector2>().x;
+        if (Math.Sign(_horizontalDirecction) != Math.Sign(_lastDirecciton) && _horizontalDirecction != 0)
+        {
+            _speed = 0;
+        }
+    }
+    public void Sprint(InputAction.CallbackContext context)
+    {
+        if (context.performed && context.interaction is TapInteraction)
+        {
+            Debug.Log("Corre por tu vieja");
+        }
     }
     #endregion
+
 }
