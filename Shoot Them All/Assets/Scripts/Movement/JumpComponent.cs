@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+[RequireComponent(typeof(HorizontalComponent))]
 public class JumpComponent : MonoBehaviour
 {
     #region References
     [SerializeField]
     Transform _foot;
     Rigidbody2D _rigidBody;
+    HorizontalComponent _horizontalComponent;
     #endregion
 
     #region Parameters
@@ -31,8 +33,6 @@ public class JumpComponent : MonoBehaviour
     [Tooltip("Numero de saltos adicionales")]
     [SerializeField]
     int _additionalJumps;
-    [SerializeField] //Serializado para comprobar el correcto funcionamiento
-    bool _floor;
     #endregion
 
     #region Properties
@@ -40,6 +40,12 @@ public class JumpComponent : MonoBehaviour
     LayerMask _layerMask;
     float _additionalSpeedTime;
     bool _salto;
+    [SerializeField] //Serializado para comprobar el correcto funcionamiento
+    bool _floor;
+    public bool Floor
+    {
+        get { return _floor; }
+    }
     #endregion
 
     #region UnityMethods
@@ -48,14 +54,14 @@ public class JumpComponent : MonoBehaviour
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
-        Debug.Log(Physics2D.gravity);
-        Debug.Log(_rigidBody.position);
         _layerMask = LayerMask.GetMask("Floor");
+        _horizontalComponent = GetComponent<HorizontalComponent>();
+        _horizontalSpeedInAir = _horizontalComponent.SpeedToAcelerate;
     }
 
     void FixedUpdate()
     {
-        //calculo de los parametros del salto
+        //calculo de los parametros del salto mas adelante mover al start cuando se hayan fijado los parametros
         _initialSpeed = (2 * _minimumMaxHeith * _horizontalSpeedInAir) / _middleJump;
         Physics2D.gravity = Vector2.up * -_initialSpeed * (_horizontalSpeedInAir / _middleJump);
         //Aplicacion de las formulas de aceleracion
@@ -102,10 +108,6 @@ public class JumpComponent : MonoBehaviour
             _additionalSpeedTime = 0;
             _salto = false;
         }
-    }
-    public bool OnFloor()
-    {
-        return _floor;
     }
     #endregion
 }
