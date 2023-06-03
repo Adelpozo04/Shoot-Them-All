@@ -214,6 +214,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: e1281ef9-f743-4237-a97f-d914a2b46a07
     m_ActionName: Battle/SecondaryAttack[/XInputControllerWindows/leftShoulder]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 138097616}
+        m_TargetAssemblyTypeName: HorizontalComponent, Assembly-CSharp
+        m_MethodName: Sprint
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9bd4c0e1-6ff9-4e24-897c-18bcd5846d03
+    m_ActionName: Battle/Sprint[/XInputControllerWindows/leftStick/right]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Battle

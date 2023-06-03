@@ -54,7 +54,10 @@ public class JumpComponent : MonoBehaviour
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
+        //empleamos nuestra propia gravedad
+        _rigidBody.gravityScale = 0;
         _layerMask = LayerMask.GetMask("Floor");
+        _foot.localPosition = Vector2.up * -0.1f;
         _horizontalComponent = GetComponent<HorizontalComponent>();
         _horizontalSpeedInAir = _horizontalComponent.SpeedToAcelerate;
     }
