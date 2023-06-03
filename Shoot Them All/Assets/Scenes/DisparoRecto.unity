@@ -209,9 +209,9 @@ MonoBehaviour:
     m_ActionName: Battle/Apuntado
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 728000731}
+      - m_Target: {fileID: 501490974}
         m_TargetAssemblyTypeName: DisparoRecto, Assembly-CSharp
-        m_MethodName: AtaquePrincipal
+        m_MethodName: 
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -451,6 +451,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &501490974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3890155791971203699, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
+  m_PrefabInstance: {fileID: 3890155791582974635}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &728000729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3890155791971203698, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
@@ -461,7 +466,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3890155791971203696, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
   m_PrefabInstance: {fileID: 3890155791582974635}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 501490974}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5a3896b996ce8c843a7c16faed19b574, type: 3}

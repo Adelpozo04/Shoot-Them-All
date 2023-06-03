@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//Clase padre de las armas
 public class AttackGeneral : MonoBehaviour
 {
 
     #region methods
 
-    public virtual void AtaquePrincipal(InputAction.CallbackContext contex)
+    public virtual void AtaquePrincipal()
     {
         
 
     }
 
-    public virtual void AtaqueSecundario(InputAction.CallbackContext contex)
+    public virtual void AtaqueSecundario()
     {
         
     }
