@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class AtaqueMelee : MonoBehaviour
 {
     #region references
-    private GameObject _myWeapon; 
+    private GameObject _myWeapon;
     private Mesh _weaponMesh;
     private Transform _myTransform;
     #endregion

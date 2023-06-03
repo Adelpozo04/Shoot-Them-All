@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3890155791255964499}
   m_Layer: 0
-  m_Name: "Ca\xF1on"
+  m_Name: Spawn point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3890155791971203699}
-  m_LocalRotation: {x: -0, y: -0, z: -0.7060069, w: 0.70820504}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7060075, w: 0.7082044}
   m_LocalPosition: {x: 1.29, y: 0, z: 0}
   m_LocalScale: {x: 0.1844, y: 0.82866675, z: 1}
   m_ConstrainProportionsScale: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3896b996ce8c843a7c16faed19b574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxBalas: 2
+  _maxBalas: 10
   _enfriamiento: 1
   _bulletPrefab: {fileID: 8045010264843042468, guid: dee240b6ded548b4c8463faa531be77e, type: 3}
   _bulletSpawnPoint: {fileID: 3890155791255964499}
