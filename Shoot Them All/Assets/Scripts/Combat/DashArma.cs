@@ -20,7 +20,7 @@ public class DashArma : AttackGeneral
         _direction = AngleToDirection();
         //Se pide al jugador que haga el dash
         _dashJugador.HacerDash(_direction);
-        GetComponent<ChoqueArmaDashComponent>().ChangeDamageStage();
+        GetComponent<ChoqueArmaDashComponent>().ChangeDamageStage(true);
 
     }
 

@@ -21,7 +21,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: _dashingTime
-      value: 2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: _dashingPower
@@ -35,6 +35,10 @@ PrefabInstance:
       propertyPath: _weaponChoque
       value: 
       objectReference: {fileID: 1028326999887553363}
+    - target: {fileID: 7993799162126593835, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
+      propertyPath: _distance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7993799162126593841, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0

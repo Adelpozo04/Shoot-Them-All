@@ -7,15 +7,15 @@ public class ChoqueArmaDashComponent : MonoBehaviour
     #region properties
 
     [SerializeField] GameObject _player;
-    private bool _inDash = false;
+    private Collider2D _collider;
 
     #endregion
 
     #region methods
 
-    public void ChangeDamageStage()
+    public void ChangeDamageStage(bool inDash)
     {
-        _inDash = !_inDash;
+        _collider.enabled = inDash;
     }
 
     #endregion
@@ -23,7 +23,8 @@ public class ChoqueArmaDashComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _collider = GetComponent<CapsuleCollider2D>();
+        _collider.enabled = false;
     }
 
     // Update is called once per frame
@@ -33,9 +34,8 @@ public class ChoqueArmaDashComponent : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(_inDash);
 
-        if (collision.gameObject.GetComponent<KnockbackComponent>() != null && _inDash)            // Si el arma colisiona con otro jugador        
+        if (collision.gameObject.GetComponent<KnockbackComponent>() != null)            // Si el arma colisiona con otro jugador        
         {
             collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().ApplyConsecuencies(5, _player);
         }

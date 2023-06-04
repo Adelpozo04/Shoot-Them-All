@@ -23,6 +23,7 @@ public class DashJugador : MonoBehaviour
     private Rigidbody2D _myRB;
     private bool _canDash = true;
     private TrailRenderer _myTrailRenderer;
+    private float _elapsedTime = 0;
     
 
     #endregion
@@ -37,12 +38,23 @@ public class DashJugador : MonoBehaviour
 
     public void HacerDash(Vector2 direction)
     {
+        
+
         //Llamada a la corrutina
         if (_canDash)
         {
-            Debug.Log("Deberia hacerlo");
+            
             StartCoroutine(Dash(direction));
         }
+    }
+
+    /// <summary>
+    /// Metodo para frenar el movimiento del dash antes de tiempo
+    /// </summary>
+    public void StopDash()
+    {
+        
+        _elapsedTime = _dashingTime;
     }
 
     #endregion
@@ -65,13 +77,23 @@ public class DashJugador : MonoBehaviour
     //e impidiendo volver ha hacer otro hasta el enfriamiento
     private IEnumerator Dash(Vector2 direction)
     {
+        
         _canDash = false;
         _myRB.velocity += direction * _dashingPower;
         _myTrailRenderer.emitting = true;
-        yield return new WaitForSeconds(_dashingTime);
-        _myRB.velocity -= direction * _dashingPower;
+        Debug.Log(direction);
+
+        while (_elapsedTime < _dashingTime)
+        {
+            _elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        _elapsedTime = 0;
+
+        _myRB.velocity = Vector2.zero;
         _myTrailRenderer.emitting = false;
-        _weaponChoque.ChangeDamageStage();
+        _weaponChoque.ChangeDamageStage(false);
         yield return new WaitForSeconds(_enfriamiento);
         _canDash = true;
     }
