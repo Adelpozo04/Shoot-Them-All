@@ -11,9 +11,17 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 827111903224029823, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.a
+      value: 0.7764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 827111903224029823, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: _dashingTime
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: _dashingPower

@@ -23,7 +23,7 @@ public class DashJugador : MonoBehaviour
     private Rigidbody2D _myRB;
     private bool _canDash = true;
     private TrailRenderer _myTrailRenderer;
-   
+    
 
     #endregion
 
@@ -66,10 +66,10 @@ public class DashJugador : MonoBehaviour
     private IEnumerator Dash(Vector2 direction)
     {
         _canDash = false;
-        _myRB.velocity = direction * _dashingPower;
+        _myRB.velocity += direction * _dashingPower;
         _myTrailRenderer.emitting = true;
         yield return new WaitForSeconds(_dashingTime);
-
+        _myRB.velocity -= direction * _dashingPower;
         _myTrailRenderer.emitting = false;
         _weaponChoque.ChangeDamageStage();
         yield return new WaitForSeconds(_enfriamiento);
