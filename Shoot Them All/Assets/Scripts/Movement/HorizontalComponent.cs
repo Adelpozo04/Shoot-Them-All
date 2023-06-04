@@ -63,6 +63,10 @@ public class HorizontalComponent : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Math.Sign(_horizontalDirecction) != Math.Sign(_lastDirecciton) && _horizontalDirecction != 0)
+        {
+            _myTransform.localScale = new Vector2(-_myTransform.localScale.x, _myTransform.localScale.y);
+        }
         //Es posible que haya que cambiar el comportamiento en función de si se esta en el aire o no
         SetSpeed();
         _wallBox = Physics2D.BoxCast(_myTransform.position, _wallDetectorBox, 0, Vector2.zero, 0, _layerMask);
@@ -88,7 +92,7 @@ public class HorizontalComponent : MonoBehaviour
     {
         
         //aceleración
-        if(_speed < _speedToAcelerate && _speed > -_speedToAcelerate && _horizontalDirecction !=0)
+        if(_speed < _speedToAcelerate && _speed > -_speedToAcelerate && _horizontalDirecction != 0)
         {
             _speed += Time.fixedDeltaTime * _horizontalDirecction * _aceleration;
             _lastDirecciton = _horizontalDirecction;
@@ -96,14 +100,13 @@ public class HorizontalComponent : MonoBehaviour
         //deceleracion
         if(_horizontalDirecction == 0 && _speed != 0)
         {
-            _speed -= _lastDirecciton*_deceleration*Time.fixedDeltaTime;
-            if (Math.Abs(_speed) < 0.1f)
+            _speed += Time.fixedDeltaTime * -_lastDirecciton * _deceleration;
+            //porros de pablo alto trocolo mi hermano
+            if (_speed * _lastDirecciton < 0)
             {
                 _speed = 0;
             }
         }
-
-
         //Mecanismos de seguridad para ajustar la velocidad debido a las operaciones con coma flotante
         _speed = Math.Clamp(_speed, -_speedToAcelerate, _speedToAcelerate);
         //Parada del personaje si se encuentra contra un muro
@@ -116,11 +119,14 @@ public class HorizontalComponent : MonoBehaviour
     public void HorizontalMovement(InputAction.CallbackContext context)
     {
         _horizontalDirecction = context.ReadValue<Vector2>().x;
+        //Evita que en el cambio de dirección el jugador patine
         if (Math.Sign(_horizontalDirecction) != Math.Sign(_lastDirecciton) && _horizontalDirecction != 0)
         {
+             
             _speed = 0;
         }
     }
+    //posible metodo para el sprint
     public void Sprint(InputAction.CallbackContext context)
     {
         if (context.performed && context.interaction is TapInteraction)

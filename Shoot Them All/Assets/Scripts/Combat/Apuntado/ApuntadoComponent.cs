@@ -24,6 +24,7 @@ public class ApuntadoComponent : MonoBehaviour
    
     [SerializeField]
     private Transform _armaTranform;
+    private Transform _myTransform;
 
     #endregion
 
@@ -68,6 +69,7 @@ public class ApuntadoComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _myTransform = transform;
         //para separar el arma del centro
         _armaTranform.localPosition = new Vector3 (_distance, 0, 0);
     }
@@ -79,7 +81,7 @@ public class ApuntadoComponent : MonoBehaviour
         //rota el arma, si no hay input, se apunta hacia la derecha de forma predeterminada
         if(_direction != Vector2.zero)
         {
-            RotarTransform(_direction,_centroArmaTransform);
+            RotarTransform(_direction * _myTransform.localScale.x,_centroArmaTransform);
         }
         else
         {
