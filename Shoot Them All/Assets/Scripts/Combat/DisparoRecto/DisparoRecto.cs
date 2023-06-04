@@ -55,7 +55,7 @@ public class DisparoRecto : AttackGeneral
 
     public override void AtaqueSecundario()
     {
-            Recargar();
+        Recargar();
     }
 
     private void Recargar()

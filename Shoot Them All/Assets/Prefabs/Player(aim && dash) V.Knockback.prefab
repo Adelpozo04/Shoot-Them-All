@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: _dashingTime
-      value: 0.2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: _dashingPower
@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: _enfriamiento
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
+      propertyPath: _weaponChoque
+      value: 
+      objectReference: {fileID: 1028326999887553363}
     - target: {fileID: 7993799162126593841, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 0
@@ -58,6 +62,10 @@ PrefabInstance:
     - target: {fileID: 7993799162126593842, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: m_Name
       value: Player(aim && dash) V.Knockback
+      objectReference: {fileID: 0}
+    - target: {fileID: 7993799162126593842, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 7993799162126593846, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: m_RootOrder
@@ -110,19 +118,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7486912042069697331, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
   m_PrefabInstance: {fileID: 5096888630789652922}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1028326999887553363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2404099634077721225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f160b634010a52842af3edd0b3b102ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _player: {fileID: 2906058472429661832}
 --- !u!70 &9179446506481138199
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -139,6 +134,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &1028326999887553363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2404099634077721225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f160b634010a52842af3edd0b3b102ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 2906058472429661832}
 --- !u!1 &2906058472429661832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7993799162126593842, guid: 3308d04ae75777f498d8707faee6b042, type: 3}

@@ -17,11 +17,10 @@ public class DashArma : AttackGeneral
     //Se calcula la direcciom a la que va el dash a partir de la rotación del centro del arma 
     public override void AtaquePrincipal()
     {
-        //Seno y coseno para sacar las componentes x e y de la direccion
-        _direction.x = Mathf.Cos(transform.parent.rotation.eulerAngles.z * Mathf.Deg2Rad);
-        _direction.y = Mathf.Sin(transform.parent.rotation.eulerAngles.z * Mathf.Deg2Rad);
+        _direction = AngleToDirection();
         //Se pide al jugador que haga el dash
         _dashJugador.HacerDash(_direction);
+        GetComponent<ChoqueArmaDashComponent>().ChangeDamageStage();
 
     }
 

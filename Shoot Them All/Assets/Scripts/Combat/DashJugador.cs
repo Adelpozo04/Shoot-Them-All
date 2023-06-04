@@ -18,14 +18,18 @@ public class DashJugador : MonoBehaviour
 
     #endregion
 
-
-
     #region properties
 
     private Rigidbody2D _myRB;
     private bool _canDash = true;
     private TrailRenderer _myTrailRenderer;
-    private float _originalGravity;
+   
+
+    #endregion
+
+    #region references
+
+    [SerializeField] private ChoqueArmaDashComponent _weaponChoque;
 
     #endregion
 
@@ -49,7 +53,6 @@ public class DashJugador : MonoBehaviour
     {
         _myRB = GetComponent<Rigidbody2D>();
         _myTrailRenderer = GetComponent<TrailRenderer>();
-        _originalGravity = _myRB.gravityScale;
     }
 
     // Update is called once per frame
@@ -63,12 +66,12 @@ public class DashJugador : MonoBehaviour
     private IEnumerator Dash(Vector2 direction)
     {
         _canDash = false;
-        _myRB.gravityScale = 0f;
         _myRB.velocity = direction * _dashingPower;
         _myTrailRenderer.emitting = true;
         yield return new WaitForSeconds(_dashingTime);
+
         _myTrailRenderer.emitting = false;
-        _myRB.gravityScale = _originalGravity;
+        _weaponChoque.ChangeDamageStage();
         yield return new WaitForSeconds(_enfriamiento);
         _canDash = true;
     }

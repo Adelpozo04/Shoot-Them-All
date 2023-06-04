@@ -7,6 +7,9 @@ using UnityEngine.InputSystem;
 public class AttackGeneral : MonoBehaviour
 {
 
+
+
+
     #region methods
 
     public virtual void AtaquePrincipal()
@@ -18,6 +21,15 @@ public class AttackGeneral : MonoBehaviour
     public virtual void AtaqueSecundario()
     {
         
+    }
+
+    protected Vector2 AngleToDirection()
+    {
+        Vector2 _direction;
+        _direction.x = Mathf.Cos(transform.parent.rotation.eulerAngles.z * Mathf.Deg2Rad);
+        _direction.y = Mathf.Sin(transform.parent.rotation.eulerAngles.z * Mathf.Deg2Rad);
+
+        return _direction;
     }
 
     #endregion
