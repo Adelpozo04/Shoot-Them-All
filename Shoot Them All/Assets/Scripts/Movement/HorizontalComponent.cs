@@ -15,6 +15,7 @@ public class HorizontalComponent : MonoBehaviour
     Transform _myTransform;
     Rigidbody2D _rigidbody;
     JumpComponent _jumpComponent;
+    AnimatorsManager _animatorsManager;
     #endregion
 
     #region Parameters
@@ -41,7 +42,7 @@ public class HorizontalComponent : MonoBehaviour
     private float _speed;
     private float _aceleration;
     private float _deceleration;
-    private float _lastDirecciton;
+    private float _lastDirecciton = 1;
     private float _horizontalDirecction; //propiedad determinada por input
     LayerMask _layerMask;
     RaycastHit2D _wallBox;
@@ -51,13 +52,14 @@ public class HorizontalComponent : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("Walk");
         _myTransform = transform;
         _rigidbody = GetComponent<Rigidbody2D>();
         _aceleration = _speedToAcelerate / _timeToAcelerate;
         _deceleration = _speedToAcelerate / _timeToDecelerate;
         _layerMask = LayerMask.GetMask("Floor");
         _jumpComponent = GetComponent<JumpComponent>();
-        
+        _animatorsManager = GetComponent<AnimatorsManager>();
     }
 
     // Update is called once per frame
@@ -119,6 +121,7 @@ public class HorizontalComponent : MonoBehaviour
     public void HorizontalMovement(InputAction.CallbackContext context)
     {
         _horizontalDirecction = context.ReadValue<Vector2>().x;
+        _animatorsManager.ChangeWalking(_horizontalDirecction != 0);
         //Evita que en el cambio de dirección el jugador patine
         if (Math.Sign(_horizontalDirecction) != Math.Sign(_lastDirecciton) && _horizontalDirecction != 0)
         {

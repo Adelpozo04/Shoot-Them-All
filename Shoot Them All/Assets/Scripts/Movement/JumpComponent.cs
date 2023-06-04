@@ -11,6 +11,7 @@ public class JumpComponent : MonoBehaviour
     Transform _foot;
     Rigidbody2D _rigidBody;
     HorizontalComponent _horizontalComponent;
+    AnimatorsManager _animatorsManager;
     #endregion
 
     #region Parameters
@@ -40,7 +41,6 @@ public class JumpComponent : MonoBehaviour
     LayerMask _layerMask;
     float _additionalSpeedTime;
     bool _salto;
-    [SerializeField] //Serializado para comprobar el correcto funcionamiento
     bool _floor;
     public bool Floor
     {
@@ -58,6 +58,7 @@ public class JumpComponent : MonoBehaviour
         _rigidBody.gravityScale = 0;
         _layerMask = LayerMask.GetMask("Floor");
         _foot.localPosition = Vector2.up * -0.1f;
+        _animatorsManager = GetComponent<AnimatorsManager>();
         _horizontalComponent = GetComponent<HorizontalComponent>();
         _horizontalSpeedInAir = _horizontalComponent.SpeedToAcelerate;
     }
@@ -81,6 +82,15 @@ public class JumpComponent : MonoBehaviour
             _additionalSpeedTime += Time.fixedDeltaTime;
         }
         _floor = Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask);
+        _animatorsManager?.ChangeFloor(_floor);
+        if (!_floor)
+        {
+            _animatorsManager?.ChangeJumpingBend(_rigidBody.velocity.y);
+        }
+        else
+        {
+            _animatorsManager?.ChangeJumpingBend(0);
+        }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
@@ -88,6 +98,7 @@ public class JumpComponent : MonoBehaviour
         if(_floor)
         {
             _additionalJumps = 2;
+            _animatorsManager?.ChangeNJump(0);
         }
     }
     #endregion
@@ -105,6 +116,11 @@ public class JumpComponent : MonoBehaviour
             _floor = false;
             _salto = true;
             _additionalJumps--;
+            if (_additionalJumps == 0)
+            {
+                _animatorsManager?.ChangeNJump(1);
+            }
+
         }
         if (context.canceled)
         {
