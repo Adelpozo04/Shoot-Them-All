@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerRegulator: 0.25
-  _proportionPercentagePerVerticalImpulse: 0.1
+  _proportionPercentagePerVerticalImpulse: 0.05
 --- !u!114 &818430753152859270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91db7c7bbfdafc342a662aad3ac3f9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  percentage: 0
 --- !u!1 &7993799162927697144
 GameObject:
   m_ObjectHideFlags: 0
