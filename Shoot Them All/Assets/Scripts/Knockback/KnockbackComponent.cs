@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,6 +30,7 @@ public class KnockbackComponent : MonoBehaviour
     private float ConvertPercentageToPower(int percentage)
     {
         _verticalImpulse = _proportionPercentagePerVerticalImpulse * percentage;
+        return 0.01f * percentage * (float)Math.Log(percentage);
         return powerRegulator * percentage;
     }
 

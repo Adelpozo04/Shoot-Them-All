@@ -44,6 +44,7 @@ public class DisparoRecto : AttackGeneral
     {
         if (_currentBullets > 0 && _canShot)
         {
+            base.AtaquePrincipal();
             bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
             bullet.transform.rotation = transform.rotation;
             _currentBullets--;
@@ -55,6 +56,7 @@ public class DisparoRecto : AttackGeneral
 
     public override void AtaqueSecundario()
     {
+        base.AtaqueSecundario();
         Recargar();
     }
 
@@ -67,7 +69,8 @@ public class DisparoRecto : AttackGeneral
 
     // Start is called before the first frame update
     void Start()
-    {              
+    {
+        _animatorsManager = GetComponentInParent<AnimatorsManager>();
         _currentBullets = _maxBalas;
     }
 

@@ -19,6 +19,7 @@ public class Arma : MonoBehaviour
     {
         if (contex.performed)
         {
+            Debug.Log("Lamada");
             _miArmaActual.AtaquePrincipal();
         }
 

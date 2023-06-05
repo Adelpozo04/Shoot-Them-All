@@ -7,20 +7,21 @@ using UnityEngine.InputSystem;
 public class AttackGeneral : MonoBehaviour
 {
 
-
+    protected AnimatorsManager _animatorsManager;
 
 
     #region methods
 
     public virtual void AtaquePrincipal()
     {
-        
+        _animatorsManager?.TriggerShoot1();
+        _animatorsManager?.TriggerShoot();
 
     }
 
     public virtual void AtaqueSecundario()
     {
-        
+        _animatorsManager?.TriggerShoot2();
     }
 
     protected Vector2 AngleToDirection()

@@ -121,7 +121,7 @@ public class HorizontalComponent : MonoBehaviour
     public void HorizontalMovement(InputAction.CallbackContext context)
     {
         _horizontalDirecction = context.ReadValue<Vector2>().x;
-        _animatorsManager.ChangeWalking(_horizontalDirecction != 0);
+        _animatorsManager?.ChangeWalking(_horizontalDirecction != 0);
         //Evita que en el cambio de dirección el jugador patine
         if (Math.Sign(_horizontalDirecction) != Math.Sign(_lastDirecciton) && _horizontalDirecction != 0)
         {

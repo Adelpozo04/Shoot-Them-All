@@ -17,6 +17,9 @@ public class AnimatorsManager : MonoBehaviour
     private int JumpingBend = Animator.StringToHash("JumpingBend");
     private int NJump = Animator.StringToHash("NJump");
     private int Shoot = Animator.StringToHash("Shoot");
+    private int WeaponType = Animator.StringToHash("WeaponType");
+    private int Shoot1 = Animator.StringToHash("Shoot1");
+    private int Shoot2 = Animator.StringToHash("Shoot2");
 
     public void ChangeFloor(bool floor)
     {
@@ -33,5 +36,21 @@ public class AnimatorsManager : MonoBehaviour
     public void ChangeNJump(int n)
     {
         _bodyAnimator.SetFloat(NJump, n);
+    }
+    public void TriggerShoot()
+    {
+        _bodyAnimator.SetTrigger(Shoot);
+    }
+    public void ChangeWeaponType(float value)
+    {
+        _weaponAnimator.SetFloat(WeaponType, value);
+    }
+    public void TriggerShoot1()
+    {
+        _weaponAnimator.SetTrigger(Shoot1);
+    }
+    public void TriggerShoot2()
+    {
+        _weaponAnimator.SetTrigger(Shoot2);
     }
 }
