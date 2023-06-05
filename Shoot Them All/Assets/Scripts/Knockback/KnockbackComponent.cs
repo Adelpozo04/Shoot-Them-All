@@ -6,6 +6,7 @@ using UnityEngine;
 public class KnockbackComponent : MonoBehaviour
 {
     private Rigidbody2D _myRigidBody2D;
+    private JumpComponent _myJumpComponent;
 
     //[SerializeField] private float powerRegulator;
     private Vector2 _impulseForce;
@@ -42,10 +43,15 @@ public class KnockbackComponent : MonoBehaviour
     /// <param name="percentage"></param>
     public void Knockback(GameObject collision, int percentage)
     {
-        //Se puede usar el modo impulso para esto (LUIS)
-        //igual hace falta quitar el delta time
         Debug.Log("Hay knockback");
-        _impulseForce = ConvertDirection(collision) * ConvertPercentageToPower(percentage) + Vector2.up * _verticalImpulse;
+        if (!_myJumpComponent.Floor)        //Si estoy en el aire se realiza el impulso realista
+        {
+            _impulseForce = ConvertDirection(collision) * ConvertPercentageToPower(percentage);
+        }
+        else                                //Si estoy en el suelo se realiza el impulso con el añadido vertical
+        {
+            _impulseForce = ConvertDirection(collision) * ConvertPercentageToPower(percentage) + Vector2.up * _verticalImpulse;
+        }        
         _myRigidBody2D.velocity = Vector2.zero;
         _myRigidBody2D.AddForce(_impulseForce, ForceMode2D.Impulse);
         // Desactivar Input (por un periodo de tiempo) TODO
@@ -59,10 +65,15 @@ public class KnockbackComponent : MonoBehaviour
      /// <param name="percentage"></param>
     public void Knockback(Vector2 direction, int percentage)
     {
-        //Se puede usar el modo impulso para esto (LUIS)
-        //igual hace falta quitar el delta time
         Debug.Log("Hay knockback");
-        _impulseForce = direction * ConvertPercentageToPower(percentage) + Vector2.up * _verticalImpulse;
+        if (!_myJumpComponent.Floor)        //Si estoy en el aire se realiza el impulso realista
+        {
+            _impulseForce = direction * ConvertPercentageToPower(percentage);
+        }
+        else                                //Si estoy en el suelo se realiza el impulso con el añadido vertical
+        {
+            _impulseForce = direction * ConvertPercentageToPower(percentage) + Vector2.up * _verticalImpulse;
+        } 
         _myRigidBody2D.velocity = Vector2.zero;
         _myRigidBody2D.AddForce(_impulseForce, ForceMode2D.Impulse);
         // Desactivar Input (por un periodo de tiempo) TODO
@@ -73,5 +84,6 @@ public class KnockbackComponent : MonoBehaviour
     private void Start()
     {
         _myRigidBody2D = GetComponent<Rigidbody2D>();
+        _myJumpComponent = GetComponent<JumpComponent>();
     }
 }

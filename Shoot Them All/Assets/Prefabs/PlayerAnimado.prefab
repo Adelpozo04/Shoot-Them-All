@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: -1244483020728536584}
   - component: {fileID: 818430753152859270}
   - component: {fileID: 3115678996279819948}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerAnimado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93facb91d5eb7a343a11e04e43b9ed66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerRegulator: 0.25
   _proportionPercentagePerVerticalImpulse: 0.05
 --- !u!114 &818430753152859270
 MonoBehaviour:
