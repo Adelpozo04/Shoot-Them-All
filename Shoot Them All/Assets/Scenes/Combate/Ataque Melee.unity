@@ -255,7 +255,6 @@ MonoBehaviour:
   _maxAdditionalSpeedTime: 0.95
   _additionalJumpProportion: 0.594
   _additionalJumps: 2
-  _floor: 0
 --- !u!212 &138097612
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -385,6 +384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _distance: 1.2
+  _centroArmaTransform: {fileID: 0}
+  _armaTranform: {fileID: 0}
 --- !u!114 &138097617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,7 +477,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.745283, g: 0.2285066, b: 0.70836043, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -45,6 +45,7 @@ public class KnockbackComponent : MonoBehaviour
         //igual hace falta quitar el delta time
         Debug.Log("Hay knockback");
         _impulseForce = ConvertDirection(collision) * ConvertPercentageToPower(percentage) + Vector2.up * _verticalImpulse;
+        _myRigidBody2D.velocity = Vector2.zero;
         _myRigidBody2D.AddForce(_impulseForce, ForceMode2D.Impulse);
         // Desactivar Input (por un periodo de tiempo) TODO
         // iFrames (por un periodo de tiempo) TODO
