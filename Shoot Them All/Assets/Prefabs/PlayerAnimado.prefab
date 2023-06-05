@@ -20,6 +20,8 @@ GameObject:
   - component: {fileID: -1244483020728536584}
   - component: {fileID: 818430753152859270}
   - component: {fileID: 3115678996279819948}
+  - component: {fileID: 7773974089437821504}
+  - component: {fileID: 1107856465239018640}
   m_Layer: 9
   m_Name: PlayerAnimado
   m_TagString: Untagged
@@ -322,6 +324,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentage: 0
+--- !u!114 &7773974089437821504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993799162126593842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e496ee8a4800eb44ea799ff59c74fd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coolDown: 10
+--- !u!114 &1107856465239018640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993799162126593842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b4aa33ef4c7f94ea52784789600aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7993799162927697144
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,6 +949,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7993799162927697151}
     m_Modifications:
+    - target: {fileID: 3890155791971203696, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
+      propertyPath: _playerFather
+      value: 
+      objectReference: {fileID: 7993799162126593842}
     - target: {fileID: 3890155791971203698, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
       propertyPath: m_RootOrder
       value: 0
