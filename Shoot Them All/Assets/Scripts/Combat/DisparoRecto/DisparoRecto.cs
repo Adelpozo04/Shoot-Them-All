@@ -15,10 +15,15 @@ public class DisparoRecto : AttackGeneral
     [Tooltip("Tiempo que debe pasar entre un disparo y otro")]
     [SerializeField] private float _enfriamiento;
 
+    [Tooltip("Distancia a la que se spawnea la bala (para comprobar que no atraviese paredes")]
+    [SerializeField]
+    private float _distancia;
+
+    [SerializeField]
+    private LayerMask _layer;
     #endregion
 
     #region references
-
     [SerializeField] private GameObject _bulletPrefab;
 
     [SerializeField] private Transform _bulletSpawnPoint;
@@ -42,7 +47,9 @@ public class DisparoRecto : AttackGeneral
 
     public override void AtaquePrincipal()
     {
-        if (_currentBullets > 0 && _canShot)
+        RaycastHit2D raycast = Physics2D.Raycast(Vector2.zero, AngleToDirection(), _distancia, _layer);
+        Debug.DrawRay(transform.position, new Vector3(AngleToDirection().x, AngleToDirection().y,0), Color.red, 5);
+        if (_currentBullets > 0 && _canShot && raycast.collider == null)
         {
             base.AtaquePrincipal();
             bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
