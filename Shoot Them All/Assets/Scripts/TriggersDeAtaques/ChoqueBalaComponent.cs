@@ -9,6 +9,7 @@ public class ChoqueBalaComponent : MonoBehaviour
 
     private LayerMask _floor;
     private LayerMask _limit;
+    private GameObject _playerFather;
 
     #endregion
 
@@ -26,7 +27,7 @@ public class ChoqueBalaComponent : MonoBehaviour
         }
         if (collision.gameObject.GetComponent<KnockbackComponent>() != null)            // Si la bala colisiona con otro jugador        
         {
-            collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().ApplyConsecuencies(5, gameObject);
+            collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().ApplyConsecuencies(5, gameObject, _playerFather);
             Destroy(gameObject);
         }
     }
@@ -39,6 +40,9 @@ public class ChoqueBalaComponent : MonoBehaviour
     {
         _floor = LayerMask.NameToLayer("Floor");
         _limit = LayerMask.NameToLayer("Limit");
+
+        //Intento limites
+        _playerFather = GetComponent<DisparoRecto>().BulletSpawnPoint.parent.transform.parent.transform.parent.gameObject;
     }
 
     

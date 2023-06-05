@@ -43,6 +43,18 @@ public class DisparoRecto : AttackGeneral
 
     #endregion
 
+    #region Get/Set
+
+    public Transform BulletSpawnPoint
+    {
+        get
+        {
+            return _bulletSpawnPoint;
+        }
+    }
+
+    #endregion
+
     #region methods
 
     public override void AtaquePrincipal()

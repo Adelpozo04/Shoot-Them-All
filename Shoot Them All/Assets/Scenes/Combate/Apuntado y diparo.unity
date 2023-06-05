@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 133340302}
   - component: {fileID: 133340304}
   - component: {fileID: 133340303}
+  - component: {fileID: 133340305}
   m_Layer: 7
   m_Name: LimitDown
   m_TagString: Untagged
@@ -234,6 +235,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &133340305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133340301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9758312c32a79469304778c3131a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myLimit: 0
+--- !u!1 &145872953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7993799162126593842, guid: 471a2feeb6f8a1a49a02285209881281, type: 3}
+  m_PrefabInstance: {fileID: 7993799161992830203}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &442520770 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6562643957805159035, guid: 471a2feeb6f8a1a49a02285209881281, type: 3}
@@ -256,6 +275,7 @@ GameObject:
   - component: {fileID: 513689826}
   - component: {fileID: 513689828}
   - component: {fileID: 513689827}
+  - component: {fileID: 513689829}
   m_Layer: 7
   m_Name: LimitUp
   m_TagString: Untagged
@@ -356,6 +376,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &513689829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513689825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9758312c32a79469304778c3131a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myLimit: 2
 --- !u!1 &999195665
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,12 +439,37 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7993799162126593834, guid: 471a2feeb6f8a1a49a02285209881281, type: 3}
   m_PrefabInstance: {fileID: 7993799161992830203}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 145872953}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 677458e26c3d71045807677f0eec6319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1112835732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145872953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b4aa33ef4c7f94ea52784789600aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1112835733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145872953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e496ee8a4800eb44ea799ff59c74fd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coolDown: 60
 --- !u!1 &1176787841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,6 +1208,7 @@ GameObject:
   - component: {fileID: 1668168499}
   - component: {fileID: 1668168501}
   - component: {fileID: 1668168500}
+  - component: {fileID: 1668168502}
   m_Layer: 7
   m_Name: LimitLeft
   m_TagString: Untagged
@@ -1250,6 +1309,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1668168502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668168498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9758312c32a79469304778c3131a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myLimit: 1
 --- !u!1 &2009553126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,6 +1417,7 @@ GameObject:
   - component: {fileID: 2140018755}
   - component: {fileID: 2140018757}
   - component: {fileID: 2140018756}
+  - component: {fileID: 2140018758}
   m_Layer: 7
   m_Name: LimitRight
   m_TagString: Untagged
@@ -1445,6 +1518,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2140018758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140018754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9758312c32a79469304778c3131a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _myLimit: 1
 --- !u!1001 &7993799161992830203
 PrefabInstance:
   m_ObjectHideFlags: 0
