@@ -6,11 +6,13 @@ public class WeaponConsecuenciesComponent : MonoBehaviour
 {
     private KnockbackComponent _myKnockBackComponent;
     private PercentageComponent _myPercentageComponent;
+    private Death _myDeathComponent;
 
     void Start()
     {
         _myKnockBackComponent = GetComponent<KnockbackComponent>();
         _myPercentageComponent = GetComponent<PercentageComponent>();
+        _myDeathComponent = GetComponent<Death>();
     }
     /// <summary>
     /// Método que se llama cuando el jugador recibe un ataque con toda la información del ataque
@@ -28,12 +30,6 @@ public class WeaponConsecuenciesComponent : MonoBehaviour
         Debug.Log("El jugador: " + gameObject.name + "/ Daño recibido: " + weaponDamage + "/ Porcentaje: " + _myPercentageComponent.Percentage);
         _myPercentageComponent.AddDamage(weaponDamage);     // Se le aplica el daño del arma al jugador
         _myKnockBackComponent.Knockback(weapon, _myPercentageComponent.Percentage); // Se le aplica al jugador el knockback del arma
-    }
-
-    public void ApplyConsecuencies(int weaponDamage, Vector2 direction)
-    {
-        Debug.Log("El jugador: " + gameObject.name + "/ Daño recibido: " + weaponDamage + "/ Porcentaje: " + _myPercentageComponent.Percentage);
-        _myPercentageComponent.AddDamage(weaponDamage);     // Se le aplica el daño del arma al jugador
-        _myKnockBackComponent.Knockback(direction, _myPercentageComponent.Percentage); // Se le aplica al jugador el knockback del arma
+        _myDeathComponent.ProcessDamage(damager);
     }
 }

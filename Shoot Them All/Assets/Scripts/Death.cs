@@ -57,6 +57,7 @@ public class Death : MonoBehaviour
         {
             if (_elapsedTime < _coolDown)
             {
+                Debug.Log(_elapsedTime);
                 _elapsedTime += Time.deltaTime;
             }
             else

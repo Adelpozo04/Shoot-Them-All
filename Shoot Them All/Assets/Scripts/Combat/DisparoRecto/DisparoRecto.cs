@@ -21,6 +21,9 @@ public class DisparoRecto : AttackGeneral
 
     [SerializeField]
     private LayerMask _layer;
+
+    [SerializeField]
+    private GameObject _playerFather;
     #endregion
 
     #region references
@@ -65,6 +68,7 @@ public class DisparoRecto : AttackGeneral
         {
             base.AtaquePrincipal();
             bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
+            bullet.GetComponent<ChoqueBalaComponent>().SetPlayerFather(_playerFather);
             bullet.transform.rotation = transform.rotation;
             _currentBullets--;
             _canShot = false;

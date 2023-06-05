@@ -8,7 +8,7 @@ public class PointsComponent : MonoBehaviour
 
     private int _roundWon;
 
-    private int _playerKillPoints;
+    private int _playerKillPoints ;
 
     #endregion
 
@@ -18,7 +18,7 @@ public class PointsComponent : MonoBehaviour
     public void ChangeKillPoints(int points)
     {
         _playerKillPoints += points;
-        Debug.Log("Menus uno campeon");
+        Debug.Log(_playerKillPoints);
     }
 
     #endregion

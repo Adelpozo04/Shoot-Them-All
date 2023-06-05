@@ -13,6 +13,14 @@ public class ChoqueBalaComponent : MonoBehaviour
 
     #endregion
 
+    #region Get/Set
+    public void SetPlayerFather(GameObject PlayerFather)
+    {
+        _playerFather = PlayerFather;
+        //Intento limites
+        Debug.Log(_playerFather.name);
+    }
+    #endregion
 
     #region methods
 
@@ -40,10 +48,5 @@ public class ChoqueBalaComponent : MonoBehaviour
     {
         _floor = LayerMask.NameToLayer("Floor");
         _limit = LayerMask.NameToLayer("Limit");
-
-        //Intento limites
-        _playerFather = GetComponent<DisparoRecto>().BulletSpawnPoint.parent.transform.parent.transform.parent.gameObject;
-    }
-
-    
+    }  
 }
