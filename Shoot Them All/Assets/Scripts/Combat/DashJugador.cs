@@ -79,7 +79,16 @@ public class DashJugador : MonoBehaviour
     {
         
         _canDash = false;
-        _myRB.velocity += direction * _dashingPower;
+
+        if(transform.localScale.x < 0)
+        {
+            _myRB.velocity += -direction * _dashingPower;
+        }
+        else
+        {
+            _myRB.velocity += direction * _dashingPower;
+        }
+        
         _myTrailRenderer.emitting = true;
         Debug.Log(direction);
 

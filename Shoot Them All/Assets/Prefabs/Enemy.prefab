@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerRegulator: 0.25
-  _proportionPercentagePerVerticalImpulse: 0.25
+  _proportionPercentagePerVerticalImpulse: 0.05
 --- !u!50 &2749357364514193865
 Rigidbody2D:
   serializedVersion: 4
@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91db7c7bbfdafc342a662aad3ac3f9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  percentage: 0
 --- !u!114 &2749357364514193871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,4 +245,3 @@ MonoBehaviour:
   _maxAdditionalSpeedTime: 0.5
   _additionalJumpProportion: 0.332
   _additionalJumps: 2
-  _floor: 0
