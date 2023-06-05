@@ -259,6 +259,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2749357364514193867, guid: ba9b6bdf41881884b89f1fffc33da2c4, type: 3}
+      propertyPath: _proportionPercentagePerVerticalImpulse
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2749357364514193876, guid: ba9b6bdf41881884b89f1fffc33da2c4, type: 3}
       propertyPath: m_RootOrder
       value: 1
