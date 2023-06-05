@@ -91,7 +91,490 @@ ScriptedImporter:
     uvTransform: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
-  - name: Capa 5 copia 4
+  - name: Capa 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 23
+      y: 116
+      width: 0
+      height: 0
+    spriteID: 6117aa320cadd19458ebd24da69adf62
+    spriteBone:
+    - name: Weapon
+      guid: 6e4f21083c1fec64e9c87ad3aa24e26c
+      position: {x: -20.214136, y: -21.508095, z: 3}
+      rotation: {x: 0, y: 0, z: 0.005077323, w: 0.9999872}
+      length: 8.807125
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -16, y: 79}
+  - name: Capa 1 copia
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 44
+      width: 12
+      height: 12
+    spriteID: 340e3b28e0771ba4288f8bcf2fb5ab45
+    spriteBone:
+    - name: Weapon
+      guid: 6e4f21083c1fec64e9c87ad3aa24e26c
+      position: {x: 10.785866, y: 4.491905, z: 3}
+      rotation: {x: 0, y: 0, z: 0.005077323, w: 0.9999872}
+      length: 8.807125
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    spriteOutline: []
+    vertices:
+    - position: {x: 8.615, y: 0.36899996}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 12, y: 3}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 11.775, y: 7.972}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 11, y: 12}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 6.046, y: 11.698}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 1.586, y: 10.585}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0.362, y: 6.182}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0.26399994, y: 1.3039999}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0.7579999, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000000000000400000002000000000000000600000004000000000000000700000006000000000000000800000007000000020000000400000003000000040000000600000005000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 8}
+    - {x: 1, y: 2}
+    - {x: 2, y: 3}
+    - {x: 3, y: 4}
+    - {x: 4, y: 5}
+    - {x: 5, y: 6}
+    - {x: 6, y: 7}
+    - {x: 7, y: 8}
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 51, y: 33}
+  - name: Capa 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 64
+      width: 9
+      height: 13
+    spriteID: 8e826b2a70ad84a42ba8fdb930a25244
+    spriteBone:
+    - name: Weapon
+      guid: 6e4f21083c1fec64e9c87ad3aa24e26c
+      position: {x: 10.785866, y: 4.491905, z: 3}
+      rotation: {x: 0, y: 0, z: 0.005077323, w: 0.9999872}
+      length: 8.807125
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    spriteOutline: []
+    vertices:
+    - position: {x: 7.655, y: 0.3119998}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 9, y: 1}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 9, y: 6.001}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 9, y: 11}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 6.271, y: 12.5060005}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0.58599997, y: 12.585}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0.1789999, y: 7.822}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0.42700005, y: 2.997}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 2.7589998, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000000000000800000002000000020000000400000003000000020000000600000004000000020000000700000006000000020000000800000007000000040000000600000005000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 8}
+    - {x: 1, y: 2}
+    - {x: 2, y: 3}
+    - {x: 3, y: 4}
+    - {x: 4, y: 5}
+    - {x: 5, y: 6}
+    - {x: 6, y: 7}
+    - {x: 7, y: 8}
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 51, y: 53}
+  - name: micro 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 59
+      y: 22
+      width: 22
+      height: 14
+    spriteID: fb1e7c32f99b70f4984e997c7733c626
+    spriteBone:
+    - name: Weapon
+      guid: 6e4f21083c1fec64e9c87ad3aa24e26c
+      position: {x: 6.785866, y: 8.491905, z: 3}
+      rotation: {x: 0, y: 0, z: 0.005077323, w: 0.9999872}
+      length: 8.807125
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4278255615
+    spriteOutline: []
+    vertices:
+    - position: {x: 22, y: 7}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 22, y: 12}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 22, y: 14}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 17, y: 14}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 11.999, y: 14}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 7, y: 14}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 2, y: 14}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 14}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 6}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 1.0009999}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 9, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 13.999, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 19, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 22, y: 0}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000300000001000000000000000c00000003000000000000000d0000000c000000000000000e0000000d000000010000000300000002000000030000000c00000004000000040000000b00000005000000040000000c0000000b000000050000000800000006000000050000000b00000008000000060000000800000007000000080000000b00000009000000090000000b0000000a000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 14}
+    - {x: 1, y: 2}
+    - {x: 2, y: 3}
+    - {x: 3, y: 4}
+    - {x: 4, y: 5}
+    - {x: 5, y: 6}
+    - {x: 6, y: 7}
+    - {x: 7, y: 8}
+    - {x: 8, y: 9}
+    - {x: 9, y: 10}
+    - {x: 10, y: 11}
+    - {x: 11, y: 12}
+    - {x: 12, y: 13}
+    - {x: 13, y: 14}
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 47, y: 15}
+  - name: micro 7
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -286,7 +769,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 20, y: 1}
-  - name: Capa 5 copia 11
+  - name: micro6
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -481,7 +964,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 20, y: 27}
-  - name: Capa 9 copia
+  - name: micro5
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -654,7 +1137,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -11, y: 85}
-  - name: Capa 4
+  - name: micro4
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -827,7 +1310,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 16, y: 52}
-  - name: Capa 3
+  - name: micro3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -1011,7 +1494,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -8, y: 61}
-  - name: Capa 2
+  - name: micro2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -1184,7 +1667,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 18, y: 76}
-  - name: Capa 1
+  - name: micro1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -1357,7 +1840,7 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: 19, y: 97}
-  - name: Weapon
+  - name: hands
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -1571,14 +2054,14 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 59
-      y: 22
+      y: 85
       width: 8
       height: 5
     spriteID: 23e42ba27005136469b9b00e51fb1b6d
     spriteBone:
     - name: Foot_Der
       guid: be2a35db8cf75014ea4197d54acb5513
-      position: {x: 0.7858658, y: 1.49193, z: 2}
+      position: {x: 0.7858658, y: 1.4919281, z: 2}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       length: 6.061543
       parentId: -1
@@ -1658,7 +2141,7 @@ ScriptedImporter:
     - {x: 4, y: 5}
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 50, y: 21}
+    uvTransform: {x: 50, y: 84}
   - name: Hat_Merch
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1865,6 +2348,135 @@ ScriptedImporter:
     tessellationDetail: 0
     parentGroupIndex: -1
     uvTransform: {x: -6, y: 23}
+  - name: ojos
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 4
+      width: 11
+      height: 10
+    spriteID: b6805fe686370f546a0045e7bb49abf4
+    spriteBone:
+    - name: Eye
+      guid: 2557513b13c4ca9439af2f91fd7ae89e
+      position: {x: 4.872986, y: 7.8154106, z: 3}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      length: 0.08288574
+      parentId: -1
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
+    spriteOutline: []
+    vertices:
+    - position: {x: 9.816999, y: 0.34299994}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 11, y: 1}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 11, y: 6}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 11, y: 10}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 5.218, y: 9.471001}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0.65199995, y: 10}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0.19000006, y: 5.64}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 0.24900007, y: 0.7529998}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    - position: {x: 3.954, y: 0.21600008}
+      boneWeight:
+        weight0: 1
+        weight1: 0
+        weight2: 0
+        weight3: 0
+        boneIndex0: 0
+        boneIndex1: 0
+        boneIndex2: 0
+        boneIndex3: 0
+    spritePhysicsOutline: []
+    indices: 000000000200000001000000000000000800000002000000020000000400000003000000020000000800000004000000040000000600000005000000040000000800000006000000060000000800000007000000
+    edges:
+    - {x: 0, y: 1}
+    - {x: 0, y: 8}
+    - {x: 1, y: 2}
+    - {x: 2, y: 3}
+    - {x: 3, y: 4}
+    - {x: 4, y: 5}
+    - {x: 5, y: 6}
+    - {x: 6, y: 7}
+    - {x: 7, y: 8}
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 89, y: -10}
   - name: Body
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -2234,7 +2846,52 @@ ScriptedImporter:
       color:
         serializedVersion: 2
         rgba: 4294901760
+    - name: Eye
+      guid: 2557513b13c4ca9439af2f91fd7ae89e
+      position: {x: 0.8729687, y: 2.815422, z: 3}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      length: 0.08288574
+      parentId: 4
+      color:
+        serializedVersion: 2
+        rgba: 4294902015
     parts:
+    - spritePosition:
+        x: 39
+        y: 37
+        width: 0
+        height: 0
+      spriteId: 6117aa320cadd19458ebd24da69adf62
+      bones: 01000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 8
+        y: 11
+        width: 12
+        height: 12
+      spriteId: 340e3b28e0771ba4288f8bcf2fb5ab45
+      bones: 01000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 8
+        y: 11
+        width: 9
+        height: 13
+      spriteId: 8e826b2a70ad84a42ba8fdb930a25244
+      bones: 01000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
+        x: 12
+        y: 7
+        width: 22
+        height: 14
+      spriteId: fb1e7c32f99b70f4984e997c7733c626
+      bones: 01000000
+      parentGroup: 0
+      order: 0
     - spritePosition:
         x: 11
         y: 3
@@ -2326,6 +2983,15 @@ ScriptedImporter:
       parentGroup: 0
       order: 0
     - spritePosition:
+        x: 15
+        y: 14
+        width: 11
+        height: 10
+      spriteId: b6805fe686370f546a0045e7bb49abf4
+      bones: 05000000
+      parentGroup: 0
+      order: 0
+    - spritePosition:
         x: 8
         y: 7
         width: 19
@@ -2413,6 +3079,86 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
+  - name: rugby
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 3ab5a5be88f5d554d9056e701e2268e5
+    layerID: 59
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: Capa 2
+    spriteName: Capa 2
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 6117aa320cadd19458ebd24da69adf62
+    layerID: 63
+    mosaicPosition: {x: 23, y: 116}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Capa 1 copia
+    spriteName: Capa 1 copia
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 340e3b28e0771ba4288f8bcf2fb5ab45
+    layerID: 62
+    mosaicPosition: {x: 59, y: 44}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Capa 1
+    spriteName: Capa 1
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 8e826b2a70ad84a42ba8fdb930a25244
+    layerID: 61
+    mosaicPosition: {x: 59, y: 64}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: microondas v2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 52e901af5d00b1743b57541866881f29
+    layerID: 54
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: micro 1 copia 2
+    spriteName: 
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 3ca552309975f364088af65dbf43df16
+    layerID: 58
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: micro 1 copia
+    spriteName: 
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 39893d6b9379a7d438ef41c1e8e56cc3
+    layerID: 57
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  - name: micro 1
+    spriteName: micro 1
+    isGroup: 0
+    parentIndex: 5
+    spriteID: fb1e7c32f99b70f4984e997c7733c626
+    layerID: 56
+    mosaicPosition: {x: 59, y: 22}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   - name: Microondas
     spriteName: 
     isGroup: 1
@@ -2423,78 +3169,78 @@ ScriptedImporter:
     flatten: 0
     isImported: 0
     isVisible: 1
-  - name: Capa 5 copia 4
-    spriteName: Capa 5 copia 4
+  - name: micro 7
+    spriteName: micro 7
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 9
     spriteID: 26310f5c8360f924a99e569ed235cd1b
     layerID: 49
     mosaicPosition: {x: 31, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Capa 5 copia 11
-    spriteName: Capa 5 copia 11
+  - name: micro6
+    spriteName: micro6
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 9
     spriteID: ac53abc302d9c164baa96b56ac008bed
     layerID: 48
     mosaicPosition: {x: 31, y: 31}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Capa 9 copia
-    spriteName: Capa 9 copia
+  - name: micro5
+    spriteName: micro5
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 9
     spriteID: aa5398de06cb8bc4fbd4639562d6d753
     layerID: 47
     mosaicPosition: {x: 4, y: 91}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Capa 4
-    spriteName: Capa 4
+  - name: micro4
+    spriteName: micro4
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 9
     spriteID: 10f3e02d36ecde842acc5ec6d42daf39
     layerID: 46
     mosaicPosition: {x: 31, y: 58}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Capa 3
-    spriteName: Capa 3
+  - name: micro3
+    spriteName: micro3
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 9
     spriteID: 4752aebd389fd0244bea73f0cd9fa43a
     layerID: 45
     mosaicPosition: {x: 4, y: 67}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Capa 2
-    spriteName: Capa 2
+  - name: micro2
+    spriteName: micro2
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 9
     spriteID: fe624500b6ea61d4db55938cef4c33f4
     layerID: 44
     mosaicPosition: {x: 31, y: 83}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Capa 1
-    spriteName: Capa 1
+  - name: micro1
+    spriteName: micro1
     isGroup: 0
-    parentIndex: 1
+    parentIndex: 9
     spriteID: 961c3ca105bf66743afec51d6a620f64
     layerID: 43
     mosaicPosition: {x: 31, y: 105}
     flatten: 0
     isImported: 1
     isVisible: 1
-  - name: Weapon
-    spriteName: Weapon
+  - name: hands
+    spriteName: hands
     isGroup: 0
     parentIndex: 0
     spriteID: 2a1a7c053b1c86c45b0e9d1423cbeb6e
@@ -2506,7 +3252,7 @@ ScriptedImporter:
   - name: pie derecho
     spriteName: 
     isGroup: 1
-    parentIndex: 0
+    parentIndex: -1
     spriteID: 3cf953a8a92c5634abbb3a53aef30f10
     layerID: 8
     mosaicPosition: {x: 0, y: 0}
@@ -2516,10 +3262,10 @@ ScriptedImporter:
   - name: Foot_Der
     spriteName: Foot_Der
     isGroup: 0
-    parentIndex: 10
+    parentIndex: 18
     spriteID: 23e42ba27005136469b9b00e51fb1b6d
     layerID: 26
-    mosaicPosition: {x: 59, y: 22}
+    mosaicPosition: {x: 59, y: 85}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -2536,10 +3282,30 @@ ScriptedImporter:
   - name: Hat_Merch
     spriteName: Hat_Merch
     isGroup: 0
-    parentIndex: 12
+    parentIndex: 20
     spriteID: 92f85b5675fd8d1488b36f2c649db2fd
     layerID: 33
     mosaicPosition: {x: 4, y: 35}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: ojos
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 884ace30a7ab79d449d786d4d9e53de6
+    layerID: 51
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: ojos
+    spriteName: ojos
+    isGroup: 0
+    parentIndex: 22
+    spriteID: b6805fe686370f546a0045e7bb49abf4
+    layerID: 53
+    mosaicPosition: {x: 104, y: 4}
     flatten: 0
     isImported: 1
     isVisible: 1
@@ -2556,7 +3322,7 @@ ScriptedImporter:
   - name: Body
     spriteName: Body
     isGroup: 0
-    parentIndex: 14
+    parentIndex: 24
     spriteID: bae2c4f5435ffe24ebeb668777ff86de
     layerID: 24
     mosaicPosition: {x: 4, y: 4}
@@ -2576,7 +3342,7 @@ ScriptedImporter:
   - name: Foot_Izq
     spriteName: Foot_Izq
     isGroup: 0
-    parentIndex: 16
+    parentIndex: 26
     spriteID: 7a28a6be859e8164bb794bae79262413
     layerID: 27
     mosaicPosition: {x: 4, y: 116}
