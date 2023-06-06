@@ -12,7 +12,6 @@ public class ApuntadoComponent : MonoBehaviour
 
     #endregion
 
-
     #region References
 
     /// <summary>
@@ -33,8 +32,6 @@ public class ApuntadoComponent : MonoBehaviour
     private Vector2 _direction;
 
     #endregion
-
-
 
     #region methods
 
@@ -77,7 +74,6 @@ public class ApuntadoComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //rota el arma, si no hay input, se apunta hacia la derecha de forma predeterminada
         if(_direction != Vector2.zero)
         {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+
 /// <summary>
 /// Managea animadores que animan
 /// </summary>
