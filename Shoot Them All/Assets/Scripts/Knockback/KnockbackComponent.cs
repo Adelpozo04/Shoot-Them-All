@@ -2,15 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class KnockbackComponent : MonoBehaviour
 {
     private Rigidbody2D _myRigidBody2D;
     private JumpComponent _myJumpComponent;
+    private PlayerInput _playerInput;
 
     //[SerializeField] private float powerRegulator;
     private Vector2 _impulseForce;
     private float _verticalImpulse;
+    [SerializeField]
+    private float _knockBackTime;
     [Tooltip("Proporción del impulso que se añadira de forma vertical si se está en el suelo")]
     [Range(0f, 1f)] [SerializeField] float _proportionPercentagePerVerticalImpulse;     // Se puede cambiar a int
 
@@ -31,8 +35,9 @@ public class KnockbackComponent : MonoBehaviour
     /// <returns></returns>
     private float ConvertPercentageToPower(int percentage)
     {
+        _knockBackTime = 0.005f * percentage + 0.1f;
         _verticalImpulse = _proportionPercentagePerVerticalImpulse * percentage;
-        return 0.01f * percentage * (float)Math.Log(percentage);
+        return 0.02f * percentage * (float)Math.Log(percentage);
         //return powerRegulator * percentage;
     }
 
@@ -44,6 +49,7 @@ public class KnockbackComponent : MonoBehaviour
     /// <param name="percentage"></param>
     public void Knockback(GameObject collision, int percentage)
     {
+        StartCoroutine(KockBackDisables());
         Debug.Log("Hay knockback");
         if (!_myJumpComponent.Floor)        //Si estoy en el aire se realiza el impulso realista
         {
@@ -55,8 +61,6 @@ public class KnockbackComponent : MonoBehaviour
         }        
         _myRigidBody2D.velocity = Vector2.zero;
         _myRigidBody2D.AddForce(_impulseForce, ForceMode2D.Impulse);
-        // Desactivar Input (por un periodo de tiempo) TODO
-        // iFrames (por un periodo de tiempo) TODO
 
     }
      /// <summary>
@@ -77,9 +81,6 @@ public class KnockbackComponent : MonoBehaviour
         } 
         _myRigidBody2D.velocity = Vector2.zero;
         _myRigidBody2D.AddForce(_impulseForce, ForceMode2D.Impulse);
-        //corrutina puede ser una buena opcción en este caso
-        // Desactivar Input (por un periodo de tiempo) TODO
-        // iFrames (por un periodo de tiempo) TODO
 
     }
 
@@ -87,5 +88,16 @@ public class KnockbackComponent : MonoBehaviour
     {
         _myRigidBody2D = GetComponent<Rigidbody2D>();
         _myJumpComponent = GetComponent<JumpComponent>();
+        _playerInput = GetComponent<PlayerInput>();
+    }
+    /// <summary>
+    /// Corrutina para desactivar el input y dar IFrames
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator KockBackDisables()
+    {
+        _playerInput.actions.Disable();
+        yield return new WaitForSeconds(_knockBackTime);
+        _playerInput.actions.Enable();
     }
 }

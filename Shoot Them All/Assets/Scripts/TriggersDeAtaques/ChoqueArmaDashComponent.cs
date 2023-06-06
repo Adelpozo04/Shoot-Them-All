@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChoqueArmaDashComponent : MonoBehaviour
 {
     #region properties
-
+    //Cachear dede otro lado
     [SerializeField] GameObject _player;
     private Collider2D _collider;
 

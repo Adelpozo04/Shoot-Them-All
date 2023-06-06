@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _foot: {fileID: 7993799163570303217}
-  _minimumMaxHeith: 1
+  _minimumMaxHeith: 2
   _middleJump: 1.5
   _horizontalSpeedInAir: 1
   _maxAdditionalSpeedTime: 0.5
@@ -298,7 +298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93facb91d5eb7a343a11e04e43b9ed66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _proportionPercentagePerVerticalImpulse: 0.05
+  _knockBackTime: 0.5
+  _proportionPercentagePerVerticalImpulse: 0.1
 --- !u!114 &818430753152859270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,6 +950,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7993799162927697151}
     m_Modifications:
+    - target: {fileID: 3890155791971203696, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
+      propertyPath: _bulletPrefab
+      value: 
+      objectReference: {fileID: 3454523284414691639, guid: 55740dd90c91b834b8cdb86bca9b19ed, type: 3}
     - target: {fileID: 3890155791971203696, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
       propertyPath: _playerFather
       value: 
