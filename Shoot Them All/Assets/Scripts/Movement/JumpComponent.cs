@@ -83,8 +83,9 @@ public class JumpComponent : MonoBehaviour
         }
 
         //Ajuste de Salto
-        if (_salto && _additionalSpeedTime < _maxAdditionalSpeedTime && _additionalJumps == 1)
+        if (_salto && !_floor && _additionalSpeedTime < _maxAdditionalSpeedTime && _additionalJumps == 1)
         {
+            Debug.Log("Mas salto");
             _rigidBody.velocity += Vector2.down * Physics2D.gravity * Time.fixedDeltaTime * _additionalJumpProportion;
             _additionalSpeedTime += Time.fixedDeltaTime;
         }
@@ -104,7 +105,7 @@ public class JumpComponent : MonoBehaviour
         //Si esta en el suelo reinicia los saltos
         if(_floor)
         {
-            _additionalJumps = 2;
+            _additionalJumps = 1;
             _animatorsManager?.ChangeNJump(0);
         }
     }

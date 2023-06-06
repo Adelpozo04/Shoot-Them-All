@@ -192,8 +192,8 @@ MonoBehaviour:
   _middleJump: 1.5
   _horizontalSpeedInAir: 1
   _maxAdditionalSpeedTime: 0.5
-  _additionalJumpProportion: 0.332
-  _additionalJumps: 2
+  _additionalJumpProportion: 0.5
+  _additionalJumps: 1
 --- !u!114 &7993799162126593834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,6 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b4aa33ef4c7f94ea52784789600aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerKillPoints: 0
 --- !u!1 &7993799162927697144
 GameObject:
   m_ObjectHideFlags: 0
