@@ -23,7 +23,7 @@ public class DisparoRecto : AttackGeneral
     private LayerMask _layer;
 
     [SerializeField]
-    private GameObject _playerFather;
+    private PointsComponent _playerFather;
     #endregion
 
     #region references
@@ -33,7 +33,6 @@ public class DisparoRecto : AttackGeneral
     #endregion
 
     #region properties
-
     private GameObject bullet;
     private int _currentBullets;
     private float _elapsedTime;
@@ -42,20 +41,6 @@ public class DisparoRecto : AttackGeneral
     /// Indica si se puede disparar en relacion al ENFRIAMIENTO
     /// </summary>
     private bool _canShot = true;
-
-
-    #endregion
-
-    #region Get/Set
-
-    public Transform BulletSpawnPoint
-    {
-        get
-        {
-            return _bulletSpawnPoint;
-        }
-    }
-
     #endregion
 
     #region methods
@@ -87,7 +72,6 @@ public class DisparoRecto : AttackGeneral
     {
         _currentBullets = _maxBalas;
     }
-
     #endregion
 
     // Start is called before the first frame update
@@ -111,8 +95,5 @@ public class DisparoRecto : AttackGeneral
                 _canShot = true;
             }
         }
-        
-
-
     }
 }

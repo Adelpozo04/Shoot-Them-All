@@ -9,12 +9,16 @@ public class ChoqueBalaComponent : MonoBehaviour
 
     private LayerMask _floor;
     private LayerMask _limit;
-    private GameObject _playerFather;
+    private PointsComponent _playerFather;
 
     #endregion
 
     #region Get/Set
-    public void SetPlayerFather(GameObject PlayerFather)
+    /// <summary>
+    /// Setea al jugador que te ha golpeado en un componente de la propia bala 
+    /// </summary>
+    /// <param name="PlayerFather"></param>
+    public void SetPlayerFather(PointsComponent PlayerFather)
     {
         _playerFather = PlayerFather;
         //Intento limites
@@ -28,7 +32,7 @@ public class ChoqueBalaComponent : MonoBehaviour
     {
         LayerMask aux = collision.gameObject.layer;
 
-        if (aux == _floor || aux == _limit)
+        if (aux == _floor)
         {
             //Debug.Log("Choco con suelo");
             Destroy(gameObject);

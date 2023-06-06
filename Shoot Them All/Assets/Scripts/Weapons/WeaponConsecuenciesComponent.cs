@@ -26,7 +26,7 @@ public class WeaponConsecuenciesComponent : MonoBehaviour
         _myPercentageComponent.AddDamage(weaponDamage);     // Se le aplica el daño del arma al jugador
         _myKnockBackComponent.Knockback(weapon, _myPercentageComponent.Percentage); // Se le aplica al jugador el knockback del arma
     }
-    public void ApplyConsecuencies(int weaponDamage, GameObject weapon, GameObject damager)
+    public void ApplyConsecuencies(int weaponDamage, GameObject weapon, PointsComponent damager)
     {
         Debug.Log("El jugador: " + gameObject.name + "/ Daño recibido: " + weaponDamage + "/ Porcentaje: " + _myPercentageComponent.Percentage);
         _myPercentageComponent.AddDamage(weaponDamage);     // Se le aplica el daño del arma al jugador

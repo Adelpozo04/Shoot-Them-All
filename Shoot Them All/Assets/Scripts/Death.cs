@@ -8,38 +8,45 @@ public class Death : MonoBehaviour
     #region parameters
 
     [Tooltip("Tiempo en el que se guarda el último atacante")]
-    [SerializeField] private float _coolDown;
+    [SerializeField] private float _coolDown = 10;
+
+    private PointsComponent _myPointsComponent;
 
     #endregion
 
     #region properties
 
-    private GameObject _damager;
+    private PointsComponent _damager;
     private float _elapsedTime;
 
     #endregion
 
 
     #region methods
-    //realmente se puede pasar solo el componente de puntos y solo se va a manejar este
-    public void ProcessDamage(GameObject damager)
+    /// <summary>
+    /// Recoge quien hace 
+    /// </summary>
+    /// <param name="damager"></param>
+    public void ProcessDamage(PointsComponent damager)
     {
         _damager = damager;
         _elapsedTime = 0;
     }
 
 
-
+    /// <summary>
+    /// Decide cuantos puntos se ganan o pierden
+    /// </summary>
+    /// <param name="points"></param>
     public void SendPoints(int points)
     {
         if(_damager != null)
         {
-            _damager.GetComponent<PointsComponent>().ChangeKillPoints(points);
+            _damager.ChangeKillPoints(points);
         }
         else
         {
-            //se puede cachear una sola vez ya que es el componente propio
-            GetComponent<PointsComponent>().ChangeKillPoints(-1);
+            _myPointsComponent.ChangeKillPoints(-1);
         }
     }
 
@@ -48,7 +55,7 @@ public class Death : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        _myPointsComponent = GetComponent<PointsComponent>();
     }
 
     // Update is called once per frame
@@ -59,7 +66,6 @@ public class Death : MonoBehaviour
         {
             if (_elapsedTime < _coolDown)
             {
-                //Debug.Log(_elapsedTime);
                 _elapsedTime += Time.deltaTime;
             }
             else
