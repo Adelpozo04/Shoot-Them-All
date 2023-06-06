@@ -21,7 +21,7 @@ public class Death : MonoBehaviour
 
 
     #region methods
-
+    //realmente se puede pasar solo el componente de puntos y solo se va a manejar este
     public void ProcessDamage(GameObject damager)
     {
         _damager = damager;
@@ -38,6 +38,7 @@ public class Death : MonoBehaviour
         }
         else
         {
+            //se puede cachear una sola vez ya que es el componente propio
             GetComponent<PointsComponent>().ChangeKillPoints(-1);
         }
     }
@@ -53,11 +54,12 @@ public class Death : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Se puede compactar en un solo if
         if(_damager != null)
         {
             if (_elapsedTime < _coolDown)
             {
-                Debug.Log(_elapsedTime);
+                //Debug.Log(_elapsedTime);
                 _elapsedTime += Time.deltaTime;
             }
             else

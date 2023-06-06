@@ -11,6 +11,7 @@ public class KnockbackComponent : MonoBehaviour
     //[SerializeField] private float powerRegulator;
     private Vector2 _impulseForce;
     private float _verticalImpulse;
+    [Tooltip("Proporción del impulso que se añadira de forma vertical si se está en el suelo")]
     [Range(0f, 1f)] [SerializeField] float _proportionPercentagePerVerticalImpulse;     // Se puede cambiar a int
 
     /// <summary>
@@ -36,8 +37,8 @@ public class KnockbackComponent : MonoBehaviour
     }
 
     /// <summary>
-    /// Pasándole el objeto de la colisión y el porcentaje del receptor, llama a los métodos necesarios para realizar el knockback.
     /// Ataque balas y dash
+    /// Pasándole el objeto de la colisión y el porcentaje del receptor, llama a los métodos necesarios para realizar el knockback.
     /// </summary>
     /// <param name="collision"></param>
     /// <param name="percentage"></param>
@@ -76,6 +77,7 @@ public class KnockbackComponent : MonoBehaviour
         } 
         _myRigidBody2D.velocity = Vector2.zero;
         _myRigidBody2D.AddForce(_impulseForce, ForceMode2D.Impulse);
+        //corrutina puede ser una buena opcción en este caso
         // Desactivar Input (por un periodo de tiempo) TODO
         // iFrames (por un periodo de tiempo) TODO
 

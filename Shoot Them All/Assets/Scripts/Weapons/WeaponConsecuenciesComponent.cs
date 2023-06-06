@@ -19,6 +19,7 @@ public class WeaponConsecuenciesComponent : MonoBehaviour
     /// </summary>
     /// <param name="weaponDamage"></param>
     /// <param name="weapon"></param>
+    //Este metodo esta obsoleto?
     public void ApplyConsecuencies(int weaponDamage, GameObject weapon)
     {
         Debug.Log("El jugador: " + gameObject.name + "/ Daño recibido: " + weaponDamage + "/ Porcentaje: " + _myPercentageComponent.Percentage);
