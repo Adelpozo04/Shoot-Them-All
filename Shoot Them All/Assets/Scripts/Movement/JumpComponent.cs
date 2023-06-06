@@ -18,15 +18,19 @@ public class JumpComponent : MonoBehaviour
     [Tooltip("Altura maxima del salto con una sola pulsacion")]
     [SerializeField]
     float _minimumMaxHeith = 1;
+
     [Tooltip("Distancia horizontal a la que se encuetra el punto medio de la parabola")]
     [SerializeField]
     float _middleJump = 1;
+
     [Tooltip("Supuesta velocidad a la que se desplaza el objeto en el aire")]
     [SerializeField]
     float _horizontalSpeedInAir = 3;
+
     [Tooltip("Tiempo que se permite mantener el boton impulsando al jugador")]
     [SerializeField]
     float _maxAdditionalSpeedTime;
+
     [Tooltip("Proporcion de la gravedad que se añade al salto para ampliarlo")]
     [Range(0.0f, 1)]
     [SerializeField]
@@ -55,6 +59,7 @@ public class JumpComponent : MonoBehaviour
     {
         _rigidBody = GetComponent<Rigidbody2D>();
         //empleamos nuestra propia gravedad
+        //que borracho que sos pero dale
         _rigidBody.gravityScale = 0;
         _layerMask = LayerMask.GetMask("Floor");
         _foot.localPosition = Vector2.up * -0.1f;
@@ -65,20 +70,22 @@ public class JumpComponent : MonoBehaviour
 
     void FixedUpdate()
     {
-        //calculo de los parametros del salto mas adelante mover al start cuando se hayan fijado los parametros
+        //calculo de los parametros del salto
+        //mas adelante mover al start cuando se hayan fijado los parametros
         _initialSpeed = (2 * _minimumMaxHeith * _horizontalSpeedInAir) / _middleJump;
         Physics2D.gravity = Vector2.up * -_initialSpeed * (_horizontalSpeedInAir / _middleJump);
+
         //Aplicacion de las formulas de aceleracion
         if (!_floor)
         {
-            _rigidBody.position += _rigidBody.velocity * Time.fixedDeltaTime + 0.5f * Physics2D.gravity * Time.fixedDeltaTime * Time.fixedDeltaTime;
+            //_rigidBody.position += _rigidBody.velocity * Time.fixedDeltaTime + 0.5f * Physics2D.gravity * Time.fixedDeltaTime * Time.fixedDeltaTime;
             _rigidBody.velocity += Vector2.up * Physics2D.gravity * Time.fixedDeltaTime;
         }
 
         //Ajuste de Salto
         if (_salto && _additionalSpeedTime < _maxAdditionalSpeedTime && _additionalJumps == 1)
         {
-            _rigidBody.velocity += -Vector2.up * Physics2D.gravity * Time.fixedDeltaTime * _additionalJumpProportion;
+            _rigidBody.velocity += Vector2.down * Physics2D.gravity * Time.fixedDeltaTime * _additionalJumpProportion;
             _additionalSpeedTime += Time.fixedDeltaTime;
         }
         _floor = Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask);

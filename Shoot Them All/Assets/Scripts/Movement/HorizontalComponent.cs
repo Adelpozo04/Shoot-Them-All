@@ -14,7 +14,6 @@ public class HorizontalComponent : MonoBehaviour
     #region References
     Transform _myTransform;
     Rigidbody2D _rigidbody;
-    JumpComponent _jumpComponent;
     AnimatorsManager _animatorsManager;
     #endregion
 
@@ -22,9 +21,11 @@ public class HorizontalComponent : MonoBehaviour
     [Tooltip("Tiempo que tarda el jugadro en acelerar")]
     [SerializeField]    
     private float _timeToAcelerate;
+
     [Tooltip("Tiempo que tarda el jugador en frenar")]
     [SerializeField]
     private float _timeToDecelerate;
+
     [Tooltip("Velocidad máxima que alcanza el jugador")]
     [SerializeField]
     private float _speedToAcelerate;
@@ -32,6 +33,7 @@ public class HorizontalComponent : MonoBehaviour
     {
         get { return _speedToAcelerate; }
     }
+
     [Tooltip("Tamaño de la caja para detectar muros")]
     [SerializeField]
     Vector2 _wallDetectorBox = new Vector2(1.1f, 0.5f);
@@ -43,7 +45,7 @@ public class HorizontalComponent : MonoBehaviour
     private float _aceleration;
     private float _deceleration;
     private float _lastDirecciton = 1;
-    private float _horizontalDirecction; //propiedad determinada por input
+    private float _horizontalDirecction; //propiedad determinada por input 
     LayerMask _layerMask;
     RaycastHit2D _wallBox;
     #endregion
@@ -58,7 +60,6 @@ public class HorizontalComponent : MonoBehaviour
         _aceleration = _speedToAcelerate / _timeToAcelerate;
         _deceleration = _speedToAcelerate / _timeToDecelerate;
         _layerMask = LayerMask.GetMask("Floor");
-        _jumpComponent = GetComponent<JumpComponent>();
         _animatorsManager = GetComponent<AnimatorsManager>();
     }
 
@@ -71,6 +72,10 @@ public class HorizontalComponent : MonoBehaviour
         }
         //Es posible que haya que cambiar el comportamiento en función de si se esta en el aire o no
         SetSpeed();
+        //Mu chulo esto pero boy a comentarlo
+        //Básicamenete lo que hace es castear una cajita y comprobar la normal en x de la pared con la que se choca
+        //Luego comprueba si es la misma que la dirección y deja mover si es que sí
+        //Muy chulo el método le doy un salchicón sobre 7.9
         _wallBox = Physics2D.BoxCast(_myTransform.position, _wallDetectorBox, 0, Vector2.zero, 0, _layerMask);
         if (Math.Sign(_wallBox.normal.x) == Math.Sign(_lastDirecciton) || _wallBox.normal.x == 0)
         {
@@ -79,11 +84,11 @@ public class HorizontalComponent : MonoBehaviour
     }
     private void OnDrawGizmos()
     {
+        //Dibuja un cubo tipo debug
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(transform.position, _wallDetectorBox);
     }
     #endregion
-
 
     #region MyMethods
 
@@ -104,6 +109,8 @@ public class HorizontalComponent : MonoBehaviour
         {
             _speed += Time.fixedDeltaTime * -_lastDirecciton * _deceleration;
             //porros de pablo alto trocolo mi hermano
+            //sheeeesh
+            //Fuera coñas es una condición de terminación para que siempre acaba en 0
             if (_speed * _lastDirecciton < 0)
             {
                 _speed = 0;
@@ -129,7 +136,9 @@ public class HorizontalComponent : MonoBehaviour
             _speed = 0;
         }
     }
+
     //posible metodo para el sprint
+    //WIP
     public void Sprint(InputAction.CallbackContext context)
     {
         if (context.performed && context.interaction is TapInteraction)
