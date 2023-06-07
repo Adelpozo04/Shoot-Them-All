@@ -33,6 +33,11 @@ public class AttackGeneral : MonoBehaviour
         return _direction;
     }
 
+    protected GameObject GetFather()
+    {
+        return transform.parent.parent.gameObject;
+    }
+
     #endregion
 
     // Start is called before the first frame update

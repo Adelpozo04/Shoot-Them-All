@@ -28,6 +28,11 @@ public class LimitComponent : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(collision.gameObject);
+    }
+
     private int LimitToPoint(Limite limit)
     {
         int points = 0;

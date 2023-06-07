@@ -19,22 +19,18 @@ PrefabInstance:
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
+    - target: {fileID: 2746082936794416086, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: _dashingTime
       value: 0.4
       objectReference: {fileID: 0}
-    - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
+    - target: {fileID: 2746082936794416086, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: _dashingPower
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
+    - target: {fileID: 2746082936794416086, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: _enfriamiento
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4889869500717058693, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
-      propertyPath: _weaponChoque
-      value: 
-      objectReference: {fileID: 1028326999887553363}
     - target: {fileID: 7993799162126593835, guid: 3308d04ae75777f498d8707faee6b042, type: 3}
       propertyPath: _distance
       value: 1
@@ -176,19 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93facb91d5eb7a343a11e04e43b9ed66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _knockBackTime: 0
   _proportionPercentagePerVerticalImpulse: 0.05
---- !u!114 &5055240465980886782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2906058472429661832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9df122bb764b0149aa2de3144765e6a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2745189229847624600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,6 +187,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   percentage: 0
+--- !u!114 &5055240465980886782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2906058472429661832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9df122bb764b0149aa2de3144765e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7418385788369886791 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2326302332677398525, guid: 3308d04ae75777f498d8707faee6b042, type: 3}

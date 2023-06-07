@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 7993799162126593835}
   - component: {fileID: 7993799162126593834}
   - component: {fileID: 2326302332677398525}
-  - component: {fileID: 4889869500717058693}
   - component: {fileID: 827111903224029823}
   m_Layer: 0
   m_Name: Player(aim && dash)
@@ -114,7 +113,6 @@ MonoBehaviour:
   _maxAdditionalSpeedTime: 0.5
   _additionalJumpProportion: 0.332
   _additionalJumps: 2
-  _floor: 0
 --- !u!114 &7993799162126593841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,21 +319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _miArmaActual: {fileID: 2746082936794416086}
---- !u!114 &4889869500717058693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7993799162126593842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72d84f0844f8c1c47b875d262ef400ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enfriamiento: 3
-  _dashingPower: 24
-  _dashingTime: 0.2
 --- !u!96 &827111903224029823
 TrailRenderer:
   serializedVersion: 2
