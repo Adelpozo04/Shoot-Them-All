@@ -30,7 +30,17 @@ public class AttackGeneral : MonoBehaviour
         _direction.x = Mathf.Cos(transform.parent.rotation.eulerAngles.z * Mathf.Deg2Rad);
         _direction.y = Mathf.Sin(transform.parent.rotation.eulerAngles.z * Mathf.Deg2Rad);
 
-        return _direction;
+        if (GetFather().transform.localScale.x < 0)
+        {
+            return -_direction;
+        }
+        else
+        {
+            return _direction;
+        }
+        
+
+        
     }
 
     protected GameObject GetFather()

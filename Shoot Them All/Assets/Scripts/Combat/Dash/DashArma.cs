@@ -74,14 +74,8 @@ public class DashArma : AttackGeneral
 
         _canDash = false;
 
-        if (_fatherTransform.localScale.x < 0)
-        {
-            _myFatherRB.velocity += -direction * _dashingPower;
-        }
-        else
-        {
-            _myFatherRB.velocity += direction * _dashingPower;
-        }
+        _myFatherRB.velocity += direction * _dashingPower;
+        
 
         _myFatherTrailRenderer.emitting = true;
         Debug.Log(direction);
