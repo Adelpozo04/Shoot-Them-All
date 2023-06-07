@@ -457,6 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6b4aa33ef4c7f94ea52784789600aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerKillPoints: 0
 --- !u!114 &1112835733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,9 +1540,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6562643957805159035, guid: 471a2feeb6f8a1a49a02285209881281, type: 3}
+      propertyPath: _speed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562643957805159035, guid: 471a2feeb6f8a1a49a02285209881281, type: 3}
       propertyPath: _bulletPrefab
       value: 
-      objectReference: {fileID: 8045010264843042468, guid: dee240b6ded548b4c8463faa531be77e, type: 3}
+      objectReference: {fileID: 3454523284414691639, guid: 55740dd90c91b834b8cdb86bca9b19ed, type: 3}
+    - target: {fileID: 6562643957805159035, guid: 471a2feeb6f8a1a49a02285209881281, type: 3}
+      propertyPath: _floorLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 7993799162126593841, guid: 471a2feeb6f8a1a49a02285209881281, type: 3}
       propertyPath: m_ActionEvents.Array.data[5].m_PersistentCalls.m_Calls.Array.size
       value: 1

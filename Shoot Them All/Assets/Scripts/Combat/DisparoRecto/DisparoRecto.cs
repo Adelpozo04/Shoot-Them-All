@@ -20,10 +20,14 @@ public class DisparoRecto : AttackGeneral
     private float _distancia;
 
     [SerializeField]
-    private LayerMask _layer;
+    private LayerMask _floorLayer;
 
     [SerializeField]
     private PointsComponent _playerFather;
+
+
+    [Tooltip("Velocidad que lleva la bala ")]
+    [SerializeField] private float _speed;
     #endregion
 
     #region references
@@ -33,6 +37,7 @@ public class DisparoRecto : AttackGeneral
     #endregion
 
     #region properties
+
     private GameObject bullet;
     private int _currentBullets;
     private float _elapsedTime;
@@ -47,14 +52,25 @@ public class DisparoRecto : AttackGeneral
 
     public override void AtaquePrincipal()
     {
-        RaycastHit2D raycast = Physics2D.Raycast(Vector2.zero, AngleToDirection(), _distancia, _layer);
+        RaycastHit2D raycast = Physics2D.Raycast(_playerFather.transform.position, AngleToDirection(), _distancia, _floorLayer);
+
+
         Debug.DrawRay(transform.position, new Vector3(AngleToDirection().x, AngleToDirection().y,0), Color.red, 5);
+
+
         if (_currentBullets > 0 && _canShot && raycast.collider == null)
         {
+            Debug.Log("disparo");
+
             base.AtaquePrincipal();
+
             bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
             bullet.GetComponent<ChoqueBalaComponent>().SetPlayerFather(_playerFather);
             bullet.transform.rotation = transform.rotation;
+
+            bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up.normalized * _speed;
+
+
             _currentBullets--;
             _canShot = false;
             _elapsedTime = 0;

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 998584098490710549}
   - component: {fileID: 4694371831075577545}
   - component: {fileID: 3035588184765587677}
-  - component: {fileID: 147484691257857109}
   m_Layer: 0
   m_Name: Bala Parabolica
   m_TagString: Untagged
@@ -150,16 +149,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb9dc63c7e02504d8430b6d095666b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &147484691257857109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3454523284414691639}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a71857c2b9713e64fb5308d78f352463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _speed: 15
