@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4382065151821858201}
   - component: {fileID: 4668379581296155067}
-  - component: {fileID: -8378381744276565327}
   - component: {fileID: -4258268309016032837}
   - component: {fileID: 7785095293079937410}
+  - component: {fileID: -9055930548930548050}
+  - component: {fileID: 7416282946587863261}
   m_Layer: 0
   m_Name: "Pi\xF1ata2"
   m_TagString: Untagged
@@ -87,18 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-8378381744276565327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3010583664416582109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb9dc63c7e02504d8430b6d095666b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!60 &-4258268309016032837
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -171,3 +160,28 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &-9055930548930548050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010583664416582109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2167c089de943944819c4c138d23ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explotionPrefab: {fileID: 6704433650055654376, guid: 985af645bcc80e04bbe520b0eab609a0, type: 3}
+--- !u!114 &7416282946587863261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010583664416582109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bb9dc63c7e02504d8430b6d095666b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

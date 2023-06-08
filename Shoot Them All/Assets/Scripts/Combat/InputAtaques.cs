@@ -15,6 +15,8 @@ public class InputAtaques : MonoBehaviour
 
     public void AtaquePrincipal(InputAction.CallbackContext contex)
     {
+        Debug.Log("Recibe input");
+
         if (contex.performed)
         {
             _miArmaActual.AtaquePrincipal();
