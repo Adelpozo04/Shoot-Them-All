@@ -22,8 +22,138 @@ MonoBehaviour:
       m_Sprite: {fileID: -2072085487560777475, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
       m_FromMain: 0
       m_SpriteOverride: {fileID: -2072085487560777475, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Platano
+      m_Hash: 1810530796
+      m_Sprite: {fileID: -8739456962506533209, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8739456962506533209, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Ya_Antojaste
+      m_Hash: 1922333325
+      m_Sprite: {fileID: -6458079530820229841, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6458079530820229841, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Vikingo
+      m_Hash: 1789546226
+      m_Sprite: {fileID: -7810434167023838237, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7810434167023838237, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Troll_Face
+      m_Hash: -699087573
+      m_Sprite: {fileID: 2765230310923255005, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2765230310923255005, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Timoteo
+      m_Hash: 1956229507
+      m_Sprite: {fileID: -4066470235821902382, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4066470235821902382, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Super_Heroe
+      m_Hash: 81371334
+      m_Sprite: {fileID: 989941405286252321, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 989941405286252321, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Sombrero_Paja
+      m_Hash: -519258724
+      m_Sprite: {fileID: -7993669957091903908, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7993669957091903908, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Slime
+      m_Hash: -567028036
+      m_Sprite: {fileID: -8780944749181712933, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8780944749181712933, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Pelo_Pincho
+      m_Hash: -1488111840
+      m_Sprite: {fileID: -2228163724653841680, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2228163724653841680, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Payaso
+      m_Hash: -157683194
+      m_Sprite: {fileID: -7976347102904034774, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7976347102904034774, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Parry
+      m_Hash: -1563333903
+      m_Sprite: {fileID: -6469557545459439989, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6469557545459439989, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Omega
+      m_Hash: 923213485
+      m_Sprite: {fileID: -4774223080162823416, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4774223080162823416, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Mighty
+      m_Hash: 2099482679
+      m_Sprite: {fileID: 3795849080494380213, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 3795849080494380213, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Merch_0
+      m_Hash: -1841635578
+      m_Sprite: {fileID: -2072085487560777475, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2072085487560777475, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Lutano
+      m_Hash: 451655013
+      m_Sprite: {fileID: 5569149958708412778, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5569149958708412778, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Gafas
+      m_Hash: -368803261
+      m_Sprite: {fileID: -748253198770808893, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -748253198770808893, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Feder
+      m_Hash: 1223236952
+      m_Sprite: {fileID: 5486447095773402770, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5486447095773402770, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Fanegas
+      m_Hash: 781951199
+      m_Sprite: {fileID: 164959360925380474, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 164959360925380474, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Endless
+      m_Hash: -1561462015
+      m_Sprite: {fileID: -1263065820362055314, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -1263065820362055314, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Elegante
+      m_Hash: 1739679001
+      m_Sprite: {fileID: -2963656957834206124, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2963656957834206124, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Diablo
+      m_Hash: 69154557
+      m_Sprite: {fileID: 4223356821278692642, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4223356821278692642, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Contdown
+      m_Hash: 1465023452
+      m_Sprite: {fileID: 5502611602876986924, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5502611602876986924, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Charlie
+      m_Hash: 610989823
+      m_Sprite: {fileID: -6454173569720526030, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6454173569720526030, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Calvo_Emputado
+      m_Hash: 2003774379
+      m_Sprite: {fileID: 4449339317391394731, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4449339317391394731, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Calamardo
+      m_Hash: 1087959248
+      m_Sprite: {fileID: -5206463073090349089, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5206463073090349089, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+    - m_Name: Hat_Astronauta
+      m_Hash: 677998102
+      m_Sprite: {fileID: -8128499116384563385, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -8128499116384563385, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
     m_FromMain: 0
-    m_EntryOverrideCount: 1
+    m_EntryOverrideCount: 27
   - m_Name: Body
     m_Hash: 2073732236
     m_CategoryList: []
