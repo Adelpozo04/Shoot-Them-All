@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 3115678996279819948}
   - component: {fileID: 7773974089437821504}
   - component: {fileID: 1107856465239018640}
+  - component: {fileID: 8783347004972977928}
   m_Layer: 9
   m_Name: PlayerAnimado
   m_TagString: Untagged
@@ -77,6 +78,18 @@ MonoBehaviour:
       - m_Target: {fileID: 7993799162126593840}
         m_TargetAssemblyTypeName: JumpComponent, Assembly-CSharp
         m_MethodName: Jump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8783347004972977928}
+        m_TargetAssemblyTypeName: EdgeComponet, Assembly-CSharp
+        m_MethodName: ClimbEdge
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -351,6 +364,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerKillPoints: 0
+--- !u!114 &8783347004972977928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7993799162126593842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e4f8b8562b45c041b80ddf9ace038c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ray1Distance: 0.75
+  _ray2OffSetX: 0.5
+  _ray2Length: 0.5
 --- !u!1 &7993799162927697144
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ public class JumpComponent : MonoBehaviour
     Rigidbody2D _rigidBody;
     HorizontalComponent _horizontalComponent;
     AnimatorsManager _animatorsManager;
+    EdgeComponet _edgeComponet;
     #endregion
 
     #region Parameters
@@ -63,6 +64,7 @@ public class JumpComponent : MonoBehaviour
         _foot.localPosition = Vector2.up * -0.1f;
         _animatorsManager = GetComponent<AnimatorsManager>();
         _horizontalComponent = GetComponent<HorizontalComponent>();
+        _edgeComponet = GetComponent<EdgeComponet>();
         _horizontalSpeedInAir = _horizontalComponent.SpeedToAcelerate;
     }
 
@@ -116,7 +118,7 @@ public class JumpComponent : MonoBehaviour
     /// <param name="context"></param>
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.started && _additionalJumps > 0)
+        if (context.started && _additionalJumps > 0 && !_edgeComponet.OnEdge)
         {
             _rigidBody.velocity = Vector2.up * _initialSpeed;
             _floor = false;
