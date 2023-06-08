@@ -79,7 +79,7 @@ public class HorizontalComponent : MonoBehaviour
         _wallBox = Physics2D.BoxCast(_myTransform.position, _wallDetectorBox, 0, Vector2.zero, 0, _layerMask);
         if (Math.Sign(_wallBox.normal.x) == Math.Sign(_lastDirecciton) || _wallBox.normal.x == 0)
         {
-            _rigidbody.position += Vector2.right * Time.fixedDeltaTime * _speed;
+            _rigidbody.velocity = new Vector2(_speed, _rigidbody.velocity.y);
         }
     }
     private void OnDrawGizmos()

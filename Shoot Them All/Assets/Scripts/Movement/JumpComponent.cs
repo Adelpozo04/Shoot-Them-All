@@ -23,9 +23,7 @@ public class JumpComponent : MonoBehaviour
     [SerializeField]
     float _middleJump = 1;
 
-    [Tooltip("Supuesta velocidad a la que se desplaza el objeto en el aire")]
-    [SerializeField]
-    float _horizontalSpeedInAir = 3;
+    float _horizontalSpeedInAir;
 
     [Tooltip("Tiempo que se permite mantener el boton impulsando al jugador")]
     [SerializeField]
