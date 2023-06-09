@@ -172,7 +172,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2167c089de943944819c4c138d23ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explotionPrefab: {fileID: 6704433650055654376, guid: 985af645bcc80e04bbe520b0eab609a0, type: 3}
+  _explotionTime: 3
+  _explotionSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _playerLayer:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!114 &7416282946587863261
 MonoBehaviour:
   m_ObjectHideFlags: 0
