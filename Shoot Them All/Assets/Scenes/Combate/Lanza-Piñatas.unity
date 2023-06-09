@@ -563,7 +563,7 @@ PrefabInstance:
       objectReference: {fileID: 3010583664416582109, guid: 7ad9b3252dc16ea43898f1980876c022, type: 3}
     - target: {fileID: 5957735018295071920, guid: ee21d16728bc36e499e13af91672736e, type: 3}
       propertyPath: _maxBalasInScreen
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6023359354518823037, guid: ee21d16728bc36e499e13af91672736e, type: 3}
       propertyPath: m_IsActive
