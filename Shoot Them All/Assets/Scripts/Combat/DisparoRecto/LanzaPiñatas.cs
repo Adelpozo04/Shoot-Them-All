@@ -42,6 +42,7 @@ public class LanzaPiñatas : AttackGeneral
     private GameObject bullet;
     private int _currentBullets;
     private float _elapsedTime;
+    private int _nextExplotion;
 
     /// <summary>
     /// Indica si se puede disparar en relacion al ENFRIAMIENTO
@@ -72,7 +73,22 @@ public class LanzaPiñatas : AttackGeneral
 
             bullet.GetComponent<Rigidbody2D>().velocity = AngleToDirection() * _speed;
 
-            _shots[_currentBullets] = bullet;
+            _shots[_currentBullets % 3] = bullet;
+            _currentBullets++;
+            _canShot = false;
+            _elapsedTime = 0;
+        }
+        else
+        {
+            _shots[_nextExplotion % 3].GetComponent<ExplotionIgnition>().Explote();
+            _nextExplotion++;
+
+            bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
+            bullet.transform.rotation = transform.rotation;
+
+            bullet.GetComponent<Rigidbody2D>().velocity = AngleToDirection() * _speed;
+
+            _shots[_currentBullets % 3] = bullet;
             _currentBullets++;
             _canShot = false;
             _elapsedTime = 0;
@@ -84,12 +100,17 @@ public class LanzaPiñatas : AttackGeneral
     {
         base.AtaqueSecundario();
 
-        for(int i = 0; i < _currentBullets; i++)
+        for(int i = 0; i < _maxBalasInScreen; i++)
         {
-            _shots[i].GetComponent<ExplotionIgnition>().Explote();
+            if (_shots[i] != null)
+            {
+                _shots[i].GetComponent<ExplotionIgnition>().Explote();
+            }
+            
         }
 
         _currentBullets = 0;
+        _nextExplotion = 0;
 
     }
 
@@ -101,6 +122,7 @@ public class LanzaPiñatas : AttackGeneral
     {
         _animatorsManager = GetComponentInParent<AnimatorsManager>();
         _currentBullets = 0;
+        _nextExplotion = 0;
         _shots = new GameObject[_maxBalasInScreen];
     }
 
