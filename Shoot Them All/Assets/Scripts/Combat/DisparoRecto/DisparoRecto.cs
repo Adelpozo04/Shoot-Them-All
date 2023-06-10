@@ -6,15 +6,10 @@ using UnityEngine.InputSystem;
 
 public class DisparoRecto : AttackGeneral
 {
-
+    [SerializeField]
+    DisparoRectoBeheaviour _disparoRecto;
     #region parameters
-
-    [Tooltip("Número de balas máximas del cargador")]
-    [SerializeField] private int _maxBalas;
-
-    [Tooltip("Tiempo que debe pasar entre un disparo y otro")]
-    [SerializeField] private float _enfriamiento;
-
+    //esta distancia es calculable
     [Tooltip("Distancia a la que se spawnea la bala (para comprobar que no atraviese paredes")]
     [SerializeField]
     private float _distancia;
@@ -24,24 +19,16 @@ public class DisparoRecto : AttackGeneral
 
     [SerializeField]
     private PointsComponent _playerFather;
-
-
-    [Tooltip("Velocidad que lleva la bala ")]
-    [SerializeField] private float _speed;
     #endregion
 
     #region references
+    [SerializeField] private Transform _weaponSpawnPoint;
     [SerializeField] private GameObject _bulletPrefab;
-
-    [SerializeField] private Transform _bulletSpawnPoint;
     #endregion
 
     #region properties
-
-    private GameObject bullet;
-    private int _currentBullets;
-    private float _elapsedTime;
-
+    RaycastHit2D raycast;
+    Vector3 _raycastDir;
     /// <summary>
     /// Indica si se puede disparar en relacion al ENFRIAMIENTO
     /// </summary>
@@ -52,41 +39,26 @@ public class DisparoRecto : AttackGeneral
 
     public override void AtaquePrincipal()
     {
-        RaycastHit2D raycast = Physics2D.Raycast(_playerFather.transform.position, AngleToDirection(), _distancia, _floorLayer);
+        raycast = Physics2D.Raycast(_playerFather.transform.position,_raycastDir , _raycastDir.magnitude, _floorLayer);
 
+        //Debug.DrawRay(transform.position, new Vector3(AngleToDirection().x, AngleToDirection().y,0), Color.red, 5);
 
-        Debug.DrawRay(transform.position, new Vector3(AngleToDirection().x, AngleToDirection().y,0), Color.red, 5);
-
-
-        if (_currentBullets > 0 && _canShot && raycast.collider == null)
+        if(_disparoRecto.ShootCondition() && !raycast)
         {
-            Debug.Log("disparo");
-
             base.AtaquePrincipal();
-
-            bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
-            bullet.GetComponent<ChoqueBalaComponent>().SetPlayerFather(_playerFather);
-            bullet.transform.rotation = transform.rotation;
-
-            bullet.GetComponent<Rigidbody2D>().velocity = bullet.transform.up.normalized * _speed;
-
-
-            _currentBullets--;
-            _canShot = false;
-            _elapsedTime = 0;
+            _disparoRecto.PerfomShoot(_bulletPrefab, _playerFather, _raycastDir);
         }
-        
     }
-
+    //TODO
     public override void AtaqueSecundario()
     {
         base.AtaqueSecundario();
         Recargar();
     }
-
+    //arreglar mas adelante
     private void Recargar()
     {
-        _currentBullets = _maxBalas;
+        //_currentBullets = _maxBalas;
     }
     #endregion
 
@@ -94,22 +66,12 @@ public class DisparoRecto : AttackGeneral
     void Start()
     {
         _animatorsManager = GetComponentInParent<AnimatorsManager>();
-        _currentBullets = _maxBalas;
+        _floorLayer = LayerMask.GetMask("Floor");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!_canShot)
-        {
-            if (_elapsedTime < _enfriamiento)
-            {
-                _elapsedTime += Time.deltaTime;
-            }
-            else
-            {
-                _canShot = true;
-            }
-        }
+        _raycastDir = _weaponSpawnPoint.position - _playerFather.transform.position;
     }
 }
