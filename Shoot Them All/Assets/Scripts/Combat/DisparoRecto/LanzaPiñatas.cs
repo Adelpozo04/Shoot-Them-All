@@ -62,43 +62,46 @@ public class LanzaPiñatas : AttackGeneral
 
         Debug.DrawRay(transform.position, new Vector3(AngleToDirection().x, AngleToDirection().y,0), Color.red, 5);
 
-
-        if (_currentBullets < _maxBalasInScreen && _canShot && raycast.collider == null)
+        if(_canShot && raycast.collider == null)
         {
-            Debug.Log("Entro");
-            base.AtaquePrincipal();
-
-            bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
-            bullet.GetComponent<ExplotionIgnition>().SetPlayerFather(_playerFather);
-            bullet.transform.rotation = transform.rotation;
-
-            bullet.GetComponent<Rigidbody2D>().velocity = AngleToDirection() * _speed;
-
-            _shots[_currentBullets % _maxBalasInScreen] = bullet;
-            _currentBullets++;
-            _canShot = false;
-            _elapsedTime = 0;
-        }
-        else
-        {
-            if(_shots[_nextExplotion % _maxBalasInScreen] != null)
+            if (_currentBullets < _maxBalasInScreen)
             {
-                _shots[_nextExplotion % _maxBalasInScreen].GetComponent<ExplotionIgnition>().Explote();
+                Debug.Log("Entro");
+                base.AtaquePrincipal();
+
+                bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
+                bullet.GetComponent<ExplotionIgnition>().SetPlayerFather(_playerFather);
+                bullet.transform.rotation = transform.rotation;
+
+                bullet.GetComponent<Rigidbody2D>().velocity = AngleToDirection() * _speed;
+
+                _shots[_currentBullets % _maxBalasInScreen] = bullet;
+                _currentBullets++;
+                _canShot = false;
+                _elapsedTime = 0;
             }
-            
-            _nextExplotion++;
+            else
+            {
+                if (_shots[_nextExplotion % _maxBalasInScreen] != null)
+                {
+                    _shots[_nextExplotion % _maxBalasInScreen].GetComponent<ExplotionIgnition>().Explote();
+                }
 
-            bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
-            bullet.GetComponent<ExplotionIgnition>().SetPlayerFather(_playerFather);
-            bullet.transform.rotation = transform.rotation;
+                _nextExplotion++;
 
-            bullet.GetComponent<Rigidbody2D>().velocity = AngleToDirection() * _speed;
+                bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
+                bullet.GetComponent<ExplotionIgnition>().SetPlayerFather(_playerFather);
+                bullet.transform.rotation = transform.rotation;
 
-            _shots[_currentBullets % _maxBalasInScreen] = bullet;
-            _currentBullets++;
-            _canShot = false;
-            _elapsedTime = 0;
+                bullet.GetComponent<Rigidbody2D>().velocity = AngleToDirection() * _speed;
+
+                _shots[_currentBullets % _maxBalasInScreen] = bullet;
+                _currentBullets++;
+                _canShot = false;
+                _elapsedTime = 0;
+            }
         }
+       
         
     }
 
