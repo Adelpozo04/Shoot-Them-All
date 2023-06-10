@@ -40,6 +40,7 @@ public class JumpComponent : MonoBehaviour
     #endregion
 
     #region Properties
+    Vector2 _gravity;
     float _initialSpeed = 4;
     LayerMask _layerMask;
     float _additionalSpeedTime;
@@ -73,20 +74,20 @@ public class JumpComponent : MonoBehaviour
         //calculo de los parametros del salto
         //mas adelante mover al start cuando se hayan fijado los parametros
         _initialSpeed = (2 * _minimumMaxHeith * _horizontalSpeedInAir) / _middleJump;
-        Physics2D.gravity = Vector2.up * -_initialSpeed * (_horizontalSpeedInAir / _middleJump);
+        _gravity = Vector2.up * -_initialSpeed * (_horizontalSpeedInAir / _middleJump);
 
         //Aplicacion de las formulas de aceleracion
         if (!_floor)
         {
             //_rigidBody.position += _rigidBody.velocity * Time.fixedDeltaTime + 0.5f * Physics2D.gravity * Time.fixedDeltaTime * Time.fixedDeltaTime;
-            _rigidBody.velocity += Vector2.up * Physics2D.gravity * Time.fixedDeltaTime;
+            _rigidBody.velocity += Vector2.up * _gravity * Time.fixedDeltaTime;
         }
 
         //Ajuste de Salto
         if (_salto && !_floor && _additionalSpeedTime < _maxAdditionalSpeedTime && _additionalJumps == 1)
         {
             Debug.Log("Mas salto");
-            _rigidBody.velocity += Vector2.down * Physics2D.gravity * Time.fixedDeltaTime * _additionalJumpProportion;
+            _rigidBody.velocity += Vector2.down * _gravity * Time.fixedDeltaTime * _additionalJumpProportion;
             _additionalSpeedTime += Time.fixedDeltaTime;
         }
         _floor = Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask);
