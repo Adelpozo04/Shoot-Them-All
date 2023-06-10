@@ -9,11 +9,6 @@ public class DisparoRecto : AttackGeneral
     [SerializeField]
     DisparoRectoBeheaviour _disparoRecto;
     #region parameters
-    //esta distancia es calculable
-    [Tooltip("Distancia a la que se spawnea la bala (para comprobar que no atraviese paredes")]
-    [SerializeField]
-    private float _distancia;
-
     [SerializeField]
     private LayerMask _floorLayer;
 

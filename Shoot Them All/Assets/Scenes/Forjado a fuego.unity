@@ -1357,10 +1357,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7993799162126593840, guid: 471a2feeb6f8a1a49a02285209881281, type: 3}
-      propertyPath: _lateralFootOffset
-      value: 0.35
-      objectReference: {fileID: 0}
     - target: {fileID: 7993799162126593842, guid: 471a2feeb6f8a1a49a02285209881281, type: 3}
       propertyPath: m_Name
       value: PlayerAnimado

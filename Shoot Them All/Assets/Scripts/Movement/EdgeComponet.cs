@@ -10,8 +10,6 @@ public class EdgeComponet : MonoBehaviour
     Transform _myTransform;
     Rigidbody2D _rb;
     Bounds _bodyBounds;
-
-    LayerMask _edgeLayer;
     LayerMask _floorLayer;
     RaycastHit2D _hit1;
     RaycastHit2D _hit2;
@@ -35,10 +33,9 @@ public class EdgeComponet : MonoBehaviour
     {
         _myTransform = transform;
         _jumpComponent = GetComponent<JumpComponent>();
-        _edgeLayer = LayerMask.GetMask("Edge");
         _floorLayer = LayerMask.GetMask("Floor");
         _rb = GetComponent<Rigidbody2D>();
-        _bodyBounds = GetComponent<BoxCollider2D>().bounds;
+        _bodyBounds = GetComponent<CapsuleCollider2D>().bounds;
     }
 
     // Update is called once per frame
@@ -69,7 +66,7 @@ public class EdgeComponet : MonoBehaviour
     }
     public void ClimbEdge(InputAction.CallbackContext context)
     {
-        if (_hit2 && context.started)
+        if (!_jumpComponent.Floor && _hit2 && context.started)
         {
             _myTransform.position = _hit2.point + Vector2.up * _bodyBounds.extents.y;
         }
