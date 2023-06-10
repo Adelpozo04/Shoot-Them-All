@@ -173,17 +173,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _explotionTime: 3
-  _explotionSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _explotionSprite: {fileID: 21300000, guid: 7c461a9acdbdaa14ea1f5ae40fc9fe79, type: 3}
   _playerLayer:
     useTriggers: 0
-    useLayerMask: 0
+    useLayerMask: 1
     useDepth: 0
     useOutsideDepth: 0
     useNormalAngle: 0
     useOutsideNormalAngle: 0
     layerMask:
       serializedVersion: 2
-      m_Bits: 0
+      m_Bits: 512
     minDepth: 0
     maxDepth: 0
     minNormalAngle: 0

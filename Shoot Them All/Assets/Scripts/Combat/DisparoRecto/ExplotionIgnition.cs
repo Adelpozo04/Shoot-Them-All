@@ -23,6 +23,7 @@ public class ExplotionIgnition : MonoBehaviour
     private Collider2D[] _results;
     private PointsComponent _playerFather;
     private Rigidbody2D _myRigidBody2D;
+    private int _choquesExplosion;
 
     #endregion
 
@@ -45,21 +46,25 @@ public class ExplotionIgnition : MonoBehaviour
         GetComponent<SpriteRenderer>().sprite = _explotionSprite;
         _myRigidBody2D.velocity = Vector2.zero;
         _myRigidBody2D.gravityScale = 0;
-        StartExplotionDamage();
+        _myRigidBody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+        StartCoroutine(StartExplotionDamage());
     }
 
     private IEnumerator StartExplotionDamage()
     {
-        Physics2D.OverlapCircle(transform.position, transform.localScale.x, _playerLayer, _results);
+        _choquesExplosion = Physics2D.OverlapCircle(transform.position, transform.localScale.x, _playerLayer, _results);
 
-        for(int i = 0; i < _results.Length; i++)
+        Debug.Log(_choquesExplosion);
+
+        for (int i = 0; i < _choquesExplosion; i++)
         {
-            _results[i].gameObject.GetComponent<WeaponConsecuenciesComponent>().ApplyConsecuencies(5, gameObject, _playerFather);
+            _results[i].gameObject.GetComponent<WeaponConsecuenciesComponent>().ApplyConsecuencies(15, gameObject, _playerFather);
         }
 
         yield return new WaitForSeconds(_explotionTime);
 
         Destroy(gameObject);
+
         
     }
 
@@ -69,6 +74,7 @@ public class ExplotionIgnition : MonoBehaviour
     void Start()
     {
         _myRigidBody2D = GetComponent<Rigidbody2D>();
+        _results = new Collider2D[4];
     }
 
     // Update is called once per frame

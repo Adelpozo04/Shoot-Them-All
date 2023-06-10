@@ -81,7 +81,11 @@ public class LanzaPiñatas : AttackGeneral
         }
         else
         {
-            _shots[_nextExplotion % _maxBalasInScreen].GetComponent<ExplotionIgnition>().Explote();
+            if(_shots[_nextExplotion % _maxBalasInScreen] != null)
+            {
+                _shots[_nextExplotion % _maxBalasInScreen].GetComponent<ExplotionIgnition>().Explote();
+            }
+            
             _nextExplotion++;
 
             bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
