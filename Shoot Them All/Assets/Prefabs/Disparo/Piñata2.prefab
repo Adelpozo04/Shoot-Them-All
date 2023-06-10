@@ -151,10 +151,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 3
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2167c089de943944819c4c138d23ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explotionTime: 3
+  _explotionTime: 0.5
   _explotionSprite: {fileID: 21300000, guid: 7c461a9acdbdaa14ea1f5ae40fc9fe79, type: 3}
   _playerLayer:
     useTriggers: 0

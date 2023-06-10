@@ -73,7 +73,8 @@ public class LanzaPiñatas : AttackGeneral
                 bullet.GetComponent<ExplotionIgnition>().SetPlayerFather(_playerFather);
                 bullet.transform.rotation = transform.rotation;
 
-                bullet.GetComponent<Rigidbody2D>().velocity = AngleToDirection() * _speed;
+                bullet.GetComponent<Rigidbody2D>().AddForce(AngleToDirection() * _speed,ForceMode2D.Impulse);
+                //bullet.GetComponent<Rigidbody2D>().velocity = AngleToDirection() * _speed;
 
                 _shots[_currentBullets % _maxBalasInScreen] = bullet;
                 _currentBullets++;
@@ -92,8 +93,8 @@ public class LanzaPiñatas : AttackGeneral
                 bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
                 bullet.GetComponent<ExplotionIgnition>().SetPlayerFather(_playerFather);
                 bullet.transform.rotation = transform.rotation;
-
-                bullet.GetComponent<Rigidbody2D>().velocity = AngleToDirection() * _speed;
+                bullet.GetComponent<Rigidbody2D>().AddForce(AngleToDirection() * _speed,ForceMode2D.Impulse);
+                //bullet.GetComponent<Rigidbody2D>().velocity = AngleToDirection() * _speed;
 
                 _shots[_currentBullets % _maxBalasInScreen] = bullet;
                 _currentBullets++;

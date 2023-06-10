@@ -68,7 +68,7 @@ public class DisparoRectoBeheaviour : MonoBehaviour
     /// </summary>
     /// <param name="bulletPrefab"></param>
     /// <param name="player"></param>
-    public void PerfomShoot(GameObject bulletPrefab, PointsComponent player, Vector2 direction)
+    public GameObject PerfomShoot(GameObject bulletPrefab, PointsComponent player, Vector2 direction)
     {
         bullet = Instantiate(bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
         //asignacion de quien proviene el daño
@@ -77,6 +77,7 @@ public class DisparoRectoBeheaviour : MonoBehaviour
         bullet.GetComponent<Rigidbody2D>().velocity = direction.normalized * _speed;
         _currentBullets--;
         _elapsedTime = 0;
+        return bullet;
     }
     public void Reload()
     {
