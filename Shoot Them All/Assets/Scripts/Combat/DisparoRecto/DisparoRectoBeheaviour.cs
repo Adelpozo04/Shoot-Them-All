@@ -12,7 +12,6 @@ public class DisparoRectoBeheaviour : MonoBehaviour
     [Tooltip("Tiempo que debe pasar entre un disparo y otro")]
     [SerializeField] private float _enfriamiento;
 
-
     [Tooltip("Velocidad que lleva la bala ")]
     [SerializeField] private float _speed;
 
@@ -78,5 +77,9 @@ public class DisparoRectoBeheaviour : MonoBehaviour
         bullet.GetComponent<Rigidbody2D>().velocity = direction.normalized * _speed;
         _currentBullets--;
         _elapsedTime = 0;
+    }
+    public void Reload()
+    {
+        _currentBullets = _maxBalas;
     }
 }

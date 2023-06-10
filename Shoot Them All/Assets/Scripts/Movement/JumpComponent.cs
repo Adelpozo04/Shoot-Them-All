@@ -37,6 +37,9 @@ public class JumpComponent : MonoBehaviour
     [Tooltip("Numero de saltos adicionales")]
     [SerializeField]
     int _additionalJumps;
+    [Tooltip("La mitad del ancho de detección de los pies")]
+    [SerializeField]
+    float _lateralFootOffset;
     #endregion
 
     #region Properties
@@ -90,7 +93,10 @@ public class JumpComponent : MonoBehaviour
             _rigidBody.velocity += Vector2.down * _gravity * Time.fixedDeltaTime * _additionalJumpProportion;
             _additionalSpeedTime += Time.fixedDeltaTime;
         }
-        _floor = Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask);
+        //Varios rayos para detectar el suelo
+        _floor = Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask) || 
+            Physics2D.Raycast(_foot.position + Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask) ||
+            Physics2D.Raycast(_foot.position - Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask);
         _animatorsManager?.ChangeFloor(_floor);
         if (!_floor)
         {

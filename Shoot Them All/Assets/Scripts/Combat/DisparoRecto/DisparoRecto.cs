@@ -29,10 +29,7 @@ public class DisparoRecto : AttackGeneral
     #region properties
     RaycastHit2D raycast;
     Vector3 _raycastDir;
-    /// <summary>
-    /// Indica si se puede disparar en relacion al ENFRIAMIENTO
-    /// </summary>
-    private bool _canShot = true;
+
     #endregion
 
     #region methods
@@ -53,12 +50,7 @@ public class DisparoRecto : AttackGeneral
     public override void AtaqueSecundario()
     {
         base.AtaqueSecundario();
-        Recargar();
-    }
-    //arreglar mas adelante
-    private void Recargar()
-    {
-        //_currentBullets = _maxBalas;
+        _disparoRecto.Reload();
     }
     #endregion
 
