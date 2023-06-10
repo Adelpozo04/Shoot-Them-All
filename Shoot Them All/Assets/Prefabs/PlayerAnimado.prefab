@@ -206,6 +206,7 @@ MonoBehaviour:
   _maxAdditionalSpeedTime: 0.5
   _additionalJumpProportion: 0.5
   _additionalJumps: 1
+  _lateralFootOffset: 0.35
 --- !u!114 &7993799162126593834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd016ec1ade9874cb1a9e716eee2ef2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distance: 1
+  _distance: 0.5
   _centroArmaTransform: {fileID: 7993799162927697151}
   _armaTranform: {fileID: 6562643957805159033}
 --- !u!114 &-1244483020728536584
