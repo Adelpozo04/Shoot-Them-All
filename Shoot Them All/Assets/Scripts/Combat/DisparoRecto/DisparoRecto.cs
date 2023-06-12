@@ -4,10 +4,12 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//cambiar el nombre de la clase por cañon
 public class DisparoRecto : AttackGeneral
 {
     [SerializeField]
-    DisparoRectoBeheaviour _disparoRecto;
+    private DisparoRectoBeheaviour _disparoRecto;
+
     #region parameters
     [SerializeField]
     private LayerMask _floorLayer;
@@ -22,16 +24,22 @@ public class DisparoRecto : AttackGeneral
     #endregion
 
     #region properties
-    RaycastHit2D raycast;
-    Vector3 _raycastDir;
 
+    private RaycastHit2D raycast;
+    private Vector3 _raycastDir;
+
+
+    private float _raycastDistance;
     #endregion
 
     #region methods
 
     public override void AtaquePrincipal()
     {
-        raycast = Physics2D.Raycast(_playerFather.transform.position,_raycastDir , _raycastDir.magnitude, _floorLayer);
+
+        _raycastDir = _weaponSpawnPoint.position - _playerFather.transform.position;
+
+        raycast = Physics2D.Raycast(_playerFather.transform.position,_raycastDir , _raycastDistance, _floorLayer);
 
         //Debug.DrawRay(transform.position, new Vector3(AngleToDirection().x, AngleToDirection().y,0), Color.red, 5);
 
@@ -41,6 +49,7 @@ public class DisparoRecto : AttackGeneral
             _disparoRecto.PerfomShoot(_bulletPrefab, _playerFather, _raycastDir);
         }
     }
+
     //TODO
     public override void AtaqueSecundario()
     {
@@ -54,11 +63,10 @@ public class DisparoRecto : AttackGeneral
     {
         _animatorsManager = GetComponentInParent<AnimatorsManager>();
         _floorLayer = LayerMask.GetMask("Floor");
+
+        //para guardar la distancia del raycast
+        _raycastDir = _weaponSpawnPoint.position - _playerFather.transform.position;
+        _raycastDistance = _raycastDir.magnitude;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        _raycastDir = _weaponSpawnPoint.position - _playerFather.transform.position;
-    }
 }
