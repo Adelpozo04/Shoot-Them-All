@@ -414,14 +414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb4e6bd29a518343ab0a11fd449d016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxBalas: 5
-  _enfriamiento: 0.5
-  _speed: 6
-  _floorLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  _bulletSpawnPoint: {fileID: 6562643958734103384}
-  _infiniteAmo: 1
 --- !u!1 &7993799163570303218
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,13 +2095,33 @@ PrefabInstance:
       value: Arma1
       objectReference: {fileID: 0}
     - target: {fileID: 4861267454050266236, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
+      propertyPath: _speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861267454050266236, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
+      propertyPath: _maxBalas
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861267454050266236, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
       propertyPath: _disparoRecto
       value: 
       objectReference: {fileID: 2089973701}
     - target: {fileID: 4861267454050266236, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
+      propertyPath: _enfriamiento
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861267454050266236, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
       propertyPath: _playerFather
       value: 
       objectReference: {fileID: 1107856465239018640}
+    - target: {fileID: 4861267454050266236, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
+      propertyPath: _bulletSpawnPoint
+      value: 
+      objectReference: {fileID: 6562643958734103384}
+    - target: {fileID: 4861267454050266236, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
+      propertyPath: _disparoRectoBehaviour
+      value: 
+      objectReference: {fileID: 2089973701}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
 --- !u!114 &3285689299682280567 stripped
