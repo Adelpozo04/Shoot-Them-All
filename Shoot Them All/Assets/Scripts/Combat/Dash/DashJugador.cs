@@ -37,9 +37,7 @@ public class DashJugador : MonoBehaviour
     #region methods
 
     public void HacerDash(Vector2 direction)
-    {
-        
-
+    {        
         //Llamada a la corrutina
         if (_canDash)
         {
@@ -65,12 +63,6 @@ public class DashJugador : MonoBehaviour
     {
         _myRB = GetComponent<Rigidbody2D>();
         _myTrailRenderer = GetComponent<TrailRenderer>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     //Corrutina que realiza el funcionamiento del dash, aplicando la fuerza sin gravedad por un tiempo limitado

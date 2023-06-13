@@ -6,15 +6,19 @@ using UnityEngine.InputSystem;
 
 public class EdgeComponet : MonoBehaviour
 {
-    JumpComponent _jumpComponent;
-    Transform _myTransform;
-    Rigidbody2D _rb;
-    Bounds _bodyBounds;
-    LayerMask _floorLayer;
-    RaycastHit2D _hit1;
-    RaycastHit2D _hit2;
-    Ray2D _ray1;
-    Ray2D _ray2;
+    private JumpComponent _jumpComponent;
+    private Transform _myTransform;
+    private Rigidbody2D _rb;
+
+    private Bounds _bodyBounds;
+
+    private LayerMask _floorLayer;
+
+    private RaycastHit2D _hit1;
+    private RaycastHit2D _hit2;
+
+    private Ray2D _ray1;
+    private Ray2D _ray2;
 
     [SerializeField]
     float _ray1Distance = 0.5f;
@@ -23,11 +27,15 @@ public class EdgeComponet : MonoBehaviour
     [SerializeField]
     float _ray2Length = 0.5f;
 
+
     bool _onEdge;
+
     public bool OnEdge
     {
         get { return _onEdge; }
     }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,9 +51,12 @@ public class EdgeComponet : MonoBehaviour
     {
         _ray1 = new Ray2D(_myTransform.position, new Vector2(_myTransform.localScale.x,0));
         _hit1 = Physics2D.Raycast(_ray1.origin, _ray1.direction,_ray1Distance, _floorLayer);
+
         _ray2 = new Ray2D(_hit1.point + new Vector2(_ray1.direction.x * _ray2OffSetX,1), Vector2.down * _ray2Length);
         _hit2 = Physics2D.Raycast(_ray2.origin, _ray2.direction, 1, _floorLayer);
+
         _onEdge = _hit1 && _hit2;
+
         if (_onEdge && !_jumpComponent.Floor)
         {
             _rb.velocity = Vector2.zero;

@@ -23,6 +23,7 @@ public class DisparoRectoBeheaviour : MonoBehaviour
 
     [SerializeField] private Transform _bulletSpawnPoint;
     #endregion
+
     #region properties
     private GameObject bullet;
     //se deberia hacer accesible para dar infomacíon de algun tipo
@@ -32,6 +33,8 @@ public class DisparoRectoBeheaviour : MonoBehaviour
     private bool _infiniteAmo;
 
     #endregion
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,21 +50,16 @@ public class DisparoRectoBeheaviour : MonoBehaviour
             _elapsedTime += Time.deltaTime;
         }
     }
+
     /// <summary>
     /// Metodo para las condiciones de disparo normales del disparo recto
     /// </summary>
     /// <returns></returns>
     public bool ShootCondition()
-    {
-        if (!_infiniteAmo)
-        {
-            return _currentBullets > 0 && _elapsedTime > _enfriamiento;
-        }
-        else
-        {
-            return _infiniteAmo && _elapsedTime > _enfriamiento;
-        }
+    {       
+        return _elapsedTime > _enfriamiento && (_infiniteAmo || _currentBullets > 0);
     }
+
     /// <summary>
     /// Instacia la bala del tipo <paramref name="bulletPrefab"/> y le da comportamiento
     /// de disparo recto
@@ -75,8 +73,10 @@ public class DisparoRectoBeheaviour : MonoBehaviour
         bullet.GetComponent<ChoqueBalaComponent>().SetPlayerFather(player);
         bullet.transform.rotation = transform.rotation;
         bullet.GetComponent<Rigidbody2D>().velocity = direction.normalized * _speed;
+
         _currentBullets--;
         _elapsedTime = 0;
+
         return bullet;
     }
     public void Reload()

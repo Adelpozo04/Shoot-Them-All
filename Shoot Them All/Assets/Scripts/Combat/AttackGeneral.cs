@@ -14,6 +14,7 @@ public class AttackGeneral : MonoBehaviour
 
     public virtual void AtaquePrincipal()
     {
+        // funcion base para hacer las animaciones
         _animatorsManager?.TriggerShoot1();
         _animatorsManager?.TriggerShoot();
 
@@ -21,6 +22,7 @@ public class AttackGeneral : MonoBehaviour
 
     public virtual void AtaqueSecundario()
     {
+        // funcion base para hacer las animaciones
         _animatorsManager?.TriggerShoot2();
     }
 
@@ -49,16 +51,4 @@ public class AttackGeneral : MonoBehaviour
     }
 
     #endregion
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

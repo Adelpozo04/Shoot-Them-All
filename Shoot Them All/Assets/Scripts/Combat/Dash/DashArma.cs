@@ -65,11 +65,7 @@ public class DashArma : AttackGeneral
         _myFatherTrailRenderer = _jugador.GetComponent<TrailRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
     private IEnumerator Dash(Vector2 direction)
     {
