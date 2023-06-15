@@ -43,7 +43,7 @@ public class EdgeComponet : MonoBehaviour
         _jumpComponent = GetComponent<JumpComponent>();
         _floorLayer = LayerMask.GetMask("Floor");
         _rb = GetComponent<Rigidbody2D>();
-        _bodyBounds = GetComponent<CapsuleCollider2D>().bounds;
+        _bodyBounds = GetComponent<Collider2D>().bounds;
     }
 
     // Update is called once per frame
