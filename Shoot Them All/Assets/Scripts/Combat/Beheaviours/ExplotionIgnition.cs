@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ExplotionIgnition : MonoBehaviour
 {
-
+    [SerializeField]
+    Transform ps;
     #region parameters
 
     [Tooltip("Tiempo que tarda en desaparecer la explosion")]
@@ -56,6 +57,11 @@ public class ExplotionIgnition : MonoBehaviour
     private IEnumerator StartExplotionDamage()
     {
         _choquesExplosion = Physics2D.OverlapCircle(transform.position, _acitonRange, _playerLayer, _results);
+
+        foreach (var particlesystem in ps.GetComponentsInChildren<ParticleSystem>())
+        {
+            particlesystem.Play();
+        }
 
         Debug.Log(_choquesExplosion + "Explosion");
 
