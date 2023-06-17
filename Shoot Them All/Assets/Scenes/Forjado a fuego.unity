@@ -646,16 +646,16 @@ MonoBehaviour:
   m_JoinAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Join
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 59fabbb5-bb82-48c4-989d-9fe4da1ba80b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 7993799162126593842, guid: 471a2feeb6f8a1a49a02285209881281, type: 3}
+  m_PlayerPrefab: {fileID: 6202089724193138842, guid: 13f99de8e36f4c042b1df5a93be3f499, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -1799,6 +1799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1905056369}
   _playerUIPrefab: {fileID: 8242708995760631849, guid: 55b3308f3fe10154293e754580bc3683, type: 3}
+  _weaponPrefab: {fileID: 3890155791971203699, guid: c52f78e76f933b543a08bcc2050fd309, type: 3}
 --- !u!4 &1459380068
 Transform:
   m_ObjectHideFlags: 0

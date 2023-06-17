@@ -22,8 +22,8 @@ public class LanzaPiñatas : AttackGeneral
     [SerializeField]
     private LayerMask _floorLayer;
 
-    [SerializeField]
-    private PointsComponent _playerFather;
+    //[SerializeField]
+    //private PointsComponent _playerFather;
 
 
     [Tooltip("Velocidad que lleva la bala ")]
@@ -130,7 +130,6 @@ public class LanzaPiñatas : AttackGeneral
     // Start is called before the first frame update
     void Start()
     {
-        _animatorsManager = GetComponentInParent<AnimatorsManager>();
         _currentBullets = 0;
         _nextExplotion = 0;
         _shots = new GameObject[_maxBalasInScreen];

@@ -22,12 +22,9 @@ public class ArmaCañon : AttackGeneral
 
     [Tooltip("Velocidad que lleva la bala ")]
     [SerializeField] private float _speed;
-  
-    [SerializeField]
-    private LayerMask _floorLayer;
 
-    [SerializeField]
-    private PointsComponent _playerFather;
+    //[SerializeField]
+    //private PointsComponent _playerFather;
     #endregion
 
     #region references
@@ -44,13 +41,6 @@ public class ArmaCañon : AttackGeneral
 
     [SerializeField]
     private bool _infiniteAmo;
-
-
-    private RaycastHit2D raycast;
-    private Vector3 _raycastDir;
-
-
-    private float _raycastDistance;
     #endregion
 
     #region methods
@@ -58,14 +48,9 @@ public class ArmaCañon : AttackGeneral
     public override void AtaquePrincipal()
     {
         Debug.Log("ataque 1");
-        _raycastDir = _weaponSpawnPoint.position - _playerFather.transform.position;
-
-        raycast = Physics2D.Raycast(_playerFather.transform.position,_raycastDir , _raycastDistance, _floorLayer);
-
-        //Debug.DrawRay(transform.position, new Vector3(AngleToDirection().x, AngleToDirection().y,0), Color.red, 5);
 
         Debug.Log("condition" + ShootCondition());
-        if(ShootCondition() && !raycast)
+        if(ShootCondition() && !WeaponWallDetector())
         {
             base.AtaquePrincipal();
             _disparoRectoBehaviour.PerfomShoot(_bulletPrefab, _playerFather, _raycastDir,
@@ -84,14 +69,9 @@ public class ArmaCañon : AttackGeneral
     // Start is called before the first frame update
     void Start()
     {
-        _animatorsManager = GetComponentInParent<AnimatorsManager>();
-        _floorLayer = LayerMask.GetMask("Floor");
+        StatMethod();
 
-        //para guardar la distancia del raycast
-        _raycastDir = _weaponSpawnPoint.position - _playerFather.transform.position;
-        _raycastDistance = _raycastDir.magnitude;
-
-
+        _disparoRectoBehaviour = GetComponent<DisparoRectoBeheaviour>();
 
         _elapsedTime = 0;
         _currentBullets = _maxBalas;

@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 3890155791971203698}
   - component: {fileID: 3890155791971203697}
   - component: {fileID: 4861267454050266236}
+  - component: {fileID: 7930944469559887482}
   m_Layer: 0
   m_Name: Arma1
   m_TagString: Untagged
@@ -56,7 +57,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3890155791971203699}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7060075, w: 0.7082044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.29, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
@@ -64,7 +65,7 @@ Transform:
   - {fileID: 3890155791255964499}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -89.822}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3890155791971203697
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -129,10 +130,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3896b996ce8c843a7c16faed19b574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _disparoRecto: {fileID: 0}
+  _disparoRectoBehaviour: {fileID: 0}
+  _maxBalas: 0
+  _enfriamiento: 0
+  _speed: 0
   _floorLayer:
     serializedVersion: 2
     m_Bits: 64
   _playerFather: {fileID: 0}
+  _bulletSpawnPoint: {fileID: 0}
   _weaponSpawnPoint: {fileID: 3890155791255964499}
   _bulletPrefab: {fileID: 8045010264843042468, guid: dee240b6ded548b4c8463faa531be77e, type: 3}
+  _infiniteAmo: 0
+--- !u!114 &7930944469559887482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3890155791971203699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb4e6bd29a518343ab0a11fd449d016, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

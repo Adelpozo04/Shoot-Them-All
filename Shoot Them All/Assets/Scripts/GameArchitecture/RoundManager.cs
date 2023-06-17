@@ -10,6 +10,8 @@ public class RoundManager : MonoBehaviour
     private Transform _spawnPoint;
     [SerializeField]
     private GameObject _playerUIPrefab;
+    [SerializeField]
+    private GameObject _weaponPrefab;
     private void Awake()
     {
 
@@ -31,12 +33,18 @@ public class RoundManager : MonoBehaviour
     public void OnPlayerJoined(PlayerInput player)
     {
         player.transform.position = _spawnPoint.position;
+        //instaciciacion del arma
+        Transform weapon = Instantiate(_weaponPrefab,player.transform.GetChild(1)).transform;
+        player.GetComponent<ApuntadoComponent>().ArmaTransform = weapon;
+        //colocacion de la ui del jugador
         GameObject playerUI = Instantiate(_playerUIPrefab, GameManager.Instance.InfoPlayerTransform);
         playerUI.GetComponent<PlayerUI>().PlayerPercentage = player.GetComponent<PercentageComponent>();
+        //TODO Añadir sprite de arma
+        //Añadir jugaodr a la lista de jugadores del gameManager
         GameManager.Instance.playerList.Add(player);
     }
     public void OnPlayerLeft(PlayerInput player)
     {
-        Debug.Log("Desconectado");
+        GameManager.Instance.playerList.Remove(player);
     }
 }

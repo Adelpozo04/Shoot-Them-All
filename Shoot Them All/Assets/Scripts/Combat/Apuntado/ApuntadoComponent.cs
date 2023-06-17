@@ -23,6 +23,10 @@ public class ApuntadoComponent : MonoBehaviour
    
     [SerializeField]
     private Transform _armaTranform;
+    public Transform ArmaTransform
+    {
+        set { _armaTranform = value; }
+    }
     private Transform _myTransform;
 
     #endregion
@@ -58,7 +62,6 @@ public class ApuntadoComponent : MonoBehaviour
 
         _transform.rotation = Quaternion.Euler(0f, 0f, k);
     }
-
 
     #endregion
 
