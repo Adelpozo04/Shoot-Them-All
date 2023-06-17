@@ -10,6 +10,9 @@ public class ExplotionIgnition : MonoBehaviour
     [Tooltip("Tiempo que tarda en desaparecer la explosion")]
     [SerializeField]
     private float _explotionTime;
+    [Tooltip("Radio de efecto de la explision")]
+    [SerializeField]
+    private float _acitonRange = 1;
     #endregion
 
     #region properties
@@ -52,9 +55,9 @@ public class ExplotionIgnition : MonoBehaviour
 
     private IEnumerator StartExplotionDamage()
     {
-        _choquesExplosion = Physics2D.OverlapCircle(transform.position, transform.localScale.x, _playerLayer, _results);
+        _choquesExplosion = Physics2D.OverlapCircle(transform.position, _acitonRange, _playerLayer, _results);
 
-        Debug.Log(_choquesExplosion);
+        Debug.Log(_choquesExplosion + "Explosion");
 
         for (int i = 0; i < _choquesExplosion; i++)
         {
@@ -81,5 +84,10 @@ public class ExplotionIgnition : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, _acitonRange);
     }
 }

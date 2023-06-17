@@ -22,6 +22,8 @@ public class ArmaCañon : AttackGeneral
     [Tooltip("Velocidad que lleva la bala ")]
     [SerializeField] private float _speed;
 
+    [SerializeField]
+    private bool _infiniteAmo;
     //[SerializeField]
     //private PointsComponent _playerFather;
     #endregion
@@ -38,8 +40,6 @@ public class ArmaCañon : AttackGeneral
     private int _currentBullets;
     private float _elapsedTime;
 
-    [SerializeField]
-    private bool _infiniteAmo;
     #endregion
 
     #region methods
@@ -63,12 +63,21 @@ public class ArmaCañon : AttackGeneral
         base.AtaqueSecundario();
         _disparoRectoBehaviour.Reload(ref _currentBullets,_maxBalas);
     }
+
+    /// <summary>
+    /// Metodo para las condiciones de disparo normales del disparo recto
+    /// </summary>
+    /// <returns></returns>
+    private bool ShootCondition()
+    {
+        return _elapsedTime > _enfriamiento && (_infiniteAmo || _currentBullets > 0);
+    }
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        StatMethod();
+        StartMethod();
 
         _disparoRectoBehaviour = GetComponent<DisparoRectoBeheaviour>();
         _elapsedTime = 0;
@@ -85,12 +94,4 @@ public class ArmaCañon : AttackGeneral
         }
     }
 
-    /// <summary>
-    /// Metodo para las condiciones de disparo normales del disparo recto
-    /// </summary>
-    /// <returns></returns>
-    public bool ShootCondition()
-    {
-        return _elapsedTime > _enfriamiento && (_infiniteAmo || _currentBullets > 0);
-    }
 }

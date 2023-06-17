@@ -70,6 +70,10 @@ public class AttackGeneral : MonoBehaviour
     {
         return transform.parent.parent.gameObject;
     }
+    /// <summary>
+    /// Metodo que lanza el rayo para comprobar si hay un muro delante
+    /// </summary>
+    /// <returns></returns>
     protected bool WeaponWallDetector()
     {
         _raycastDir = _myTransform.position - _player.position;
@@ -78,7 +82,7 @@ public class AttackGeneral : MonoBehaviour
     }
     #endregion
     #region InsertInUnityMethods
-    protected void StatMethod()
+    protected void StartMethod()
     {
         _myTransform = transform;
         _player = transform.parent;

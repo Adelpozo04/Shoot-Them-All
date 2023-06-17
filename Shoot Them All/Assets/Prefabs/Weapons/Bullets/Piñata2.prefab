@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _explotionTime: 0.5
+  _acitonRange: 2
   _explotionSprite: {fileID: 21300000, guid: 7c461a9acdbdaa14ea1f5ae40fc9fe79, type: 3}
   _playerLayer:
     useTriggers: 0
