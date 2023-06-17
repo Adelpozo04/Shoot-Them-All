@@ -83,7 +83,7 @@ public class AttackGeneral : MonoBehaviour
         _myTransform = transform;
         _player = transform.parent;
         _animatorsManager = GetComponentInParent<AnimatorsManager>();
-        _playerFather = GetComponent<PointsComponent>();
+        _playerFather = transform.parent.parent.GetComponent<PointsComponent>();
         _floorLayer = LayerMask.GetMask("Floor");
         _raycastDir = _myTransform.position - _player.position;
     }

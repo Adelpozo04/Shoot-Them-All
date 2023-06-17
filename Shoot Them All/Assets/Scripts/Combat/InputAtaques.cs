@@ -8,8 +8,11 @@ public class InputAtaques : MonoBehaviour
 {
     #region properties
 
-    //por ahora es una referecia pero mas adelante se gestionara por codigo
-    [SerializeField] private AttackGeneral _miArmaActual; 
+    [SerializeField] private AttackGeneral _miArmaActual;
+    public AttackGeneral MiArmaActual
+    {
+        set { _miArmaActual = value; }
+    }
 
     #endregion
 

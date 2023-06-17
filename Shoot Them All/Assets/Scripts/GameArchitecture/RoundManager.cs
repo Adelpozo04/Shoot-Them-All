@@ -36,6 +36,7 @@ public class RoundManager : MonoBehaviour
         //instaciciacion del arma
         Transform weapon = Instantiate(_weaponPrefab,player.transform.GetChild(1)).transform;
         player.GetComponent<ApuntadoComponent>().ArmaTransform = weapon;
+        player.GetComponent<InputAtaques>().MiArmaActual = weapon.GetComponent<AttackGeneral>();
         //colocacion de la ui del jugador
         GameObject playerUI = Instantiate(_playerUIPrefab, GameManager.Instance.InfoPlayerTransform);
         playerUI.GetComponent<PlayerUI>().PlayerPercentage = player.GetComponent<PercentageComponent>();

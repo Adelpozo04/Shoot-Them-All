@@ -131,14 +131,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _disparoRectoBehaviour: {fileID: 0}
-  _maxBalas: 0
-  _enfriamiento: 0
-  _speed: 0
-  _floorLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  _playerFather: {fileID: 0}
-  _bulletSpawnPoint: {fileID: 0}
+  _maxBalas: 5
+  _enfriamiento: 0.2
+  _speed: 4
+  _bulletSpawnPoint: {fileID: 3890155791255964499}
   _weaponSpawnPoint: {fileID: 3890155791255964499}
   _bulletPrefab: {fileID: 8045010264843042468, guid: dee240b6ded548b4c8463faa531be77e, type: 3}
   _infiniteAmo: 0

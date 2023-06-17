@@ -10,7 +10,6 @@ public class ArmaCañon : AttackGeneral
     [SerializeField]
     private DisparoRectoBeheaviour _disparoRectoBehaviour;
 
-
     #region parameters
 
     //mas adelante estos parametros deberian ser cambiados por codigo igual hasta hacer un struct para estos ? ya no hace falta creo
@@ -72,11 +71,10 @@ public class ArmaCañon : AttackGeneral
         StatMethod();
 
         _disparoRectoBehaviour = GetComponent<DisparoRectoBeheaviour>();
-
         _elapsedTime = 0;
         _currentBullets = _maxBalas;
     }
-    
+
 
     // Update is called once per frame
     void Update()

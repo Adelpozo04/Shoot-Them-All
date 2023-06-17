@@ -37,7 +37,7 @@ public class ChoqueBalaComponent : MonoBehaviour
             //Debug.Log("Choco con suelo");
             Destroy(gameObject);
         }
-        if (collision.gameObject.GetComponent<KnockbackComponent>() != null)            // Si la bala colisiona con otro jugador        
+        if (collision.gameObject.GetComponent<KnockbackComponent>() != null && collision.GetComponent<PointsComponent>() != _playerFather)            // Si la bala colisiona con otro jugador        
         {
             collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().ApplyConsecuencies(5, gameObject, _playerFather);
             Destroy(gameObject);
