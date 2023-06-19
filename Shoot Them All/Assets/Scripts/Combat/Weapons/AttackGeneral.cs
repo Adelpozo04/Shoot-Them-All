@@ -19,6 +19,7 @@ public class AttackGeneral : MonoBehaviour
     [Tooltip("Daño del arma")]
     [SerializeField]
     protected int _damage;
+
     #region methods
 
     #region Virutal methods
@@ -83,6 +84,7 @@ public class AttackGeneral : MonoBehaviour
         return raycast;
     }
     #endregion
+
     #region InsertInUnityMethods
     protected void StartMethod()
     {
