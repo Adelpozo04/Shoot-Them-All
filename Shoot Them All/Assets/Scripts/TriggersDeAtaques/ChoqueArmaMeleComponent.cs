@@ -9,7 +9,7 @@ public class ChoqueArmaMeleComponent : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<KnockbackComponent>() != null)            // Si el ataque mele colisiona con otro jugador        
         {
-            collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().ApplyConsecuencies(5, _weapon);
+            //collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().ApplyConsecuencies(5, _weapon);
         }
     }
 }

@@ -16,6 +16,9 @@ public class AttackGeneral : MonoBehaviour
     private RaycastHit2D raycast;
     protected Vector3 _raycastDir;
     private LayerMask _floorLayer;
+    [Tooltip("Daño del arma")]
+    [SerializeField]
+    protected int _damage;
     #region methods
 
     #region Virutal methods
@@ -50,13 +53,12 @@ public class AttackGeneral : MonoBehaviour
 
 
     #region Protected methods
-
     protected Vector2 AngleToDirection()
     {
         Vector2 _direction = new Vector2(Mathf.Cos(transform.parent.rotation.eulerAngles.z * Mathf.Deg2Rad),
                                          Mathf.Sin(transform.parent.rotation.eulerAngles.z * Mathf.Deg2Rad));
         
-        if (GetFather().transform.localScale.x < 0)
+        if (GetPlayer().transform.localScale.x < 0)
         {
             return -_direction;
         }
@@ -66,7 +68,7 @@ public class AttackGeneral : MonoBehaviour
         }
     }
 
-    protected GameObject GetFather()
+    protected GameObject GetPlayer()
     {
         return transform.parent.parent.gameObject;
     }

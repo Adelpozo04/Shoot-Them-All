@@ -10,6 +10,7 @@ public class ChoqueBalaComponent : MonoBehaviour
     private LayerMask _floor;
     private LayerMask _limit;
     private PointsComponent _playerFather;
+    private int _damage;
 
     #endregion
 
@@ -23,6 +24,10 @@ public class ChoqueBalaComponent : MonoBehaviour
         _playerFather = PlayerFather;
         //Intento limites
         Debug.Log(_playerFather.name);
+    }
+    public void SetDamage(int damage)
+    {
+        _damage = damage;
     }
     #endregion
 
@@ -39,7 +44,8 @@ public class ChoqueBalaComponent : MonoBehaviour
         }
         if (collision.gameObject.GetComponent<KnockbackComponent>() != null && collision.GetComponent<PointsComponent>() != _playerFather)            // Si la bala colisiona con otro jugador        
         {
-            collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().ApplyConsecuencies(5, gameObject, _playerFather);
+            collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().
+                ApplyConsecuencies(_damage, GetComponent<Rigidbody2D>().velocity.normalized, _playerFather);
             Destroy(gameObject);
         }
     }

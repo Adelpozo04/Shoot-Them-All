@@ -29,7 +29,8 @@ public class KnockbackComponent : MonoBehaviour
     }
 
     /// <summary>
-    /// Convierte la cantidad de daño recibido en la potencia a recibir
+    /// Convierte la cantidad de daño recibido en la potencia a recibir y el tiempo de duracion del
+    /// knockback
     /// </summary>
     /// <param name="percentage"></param>
     /// <returns></returns>
@@ -38,47 +39,43 @@ public class KnockbackComponent : MonoBehaviour
         _knockBackTime = 0.005f * percentage + 0.1f;
         _verticalImpulse = _proportionPercentagePerVerticalImpulse * percentage;
         return 0.02f * percentage * (float)Math.Log(percentage);
-        //return powerRegulator * percentage;
     }
 
-    /// <summary>
-    /// Ataque balas y dash
-    /// Pasándole el objeto de la colisión y el porcentaje del receptor, llama a los métodos necesarios para realizar el knockback.
-    /// </summary>
-    /// <param name="collision"></param>
-    /// <param name="percentage"></param>
-    public void Knockback(GameObject collision, int percentage)
-    {
-        StartCoroutine(KockBackDisables());
-        Debug.Log("Hay knockback");
-        if (!_myJumpComponent.Floor)        //Si estoy en el aire se realiza el impulso realista
-        {
-            _impulseForce = ConvertDirection(collision) * ConvertPercentageToPower(percentage);
-        }
-        else                                //Si estoy en el suelo se realiza el impulso con el añadido vertical
-        {
-            _impulseForce = ConvertDirection(collision) * ConvertPercentageToPower(percentage) + Vector2.up * _verticalImpulse;
-        }        
-        _myRigidBody2D.velocity = Vector2.zero;
-        _myRigidBody2D.AddForce(_impulseForce, ForceMode2D.Impulse);
+    ///// <summary>
+    ///// Ataque balas y dash
+    ///// Pasándole el objeto de la colisión y el porcentaje del receptor, llama a los métodos necesarios para realizar el knockback.
+    ///// </summary>
+    ///// <param name="collision"></param>
+    ///// <param name="percentage"></param>
+    //public void Knockback(GameObject collision, int percentage)
+    //{
+    //    StartCoroutine(KockBackDisables());
+    //    _impulseForce = ConvertDirection(collision) * ConvertPercentageToPower(percentage);
+    //    if (_myJumpComponent.Floor)        //Si estoy en el aire se realiza el impulso realista
+    //    {
+    //        _impulseForce += Vector2.up * _verticalImpulse;
+    //    }
+    //    _myRigidBody2D.velocity = Vector2.zero;
+    //    _myRigidBody2D.AddForce(_impulseForce, ForceMode2D.Impulse);
 
-    }
+    //}
+
      /// <summary>
-     /// Knockback del ataque mele
+     /// Aplica el kockback al jugadror
+     /// <para></para>
+     /// Lamar siempre a este metodo pasando el vector 2 ya procesado
      /// </summary>
      /// <param name="collision"></param>
      /// <param name="percentage"></param>
     public void Knockback(Vector2 direction, int percentage)
     {
-        Debug.Log("Hay knockback");
-        if (!_myJumpComponent.Floor)        //Si estoy en el aire se realiza el impulso realista
+        StartCoroutine(KockBackDisables());
+        Debug.Log("direccion knockback" + direction);
+        _impulseForce = direction * ConvertPercentageToPower(percentage);
+        if (_myJumpComponent.Floor)        //Si estoy en el aire se realiza el impulso realista
         {
-            _impulseForce = direction * ConvertPercentageToPower(percentage);
+            _impulseForce += Vector2.up * _verticalImpulse;
         }
-        else                                //Si estoy en el suelo se realiza el impulso con el añadido vertical
-        {
-            _impulseForce = direction * ConvertPercentageToPower(percentage) + Vector2.up * _verticalImpulse;
-        } 
         _myRigidBody2D.velocity = Vector2.zero;
         _myRigidBody2D.AddForce(_impulseForce, ForceMode2D.Impulse);
 
@@ -97,7 +94,11 @@ public class KnockbackComponent : MonoBehaviour
     private IEnumerator KockBackDisables()
     {
         _playerInput.actions.Disable();
+        _playerInput.GetComponent<HorizontalComponent>().enabled = false;
+        _playerInput.GetComponent<EdgeComponet>().enabled = false;
         yield return new WaitForSeconds(_knockBackTime);
         _playerInput.actions.Enable();
+        _playerInput.GetComponent<HorizontalComponent>().enabled = true;
+        _playerInput.GetComponent<EdgeComponet>().enabled = true;
     }
 }

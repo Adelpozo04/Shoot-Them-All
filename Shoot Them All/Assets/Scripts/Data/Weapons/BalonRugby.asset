@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c5313dfe5e7844e8464425fed2f19d, type: 3}
+  m_Name: BalonRugby
+  m_EditorClassIdentifier: 
+  Weapon: {fileID: 9062010486112667904, guid: fbd416a6f8cda9f4c860c20a568b0e93, type: 3}
+  NumberInAnimator: 0
+  WeaponSprite: {fileID: 0}

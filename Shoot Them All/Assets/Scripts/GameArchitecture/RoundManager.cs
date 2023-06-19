@@ -11,7 +11,7 @@ public class RoundManager : MonoBehaviour
     [SerializeField]
     private GameObject _playerUIPrefab;
     [SerializeField]
-    private GameObject _weaponPrefab;
+    private WeaponScriptable[]  _weaponsPrefabs;
     private void Awake()
     {
 
@@ -34,13 +34,18 @@ public class RoundManager : MonoBehaviour
     {
         player.transform.position = _spawnPoint.position;
         //instaciciacion del arma
-        Transform weapon = Instantiate(_weaponPrefab,player.transform.GetChild(1)).transform;
+        Transform weapon = Instantiate(_weaponsPrefabs[GameManager.Instance.playerList.Count].Weapon,player.transform.GetChild(1)).transform;
         player.GetComponent<ApuntadoComponent>().ArmaTransform = weapon;
         player.GetComponent<InputAtaques>().MiArmaActual = weapon.GetComponent<AttackGeneral>();
+
         //colocacion de la ui del jugador
         GameObject playerUI = Instantiate(_playerUIPrefab, GameManager.Instance.InfoPlayerTransform);
         playerUI.GetComponent<PlayerUI>().PlayerPercentage = player.GetComponent<PercentageComponent>();
+
+
         //TODO Añadir sprite de arma
+
+
         //Añadir jugaodr a la lista de jugadores del gameManager
         GameManager.Instance.playerList.Add(player);
     }

@@ -103,6 +103,7 @@ MonoBehaviour:
   _disparoParabolico: {fileID: 1807273314531179197}
   _maxBalasInScreen: 3
   _enfriamiento: 1
+  _damage: 15
   _infiniteAmo: 1
   _force: 50
 --- !u!114 &1807273314531179197

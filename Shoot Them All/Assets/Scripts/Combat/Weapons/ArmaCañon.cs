@@ -52,8 +52,9 @@ public class ArmaCañon : AttackGeneral
         if(ShootCondition() && !WeaponWallDetector())
         {
             base.AtaquePrincipal();
-            _disparoRectoBehaviour.PerfomShoot(_bulletPrefab, _playerFather, _raycastDir,
+            GameObject bullet = _disparoRectoBehaviour.PerfomShoot(_bulletPrefab, _playerFather, _raycastDir,
                 _bulletSpawnPoint.position,ref _currentBullets,ref _elapsedTime,_speed);
+            bullet.GetComponent<ChoqueBalaComponent>().SetDamage(_damage);
         }
     }
 

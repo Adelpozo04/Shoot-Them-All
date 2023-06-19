@@ -663,7 +663,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1
+    width: 0.5
     height: 1
 --- !u!224 &1320214490 stripped
 RectTransform:
@@ -1799,7 +1799,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnPoint: {fileID: 1905056369}
   _playerUIPrefab: {fileID: 8242708995760631849, guid: 55b3308f3fe10154293e754580bc3683, type: 3}
-  _weaponPrefab: {fileID: 4089514562777504824, guid: 650a9d006f16a38489b4485e5307ec50, type: 3}
+  _weaponsPrefabs:
+  - {fileID: 11400000, guid: 94a3ce59322f5ce48b27be4cf048c7b5, type: 2}
+  - {fileID: 11400000, guid: eea2d8d8be7959941869610e07476d8f, type: 2}
 --- !u!4 &1459380068
 Transform:
   m_ObjectHideFlags: 0

@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7048344897806403652}
   - component: {fileID: 2940459465771521054}
   - component: {fileID: -4884035382413334043}
-  - component: {fileID: -126311509404719}
+  - component: {fileID: 2042716875276493731}
+  - component: {fileID: 4290302360571483756}
   m_Layer: 0
-  m_Name: ArmaDash
+  m_Name: BalonRugby
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,7 +99,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bae95e19fdd58e448556e5a60e56f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-126311509404719
+  _damage: 10
+  _enfriamiento: 1
+  _dashingPower: 5
+  _dashingTime: 0.2
+--- !u!70 &2042716875276493731
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9062010486112667904}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 2}
+  m_Direction: 0
+--- !u!114 &4290302360571483756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,6 +128,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 9062010486112667904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfc70cbe590fc3a4393db4b4541548ee, type: 3}
+  m_Script: {fileID: 11500000, guid: f160b634010a52842af3edd0b3b102ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

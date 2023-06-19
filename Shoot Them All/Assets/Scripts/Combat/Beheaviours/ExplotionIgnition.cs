@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class ExplotionIgnition : MonoBehaviour
 {
+    #region References
+
     [SerializeField]
     Transform ps;
+    private Transform _myTrasnform;
+    #endregion
     #region parameters
 
     [Tooltip("Tiempo que tarda en desaparecer la explosion")]
@@ -28,6 +32,7 @@ public class ExplotionIgnition : MonoBehaviour
     private PointsComponent _playerFather;
     private Rigidbody2D _myRigidBody2D;
     private int _choquesExplosion;
+    private int _damage = 15;
 
     #endregion
 
@@ -44,7 +49,10 @@ public class ExplotionIgnition : MonoBehaviour
 
 
     #region methods
-
+    public void SetDamage(int damage)
+    {
+        _damage = damage;
+    }
     public void Explote()
     {
         GetComponent<SpriteRenderer>().sprite = _explotionSprite;
@@ -57,17 +65,19 @@ public class ExplotionIgnition : MonoBehaviour
     private IEnumerator StartExplotionDamage()
     {
         _choquesExplosion = Physics2D.OverlapCircle(transform.position, _acitonRange, _playerLayer, _results);
-
+        //reproduccion de particulas
         foreach (var particlesystem in ps.GetComponentsInChildren<ParticleSystem>())
         {
             particlesystem.Play();
         }
 
         Debug.Log(_choquesExplosion + "Explosion");
-
+        //aplicacion de las consecuencias
         for (int i = 0; i < _choquesExplosion; i++)
         {
-            _results[i].gameObject.GetComponent<WeaponConsecuenciesComponent>().ApplyConsecuencies(15, gameObject, _playerFather);
+            Debug.Log((_results[i].transform.position - _myTrasnform.position));
+            _results[i].gameObject.GetComponent<WeaponConsecuenciesComponent>().
+                ApplyConsecuencies(_damage, (_results[i].transform.position - _myTrasnform.position), _playerFather);
         }
 
         yield return new WaitForSeconds(_explotionTime);
@@ -83,6 +93,7 @@ public class ExplotionIgnition : MonoBehaviour
     void Start()
     {
         _myRigidBody2D = GetComponent<Rigidbody2D>();
+        _myTrasnform = transform;
         _results = new Collider2D[4];
     }
 

@@ -23,7 +23,7 @@ public class CallKnockBackComponent : MonoBehaviour
         Debug.Log(collision);
         if (collision.gameObject.GetComponent<KnockbackComponent>() != null)
         {
-            collision.gameObject.GetComponent<KnockbackComponent>().Knockback(this.gameObject, percentage);
+            //collision.gameObject.GetComponent<KnockbackComponent>().Knockback(this.gameObject, percentage);
             Destroy(gameObject);
         }
     }

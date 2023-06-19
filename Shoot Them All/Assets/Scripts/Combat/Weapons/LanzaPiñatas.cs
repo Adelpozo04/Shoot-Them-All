@@ -56,48 +56,9 @@ public class LanzaPiñatas : AttackGeneral
             }
             GameObject proyectile = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, _raycastDir,
                 _bulletSpawnPoint.position, ref _currentBullets, ref _elapsedTime, _force);
+            proyectile.GetComponent<ExplotionIgnition>().SetDamage(_damage);
             _bullets.Enqueue(proyectile.GetComponent<ExplotionIgnition>());
-        }
-        //if(_canShot && WeaponWallDetector())
-        //{
-        //    if (_currentBullets < _maxBalasInScreen)
-        //    {
-        //        Debug.Log("Entro");
-        //        base.AtaquePrincipal();
-
-        //        bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
-        //        bullet.GetComponent<ExplotionIgnition>().SetPlayerFather(_playerFather);
-        //        bullet.transform.rotation = transform.rotation;
-
-        //        bullet.GetComponent<Rigidbody2D>().AddForce(AngleToDirection() * _speed,ForceMode2D.Impulse);
-        //        //bullet.GetComponent<Rigidbody2D>().velocity = AngleToDirection() * _speed;
-
-        //        _shots[_currentBullets % _maxBalasInScreen] = bullet;
-        //        _currentBullets++;
-        //        _canShot = false;
-        //        _elapsedTime = 0;
-        //    }
-        //    else
-        //    {
-        //        if (_shots[_nextExplotion % _maxBalasInScreen] != null)
-        //        {
-        //            _shots[_nextExplotion % _maxBalasInScreen].GetComponent<ExplotionIgnition>().Explote();
-        //        }
-
-        //        _nextExplotion++;
-
-        //        bullet = Instantiate(_bulletPrefab, _bulletSpawnPoint.position, Quaternion.identity);
-        //        bullet.GetComponent<ExplotionIgnition>().SetPlayerFather(_playerFather);
-        //        bullet.transform.rotation = transform.rotation;
-        //        bullet.GetComponent<Rigidbody2D>().AddForce(AngleToDirection() * _speed,ForceMode2D.Impulse);
-
-        //        _shots[_currentBullets % _maxBalasInScreen] = bullet;
-        //        _currentBullets++;
-        //        _canShot = false;
-        //        _elapsedTime = 0;
-        //    }
-        //}
-        
+        } 
     }
 
     public override void AtaqueSecundario()
@@ -107,7 +68,7 @@ public class LanzaPiñatas : AttackGeneral
         {
             _bullets.Dequeue().Explote();
         }
-        Debug.Log(_bullets.Count + " Piñatas");
+        Debug.Log(_bullets.Count + " Piñatas Explotadas");
     }
 
 
@@ -121,7 +82,6 @@ public class LanzaPiñatas : AttackGeneral
     {
         StartMethod();
         _bullets = new Queue<ExplotionIgnition>();
-        //_bullets = new GameObject[_maxBalasInScreen];
     }
 
     // Update is called once per frame
