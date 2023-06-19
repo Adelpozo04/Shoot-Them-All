@@ -24,10 +24,11 @@ public class Hacha1 : AttackGeneral
     [SerializeField] private float _tiempoRegreso;
 
     private float _elapsedTime;
-    private bool _haveWeapon;
+    private int _currentBullets;
     private GameObject _bullet;
     [SerializeField] private DisparoParabolico _disparoParabolico;
     [SerializeField] private GameObject _bulletPrefab;
+    [SerializeField] private int _maxBullets;
 
     #endregion
 
@@ -45,17 +46,31 @@ public class Hacha1 : AttackGeneral
     public override void AtaqueSecundario()
     {
         
-
-        if (_haveWeapon)
+        if (_currentBullets == 1)
         {
             base.AtaqueSecundario();
 
-            //GameObject _bullet = _disparoParabolico.PerfomShoot(_bulletPrefab, , AngleToDirection(), _spawnpointBullet, ,_elapsedTime, _force)
+            GameObject _bullet = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, AngleToDirection(), _spawnpointBullet.position, ref _currentBullets, ref _elapsedTime, _force);
         }
 
     }
 
-    private void ReturnProyectile()
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject == _bullet)
+        {
+            Destroy(collision.gameObject);
+            Recargar();
+        }
+    }
+
+    private void Recargar()
+    {
+        //Activar animacion de recarga
+        _currentBullets = _maxBullets;
+    }
+
+    private void ReturnBullet()
     {
 
     }
@@ -65,15 +80,23 @@ public class Hacha1 : AttackGeneral
     // Start is called before the first frame update
     void Start()
     {
-        _haveWeapon = true;
+        _currentBullets = _maxBullets;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(_elapsedTime > _tiempoRegreso)
+        if(_currentBullets == 0) 
         {
-            _elapsedTime += Time.deltaTime;
+            if (_elapsedTime < _tiempoRegreso)
+            {
+                _elapsedTime += Time.deltaTime;
+            }
+            else
+            {
+                ReturnBullet();
+            }
         }
+        
     }
 }
