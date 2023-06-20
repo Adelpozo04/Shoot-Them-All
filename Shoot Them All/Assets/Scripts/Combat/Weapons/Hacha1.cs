@@ -51,20 +51,12 @@ public class Hacha1 : AttackGeneral
             base.AtaqueSecundario();
 
             GameObject _bullet = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, AngleToDirection(), _spawnpointBullet.position, ref _currentBullets, ref _elapsedTime, _force);
+            _bullet.GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(_playerFather.gameObject);
         }
 
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject == _bullet)
-        {
-            Destroy(collision.gameObject);
-            Recargar();
-        }
-    }
-
-    private void Recargar()
+    public void Recargar()
     {
         //Activar animacion de recarga
         _currentBullets = _maxBullets;
@@ -72,7 +64,7 @@ public class Hacha1 : AttackGeneral
 
     private void ReturnBullet()
     {
-
+        _bullet.GetComponent<FollowWhoThrow>().FollowPlayerWhoThrow();
     }
 
     #endregion
