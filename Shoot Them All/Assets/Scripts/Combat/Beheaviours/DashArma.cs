@@ -41,8 +41,7 @@ public class DashArma : AttackGeneral
     public override void AtaquePrincipal()
     {
         _direction = AngleToDirection();
-
-        
+        base.AtaquePrincipal();
         //Se pide al jugador que haga el dash
 
         if (_canDash)

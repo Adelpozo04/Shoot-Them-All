@@ -21,9 +21,11 @@ public class AtaqueMelee : MonoBehaviour
     [SerializeField]
     private int meshRays;
     [Tooltip("Ancho de la hitbox dinámica")]
+    [Range(0f, 360f)]
     [SerializeField]
     private float _attackWidth;
     [Tooltip("Posicionamiento de la hitbox dinámica en relación al arma")]
+    [Range(-1f, 1f)]
     [SerializeField]
     private float _attackPosition;
     private float _meshAngle;
@@ -41,6 +43,7 @@ public class AtaqueMelee : MonoBehaviour
     [Tooltip("Duración del cuwuldown")]
     [SerializeField]
     private float cooldown;
+    [SerializeField]
     private float thisTime;
     #endregion
 
@@ -119,6 +122,7 @@ public class AtaqueMelee : MonoBehaviour
 
     public void PerformAttack()
     {
+        Debug.Log("tu vieja");
         _weaponCollider.enabled = true;
         thisTime = 0;
     }
@@ -127,17 +131,22 @@ public class AtaqueMelee : MonoBehaviour
     {
         return thisTime > cooldown + timer;
     }
-    #endregion
+    #endregion 
 
     void Start()
     {
         //Asigna el objeto que tiene la hitbox del arma, así como asignar un mesh a las armas en específico
         //y el transform
         _weaponMesh = CreateMesh(_attackWidth, meshRays, _attackPosition, _distance);
-        _myWeapon = transform.GetChild(1).gameObject;
-        _myWeapon.GetComponent<MeshFilter>().mesh = _weaponMesh;
+        //no hace falta localizar el arma ya que el script esta en el arma
+        //_myWeapon = transform.GetChild(0).gameObject;
+        //_myWeapon.GetComponent<MeshFilter>().mesh = _weaponMesh;
+        //_myTransform = transform;
+        //_weaponCollider = _myWeapon.GetComponent<MeshCollider>();
+        //_weaponCollider.sharedMesh = _weaponMesh;
+        GetComponent<MeshFilter>().mesh = _weaponMesh;
         _myTransform = transform;
-        _weaponCollider = _myWeapon.GetComponent<MeshCollider>();
+        _weaponCollider = GetComponent<MeshCollider>();
         _weaponCollider.sharedMesh = _weaponMesh;
     }
 

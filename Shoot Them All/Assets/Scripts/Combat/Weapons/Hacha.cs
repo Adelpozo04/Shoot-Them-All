@@ -14,8 +14,8 @@ public class Hacha : AttackGeneral
     {
         if (ataqueMelee.AttackCondition())
         {
-            ataqueMelee.PerformAttack();
             base.AtaquePrincipal();
+            ataqueMelee.PerformAttack();
         }       
         //queso      
     }
@@ -29,7 +29,7 @@ public class Hacha : AttackGeneral
     // Start is called before the first frame update
     void Start()
     {
-        
+        ataqueMelee = GetComponent<AtaqueMelee>();
     }
 
     // Update is called once per frame
