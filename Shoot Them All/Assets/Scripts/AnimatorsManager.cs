@@ -60,11 +60,11 @@ public class AnimatorsManager : MonoBehaviour
     }
     public void ChangeDirX(float value)
     {
-        _bodyAnimator.SetFloat(DirX, value);
+        _bodyAnimator.SetFloat(DirX, 10 *value);
     }
     public void ChangeDirY(float value)
     {
-        _bodyAnimator.SetFloat(DirY, value);
+        _bodyAnimator.SetFloat(DirY, 10 * value);
     }
     #endregion
     public void SetInflence(float weigth)

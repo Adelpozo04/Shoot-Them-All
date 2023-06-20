@@ -66,8 +66,15 @@ public class ApuntadoComponent : MonoBehaviour
         }
 
         _transform.rotation = Quaternion.Euler(0f, 0f, k);
+        if (_myTransform.localScale.x < 0)
+        {
+            _animatorsManager.ChangeDirY(- direccion.normalized.y);
+        }
+        else
+        {
+            _animatorsManager.ChangeDirY(direccion.normalized.y);
+        }
         _animatorsManager.ChangeDirX(direccion.normalized.x);
-        _animatorsManager.ChangeDirY(direccion.normalized.y);
     }
 
     #endregion
@@ -88,7 +95,7 @@ public class ApuntadoComponent : MonoBehaviour
         //rota el arma, si no hay input, se apunta hacia la derecha de forma predeterminada
         if(_direction != Vector2.zero)
         {
-            _animatorsManager.SetInflence(1);
+            _animatorsManager?.SetInflence(1);
             RotarTransform(_direction * _myTransform.localScale.x,_centroArmaTransform);
         }
         else
