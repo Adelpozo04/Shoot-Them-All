@@ -10,9 +10,8 @@ using UnityEngine.InputSystem;
 public class AtaqueMelee : MonoBehaviour
 {
     #region references
-    private GameObject _myWeapon;
+    [SerializeField]
     private MeshCollider _weaponCollider;
-    private Mesh _weaponMesh;
     #endregion
 
     #region parameters
@@ -24,7 +23,7 @@ public class AtaqueMelee : MonoBehaviour
     [SerializeField]
     private float _attackWidth;
     [Tooltip("Posicionamiento de la hitbox dinámica en relación al arma")]
-    [Range(-1f, 1f)]
+    [Range(-180f, 180f)]
     [SerializeField]
     private float _attackPosition;
     private float _meshAngle;
@@ -39,8 +38,9 @@ public class AtaqueMelee : MonoBehaviour
     [Tooltip("Duración del cuwuldown")]
     [SerializeField]
     private float cooldown;
-    [SerializeField]
     private float thisTime;
+
+    private Mesh _weaponMesh;
     #endregion
 
     #region methods
@@ -59,7 +59,7 @@ public class AtaqueMelee : MonoBehaviour
     {
         Mesh returnMesh = new Mesh();
         _variation = atkWidth / rays;
-        _meshAngle = atkWidth * atkPos;
+        _meshAngle = atkPos;
 
         //Arrays necesarios para crear un mesh
         Vector3[] vertices = new Vector3[rays + 2];
@@ -119,11 +119,11 @@ public class AtaqueMelee : MonoBehaviour
     {
         //Asigna el objeto que tiene la hitbox del arma, así como asignar un mesh a las armas en específico
         //y el transform
-        _weaponMesh = CreateMesh(_attackWidth, meshRays, _attackPosition, _distance);
-        GetComponent<MeshFilter>().mesh = _weaponMesh;
-        _myTransform = transform;
         _weaponCollider = GetComponent<MeshCollider>();
+        _weaponMesh = CreateMesh(_attackWidth, meshRays, _attackPosition, _distance);
+        GetComponent<MeshFilter>().mesh = _weaponMesh;      
         _weaponCollider.sharedMesh = _weaponMesh;
+        thisTime = cooldown + timer + 1;
     }
 
     // Update is called once per frame

@@ -10,7 +10,7 @@ public class AttackGeneral : MonoBehaviour
     protected AnimatorsManager _animatorsManager;
 
     private Transform _player;
-    private Transform _myTransform;
+    protected Transform _myTransform;
     protected PointsComponent _playerFather;
 
     private RaycastHit2D raycast;
@@ -18,7 +18,9 @@ public class AttackGeneral : MonoBehaviour
     private LayerMask _floorLayer;
     [Tooltip("Daño del arma")]
     [SerializeField]
-    protected int _damage;
+    protected int _damagePri;
+    [SerializeField]
+    protected int _damageSec;
 
     #region methods
 

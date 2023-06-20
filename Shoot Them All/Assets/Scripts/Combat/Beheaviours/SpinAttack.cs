@@ -60,8 +60,7 @@ public class SpinAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _myWeapon = transform.GetChild(1).gameObject;
-        _weaponCollider = _myWeapon.GetComponent<MeshCollider>();
+        _weaponCollider = GetComponent<MeshCollider>();
         _currentSpin = _numberSpins + 1;
     }
 

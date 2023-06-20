@@ -5,10 +5,9 @@ using UnityEngine;
 public class Hacha : AttackGeneral
 {
     #region references
-    [SerializeField]
     AtaqueMelee ataqueMelee;
-    [SerializeField]
     SpinAttack spinAttack;
+    MeleeDamageComponent meleeDamage;
     #endregion
 
     #region methods
@@ -16,6 +15,7 @@ public class Hacha : AttackGeneral
     {
         if (ataqueMelee.AttackCondition())
         {
+            meleeDamage.SetDamage(_damagePri);
             base.AtaquePrincipal();
             ataqueMelee.PerformAttack();
         }       
@@ -26,6 +26,7 @@ public class Hacha : AttackGeneral
     {
         if (spinAttack.AttackCondition())
         {
+            meleeDamage.SetDamage(_damageSec);
             base.AtaqueSecundario();
             spinAttack.StartSpin();
         }
@@ -37,6 +38,8 @@ public class Hacha : AttackGeneral
     void Start()
     {
         ataqueMelee = GetComponent<AtaqueMelee>();
+        spinAttack = GetComponent<SpinAttack>();
+        meleeDamage = GetComponent<MeleeDamageComponent>();
     }
 
     // Update is called once per frame

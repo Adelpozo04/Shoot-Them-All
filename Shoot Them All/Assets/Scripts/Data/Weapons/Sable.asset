@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e0c5313dfe5e7844e8464425fed2f19d, type: 3}
-  m_Name: Hacha
+  m_Name: Sable
   m_EditorClassIdentifier: 
   Weapon: {fileID: 3704528760631980638, guid: 5795c262347fa1844a78e9e82241fdae, type: 3}
   _weaponDistance: 0.2

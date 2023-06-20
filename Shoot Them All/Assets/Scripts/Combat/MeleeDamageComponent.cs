@@ -10,7 +10,6 @@ public class MeleeDamageComponent : MonoBehaviour
     #endregion
 
     #region parameters
-    [SerializeField]
     private int _damage;
     #endregion
 
@@ -21,9 +20,14 @@ public class MeleeDamageComponent : MonoBehaviour
         return new Vector2(Mathf.Cos(angRadians), Mathf.Sin(angRadians)).normalized;
     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void SetDamage(int damage)
     {
+        _damage = damage;
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        Debug.Log("y tu padre essssss" + collision);
         if (collision.gameObject.GetComponent<KnockbackComponent>() != null)                   
         {
             collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().

@@ -59,7 +59,7 @@ public class LanzaPiñatas : AttackGeneral
             GameObject proyectile = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, _raycastDir,
                 _bulletSpawnPoint.position, ref _currentBullets, ref _elapsedTime, _force);
 
-            proyectile.GetComponent<ExplotionIgnition>().SetDamage(_damage);
+            proyectile.GetComponent<ExplotionIgnition>().SetDamage(_damagePri);
             _bullets.Enqueue(proyectile.GetComponent<ExplotionIgnition>());
         } 
     }
