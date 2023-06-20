@@ -15,8 +15,11 @@ public class KnockbackComponent : MonoBehaviour
     private float _verticalImpulse;
     [SerializeField]
     private float _knockBackTime;
+
     [Tooltip("Proporción del impulso que se añadira de forma vertical si se está en el suelo")]
-    [Range(0f, 1f)] [SerializeField] float _proportionPercentagePerVerticalImpulse;     // Se puede cambiar a int
+    [Range(0f, 1f)] 
+    [SerializeField] 
+    float _proportionPercentagePerVerticalImpulse;     // Se puede cambiar a int
 
     /// <summary>
     /// Se pasa el enemigo/arma que nos daña para retornar la velocidad del mismo
@@ -63,7 +66,7 @@ public class KnockbackComponent : MonoBehaviour
      /// <summary>
      /// Aplica el kockback al jugadror
      /// <para></para>
-     /// Lamar siempre a este metodo pasando el vector 2 ya procesado
+     /// Llamar siempre a este metodo pasando el vector 2 ya procesado
      /// </summary>
      /// <param name="collision"></param>
      /// <param name="percentage"></param>

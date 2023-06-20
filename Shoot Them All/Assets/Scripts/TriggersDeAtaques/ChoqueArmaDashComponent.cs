@@ -48,7 +48,6 @@ public class ChoqueArmaDashComponent : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.gameObject.GetComponent<KnockbackComponent>() != null)            // Si el arma colisiona con otro jugador        
         {
             collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().

@@ -7,6 +7,8 @@ public class Hacha : AttackGeneral
     #region references
     [SerializeField]
     AtaqueMelee ataqueMelee;
+    [SerializeField]
+    SpinAttack spinAttack;
     #endregion
 
     #region methods
@@ -14,15 +16,20 @@ public class Hacha : AttackGeneral
     {
         if (ataqueMelee.AttackCondition())
         {
-            ataqueMelee.PerformAttack();
             base.AtaquePrincipal();
+            ataqueMelee.PerformAttack();
         }       
         //queso      
     }
 
     public override void AtaqueSecundario()
     {
-        base.AtaqueSecundario();
+        if (spinAttack.AttackCondition())
+        {
+            base.AtaqueSecundario();
+            spinAttack.StartSpin();
+        }
+        
     }
     #endregion
 

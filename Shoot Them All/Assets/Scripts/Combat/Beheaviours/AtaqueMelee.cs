@@ -11,9 +11,8 @@ public class AtaqueMelee : MonoBehaviour
 {
     #region references
     private GameObject _myWeapon;
-    private Mesh _weaponMesh;
-    private Transform _myTransform;
     private MeshCollider _weaponCollider;
+    private Mesh _weaponMesh;
     #endregion
 
     #region parameters
@@ -31,9 +30,6 @@ public class AtaqueMelee : MonoBehaviour
     [Tooltip("Longitud de la hitbox dinámica")]
     [SerializeField]
     private float _distance;
-    [Tooltip("Layermask del suelo")]
-    [SerializeField]
-    private LayerMask _myLayerMask;
 
     [Tooltip("Duración del pollazo")]
     [SerializeField]
@@ -76,21 +72,6 @@ public class AtaqueMelee : MonoBehaviour
 
         for (int i = 0; i <= rays; i++)
         {   
-            /*
-            //Raycast para comprobar la pared
-            RaycastHit2D raycast = Physics2D.Raycast(Vector3.zero, GetVectorFromAngle(_meshAngle + _nextAngle), _distance, _myLayerMask);
-
-            //Si no hay pared, se pone el vector a máxima distancia
-            if (raycast.collider == null)
-            {
-                vertex = GetVectorFromAngle(_meshAngle) * _distance;
-            }
-            //Si hay pared, se pone el vector a la distancia de golpe
-            else
-            {
-                vertex = GetVectorFromAngle(_meshAngle) * _distance;
-            } */
-
             //Se asigna el vector a los vértices
             vertices[vertexIndex] = GetVectorFromAngle(_meshAngle) * dis;
             uv[vertexIndex] = vertices[vertexIndex].normalized;
@@ -121,6 +102,7 @@ public class AtaqueMelee : MonoBehaviour
     {
         _weaponCollider.enabled = true;
         thisTime = 0;
+        _weaponCollider.sharedMesh = _weaponMesh; 
     }
 
     public bool AttackCondition()
@@ -136,7 +118,6 @@ public class AtaqueMelee : MonoBehaviour
         _weaponMesh = CreateMesh(_attackWidth, meshRays, _attackPosition, _distance);
         _myWeapon = transform.GetChild(1).gameObject;
         _myWeapon.GetComponent<MeshFilter>().mesh = _weaponMesh;
-        _myTransform = transform;
         _weaponCollider = _myWeapon.GetComponent<MeshCollider>();
         _weaponCollider.sharedMesh = _weaponMesh;
     }

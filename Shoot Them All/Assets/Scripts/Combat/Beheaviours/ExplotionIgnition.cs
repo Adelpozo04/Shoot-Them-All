@@ -75,16 +75,14 @@ public class ExplotionIgnition : MonoBehaviour
         //aplicacion de las consecuencias
         for (int i = 0; i < _choquesExplosion; i++)
         {
-            Debug.Log((_results[i].transform.position - _myTrasnform.position));
+            Debug.Log(_results[i].transform.position - _myTrasnform.position);
             _results[i].gameObject.GetComponent<WeaponConsecuenciesComponent>().
                 ApplyConsecuencies(_damage, (_results[i].transform.position - _myTrasnform.position), _playerFather);
         }
 
         yield return new WaitForSeconds(_explotionTime);
 
-        Destroy(gameObject);
-
-        
+        Destroy(gameObject);      
     }
 
     #endregion
