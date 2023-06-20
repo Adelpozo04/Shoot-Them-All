@@ -36,6 +36,8 @@ public class RoundManager : MonoBehaviour
         //instaciciacion del arma
         Transform weapon = Instantiate(_weaponsPrefabs[GameManager.Instance.playerList.Count].Weapon,player.transform.GetChild(1)).transform;
         player.GetComponent<ApuntadoComponent>().ArmaTransform = weapon;
+        player.GetComponent<ApuntadoComponent>().Distance = _weaponsPrefabs[GameManager.Instance.playerList.Count]._weaponDistance;
+        player.GetComponent<AnimatorsManager>().ChangeWeaponType(_weaponsPrefabs[GameManager.Instance.playerList.Count].NumberInAnimator);
         player.GetComponent<InputAtaques>().MiArmaActual = weapon.GetComponent<AttackGeneral>();
 
         //colocacion de la ui del jugador

@@ -1800,7 +1800,7 @@ MonoBehaviour:
   _spawnPoint: {fileID: 1905056369}
   _playerUIPrefab: {fileID: 8242708995760631849, guid: 55b3308f3fe10154293e754580bc3683, type: 3}
   _weaponsPrefabs:
-  - {fileID: 11400000, guid: 94a3ce59322f5ce48b27be4cf048c7b5, type: 2}
+  - {fileID: 11400000, guid: 0d2ef0e05915b334cb4e788993a8f170, type: 2}
   - {fileID: 11400000, guid: eea2d8d8be7959941869610e07476d8f, type: 2}
 --- !u!4 &1459380068
 Transform:

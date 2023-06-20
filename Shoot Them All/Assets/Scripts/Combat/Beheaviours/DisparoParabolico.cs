@@ -37,6 +37,7 @@ public class DisparoParabolico : MonoBehaviour
         //{
         //    bullet.transform.localEulerAngles += new Vector3(0, 0, 180);
         //}
+        currentBullets--;
         elapsedTime = 0;
         return bullet;
     }

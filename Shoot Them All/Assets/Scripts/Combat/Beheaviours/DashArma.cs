@@ -41,12 +41,11 @@ public class DashArma : AttackGeneral
     public override void AtaquePrincipal()
     {
         _direction = AngleToDirection();
-
-        
         //Se pide al jugador que haga el dash
 
         if (_canDash)
         {
+            base.AtaquePrincipal();
             StartCoroutine(Dash(_direction));
             _choqueDash.ChangeDamageStage(true);
         }
@@ -57,6 +56,7 @@ public class DashArma : AttackGeneral
 
     void Start()
     {
+        StartMethod();
         _jugador = GetPlayer();
         _myFatherRB = _jugador.GetComponent<Rigidbody2D>();
         _trailRenderer = transform.parent.GetComponent<TrailRenderer>();

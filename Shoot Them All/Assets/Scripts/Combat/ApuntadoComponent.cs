@@ -9,6 +9,10 @@ public class ApuntadoComponent : MonoBehaviour
 
     [Tooltip("Mide la distancia del centro al arma")]
     [SerializeField] private float _distance;
+    public float Distance
+    {
+        set { _distance = value; }
+    }
 
     #endregion
 
@@ -28,6 +32,7 @@ public class ApuntadoComponent : MonoBehaviour
         set { _armaTranform = value; }
     }
     private Transform _myTransform;
+    private AnimatorsManager _animatorsManager;
 
     #endregion
 
@@ -61,6 +66,15 @@ public class ApuntadoComponent : MonoBehaviour
         }
 
         _transform.rotation = Quaternion.Euler(0f, 0f, k);
+        if (_myTransform.localScale.x < 0)
+        {
+            _animatorsManager.ChangeDirY(- direccion.normalized.y);
+        }
+        else
+        {
+            _animatorsManager.ChangeDirY(direccion.normalized.y);
+        }
+        _animatorsManager.ChangeDirX(direccion.normalized.x);
     }
 
     #endregion
@@ -72,6 +86,7 @@ public class ApuntadoComponent : MonoBehaviour
         _myTransform = transform;
         //para separar el arma del centro
         _armaTranform.localPosition = new Vector3 (_distance, 0, 0);
+        _animatorsManager = GetComponent<AnimatorsManager>();
     }
 
     // Update is called once per frame
@@ -80,10 +95,12 @@ public class ApuntadoComponent : MonoBehaviour
         //rota el arma, si no hay input, se apunta hacia la derecha de forma predeterminada
         if(_direction != Vector2.zero)
         {
+            _animatorsManager?.SetInflence(1);
             RotarTransform(_direction * _myTransform.localScale.x,_centroArmaTransform);
         }
         else
         {
+            _animatorsManager?.SetInflence(0);
             RotarTransform(Vector2.right,_centroArmaTransform);
         }       
     }

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: BalonRugby
   m_EditorClassIdentifier: 
   Weapon: {fileID: 9062010486112667904, guid: fbd416a6f8cda9f4c860c20a568b0e93, type: 3}
-  NumberInAnimator: 0
+  _weaponDistance: 0.3
+  NumberInAnimator: 2
   WeaponSprite: {fileID: 0}

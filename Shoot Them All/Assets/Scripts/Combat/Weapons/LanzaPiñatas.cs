@@ -50,12 +50,15 @@ public class LanzaPiñatas : AttackGeneral
         if(ShootCondition() && !WeaponWallDetector())
         {
             base.AtaquePrincipal();
+
             if (_bullets.Count >= _maxBalasInScreen)
             {
                 _bullets.Dequeue().Explote();
             }
+
             GameObject proyectile = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, _raycastDir,
                 _bulletSpawnPoint.position, ref _currentBullets, ref _elapsedTime, _force);
+
             proyectile.GetComponent<ExplotionIgnition>().SetDamage(_damage);
             _bullets.Enqueue(proyectile.GetComponent<ExplotionIgnition>());
         } 
@@ -64,10 +67,20 @@ public class LanzaPiñatas : AttackGeneral
     public override void AtaqueSecundario()
     {
         base.AtaqueSecundario();
+
         while(_bullets.Count > 0)
         {
-            _bullets.Dequeue().Explote();
+            if(_bullets.Peek() != null)
+            {
+                _bullets.Dequeue().Explote();
+            }
+            else
+            {
+                _bullets.Dequeue();
+            }
+            
         }
+
         Debug.Log(_bullets.Count + " Piñatas Explotadas");
     }
 

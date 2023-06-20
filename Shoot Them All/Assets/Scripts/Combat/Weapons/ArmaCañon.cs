@@ -29,9 +29,7 @@ public class ArmaCañon : AttackGeneral
     #endregion
 
     #region references
-    [SerializeField] private Transform _bulletSpawnPoint;
-
-    [SerializeField] private Transform _weaponSpawnPoint;
+    private Transform _myTransform;
     [SerializeField] private GameObject _bulletPrefab;
     #endregion
 
@@ -53,7 +51,7 @@ public class ArmaCañon : AttackGeneral
         {
             base.AtaquePrincipal();
             GameObject bullet = _disparoRectoBehaviour.PerfomShoot(_bulletPrefab, _playerFather, _raycastDir,
-                _bulletSpawnPoint.position,ref _currentBullets,ref _elapsedTime,_speed);
+                _myTransform.position,ref _currentBullets,ref _elapsedTime,_speed);
             bullet.GetComponent<ChoqueBalaComponent>().SetDamage(_damage);
         }
     }
@@ -79,7 +77,7 @@ public class ArmaCañon : AttackGeneral
     void Start()
     {
         StartMethod();
-
+        _myTransform = transform;
         _disparoRectoBehaviour = GetComponent<DisparoRectoBeheaviour>();
         _elapsedTime = 0;
         _currentBullets = _maxBalas;

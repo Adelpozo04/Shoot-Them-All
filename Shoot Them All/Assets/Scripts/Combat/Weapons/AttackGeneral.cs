@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 //Clase padre de las armas
 public class AttackGeneral : MonoBehaviour
 {
-    private AnimatorsManager _animatorsManager;
+    protected AnimatorsManager _animatorsManager;
 
     private Transform _player;
     private Transform _myTransform;
@@ -19,6 +19,7 @@ public class AttackGeneral : MonoBehaviour
     [Tooltip("Daño del arma")]
     [SerializeField]
     protected int _damage;
+
     #region methods
 
     #region Virutal methods
@@ -39,9 +40,9 @@ public class AttackGeneral : MonoBehaviour
 
     private void AnimacionesAtaquePrincipal()
     {
-        // funcion base para hacer las animaciones
+        // funcion base para hacer las animacionesS
+        Debug.Log(_animatorsManager);
         _animatorsManager?.TriggerShoot1();
-        _animatorsManager?.TriggerShoot();
     }
 
     private void AnimacionesAtaqueSecundario()
@@ -83,6 +84,7 @@ public class AttackGeneral : MonoBehaviour
         return raycast;
     }
     #endregion
+
     #region InsertInUnityMethods
     protected void StartMethod()
     {

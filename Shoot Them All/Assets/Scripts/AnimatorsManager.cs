@@ -21,6 +21,10 @@ public class AnimatorsManager : MonoBehaviour
     private int WeaponType = Animator.StringToHash("WeaponType");
     private int Shoot1 = Animator.StringToHash("Shoot1");
     private int Shoot2 = Animator.StringToHash("Shoot2");
+    private int DirX = Animator.StringToHash("DirX");
+    private int DirY = Animator.StringToHash("DirY");
+
+    #region SetParamaters
 
     public void ChangeFloor(bool floor)
     {
@@ -53,5 +57,18 @@ public class AnimatorsManager : MonoBehaviour
     public void TriggerShoot2()
     {
         _weaponAnimator.SetTrigger(Shoot2);
+    }
+    public void ChangeDirX(float value)
+    {
+        _bodyAnimator.SetFloat(DirX, 10 *value);
+    }
+    public void ChangeDirY(float value)
+    {
+        _bodyAnimator.SetFloat(DirY, 10 * value);
+    }
+    #endregion
+    public void SetInflence(float weigth)
+    {
+        _bodyAnimator.SetLayerWeight(_bodyAnimator.GetLayerIndex("Direccion Arma"), weigth);
     }
 }
