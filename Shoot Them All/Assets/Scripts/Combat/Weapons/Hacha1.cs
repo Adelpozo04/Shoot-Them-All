@@ -23,6 +23,7 @@ public class Hacha1 : AttackGeneral
 
     [SerializeField] private float _tiempoRegreso;
 
+    private bool _bulletFollowing = false;
     private float _elapsedTime;
     private int _currentBullets;
     private GameObject _bullet;
@@ -50,8 +51,8 @@ public class Hacha1 : AttackGeneral
         {
             base.AtaqueSecundario();
 
-            GameObject _bullet = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, AngleToDirection(), _spawnpointBullet.position, ref _currentBullets, ref _elapsedTime, _force);
-            _bullet.GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(_playerFather.gameObject);
+            _bullet = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, AngleToDirection(), _spawnpointBullet.position, ref _currentBullets, ref _elapsedTime, _force);
+            _bullet.GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(GetPlayer()); //Cambiar por padre
         }
 
     }
@@ -60,11 +61,13 @@ public class Hacha1 : AttackGeneral
     {
         //Activar animacion de recarga
         _currentBullets = _maxBullets;
+        _bulletFollowing = false;
     }
 
     private void ReturnBullet()
     {
         _bullet.GetComponent<FollowWhoThrow>().FollowPlayerWhoThrow();
+        _bulletFollowing = true;
     }
 
     #endregion
@@ -78,7 +81,7 @@ public class Hacha1 : AttackGeneral
     // Update is called once per frame
     void Update()
     {
-        if(_currentBullets == 0) 
+        if(_currentBullets == 0 && !_bulletFollowing) 
         {
             if (_elapsedTime < _tiempoRegreso)
             {

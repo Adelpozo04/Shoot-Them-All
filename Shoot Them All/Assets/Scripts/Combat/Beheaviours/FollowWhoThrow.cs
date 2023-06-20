@@ -31,7 +31,7 @@ public class FollowWhoThrow : MonoBehaviour
     {
         if(collision.gameObject == _playerWhoThrow)
         {
-            collision.gameObject.GetComponent<Hacha1>().Recargar();
+            collision.gameObject.BroadcastMessage("Recargar"); //Abierto al cambio
             Destroy(gameObject);
         }
     }
@@ -40,7 +40,7 @@ public class FollowWhoThrow : MonoBehaviour
     {
         if (collision.gameObject == _playerWhoThrow)
         {
-            collision.gameObject.GetComponent<Hacha1>().Recargar();
+            collision.gameObject.BroadcastMessage("Recargar"); //Abierto al cambio
             Destroy(gameObject);
         }
     }
@@ -52,9 +52,9 @@ public class FollowWhoThrow : MonoBehaviour
 
     public void FollowPlayerWhoThrow()
     {
+        Debug.Log("Llego");
         _myCollider.isTrigger = true;
         _following = true;
-
     }
 
     #endregion
