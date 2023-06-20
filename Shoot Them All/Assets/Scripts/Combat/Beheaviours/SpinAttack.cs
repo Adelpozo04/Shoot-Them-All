@@ -6,8 +6,7 @@ using UnityEngine;
 public class SpinAttack : MonoBehaviour
 {
     #region references
-    private GameObject _myWeapon;
-    private MeshCollider _weaponCollider;
+    private PolygonCollider2D _weaponCollider;
     #endregion
 
     #region parameters
@@ -36,12 +35,14 @@ public class SpinAttack : MonoBehaviour
         _currentTime = 0;
         coolTimer = 0;
         _weaponCollider.enabled = true;
+        Debug.Log(_weaponCollider.enabled);
     }
 
     private void Oscillate()
     {
         if (_currentSpin == _numberSpins)
         {
+            Debug.Log(_weaponCollider);
             _weaponCollider.enabled = false;
             _currentSpin++;
         }
@@ -60,7 +61,7 @@ public class SpinAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _weaponCollider = GetComponent<MeshCollider>();
+        _weaponCollider = GetComponent<PolygonCollider2D>();
         _currentSpin = _numberSpins + 1;
     }
 

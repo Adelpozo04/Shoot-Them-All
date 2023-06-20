@@ -25,7 +25,7 @@ public class MeleeDamageComponent : MonoBehaviour
         _damage = damage;
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("y tu padre essssss" + collision);
         if (collision.gameObject.GetComponent<KnockbackComponent>() != null)                   

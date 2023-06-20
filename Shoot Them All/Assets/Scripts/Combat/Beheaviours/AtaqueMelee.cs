@@ -11,7 +11,7 @@ public class AtaqueMelee : MonoBehaviour
 {
     #region references
     [SerializeField]
-    private MeshCollider _weaponCollider;
+    private PolygonCollider2D _weaponCollider;
     #endregion
 
     #region parameters
@@ -41,9 +41,21 @@ public class AtaqueMelee : MonoBehaviour
     private float thisTime;
 
     private Mesh _weaponMesh;
+
+    private bool isAttacking;
     #endregion
 
     #region methods
+    private void EstablishCollider()
+    {
+        Vector2[] newPoints = new Vector2[_weaponMesh.vertices.Length];
+        for (int i = 0; i < _weaponMesh.vertices.Length; i++)
+        {
+            newPoints[i] = _weaponMesh.vertices[i];
+        }
+        _weaponCollider.points = newPoints;
+    }
+
     /// <summary>
     /// Método auxiliar para transformar un ángulo en float a un Vector3
     /// </summary>
@@ -105,8 +117,8 @@ public class AtaqueMelee : MonoBehaviour
     {
         Debug.Log("tu vieja");
         _weaponCollider.enabled = true;
+        isAttacking = true;
         thisTime = 0;
-        _weaponCollider.sharedMesh = _weaponMesh; 
     }
 
     public bool AttackCondition()
@@ -119,11 +131,12 @@ public class AtaqueMelee : MonoBehaviour
     {
         //Asigna el objeto que tiene la hitbox del arma, así como asignar un mesh a las armas en específico
         //y el transform
-        _weaponCollider = GetComponent<MeshCollider>();
+        _weaponCollider = GetComponent<PolygonCollider2D>();
         _weaponMesh = CreateMesh(_attackWidth, meshRays, _attackPosition, _distance);
+        EstablishCollider();
         GetComponent<MeshFilter>().mesh = _weaponMesh;      
-        _weaponCollider.sharedMesh = _weaponMesh;
         thisTime = cooldown + timer + 1;
+        isAttacking = false;
     }
 
     // Update is called once per frame
@@ -134,9 +147,10 @@ public class AtaqueMelee : MonoBehaviour
             thisTime += Time.deltaTime;
         }
 
-        if(_weaponCollider.enabled && thisTime > timer)
+        if(isAttacking && thisTime > timer)
         {
             _weaponCollider.enabled = false;
+            isAttacking = false;
         }
     }
 }
