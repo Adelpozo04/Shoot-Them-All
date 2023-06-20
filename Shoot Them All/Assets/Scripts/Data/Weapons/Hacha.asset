@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Hacha
   m_EditorClassIdentifier: 
   Weapon: {fileID: 5054772673225909923, guid: 503502bd8a101d44abb2bb7e40a56729, type: 3}
-  NumberInAnimator: 0
+  _weaponDistance: 0.2
+  NumberInAnimator: 4
   WeaponSprite: {fileID: 0}

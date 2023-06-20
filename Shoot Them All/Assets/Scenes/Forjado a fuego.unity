@@ -579,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9847f39acf75e4d9d1d85e02094bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playersNumber: 1
+  _playersNumber: 2
   _infoPlayerTransform: {fileID: 1320214490}
   playerList: []
 --- !u!4 &577760173
@@ -1800,7 +1800,8 @@ MonoBehaviour:
   _spawnPoint: {fileID: 1905056369}
   _playerUIPrefab: {fileID: 8242708995760631849, guid: 55b3308f3fe10154293e754580bc3683, type: 3}
   _weaponsPrefabs:
-  - {fileID: 11400000, guid: 6773002646663e443b50ea03de73e371, type: 2}
+  - {fileID: 11400000, guid: 0d2ef0e05915b334cb4e788993a8f170, type: 2}
+  - {fileID: 11400000, guid: eea2d8d8be7959941869610e07476d8f, type: 2}
 --- !u!4 &1459380068
 Transform:
   m_ObjectHideFlags: 0

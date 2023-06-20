@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: "Lanzapi\xF1atas"
   m_EditorClassIdentifier: 
   Weapon: {fileID: 4089514562777504824, guid: 650a9d006f16a38489b4485e5307ec50, type: 3}
+  _weaponDistance: 0.5
   NumberInAnimator: 0
   WeaponSprite: {fileID: 0}
