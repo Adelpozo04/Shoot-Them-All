@@ -29,6 +29,11 @@ public class SpinAttack : MonoBehaviour
         return coolTimer > cooldownTime;
     }
 
+    public bool IsAttacking()
+    {
+        return _currentSpin <= _numberSpins;
+    }
+
     public void StartSpin()
     {
         _currentSpin = 1;

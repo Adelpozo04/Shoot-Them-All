@@ -43,6 +43,7 @@ public class AtaqueMelee : MonoBehaviour
     private Mesh _weaponMesh;
 
     private bool isAttacking;
+    public bool IsAttacking { get { return isAttacking; } }
     #endregion
 
     #region methods

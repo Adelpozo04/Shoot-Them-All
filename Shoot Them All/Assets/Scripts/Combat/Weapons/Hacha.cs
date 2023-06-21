@@ -13,7 +13,7 @@ public class Hacha : AttackGeneral
     #region methods
     public override void AtaquePrincipal()
     {
-        if (ataqueMelee.AttackCondition())
+        if (ataqueMelee.AttackCondition() && !spinAttack.IsAttacking())
         {
             meleeDamage.SetDamage(_damagePri);
             base.AtaquePrincipal();
@@ -24,7 +24,7 @@ public class Hacha : AttackGeneral
 
     public override void AtaqueSecundario()
     {
-        if (spinAttack.AttackCondition())
+        if (spinAttack.AttackCondition() && !ataqueMelee.IsAttacking)
         {
             meleeDamage.SetDamage(_damageSec);
             base.AtaqueSecundario();
