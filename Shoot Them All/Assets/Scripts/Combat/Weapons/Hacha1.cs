@@ -26,7 +26,7 @@ public class Hacha1 : AttackGeneral
     private bool _bulletFollowing = false;
     private float _elapsedTime;
     private int _currentBullets;
-    private GameObject _bullet;
+    private GameObject [] _bullets;
     [SerializeField] private DisparoParabolico _disparoParabolico;
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private int _maxBullets;
@@ -47,12 +47,13 @@ public class Hacha1 : AttackGeneral
     public override void AtaqueSecundario()
     {
         
-        if (_currentBullets == 1)
+        if (_currentBullets > 0)
         {
             base.AtaqueSecundario();
 
-            _bullet = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, AngleToDirection(), _spawnpointBullet.position, ref _currentBullets, ref _elapsedTime, _force);
-            _bullet.GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(GetPlayer()); //Cambiar por padre
+            _bullets[_maxBullets - _currentBullets] = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, AngleToDirection(), _spawnpointBullet.position, ref _currentBullets, ref _elapsedTime, _force);
+            _bullets[_maxBullets - _currentBullets].GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(GetPlayer()); //Cambiar por padre
+            
         }
 
     }
@@ -66,8 +67,20 @@ public class Hacha1 : AttackGeneral
 
     private void ReturnBullet()
     {
-        _bullet.GetComponent<FollowWhoThrow>().FollowPlayerWhoThrow();
-        _bulletFollowing = true;
+        for (int i = 0; i < _maxBullets - _currentBullets; i++)
+        {
+            if(_bullets[_currentBullets] != null)
+            {
+                _bullets[_currentBullets].GetComponent<FollowWhoThrow>().FollowPlayerWhoThrow();
+                _bulletFollowing = true;
+            }
+            else
+            {
+                Recargar();
+            }
+        }
+        
+        
     }
 
     #endregion
@@ -76,6 +89,7 @@ public class Hacha1 : AttackGeneral
     void Start()
     {
         _currentBullets = _maxBullets;
+        _bullets = new GameObject[_maxBullets];
     }
 
     // Update is called once per frame
