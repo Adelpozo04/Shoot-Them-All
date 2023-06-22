@@ -9,6 +9,9 @@ public class Hacha1 : AttackGeneral
     [Tooltip("Fuerza con la que sale disparado el arma")]
     [SerializeField] private float _force;
 
+    [Tooltip("Tiempo que tarda en recargar el arma si esta se sale del mapa")]
+    [SerializeField] private float _tiempoRegresoFueraLimites;
+
     #endregion
 
     #region references
@@ -20,8 +23,6 @@ public class Hacha1 : AttackGeneral
     #endregion
 
     #region properties
-
-    [SerializeField] private float _tiempoRegreso;
 
     private bool _bulletFollowing = false;
     private float _elapsedTime;
@@ -51,8 +52,10 @@ public class Hacha1 : AttackGeneral
         {
             base.AtaqueSecundario();
 
+            
             _bullets[_maxBullets - _currentBullets] = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, AngleToDirection(), _spawnpointBullet.position, ref _currentBullets, ref _elapsedTime, _force);
-            _bullets[_maxBullets - _currentBullets].GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(GetPlayer()); //Cambiar por padre
+            _bullets[_maxBullets - (_currentBullets + 1)].GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(GetPlayer()); //Cambiar por padre
+                                                                                                                            //Es un poco chapuza lo de +1 pero sino habria que hacer contador individual aparte
             
         }
 
@@ -61,20 +64,15 @@ public class Hacha1 : AttackGeneral
     public void Recargar()
     {
         //Activar animacion de recarga
-        _currentBullets = _maxBullets;
+        _currentBullets++;
         _bulletFollowing = false;
     }
 
-    private void ReturnBullet()
+    private void RecargaBalaFueraLimites()
     {
         for (int i = 0; i < _maxBullets - _currentBullets; i++)
         {
-            if(_bullets[_currentBullets] != null)
-            {
-                _bullets[_currentBullets].GetComponent<FollowWhoThrow>().FollowPlayerWhoThrow();
-                _bulletFollowing = true;
-            }
-            else
+            if (_bullets[i] == null)
             {
                 Recargar();
             }
@@ -97,13 +95,13 @@ public class Hacha1 : AttackGeneral
     {
         if(_currentBullets == 0 && !_bulletFollowing) 
         {
-            if (_elapsedTime < _tiempoRegreso)
+            if (_elapsedTime < _tiempoRegresoFueraLimites)
             {
                 _elapsedTime += Time.deltaTime;
             }
             else
             {
-                ReturnBullet();
+                RecargaBalaFueraLimites();
             }
         }
         

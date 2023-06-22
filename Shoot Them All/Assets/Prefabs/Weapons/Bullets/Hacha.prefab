@@ -137,3 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _followingSpeed: 3
+  _tiempoRegreso: 5

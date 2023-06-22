@@ -10,6 +10,9 @@ public class FollowWhoThrow : MonoBehaviour
     [Tooltip("How fast the weapon is going to follow the player")]
     [SerializeField] private float _followingSpeed;
 
+    [Tooltip("El tiempo que tarda el arma en regresar a su dueño")]
+    [SerializeField] private float _tiempoRegreso;
+
     #endregion
 
 
@@ -20,6 +23,7 @@ public class FollowWhoThrow : MonoBehaviour
     private Collider2D _myCollider;
     private Vector3 _direction;
     private Rigidbody2D _myRigidBody;
+    private float _elapsedTime = 0;
 
     #endregion
 
@@ -47,6 +51,7 @@ public class FollowWhoThrow : MonoBehaviour
 
     public void RegisterPlayerWhoThrow(GameObject player)
     {
+        Debug.Log("Registrado");
         _playerWhoThrow = player;
     }
 
@@ -76,6 +81,16 @@ public class FollowWhoThrow : MonoBehaviour
             _direction = (_playerWhoThrow.transform.position - transform.position).normalized * _followingSpeed;
             _myRigidBody.velocity = _direction;
         }
+
+        if (_elapsedTime < _tiempoRegreso)
+        {
+            _elapsedTime += Time.deltaTime;
+        }
+        else
+        {
+            FollowPlayerWhoThrow();
+        }
+        
 
     }
 }
