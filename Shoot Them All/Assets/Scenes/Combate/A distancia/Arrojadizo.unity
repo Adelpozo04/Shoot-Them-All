@@ -2231,6 +2231,10 @@ PrefabInstance:
       propertyPath: _tiempoRegresoFueraLimites
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5117993495221333729, guid: 5c37760adf34ef74499eb26a4babd275, type: 3}
+      propertyPath: _speedToAcelerate
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5117993495221333753, guid: 5c37760adf34ef74499eb26a4babd275, type: 3}
       propertyPath: m_Name
       value: Arrojadizo
