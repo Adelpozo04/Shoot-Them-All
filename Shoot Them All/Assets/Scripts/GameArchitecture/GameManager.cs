@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
         get { return _instance; }
     }
     [SerializeField]
-    private int _playersNumber;//hacer estatico
+    static private int _playersNumber;//hacer estatico
     public int PlayersNumber
     {
         get { return _playersNumber; }
@@ -38,7 +38,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        PlayerInput cosa;
+        
     }
 
     // Update is called once per frame

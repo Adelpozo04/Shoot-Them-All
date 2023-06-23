@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.UI;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -13,6 +14,7 @@ public class RoundManager : MonoBehaviour
     private GameObject _playerUIPrefab;
     [SerializeField]
     private WeaponScriptable[]  _weaponsPrefabs;
+
     private void Awake()
     {
 
@@ -37,7 +39,7 @@ public class RoundManager : MonoBehaviour
     }
     public void SetWeapon(WeaponScriptable weapon, int index)
     {
-        _weaponsPrefabs[0] = weapon;
+        _weaponsPrefabs[index] = weapon;
     }
     public void OnPlayerJoined(PlayerInput player)
     {
