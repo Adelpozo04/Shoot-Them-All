@@ -6,6 +6,9 @@ using UnityEngine.UI;
 
 public class PlayerUI : MonoBehaviour
 {
+
+
+
     private PercentageComponent _playerPercentage;
     public PercentageComponent PlayerPercentage
     {
