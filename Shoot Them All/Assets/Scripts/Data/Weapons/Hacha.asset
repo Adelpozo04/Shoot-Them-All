@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c5313dfe5e7844e8464425fed2f19d, type: 3}
   m_Name: Hacha
   m_EditorClassIdentifier: 
-  Weapon: {fileID: 3704528760631980638, guid: 5795c262347fa1844a78e9e82241fdae, type: 3}
-  _weaponDistance: 0
+  Weapon: {fileID: 5054772673225909923, guid: 503502bd8a101d44abb2bb7e40a56729, type: 3}
+  _weaponDistance: 0.2
   NumberInAnimator: 4
   WeaponSprite: {fileID: 0}

@@ -20,6 +20,10 @@ public class FollowWhoThrow : MonoBehaviour
 
     private GameObject _playerWhoThrow;
     private bool _following;
+    public  bool Following
+    {
+        get { return _following; }
+    }
     private Collider2D _myCollider;
     private Vector3 _direction;
     private Rigidbody2D _myRigidBody;
@@ -30,15 +34,6 @@ public class FollowWhoThrow : MonoBehaviour
 
 
     #region methods
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject == _playerWhoThrow)
-        {
-            collision.gameObject.BroadcastMessage("Recargar"); //Abierto al cambio
-            Destroy(gameObject);
-        }
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

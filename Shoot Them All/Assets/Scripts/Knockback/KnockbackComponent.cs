@@ -72,7 +72,10 @@ public class KnockbackComponent : MonoBehaviour
      /// <param name="percentage"></param>
     public void Knockback(Vector2 direction, int percentage)
     {
-        StartCoroutine(KockBackDisables());
+        if (_playerInput != null)
+        {
+            StartCoroutine(KockBackDisables());
+        }
         Debug.Log("direccion knockback" + direction);
         _impulseForce = direction * ConvertPercentageToPower(percentage);
         if (_myJumpComponent.Floor)        //Si estoy en el aire se realiza el impulso realista

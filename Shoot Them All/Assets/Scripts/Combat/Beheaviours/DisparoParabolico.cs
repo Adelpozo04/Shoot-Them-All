@@ -29,6 +29,10 @@ public class DisparoParabolico : MonoBehaviour
         {
             bullet.GetComponent<ExplotionIgnition>().SetPlayerFather(player);
         }
+        if (bulletPrefab.GetComponent<ChoqueArrojadiza>() != null)
+        {
+            bullet.GetComponent<ChoqueArrojadiza>().SetPlayerFather(player);
+        }
         //configuracion de lanzamiento
         bullet.transform.rotation = transform.rotation;
         bullet.GetComponent<Rigidbody2D>().AddForce(direction*force,ForceMode2D.Impulse);

@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChoqueBalaComponent : MonoBehaviour
+public class ChoqueArrojadiza : MonoBehaviour
 {
-
     #region Properties
 
     private LayerMask _floor;
     private LayerMask _limit;
+    private Rigidbody2D _rigidbody;
     private PointsComponent _playerFather;
+    private FollowWhoThrow _followWhoThrow;
     private int _damage;
 
     #endregion
@@ -34,27 +35,35 @@ public class ChoqueBalaComponent : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         LayerMask aux = collision.gameObject.layer;
-
+        //Al chocar con el suelo se para la bala
         if (aux == _floor)
         {
-            //Debug.Log("Choco con suelo");
-            Destroy(gameObject);
+            _rigidbody.isKinematic = true;
+            _rigidbody.velocity = Vector2.zero;
         }
-        if (collision.gameObject.GetComponent<KnockbackComponent>() != null && collision.GetComponent<PointsComponent>() != _playerFather)            // Si la bala colisiona con otro jugador        
+        //Deteccion de golpeo normal
+        if (collision.gameObject.GetComponent<KnockbackComponent>() != null && 
+            collision.GetComponent<PointsComponent>() != _playerFather && !_followWhoThrow.Following)            // Si la bala colisiona con otro jugador        
         {
             collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().
-                ApplyConsecuencies(_damage, GetComponent<Rigidbody2D>().velocity.normalized, _playerFather);
-            Destroy(gameObject);
+                ApplyConsecuencies(_damage, _rigidbody.velocity.normalized, _playerFather);
+            _rigidbody.velocity = Vector2.zero;
         }
     }
-    
+
     #endregion
-
-
-
+    // Start is called before the first frame update
     void Start()
     {
+        _followWhoThrow = GetComponent<FollowWhoThrow>();
         _floor = LayerMask.NameToLayer("Floor");
         _limit = LayerMask.NameToLayer("Limit");
-    }  
+        _rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

@@ -41,13 +41,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2749357364514193876}
   - component: {fileID: 2749357364514193877}
-  - component: {fileID: 2749357364514193867}
   - component: {fileID: 2749357364514193865}
   - component: {fileID: 2749357364514193866}
+  - component: {fileID: 2749357364514193867}
   - component: {fileID: 2749357364514193864}
   - component: {fileID: 2749357364514193871}
   - component: {fileID: 3388968471662313615}
   - component: {fileID: 884143751302631150}
+  - component: {fileID: 6681661824529101890}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -123,20 +124,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2749357364514193867
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2749357364514193878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93facb91d5eb7a343a11e04e43b9ed66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerRegulator: 0.25
-  _proportionPercentagePerVerticalImpulse: 0.05
 --- !u!50 &2749357364514193865
 Rigidbody2D:
   serializedVersion: 4
@@ -184,6 +171,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2749357364514193867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749357364514193878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93facb91d5eb7a343a11e04e43b9ed66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _knockBackTime: 0
+  _proportionPercentagePerVerticalImpulse: 0.05
 --- !u!114 &2749357364514193864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +242,20 @@ MonoBehaviour:
   _foot: {fileID: 2720103625950317444}
   _minimumMaxHeith: 0.75
   _middleJump: 1.5
-  _horizontalSpeedInAir: 1
   _maxAdditionalSpeedTime: 0.5
   _additionalJumpProportion: 0.332
   _additionalJumps: 2
+  _lateralFootOffset: 0
+--- !u!114 &6681661824529101890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2749357364514193878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e496ee8a4800eb44ea799ff59c74fd21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coolDown: 10

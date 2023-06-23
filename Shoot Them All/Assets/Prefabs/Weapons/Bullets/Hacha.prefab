@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 567272442408609380}
   - component: {fileID: 8055724802084716446}
   - component: {fileID: -3981353014138821864}
+  - component: {fileID: 1095143949576750049}
   m_Layer: 0
   m_Name: Hacha
   m_TagString: Untagged
@@ -118,7 +119,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -136,5 +137,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8716ec83a0466c42a200981360a6a9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _followingSpeed: 3
+  _followingSpeed: 10
   _tiempoRegreso: 5
+--- !u!114 &1095143949576750049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6777782951466673763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a54d0a067883594bab4e333af8976b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

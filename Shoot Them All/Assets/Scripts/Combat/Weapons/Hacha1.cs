@@ -28,7 +28,7 @@ public class Hacha1 : AttackGeneral
     private float _elapsedTime;
     private int _currentBullets;
     private GameObject [] _bullets;
-    [SerializeField] private DisparoParabolico _disparoParabolico;
+    private DisparoParabolico _disparoParabolico;
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private int _maxBullets;
 
@@ -48,15 +48,17 @@ public class Hacha1 : AttackGeneral
     public override void AtaqueSecundario()
     {
         
-        if (_currentBullets > 0)
+        if (_currentBullets > 0 && !WeaponWallDetector())
         {
             base.AtaqueSecundario();
 
             
-            _bullets[_maxBullets - _currentBullets] = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, AngleToDirection(), _spawnpointBullet.position, ref _currentBullets, ref _elapsedTime, _force);
+            _bullets[_maxBullets - _currentBullets] = 
+                _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, 
+                AngleToDirection(), _spawnpointBullet.position, ref _currentBullets, ref _elapsedTime, _force);
             _bullets[_maxBullets - (_currentBullets + 1)].GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(GetPlayer()); //Cambiar por padre
-                                                                                                                            //Es un poco chapuza lo de +1 pero sino habria que hacer contador individual aparte
-            
+                                                                                                                              //Es un poco chapuza lo de +1 pero sino habria que hacer contador individual aparte
+            _bullets[_maxBullets - (_currentBullets + 1)].GetComponent<ChoqueArrojadiza>().SetDamage(_damageSec);
         }
 
     }
@@ -77,8 +79,6 @@ public class Hacha1 : AttackGeneral
                 Recargar();
             }
         }
-        
-        
     }
 
     #endregion
@@ -86,8 +86,10 @@ public class Hacha1 : AttackGeneral
     // Start is called before the first frame update
     void Start()
     {
+        StartMethod();
         _currentBullets = _maxBullets;
         _bullets = new GameObject[_maxBullets];
+        _disparoParabolico = GetComponent<DisparoParabolico>();
     }
 
     // Update is called once per frame

@@ -61,8 +61,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272efc46a400d804c952d21288deddf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 4
-  ataqueMelee: {fileID: 0}
+  _damagePri: 0
+  _damageSec: 0
 --- !u!114 &3525883304604187449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,16 +75,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e820f92bd9fe7374887b4406415d96d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _weaponCollider: {fileID: 0}
   meshRays: 20
   _attackWidth: 90
   _attackPosition: 0.5
   _distance: 0.5
-  _myLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
   timer: 0.2
   cooldown: 0.5
-  thisTime: 0
 --- !u!64 &3605439576181548041
 MeshCollider:
   m_ObjectHideFlags: 0
