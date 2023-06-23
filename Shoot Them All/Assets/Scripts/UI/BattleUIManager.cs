@@ -14,6 +14,8 @@ public class BattleUIManager : MonoBehaviour
     [SerializeField] private Image _armaIconoLugar;
     [SerializeField] private Image _armaHabilidad1Lugar;
     [SerializeField] private Image _armaHabilidad2Lugar;
+    [SerializeField] private CopiarseYPegarse _marcoRondas;
+    [SerializeField] private Slider _sliderRondas;
 
     #endregion
 
@@ -24,11 +26,16 @@ public class BattleUIManager : MonoBehaviour
         _percentageText.text = newPercentage.ToString() + "%";
     }
 
-    public void SetIcons(Sprite arma, Sprite habilidad1, Sprite habilidad2)
+    private void SetIcons(Sprite arma, Sprite habilidad1, Sprite habilidad2)
     {
         _armaHabilidad1Lugar.sprite = arma;
         _armaHabilidad1Lugar.sprite = habilidad1;
         _armaHabilidad2Lugar.sprite = habilidad2;
+    }
+
+    public void InicializacionBarra(Sprite arma, Sprite habilidad1, Sprite habilidad2, int _rondasGanadas, int numeroRondas)
+    {
+
     }
 
     #endregion
