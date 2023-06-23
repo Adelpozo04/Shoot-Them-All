@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class MeleeDamageComponent : Choque
 {
-    #region references
-    private Transform _coreTransform;
-    #endregion
-
-
+    private Transform _weaponTransform;
     #region methods
     private Vector2 GetVectorFromAngle(float angle)
     {
@@ -18,12 +14,14 @@ public class MeleeDamageComponent : Choque
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("y tu padre essssss" + collision);
         if (collision.gameObject.GetComponent<KnockbackComponent>() != null)                   
         {
+            Debug.Log("y tu padre essssss" + _playerFather);
+            Debug.Log(_damage);
             collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().
-                ApplyConsecuencies(_damage, GetVectorFromAngle(_coreTransform.rotation.eulerAngles.z), _playerFather);
+                ApplyConsecuencies(_damage, _weaponTransform.position - _playerFather.transform.position, _playerFather);
         }
+        
     }
     #endregion
 
@@ -31,8 +29,8 @@ public class MeleeDamageComponent : Choque
     // Start is called before the first frame update
     void Start()
     {
+        _weaponTransform = transform;
         _playerFather = transform.parent.parent.GetComponent<PointsComponent>();
-        _coreTransform = transform.parent.transform;
     }
 
     // Update is called once per frame

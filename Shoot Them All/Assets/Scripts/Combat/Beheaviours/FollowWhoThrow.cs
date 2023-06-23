@@ -34,7 +34,7 @@ public class FollowWhoThrow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == _playerWhoThrow)
+        if (collision.gameObject == _playerWhoThrow && (_following || _myRigidBody.velocity.magnitude == 0))
         {
             collision.gameObject.BroadcastMessage("Recargar"); //Abierto al cambio
             Destroy(gameObject);

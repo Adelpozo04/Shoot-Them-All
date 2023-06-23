@@ -7,10 +7,11 @@ using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent (typeof (PolygonCollider2D))]
+[RequireComponent (typeof (MeshFilter))]
 public class AtaqueMelee : MonoBehaviour
 {
     #region references
-    [SerializeField]
     private PolygonCollider2D _weaponCollider;
     #endregion
 

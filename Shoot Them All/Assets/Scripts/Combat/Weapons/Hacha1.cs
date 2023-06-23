@@ -16,17 +16,15 @@ public class Hacha1 : AttackGeneral
     #endregion
 
     #region references
-    [SerializeField]
-    AtaqueMelee ataqueMelee;
-
-    [SerializeField] private Transform _spawnpointBullet;
+    private AtaqueMelee ataqueMelee;
+    private Transform _spawnpointBullet;
 
     #endregion
 
     #region properties
-    private float _elapsedTime;
     [SerializeField]
     private float _enfriamiento;
+    private float _elapsedTime;
     private int _currentBullets;
     private float _returnTime;
     private GameObject [] _bullets;
@@ -41,8 +39,8 @@ public class Hacha1 : AttackGeneral
     {
         if (ataqueMelee.AttackCondition() && ShootCondition() && !WeaponWallDetector())
         {
-            ataqueMelee.PerformAttack();
             base.AtaquePrincipal();
+            ataqueMelee.PerformAttack();
         }          
     }
 
@@ -52,13 +50,12 @@ public class Hacha1 : AttackGeneral
         if (ShootCondition() && !WeaponWallDetector() && !ataqueMelee.IsAttacking)
         {
             base.AtaqueSecundario();
-           
             _bullets[_maxBullets - _currentBullets] = 
                 _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, 
                 AngleToDirection(), _spawnpointBullet.position, ref _currentBullets, ref _elapsedTime, _force);
             _bullets[_maxBullets - (_currentBullets + 1)].GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(GetPlayer()); //Cambiar por padre
                                                                                                                               //Es un poco chapuza lo de +1 pero sino habria que hacer contador individual aparte
-            _bullets[_maxBullets - (_currentBullets + 1)].GetComponent<ChoqueArrojadiza>().SetDamage(_damageSec);
+            _bullets[_maxBullets - (_currentBullets + 1)].GetComponent<Choque>().SetDamage(_damageSec);
         }
     }
 
@@ -98,6 +95,8 @@ public class Hacha1 : AttackGeneral
         _elapsedTime = _enfriamiento + 1;
         _returnTime = 0;
         ataqueMelee = GetComponent<AtaqueMelee>();
+        GetComponent<Choque>().SetDamage(_damagePri);
+        _spawnpointBullet = transform;
     }
 
     // Update is called once per frame
