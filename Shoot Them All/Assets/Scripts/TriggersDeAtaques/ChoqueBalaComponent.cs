@@ -2,31 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChoqueBalaComponent : MonoBehaviour
+public class ChoqueBalaComponent : Choque
 {
 
     #region Properties
 
     private LayerMask _floor;
     private LayerMask _limit;
-    private PointsComponent _playerFather;
-    private int _damage;
-
-    #endregion
-
-    #region Get/Set
-    /// <summary>
-    /// Setea al jugador que te ha golpeado en un componente de la propia bala 
-    /// </summary>
-    /// <param name="PlayerFather"></param>
-    public void SetPlayerFather(PointsComponent PlayerFather)
-    {
-        _playerFather = PlayerFather;
-    }
-    public void SetDamage(int damage)
-    {
-        _damage = damage;
-    }
     #endregion
 
     #region methods
@@ -35,9 +17,8 @@ public class ChoqueBalaComponent : MonoBehaviour
     {
         LayerMask aux = collision.gameObject.layer;
 
-        if (aux == _floor)
+        if (aux == _floor || aux == _limit)
         {
-            //Debug.Log("Choco con suelo");
             Destroy(gameObject);
         }
         if (collision.gameObject.GetComponent<KnockbackComponent>() != null && collision.GetComponent<PointsComponent>() != _playerFather)            // Si la bala colisiona con otro jugador        

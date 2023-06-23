@@ -106,6 +106,5 @@ public class Hacha1 : AttackGeneral
                 RecargaBalaFueraLimites();
             }
         }
-        
     }
 }

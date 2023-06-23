@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplotionIgnition : MonoBehaviour
+public class ExplotionIgnition : Choque
 {
     #region References
 
@@ -29,30 +29,13 @@ public class ExplotionIgnition : MonoBehaviour
     private ContactFilter2D _playerLayer;
 
     private Collider2D[] _results;
-    private PointsComponent _playerFather;
     private Rigidbody2D _myRigidBody2D;
     private int _choquesExplosion;
-    private int _damage = 15;
-
-    #endregion
-
-    #region Get/Set
-
-    public void SetPlayerFather(PointsComponent PlayerFather)
-    {
-        _playerFather = PlayerFather;
-        //Intento limites
-        Debug.Log(_playerFather.name);
-    }
 
     #endregion
 
 
     #region methods
-    public void SetDamage(int damage)
-    {
-        _damage = damage;
-    }
     public void Explote()
     {
         GetComponent<SpriteRenderer>().sprite = _explotionSprite;

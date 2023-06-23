@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56300886ccc5ffe4dbc342c6325c0ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 15
+  _damagePri: 5
+  _damageSec: 5
   _bulletPrefab: {fileID: 3010583664416582109, guid: 7ad9b3252dc16ea43898f1980876c022, type: 3}
   _bulletSpawnPoint: {fileID: 1613200108784266960}
   _disparoParabolico: {fileID: 1807273314531179197}

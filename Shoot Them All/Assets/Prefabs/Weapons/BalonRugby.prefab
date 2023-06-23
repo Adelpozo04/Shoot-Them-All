@@ -46,7 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bae95e19fdd58e448556e5a60e56f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 10
+  _damagePri: 5
+  _damageSec: 5
   _enfriamiento: 1
   _dashingPower: 5
   _dashingTime: 0.2

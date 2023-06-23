@@ -63,6 +63,7 @@ public class DashArma : AttackGeneral
         _horizontalComponent = _jugador.GetComponent<HorizontalComponent>();
         _jumpComponent = _jugador.GetComponent<JumpComponent>();
         _edgeComponet = _jugador.GetComponent<EdgeComponet>();
+
         _choqueDash = GetComponent<ChoqueArmaDashComponent>();
         _choqueDash.SetDamage(_damagePri);
         _choqueDash.Player = _jugador;

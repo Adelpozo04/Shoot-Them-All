@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChoqueArmaDashComponent : MonoBehaviour
+public class ChoqueArmaDashComponent : Choque
 {
     #region properties
     //Cachear dede otro lado
@@ -12,24 +12,12 @@ public class ChoqueArmaDashComponent : MonoBehaviour
         set { _player = value; }
     }
     private Collider2D _collider;
-    private PointsComponent _playerFather;
-    private int _damage = 5;
     #endregion
 
     #region methods
-    public void SetDamage(int damage)
-    {
-        _damage = damage;
-    }
     public void ChangeDamageStage(bool inDash)
     {
         _collider.enabled = inDash;
-    }
-    public void SetPlayerFather(PointsComponent PlayerFather)
-    {
-        _playerFather = PlayerFather;
-        //Intento limites
-        Debug.Log(_playerFather.name);
     }
     #endregion
 

@@ -17,7 +17,7 @@ public class DisparoRectoBeheaviour : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
 
         //asignacion de quien proviene el daño
-        bullet.GetComponent<ChoqueBalaComponent>().SetPlayerFather(player);
+        bullet.GetComponent<Choque>().SetPlayerFather(player);
         bullet.transform.rotation = transform.rotation;
         bullet.GetComponent<Rigidbody2D>().velocity = direction.normalized * speed;
 

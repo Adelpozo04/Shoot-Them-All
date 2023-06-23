@@ -19,20 +19,21 @@ public class DisparoParabolico : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
 
-        //igual hace falta hacer un parent component para casos como el de abajo
-        //asignacion de quien proviene el daño
-        if (bullet.GetComponent<ChoqueBalaComponent>() != null)
-        {
-            bullet.GetComponent<ChoqueBalaComponent>().SetPlayerFather(player);
-        }
-        if (bulletPrefab.GetComponent<ExplotionIgnition>() != null)
-        {
-            bullet.GetComponent<ExplotionIgnition>().SetPlayerFather(player);
-        }
-        if (bulletPrefab.GetComponent<ChoqueArrojadiza>() != null)
-        {
-            bullet.GetComponent<ChoqueArrojadiza>().SetPlayerFather(player);
-        }
+        ////igual hace falta hacer un parent component para casos como el de abajo
+        ////asignacion de quien proviene el daño
+        //if (bullet.GetComponent<ChoqueBalaComponent>() != null)
+        //{
+        //    bullet.GetComponent<ChoqueBalaComponent>().SetPlayerFather(player);
+        //}
+        //if (bulletPrefab.GetComponent<ExplotionIgnition>() != null)
+        //{
+        //    bullet.GetComponent<ExplotionIgnition>().SetPlayerFather(player);
+        //}
+        //if (bulletPrefab.GetComponent<ChoqueArrojadiza>() != null)
+        //{
+        //    bullet.GetComponent<ChoqueArrojadiza>().SetPlayerFather(player);
+        //}
+        bullet.GetComponent<Choque>().SetPlayerFather(player);
         //configuracion de lanzamiento
         bullet.transform.rotation = transform.rotation;
         bullet.GetComponent<Rigidbody2D>().AddForce(direction*force,ForceMode2D.Impulse);
