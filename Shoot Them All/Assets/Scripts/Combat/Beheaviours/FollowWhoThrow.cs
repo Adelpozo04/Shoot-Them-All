@@ -15,7 +15,6 @@ public class FollowWhoThrow : MonoBehaviour
 
     #endregion
 
-
     #region properties
 
     private GameObject _playerWhoThrow;
@@ -30,8 +29,6 @@ public class FollowWhoThrow : MonoBehaviour
     private float _elapsedTime = 0;
 
     #endregion
-
-
 
     #region methods
 
