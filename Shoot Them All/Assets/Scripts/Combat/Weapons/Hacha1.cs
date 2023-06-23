@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Hacha1 : AttackGeneral
@@ -23,9 +24,11 @@ public class Hacha1 : AttackGeneral
     #endregion
 
     #region properties
-
     private float _elapsedTime;
+    [SerializeField]
+    private float _enfriamiento;
     private int _currentBullets;
+    private float _returnTime;
     private GameObject [] _bullets;
     private DisparoParabolico _disparoParabolico;
     [SerializeField] private GameObject _bulletPrefab;
@@ -36,7 +39,7 @@ public class Hacha1 : AttackGeneral
     #region methods
     public override void AtaquePrincipal()
     {
-        if (ataqueMelee.AttackCondition() && _currentBullets > 0 && !WeaponWallDetector())
+        if (ataqueMelee.AttackCondition() && ShootCondition() && !WeaponWallDetector())
         {
             ataqueMelee.PerformAttack();
             base.AtaquePrincipal();
@@ -46,7 +49,7 @@ public class Hacha1 : AttackGeneral
     public override void AtaqueSecundario()
     {
         
-        if (_currentBullets > 0 && !WeaponWallDetector())
+        if (ShootCondition() && !WeaponWallDetector() && !ataqueMelee.IsAttacking)
         {
             base.AtaqueSecundario();
            
@@ -61,8 +64,10 @@ public class Hacha1 : AttackGeneral
 
     public void Recargar()
     {
-        //Activar animacion de recarga
-        _currentBullets++;
+        if (_currentBullets < _maxBullets)
+        {
+            _currentBullets++;
+        }
     }
 
     private void RecargaBalaFueraLimites()
@@ -72,11 +77,15 @@ public class Hacha1 : AttackGeneral
             if (_bullets[i] == null)
             {
                 Recargar();
-                _elapsedTime = 0;
+                _returnTime = 0;
             }
         }        
     }
 
+    private bool ShootCondition()
+    {
+        return _currentBullets > 0 && _elapsedTime > _enfriamiento;
+    }
     #endregion
 
     // Start is called before the first frame update
@@ -86,16 +95,25 @@ public class Hacha1 : AttackGeneral
         _currentBullets = _maxBullets;
         _bullets = new GameObject[_maxBullets];
         _disparoParabolico = GetComponent<DisparoParabolico>();
+        _elapsedTime = _enfriamiento + 1;
+        _returnTime = 0;
+        ataqueMelee = GetComponent<AtaqueMelee>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (_elapsedTime < _enfriamiento)
+        {
+            _elapsedTime += Time.deltaTime;
+        }
+
+
         if(_currentBullets == 0) 
         {
-            if (_elapsedTime < _tiempoRegresoFueraLimites)
+            if (_returnTime < _tiempoRegresoFueraLimites)
             {
-                _elapsedTime += Time.deltaTime;
+                _returnTime += Time.deltaTime;
             }
             else
             {

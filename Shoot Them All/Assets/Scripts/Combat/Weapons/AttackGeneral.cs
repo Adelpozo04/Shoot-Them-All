@@ -73,6 +73,7 @@ public class AttackGeneral : MonoBehaviour
 
     protected GameObject GetPlayer()
     {
+        Debug.Log(transform.parent.parent.gameObject);
         return transform.parent.parent.gameObject;
     }
     /// <summary>

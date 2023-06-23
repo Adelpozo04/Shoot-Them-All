@@ -2,32 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChoqueArrojadiza : MonoBehaviour
+public class ChoqueArrojadiza : Choque
 {
     #region Properties
 
     private LayerMask _floor;
     private LayerMask _limit;
     private Rigidbody2D _rigidbody;
-    private PointsComponent _playerFather;
     private FollowWhoThrow _followWhoThrow;
-    private int _damage;
 
-    #endregion
-
-    #region Get/Set
-    /// <summary>
-    /// Setea al jugador que te ha golpeado en un componente de la propia bala 
-    /// </summary>
-    /// <param name="PlayerFather"></param>
-    public void SetPlayerFather(PointsComponent PlayerFather)
-    {
-        _playerFather = PlayerFather;
-    }
-    public void SetDamage(int damage)
-    {
-        _damage = damage;
-    }
     #endregion
 
     #region methods
