@@ -893,6 +893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _percentage: {fileID: 8242708995817767287}
+  _weaponIcon: {fileID: 8242708994437903162}
 --- !u!1 &8242708995817767285
 GameObject:
   m_ObjectHideFlags: 0

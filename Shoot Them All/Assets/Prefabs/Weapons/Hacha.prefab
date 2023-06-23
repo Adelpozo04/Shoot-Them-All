@@ -89,7 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damagePri: 20
   _damageSec: 5
-  _force: 20
+  _force: 15
   _tiempoRegresoFueraLimites: 3
   _enfriamiento: 2
   _bulletPrefab: {fileID: 6777782951466673763, guid: 05cb949e3e68db3468c32fcbf0706ec1, type: 3}

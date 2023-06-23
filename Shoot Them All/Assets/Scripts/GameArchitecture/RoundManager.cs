@@ -1,8 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class RoundManager : MonoBehaviour
 {
@@ -19,16 +20,24 @@ public class RoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < GameManager.Instance.PlayersNumber; i++)
-        {
-            PlayerInputManager.instance.JoinPlayer(i, -1, pairWithDevice: Gamepad.all[i]);
-        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+    public void StartRound()
+    {
+        for (int i = 0; i < GameManager.Instance.PlayersNumber; i++)
+        {
+            PlayerInputManager.instance.JoinPlayer(i, -1, pairWithDevice: Gamepad.all[i]);
+        }
+    }
+    public void SetWeapon(WeaponScriptable weapon, int index)
+    {
+        _weaponsPrefabs[0] = weapon;
     }
     public void OnPlayerJoined(PlayerInput player)
     {
@@ -43,8 +52,7 @@ public class RoundManager : MonoBehaviour
         //colocacion de la ui del jugador
         GameObject playerUI = Instantiate(_playerUIPrefab, GameManager.Instance.InfoPlayerTransform);
         playerUI.GetComponent<PlayerUI>().PlayerPercentage = player.GetComponent<PercentageComponent>();
-
-
+        playerUI.GetComponent<PlayerUI>().WeaponIcon.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].WeaponSprite;
         //TODO Añadir sprite de arma
 
 

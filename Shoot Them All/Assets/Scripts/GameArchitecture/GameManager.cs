@@ -44,9 +44,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach (InputDevice Device in playerList[0].devices)
-        {
-            Debug.Log(Device.name);
-        }
+        //foreach (InputDevice Device in playerList[0].devices)
+        //{
+        //    Debug.Log(Device.name);
+        //}
     }
 }
