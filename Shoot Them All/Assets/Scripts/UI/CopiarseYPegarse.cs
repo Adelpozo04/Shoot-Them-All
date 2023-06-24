@@ -9,9 +9,9 @@ public class CopiarseYPegarse : MonoBehaviour
 
     public void CopyPaste(int manyTimes)
     {
-        for(int i = 0; i < manyTimes; i++)
+        for(int i = 0; i < manyTimes - 1; i++)
         {
-            Instantiate(gameObject, transform.position, Quaternion.identity);
+            Instantiate(gameObject, transform.parent);
         }
     }
 

@@ -9,7 +9,7 @@ public class PlayerBarra : MonoBehaviour
     [SerializeField] private GameObject _barraPrefab;
     [SerializeField] private PercentageComponent _percentageJugador;
     //Puntuacion rondas ganadas
-    //Color jugador
+    [SerializeField] private SpriteRenderer _colorJugador;
     //Iconos armas y habilidades
     [SerializeField] private Sprite _provisionalSprite; //SOLO PARA TESTEO 
     [SerializeField] private GameObject _canvas;
@@ -26,7 +26,7 @@ public class PlayerBarra : MonoBehaviour
     void Start()
     {
         _barraJugador = Instantiate(_barraPrefab, _canvas.transform);
-        _barraJugador.GetComponent<BattleUIManager>().InicializacionBarra(_provisionalSprite, _provisionalSprite, _provisionalSprite, 2, 5, Color.yellow);
+        _barraJugador.GetComponent<BattleUIManager>().InicializacionBarra(_provisionalSprite, _provisionalSprite, _provisionalSprite, 2, 5, _colorJugador.color);
     }
 
     // Update is called once per frame

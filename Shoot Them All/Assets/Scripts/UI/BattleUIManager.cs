@@ -16,7 +16,7 @@ public class BattleUIManager : MonoBehaviour
     [SerializeField] private Image _armaHabilidad2Lugar;
     [SerializeField] private CopiarseYPegarse _marcoRondas;
     [SerializeField] private Slider _sliderRondas;
-    [SerializeField] private Color _barColor;
+    [SerializeField] private Image _barColor;
 
     #endregion
 
@@ -35,7 +35,8 @@ public class BattleUIManager : MonoBehaviour
         _sliderRondas.maxValue = numeroRondas;
         _sliderRondas.value = rondasGanadas;
         _marcoRondas.CopyPaste(numeroRondas);
-        _barColor = jugadorColor;
+        _barColor.color = jugadorColor;
+        _percentageText.text = "0%";
     }
 
     //Hacer el cooldown
