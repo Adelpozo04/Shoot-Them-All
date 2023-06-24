@@ -12,6 +12,7 @@ public class PlayerBarra : MonoBehaviour
     //Color jugador
     //Iconos armas y habilidades
     [SerializeField] private Sprite _provisionalSprite; //SOLO PARA TESTEO 
+    [SerializeField] private GameObject _canvas;
 
     private GameObject _barraJugador;
 
@@ -24,7 +25,7 @@ public class PlayerBarra : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _barraJugador = Instantiate(_barraPrefab, transform.position, Quaternion.identity);
+        _barraJugador = Instantiate(_barraPrefab, _canvas.transform);
         _barraJugador.GetComponent<BattleUIManager>().InicializacionBarra(_provisionalSprite, _provisionalSprite, _provisionalSprite, 2, 5, Color.yellow);
     }
 
