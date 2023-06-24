@@ -9,6 +9,7 @@ public class ChoqueBalaComponent : Choque
 
     private LayerMask _floor;
     private LayerMask _limit;
+    [SerializeField] private bool _progresie;
     #endregion
 
     #region methods
@@ -16,16 +17,24 @@ public class ChoqueBalaComponent : Choque
     private void OnTriggerEnter2D(Collider2D collision)
     {
         LayerMask aux = collision.gameObject.layer;
+        GameObject gameObjectAux = collision.gameObject;
 
         if (aux == _floor || aux == _limit)
         {
             Destroy(gameObject);
         }
-        if (collision.gameObject.GetComponent<KnockbackComponent>() != null && collision.GetComponent<PointsComponent>() != _playerFather)            // Si la bala colisiona con otro jugador        
+        if (gameObjectAux.GetComponent<KnockbackComponent>() != null /*&& gameObjectAux.GetComponent<PointsComponent>() != _playerFather*/)            // Si la bala colisiona con otro jugador        
         {
-            collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().
-                ApplyConsecuencies(_damage, GetComponent<Rigidbody2D>().velocity.normalized, _playerFather);
+            gameObjectAux.GetComponent<WeaponConsecuenciesComponent>().
+            ApplyConsecuencies(_damage, GetComponent<Rigidbody2D>().velocity.normalized, _playerFather);
             Destroy(gameObject);
+        }
+        if (_progresie)
+        {
+            if (gameObjectAux.GetComponent<ProgresiveDamage>() != null)
+            {
+                gameObjectAux.GetComponent<ProgresiveDamage>().IniciaDaño();
+            }
         }
     }
     
