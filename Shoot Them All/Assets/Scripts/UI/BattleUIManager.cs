@@ -16,6 +16,7 @@ public class BattleUIManager : MonoBehaviour
     [SerializeField] private Image _armaHabilidad2Lugar;
     [SerializeField] private CopiarseYPegarse _marcoRondas;
     [SerializeField] private Slider _sliderRondas;
+    [SerializeField] private Color _barColor;
 
     #endregion
 
@@ -26,17 +27,18 @@ public class BattleUIManager : MonoBehaviour
         _percentageText.text = newPercentage.ToString() + "%";
     }
 
-    private void SetIcons(Sprite arma, Sprite habilidad1, Sprite habilidad2)
+    public void InicializacionBarra(Sprite arma, Sprite habilidad1, Sprite habilidad2, int rondasGanadas, int numeroRondas, Color jugadorColor)
     {
         _armaHabilidad1Lugar.sprite = arma;
         _armaHabilidad1Lugar.sprite = habilidad1;
         _armaHabilidad2Lugar.sprite = habilidad2;
+        _sliderRondas.maxValue = numeroRondas;
+        _sliderRondas.value = rondasGanadas;
+        _marcoRondas.CopyPaste(numeroRondas);
+        _barColor = jugadorColor;
     }
 
-    public void InicializacionBarra(Sprite arma, Sprite habilidad1, Sprite habilidad2, int _rondasGanadas, int numeroRondas)
-    {
-
-    }
+    //Hacer el cooldown
 
     #endregion
 
