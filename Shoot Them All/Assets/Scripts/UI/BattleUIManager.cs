@@ -12,14 +12,14 @@ public class BattleUIManager : MonoBehaviour
 
     [SerializeField] private TMP_Text _percentageText;
     [SerializeField] private Image _armaIconoLugar;
-    [SerializeField] private Image _armaHabilidad1Lugar;
-    [SerializeField] private Image _armaHabilidad2Lugar;
     [SerializeField] private CopiarseYPegarse _marcoRondas;
     [SerializeField] private Slider _sliderRondas;
     [SerializeField] private Image _barColor;
     // Referencia a los sliders para cuando tengamos que manipularlos en el futuro
     [SerializeField] private Slider _ability1Slider;
     [SerializeField] private Slider _ability2Slider;
+
+
 
     #endregion
 
@@ -32,9 +32,17 @@ public class BattleUIManager : MonoBehaviour
 
     public void InicializacionBarra(Sprite arma, Sprite habilidad1, Sprite habilidad2, int rondasGanadas, int numeroRondas, Color jugadorColor)
     {
-        _armaHabilidad1Lugar.sprite = arma;
-        _armaHabilidad1Lugar.sprite = habilidad1;
-        _armaHabilidad2Lugar.sprite = habilidad2;
+        _armaIconoLugar.sprite = arma;
+
+        _ability1Slider.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = habilidad1;
+        _ability1Slider.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = habilidad1;
+
+        _ability2Slider.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = habilidad2;
+        _ability2Slider.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = habilidad2;
+
+        _ability1Slider.value = 1;
+        _ability2Slider.value = 1;
+
         _sliderRondas.maxValue = numeroRondas;
         _sliderRondas.value = rondasGanadas;
         _marcoRondas.CopyPaste(numeroRondas);
