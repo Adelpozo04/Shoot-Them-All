@@ -17,8 +17,10 @@ public class BattleUIManager : MonoBehaviour
     [SerializeField] private Slider _sliderRondas;
     [SerializeField] private Image _barColor;
     // Referencia a los sliders para cuando tengamos que manipularlos en el futuro
-    [SerializeField] private Slider _abilitySliderL;
-    [SerializeField] private Slider _abilitySliderR;
+    [SerializeField] private Image _abilitySliderLFront;
+    [SerializeField] private Image _abilitySliderLBack;
+    [SerializeField] private Image _abilitySliderRFront;
+    [SerializeField] private Image _abilitySliderRBack;
 
 
 
@@ -35,12 +37,14 @@ public class BattleUIManager : MonoBehaviour
     {
         _armaIconoLugar.sprite = arma;
 
-        _abilitySliderL.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = habilidad1;
-        _abilitySliderL.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = habilidad1;
+        //Asignacion imagenes cooldonw 
+        _abilitySliderLFront.sprite = habilidad1;
+        _abilitySliderLBack.sprite= habilidad1;
 
-        _abilitySliderR.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = habilidad2;
-        _abilitySliderR.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = habilidad2;
+        _abilitySliderRFront.sprite = habilidad2;
+        _abilitySliderRBack.sprite = habilidad2;
 
+        //inicializar Rondas UI
         _sliderRondas.maxValue = numeroRondas;
         _sliderRondas.value = rondasGanadas;
         _marcoRondas.CopyPaste(numeroRondas);

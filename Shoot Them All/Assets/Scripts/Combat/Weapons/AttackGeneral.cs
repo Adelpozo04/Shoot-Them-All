@@ -16,6 +16,22 @@ public class AttackGeneral : MonoBehaviour
     private RaycastHit2D raycast;
     protected Vector3 _raycastDir;
     private LayerMask _floorLayer;
+
+
+    [SerializeField]
+    protected float _coolDownPri;
+    public float CoolDownPri
+    {
+        get { return _coolDownPri; }
+    }
+    protected float _timerPri;
+    public float TimerPri
+    {
+        get { return _timerPri; }
+    }
+    [SerializeField]
+    protected float _coolDownSec;
+    protected float _timerSec;
     [Tooltip("Daño del arma")]
     [SerializeField]
     protected int _damagePri;

@@ -15,6 +15,9 @@ public class RoundManager : MonoBehaviour
     [SerializeField]
     private WeaponScriptable[]  _weaponsPrefabs;
 
+    private int _roundNumber;
+
+
     private void Awake()
     {
 
@@ -54,7 +57,7 @@ public class RoundManager : MonoBehaviour
         //colocacion de la ui del jugador
         GameObject playerUI = Instantiate(_playerUIPrefab, GameManager.Instance.InfoPlayerTransform);
         playerUI.GetComponent<PlayerUI>().PlayerPercentage = player.GetComponent<PercentageComponent>();
-        playerUI.GetComponent<PlayerUI>().WeaponIcon.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].WeaponSprite;
+        playerUI.GetComponent<PlayerUI>().WeaponIcon.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].WeaponSpriteIcon;
         //TODO Añadir sprite de arma
 
 

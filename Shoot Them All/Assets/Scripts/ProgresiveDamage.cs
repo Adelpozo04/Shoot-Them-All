@@ -13,6 +13,7 @@ public class ProgresiveDamage : MonoBehaviour
 
     public void IniciaDaño()
     {
+        //existe un on enable para estas cosas si vamos a hacer el funcionamiento que deciamos
         _tiempoHerido = _tiempoHeridoInicial;
         _contadorDeSegundos = _tiempoHerido - 1f;
         if (enabled == false)
