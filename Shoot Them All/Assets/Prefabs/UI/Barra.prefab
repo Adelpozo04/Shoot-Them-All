@@ -479,8 +479,9 @@ GameObject:
   m_Component:
   - component: {fileID: 36966497107613887}
   - component: {fileID: 8836567727768050848}
+  - component: {fileID: 3166190632859239526}
   m_Layer: 5
-  m_Name: CooldownAbility2
+  m_Name: CooldownAbilityL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,6 +560,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3166190632859239526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5092870570061809556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45dcfcbcf1fcbdb44a9af479a3776927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5118523257536969906
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,8 +582,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2941482883177780377}
   - component: {fileID: 9120009297629957678}
+  - component: {fileID: 3776506326961822033}
   m_Layer: 5
-  m_Name: CooldownAbility1
+  m_Name: CooldownAbilityR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,10 +659,22 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3776506326961822033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5118523257536969906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45dcfcbcf1fcbdb44a9af479a3776927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5174921924440042833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1148,7 +1174,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1492,5 +1518,5 @@ MonoBehaviour:
   _marcoRondas: {fileID: 8982832703690268519}
   _sliderRondas: {fileID: 5805566950468074216}
   _barColor: {fileID: 4002573099860511692}
-  _ability1Slider: {fileID: 9120009297629957678}
-  _ability2Slider: {fileID: 8836567727768050848}
+  _abilitySliderL: {fileID: 8836567727768050848}
+  _abilitySliderR: {fileID: 9120009297629957678}

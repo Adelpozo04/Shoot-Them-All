@@ -8,6 +8,7 @@ public class BattleUIManager : MonoBehaviour
 {
     //Adapta la barra a los cambios que le emitan
 
+    
     #region properties
 
     [SerializeField] private TMP_Text _percentageText;
@@ -16,8 +17,8 @@ public class BattleUIManager : MonoBehaviour
     [SerializeField] private Slider _sliderRondas;
     [SerializeField] private Image _barColor;
     // Referencia a los sliders para cuando tengamos que manipularlos en el futuro
-    [SerializeField] private Slider _ability1Slider;
-    [SerializeField] private Slider _ability2Slider;
+    [SerializeField] private Slider _abilitySliderL;
+    [SerializeField] private Slider _abilitySliderR;
 
 
 
@@ -34,14 +35,11 @@ public class BattleUIManager : MonoBehaviour
     {
         _armaIconoLugar.sprite = arma;
 
-        _ability1Slider.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = habilidad1;
-        _ability1Slider.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = habilidad1;
+        _abilitySliderL.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = habilidad1;
+        _abilitySliderL.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = habilidad1;
 
-        _ability2Slider.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = habilidad2;
-        _ability2Slider.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = habilidad2;
-
-        _ability1Slider.value = 1;
-        _ability2Slider.value = 1;
+        _abilitySliderR.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = habilidad2;
+        _abilitySliderR.gameObject.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = habilidad2;
 
         _sliderRondas.maxValue = numeroRondas;
         _sliderRondas.value = rondasGanadas;
