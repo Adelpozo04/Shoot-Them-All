@@ -17,6 +17,9 @@ public class BattleUIManager : MonoBehaviour
     [SerializeField] private CopiarseYPegarse _marcoRondas;
     [SerializeField] private Slider _sliderRondas;
     [SerializeField] private Image _barColor;
+    // Referencia a los sliders para cuando tengamos que manipularlos en el futuro
+    [SerializeField] private Slider _ability1Slider;
+    [SerializeField] private Slider _ability2Slider;
 
     #endregion
 
