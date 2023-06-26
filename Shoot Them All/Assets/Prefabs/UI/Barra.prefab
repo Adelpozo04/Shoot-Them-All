@@ -1313,6 +1313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3909552469908105662}
   - component: {fileID: 2323485161220883918}
+  - component: {fileID: -5430637040554053805}
   m_Layer: 5
   m_Name: Barra
   m_TagString: Untagged
@@ -1368,3 +1369,17 @@ MonoBehaviour:
   _abilitySliderLBack: {fileID: 6757133253598252469}
   _abilitySliderRFront: {fileID: 8007547130630004074}
   _abilitySliderRBack: {fileID: 4818621581863579400}
+--- !u!114 &-5430637040554053805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8741494373899700753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b8cc807d5e578f408cc2210a935571b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _percentage: {fileID: 3635719204706191527}
+  _weaponIcon: {fileID: 5381747547301689212}
