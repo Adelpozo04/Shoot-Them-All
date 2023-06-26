@@ -6,10 +6,8 @@ using UnityEngine.UI;
 
 public class TimerComponent : MonoBehaviour
 {
-    [SerializeField] private Text _myTimerText;
+    private Text _myTimerText;
     private float _timer = 75;
-
-
 
     // Update is called once per frame
     void Update()
@@ -55,5 +53,10 @@ public class TimerComponent : MonoBehaviour
     public void SetRoundTimer(float newTimer)
     {
         _timer = newTimer;
+    }
+
+    private void Start()
+    {
+        _myTimerText = GetComponent<Text>();
     }
 }

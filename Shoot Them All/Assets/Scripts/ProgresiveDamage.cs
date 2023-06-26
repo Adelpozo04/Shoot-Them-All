@@ -7,6 +7,7 @@ public class ProgresiveDamage : MonoBehaviour
     #region parameters
     [SerializeField] private float _tiempoHerido = 3;
     [SerializeField] private int _danoPorSegHerido = 5;
+    [SerializeField] private float _tiempoEntreDaños = 1;
     private float _tiempoHeridoInicial, _contadorDeSegundos;
     private PercentageComponent _myPercentageComponent;
     #endregion
@@ -15,8 +16,8 @@ public class ProgresiveDamage : MonoBehaviour
     {
         //existe un on enable para estas cosas si vamos a hacer el funcionamiento que deciamos
         _tiempoHerido = _tiempoHeridoInicial;
-        _contadorDeSegundos = _tiempoHerido - 1f;
-        if (enabled == false)
+        _contadorDeSegundos = _tiempoHerido - _tiempoEntreDaños;
+        if (!enabled)
         {
             enabled = true;
         }
@@ -36,7 +37,7 @@ public class ProgresiveDamage : MonoBehaviour
         if (_tiempoHerido < _contadorDeSegundos)
         {
             _myPercentageComponent.AddDamage(_danoPorSegHerido);
-            _contadorDeSegundos--;
+            _contadorDeSegundos -= _tiempoEntreDaños;
         }
         if (_tiempoHerido <= 0)
         {

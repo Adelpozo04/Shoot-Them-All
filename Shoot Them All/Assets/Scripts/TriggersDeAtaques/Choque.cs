@@ -8,6 +8,11 @@ public class Choque : MonoBehaviour
     protected int _damage;
     [SerializeField]
     protected bool _progresive;
+    protected bool _stun = false;
+    public bool Stun
+    {
+        set { _stun = value; }
+    }
 
     /// <summary>
     /// Setea al jugador que te ha golpeado en un componente de la propia bala 
@@ -26,6 +31,13 @@ public class Choque : MonoBehaviour
         if(_progresive)
         {
             objetive.IniciaDaño();
+        }
+    }
+    protected void CallStun(StunComponent objective)
+    {
+        if (_stun)
+        {
+            objective.Stun(3);
         }
     }
 }

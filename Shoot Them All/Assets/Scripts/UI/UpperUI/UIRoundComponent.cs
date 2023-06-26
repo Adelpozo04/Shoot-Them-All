@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIRoundComponent : MonoBehaviour
 {
-    [SerializeField] private Text _myText;
+    private Text _myText;
 
     /// <summary>
     /// Método a llamar cuando se avance de ronda para editar el número de la misma (pasándole el número de ronda)
@@ -14,5 +14,10 @@ public class UIRoundComponent : MonoBehaviour
     public void UpdateRound(int newRound)
     {
         _myText.text = "Round " + newRound;
+    }
+
+    private void Start()
+    {
+        _myText = GetComponent<Text>();
     }
 }
