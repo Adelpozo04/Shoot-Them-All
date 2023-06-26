@@ -85,4 +85,25 @@ public class RoundManager : MonoBehaviour
     {
         GameManager.Instance.playerList.Remove(player);
     }
+    #region AuxMethods
+    public void SetWeaponP1(Int32 num)
+    {
+        _weaponsPrefabs[0] = GameManager.Instance.AlWeaponsList[num];
+    }
+    public void SetWeaponP2(Int32 num)
+    {
+        if(_weaponsPrefabs.Length >= 2)
+        _weaponsPrefabs[1] = GameManager.Instance.AlWeaponsList[num];
+    }
+    public void SetWeaponP3(Int32 num)
+    {
+        if (_weaponsPrefabs.Length >= 3)
+            _weaponsPrefabs[2] = GameManager.Instance.AlWeaponsList[num];
+    }
+    public void SetWeaponP4(Int32 num)
+    {
+        if (_weaponsPrefabs.Length >= 4)
+            _weaponsPrefabs[3] = GameManager.Instance.AlWeaponsList[num];
+    }
+    #endregion
 }
