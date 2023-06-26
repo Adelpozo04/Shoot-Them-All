@@ -8,6 +8,6 @@ public class WeaponScriptable : ScriptableObject
     public GameObject Weapon;
     public float _weaponDistance;
     public int NumberInAnimator;
-    public Sprite WeaponSpriteIcon, Habilty, HabilyR;
+    public Sprite WeaponSpriteIcon, HabiltyL, HabilyR;
 }
 
