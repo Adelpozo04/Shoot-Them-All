@@ -15,8 +15,8 @@ public class Hacha : AttackGeneral
     {
         if (ataqueMelee.AttackCondition() && !spinAttack.IsAttacking())
         {
-            meleeDamage.SetDamage(_damagePri);
             base.AtaquePrincipal();
+            meleeDamage.SetDamage(_damagePri);
             ataqueMelee.PerformAttack();
         }       
         //queso      
@@ -26,8 +26,8 @@ public class Hacha : AttackGeneral
     {
         if (spinAttack.AttackCondition() && !ataqueMelee.IsAttacking)
         {
-            meleeDamage.SetDamage(_damageSec);
             base.AtaqueSecundario();
+            meleeDamage.SetDamage(_damageSec);
             spinAttack.StartSpin();
         }
         
@@ -40,6 +40,7 @@ public class Hacha : AttackGeneral
         ataqueMelee = GetComponent<AtaqueMelee>();
         spinAttack = GetComponent<SpinAttack>();
         meleeDamage = GetComponent<MeleeDamageComponent>();
+        StartMethod();
     }
 
     // Update is called once per frame
