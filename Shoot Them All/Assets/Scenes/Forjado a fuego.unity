@@ -1276,6 +1276,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8962152555424223082, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962152555424223082, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962152555424223082, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962152555424223083, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
+      propertyPath: m_Spacing
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962152555424223083, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962152555424223083, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
+      propertyPath: m_Padding.m_Right
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962152555424223083, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
+      propertyPath: m_ChildControlWidth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962152555424223083, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
+      propertyPath: m_ChildControlHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962152555424223083, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
+      propertyPath: m_ReverseArrangement
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962152555424223083, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
+      propertyPath: m_ChildForceExpandWidth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8962152555424223083, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
+      propertyPath: m_ChildForceExpandHeight
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8962152555696774427, guid: 58c8da0ba3665a246bce5a41d3445459, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4305,7 +4349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000038146973, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.0000076293945, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1320214490 stripped
@@ -5814,7 +5858,10 @@ MonoBehaviour:
   _spawnPoint: {fileID: 1905056369}
   _playerUIPrefab: {fileID: 8741494373899700753, guid: 768fd270521c79d4cb686974848236a7, type: 3}
   _weaponsPrefabs:
-  - {fileID: 11400000, guid: eea2d8d8be7959941869610e07476d8f, type: 2}
+  - {fileID: 11400000, guid: 94a3ce59322f5ce48b27be4cf048c7b5, type: 2}
+  _playerColor:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0.079197526, g: 1, b: 0, a: 1}
 --- !u!4 &1459380068
 Transform:
   m_ObjectHideFlags: 0

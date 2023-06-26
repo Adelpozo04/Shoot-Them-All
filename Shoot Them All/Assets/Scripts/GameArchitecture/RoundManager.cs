@@ -15,6 +15,8 @@ public class RoundManager : MonoBehaviour
     private GameObject _playerUIPrefab;
     [SerializeField]
     private WeaponScriptable[]  _weaponsPrefabs;
+    [SerializeField]
+    private Color[] _playerColor;
 
     private int _roundNumber;
 
@@ -73,8 +75,18 @@ public class RoundManager : MonoBehaviour
 
         //colocacion de la ui del jugador
         GameObject playerUI = Instantiate(_playerUIPrefab, GameManager.Instance.InfoPlayerTransform);
-        playerUI.GetComponent<PlayerUI>().PlayerPercentage = player.GetComponent<PercentageComponent>();
-        playerUI.GetComponent<PlayerUI>().WeaponIcon.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].WeaponSpriteIcon;
+        PlayerUI UI = playerUI.GetComponent<PlayerUI>();
+        Debug.Log(UI);
+        playerUI.GetComponent<Image>().color = _playerColor[GameManager.Instance.playerList.Count];
+
+        UI.PlayerPercentage = player.GetComponent<PercentageComponent>();
+
+        UI.WeaponIcon.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].WeaponSpriteIcon;
+        //Sprites de los cooldowns
+        UI.AbilitySliderLBack.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].HabiltyL;
+        UI.AbilitySliderLFront.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].HabiltyL;
+        UI.AbilitySliderRBack.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].HabilyR;
+        UI.AbilitySliderRFront.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].HabilyR;
         //TODO Añadir sprite de arma
 
 

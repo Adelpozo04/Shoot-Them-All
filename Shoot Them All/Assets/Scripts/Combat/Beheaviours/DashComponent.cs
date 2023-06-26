@@ -2,19 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DashArma : AttackGeneral
+public class DashComponent : MonoBehaviour
 {
-
     #region parameters
 
-    [Tooltip("Tiempo para poder usar la habilidad otra vez")]
-    [SerializeField] private float _enfriamiento;
-
-    [Tooltip("Fuerza con la que se hace el dash")]
-    [SerializeField] private float _dashingPower;
-
-    [Tooltip("Tiempo en el que esta haciendo dash")]
-    [SerializeField] private float _dashingTime;
+    private float _enfriamiento;
+    public float Enfriamiento
+    {
+        set{ _enfriamiento = value; }
+    }
     #endregion
 
 
@@ -29,63 +25,44 @@ public class DashArma : AttackGeneral
     private TrailRenderer _trailRenderer;
     private GameObject _jugador;
     private bool _canDash = true;
-    private float _elapsedTime = 0;
-    private Vector2 _direction;
-
-
-    #endregion
-
-    #region methods
-
-    //Se calcula la direcciom a la que va el dash a partir de la rotación del centro del arma 
-    public override void AtaquePrincipal()
+    public bool CanDash
     {
-        _direction = AngleToDirection();
-        //Se pide al jugador que haga el dash
-
-        if (_canDash)
-        {
-            base.AtaquePrincipal();
-            StartCoroutine(Dash(_direction));
-            _choqueDash.ChangeDamageStage(true);
-        }
+        get { return _canDash; }
     }
+    private float _elapsedTime = 0;
+
 
     #endregion
-
 
     void Start()
     {
-        StartMethod();
-        _jugador = GetPlayer();
+        _jugador = transform.root.gameObject;
+
         _myFatherRB = _jugador.GetComponent<Rigidbody2D>();
-        _trailRenderer = transform.parent.GetComponent<TrailRenderer>();
         _horizontalComponent = _jugador.GetComponent<HorizontalComponent>();
         _jumpComponent = _jugador.GetComponent<JumpComponent>();
         _edgeComponet = _jugador.GetComponent<EdgeComponet>();
 
+        _trailRenderer = transform.parent.GetComponent<TrailRenderer>();
+
         _choqueDash = GetComponent<ChoqueArmaDashComponent>();
-        _choqueDash.SetDamage(_damagePri);
-        _choqueDash.Player = _jugador;
-        
     }
 
-   
 
-    private IEnumerator Dash(Vector2 direction)
+
+    public IEnumerator Dash(Vector2 direction, float dashingPower, float dashingTime)
     {
 
         _canDash = false;
         _horizontalComponent.enabled = false;
         _jumpComponent.enabled = false;
         _edgeComponet.enabled = false;
-        _myFatherRB.velocity += direction * _dashingPower * _horizontalComponent.SpeedToAcelerate;
-        
+        _myFatherRB.velocity += direction * dashingPower * _horizontalComponent.SpeedToAcelerate;
+
 
         _trailRenderer.emitting = true;
-        Debug.Log(direction);
 
-        while (_elapsedTime < _dashingTime)
+        while (_elapsedTime < dashingTime)
         {
             _elapsedTime += Time.deltaTime;
             yield return null;

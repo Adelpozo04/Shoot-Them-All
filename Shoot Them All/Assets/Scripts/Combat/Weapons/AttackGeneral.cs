@@ -17,7 +17,7 @@ public class AttackGeneral : MonoBehaviour
     protected Vector3 _raycastDir;
     private LayerMask _floorLayer;
 
-
+    [Tooltip("Enfriameito del ataque principal")]
     [SerializeField]
     protected float _coolDownPri;
     public float CoolDownPri
@@ -29,6 +29,7 @@ public class AttackGeneral : MonoBehaviour
     {
         get { return _timerPri; }
     }
+    [Tooltip("Enfriameito del ataque secundario")]
     [SerializeField]
     protected float _coolDownSec;
     protected float _timerSec;

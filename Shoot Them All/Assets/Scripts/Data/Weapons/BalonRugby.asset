@@ -16,5 +16,5 @@ MonoBehaviour:
   _weaponDistance: 0.3
   NumberInAnimator: 2
   WeaponSpriteIcon: {fileID: -1486893901513991135, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
-  Habilty: {fileID: 0}
-  HabilyR: {fileID: 0}
+  HabiltyL: {fileID: -2728848918374310037, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+  HabilyR: {fileID: 8218407679597672352, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
