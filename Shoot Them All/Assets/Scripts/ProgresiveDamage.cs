@@ -10,7 +10,7 @@ public class ProgresiveDamage : MonoBehaviour
     private float _tiempoHeridoInicial, _contadorDeSegundos;
     private PercentageComponent _myPercentageComponent;
     #endregion
-
+    /*podemos pasar los parametros de el tiempo que hace daño y la cantidad de daño que hace el quemado*/
     public void IniciaDaño()
     {
         //existe un on enable para estas cosas si vamos a hacer el funcionamiento que deciamos

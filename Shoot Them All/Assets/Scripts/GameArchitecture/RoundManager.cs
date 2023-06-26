@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.UI;
@@ -25,7 +26,7 @@ public class RoundManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager.Instance.ChangeNPlayers.AddListener(ChangeNPlayers);
     }
 
     // Update is called once per frame
@@ -33,16 +34,32 @@ public class RoundManager : MonoBehaviour
     {
 
     }
+    private void ChangeNPlayers(Int32 num)
+    {
+        WeaponScriptable[] aux = _weaponsPrefabs;
+        _weaponsPrefabs = new WeaponScriptable[(int)num];
+        for (int i = 0; i < Math.Min(aux.Length,_weaponsPrefabs.Length); i++)
+        {
+            _weaponsPrefabs[i] = aux[i];
+        }
+    }
     public void StartRound()
     {
         for (int i = 0; i < GameManager.Instance.PlayersNumber; i++)
         {
-            PlayerInputManager.instance.JoinPlayer(i, -1, pairWithDevice: Gamepad.all[i]);
+            try
+            {
+                PlayerInputManager.instance.JoinPlayer(i, -1, pairWithDevice: Gamepad.all[i]);
+            }
+            catch(ArgumentOutOfRangeException)
+            {
+                Debug.Log("No se detectaron mas mandos");
+            }
         }
     }
-    public void SetWeapon(WeaponScriptable weapon, int index)
+    public void SetWeapon(float weapon, int index)
     {
-        _weaponsPrefabs[index] = weapon;
+        //_weaponsPrefabs[index] = weapon;
     }
     public void OnPlayerJoined(PlayerInput player)
     {

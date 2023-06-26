@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
@@ -11,7 +14,7 @@ public class GameManager : MonoBehaviour
         get { return _instance; }
     }
     [SerializeField]
-    static private int _playersNumber;//hacer estatico
+    private int _playersNumber;//hacer estatico
     public int PlayersNumber
     {
         get { return _playersNumber; }
@@ -24,6 +27,11 @@ public class GameManager : MonoBehaviour
         get { return _infoPlayerTransform; }
     }
     public List<PlayerInput> playerList = new List<PlayerInput>();
+    public List<WeaponScriptable> AlWeaponsList = new List<WeaponScriptable>();
+
+    [HideInInspector]
+    public UnityEvent<Int32> ChangeNPlayers;
+
     private void Awake()
     {
         if (_instance == null)
@@ -38,8 +46,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerInput cosa;
-        
+        //ChangeNPlayers.AddListener(SetPlayerNum);
     }
 
     // Update is called once per frame
@@ -49,5 +56,10 @@ public class GameManager : MonoBehaviour
         //{
         //    Debug.Log(Device.name);
         //}
+    }
+    public void SetPlayerNum(Int32 num)
+    {
+        ChangeNPlayers?.Invoke(num + 1);
+        _playersNumber = num + 1;
     }
 }

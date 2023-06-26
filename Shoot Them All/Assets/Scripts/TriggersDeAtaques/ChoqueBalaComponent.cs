@@ -23,17 +23,18 @@ public class ChoqueBalaComponent : Choque
         {
             Destroy(gameObject);
         }
-        if (gameObjectAux.GetComponent<KnockbackComponent>() != null /*&& gameObjectAux.GetComponent<PointsComponent>() != _playerFather*/)            // Si la bala colisiona con otro jugador        
+        if (gameObjectAux.GetComponent<KnockbackComponent>() != null && gameObjectAux.GetComponent<PointsComponent>() != _playerFather)            // Si la bala colisiona con otro jugador        
         {
             gameObjectAux.GetComponent<WeaponConsecuenciesComponent>().
             ApplyConsecuencies(_damage, GetComponent<Rigidbody2D>().velocity.normalized, _playerFather);
             Destroy(gameObject);
-        }
-        if (_progresie)
-        {
-            if (gameObjectAux.GetComponent<ProgresiveDamage>() != null)
+            //se ha hecho un metodo en la calse padre para hacer esto y que se pueda hacer en cualquier componente de choque
+            if (_progresie)
             {
-                gameObjectAux.GetComponent<ProgresiveDamage>().IniciaDaño();
+                if (gameObjectAux.GetComponent<ProgresiveDamage>() != null)
+                {
+                    gameObjectAux.GetComponent<ProgresiveDamage>().IniciaDaño();
+                }
             }
         }
     }

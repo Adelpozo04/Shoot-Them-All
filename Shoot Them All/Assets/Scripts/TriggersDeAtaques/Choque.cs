@@ -6,6 +6,8 @@ public class Choque : MonoBehaviour
 {
     protected PointsComponent _playerFather;
     protected int _damage;
+    [SerializeField]
+    protected bool _progresive;
 
     /// <summary>
     /// Setea al jugador que te ha golpeado en un componente de la propia bala 
@@ -18,5 +20,12 @@ public class Choque : MonoBehaviour
     public void SetDamage(int damage)
     {
         _damage = damage;
+    }
+    protected void CallProgresive(ProgresiveDamage objetive)
+    {
+        if(_progresive)
+        {
+            objetive.IniciaDaño();
+        }
     }
 }
