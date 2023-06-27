@@ -8,21 +8,25 @@ public class TimerComponent : MonoBehaviour
 {
     private Text _myTimerText;
     private float _timer = 75;
+    [SerializeField] private bool _timerCanCount = false;       // Quitar SerializeField de testeo
 
     // Update is called once per frame
     void Update()
     {
-        // Actualizamos el tiempo del contador
-        if (_timer > 0)
+        if (_timerCanCount)
         {
-            _timer -= Time.deltaTime;
-        }
-        else
-        {
-            _timer = 0;
-        }
+            // Actualizamos el tiempo del contador
+            if (_timer > 0)
+            {
+                _timer -= Time.deltaTime;
+            }
+            else
+            {
+                _timer = 0;
+            }
 
-        DisplayTimer(_timer);
+            DisplayTimer(_timer);
+        }
     }
 
     /// <summary>
