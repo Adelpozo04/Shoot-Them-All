@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8055724802084716446}
   - component: {fileID: -3981353014138821864}
   - component: {fileID: 1095143949576750049}
+  - component: {fileID: 4671759378943046576}
   m_Layer: 0
   m_Name: Hacha
   m_TagString: Untagged
@@ -149,5 +150,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a54d0a067883594bab4e333af8976b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _progresive: 0
+  _stun: 0
+--- !u!114 &4671759378943046576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6777782951466673763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb08f07d20c95bc4e8c3ffe10b700c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

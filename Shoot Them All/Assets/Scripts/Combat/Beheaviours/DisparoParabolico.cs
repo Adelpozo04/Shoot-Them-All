@@ -29,4 +29,6 @@ public class DisparoParabolico : MonoBehaviour
         elapsedTime = 0;
         return bullet;
     }
+
+
 }

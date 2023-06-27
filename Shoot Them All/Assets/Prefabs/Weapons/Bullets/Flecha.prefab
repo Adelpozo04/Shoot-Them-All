@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9157624450852651306}
   - component: {fileID: -390457790893225999}
   - component: {fileID: 7388936000348231737}
+  - component: {fileID: 4145859774291424845}
   m_Layer: 0
   m_Name: Flecha
   m_TagString: Untagged
@@ -138,3 +139,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _progresive: 0
   _stun: 0
+--- !u!114 &4145859774291424845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8045010264843042468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb08f07d20c95bc4e8c3ffe10b700c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
