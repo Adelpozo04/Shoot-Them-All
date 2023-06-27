@@ -21,21 +21,18 @@ public class RoundManager : MonoBehaviour
     private int _roundNumber;
 
 
-    private void Awake()
-    {
+    // esto es para testeooooo
+    [SerializeField]
+    private List<Slider> _listaSliders = new List<Slider>();
 
-    }
+
+
     // Start is called before the first frame update
     void Start()
     {
         GameManager.Instance.ChangeNPlayers.AddListener(ChangeNPlayers);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     private void ChangeNPlayers(Int32 num)
     {
         WeaponScriptable[] aux = _weaponsPrefabs;
@@ -66,36 +63,41 @@ public class RoundManager : MonoBehaviour
     public void OnPlayerJoined(PlayerInput player)
     {
         player.transform.position = _spawnPoint.position;
+
+
+        //el numero de elementos en la lista
+        int playerListCount = GameManager.Instance.GetPlayerListCount();
+
         //instaciciacion del arma
-        Transform weapon = Instantiate(_weaponsPrefabs[GameManager.Instance.playerList.Count].Weapon,player.transform.GetChild(1)).transform;
+        Transform weapon = Instantiate(_weaponsPrefabs[playerListCount].Weapon,player.transform.GetChild(1)).transform;
         player.GetComponent<ApuntadoComponent>().ArmaTransform = weapon;
-        player.GetComponent<ApuntadoComponent>().Distance = _weaponsPrefabs[GameManager.Instance.playerList.Count]._weaponDistance;
-        player.GetComponent<AnimatorsManager>().ChangeWeaponType(_weaponsPrefabs[GameManager.Instance.playerList.Count].NumberInAnimator);
+        player.GetComponent<ApuntadoComponent>().Distance = _weaponsPrefabs[playerListCount]._weaponDistance;
+        player.GetComponent<AnimatorsManager>().ChangeWeaponType(_weaponsPrefabs[playerListCount].NumberInAnimator);
         player.GetComponent<InputAtaques>().MiArmaActual = weapon.GetComponent<AttackGeneral>();
 
         //colocacion de la ui del jugador
         GameObject playerUI = Instantiate(_playerUIPrefab, GameManager.Instance.InfoPlayerTransform);
         PlayerUI UI = playerUI.GetComponent<PlayerUI>();
         Debug.Log(UI);
-        playerUI.GetComponent<Image>().color = _playerColor[GameManager.Instance.playerList.Count];
+        playerUI.GetComponent<Image>().color = _playerColor[playerListCount];
 
         UI.PlayerPercentage = player.GetComponent<PercentageComponent>();
 
-        UI.WeaponIcon.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].WeaponSpriteIcon;
+        UI.WeaponIcon.sprite = _weaponsPrefabs[playerListCount].WeaponSpriteIcon;
         //Sprites de los cooldowns
-        UI.AbilitySliderLBack.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].HabiltyL;
-        UI.AbilitySliderLFront.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].HabiltyL;
-        UI.AbilitySliderRBack.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].HabilyR;
-        UI.AbilitySliderRFront.sprite = _weaponsPrefabs[GameManager.Instance.playerList.Count].HabilyR;
+        UI.AbilitySliderLBack.sprite = _weaponsPrefabs[playerListCount].HabiltyL;
+        UI.AbilitySliderLFront.sprite = _weaponsPrefabs[playerListCount].HabiltyL;
+        UI.AbilitySliderRBack.sprite = _weaponsPrefabs[playerListCount].HabilyR;
+        UI.AbilitySliderRFront.sprite = _weaponsPrefabs[playerListCount].HabilyR;
         //TODO Añadir sprite de arma
 
 
-        //Añadir jugaodr a la lista de jugadores del gameManager
-        GameManager.Instance.playerList.Add(player);
+
+        GameManager.Instance.AñadeJugador(player);
     }
     public void OnPlayerLeft(PlayerInput player)
     {
-        GameManager.Instance.playerList.Remove(player);
+        GameManager.Instance.QuitaJugador(player);
     }
     #region AuxMethods
     public void SetWeaponP1(Int32 num)
@@ -117,5 +119,31 @@ public class RoundManager : MonoBehaviour
         if (_weaponsPrefabs.Length >= 4)
             _weaponsPrefabs[3] = GameManager.Instance.AlWeaponsList[num];
     }
+
+
+
+
+    public void GanarRonda(PlayerInput ganador)
+    {
+        GameManager.Instance.IncrementaRondasGanadas(ganador);
+        AumentaSlider(ganador);
+    }
+
+
+    //testeo
+    public void AumentaSlider(PlayerInput ganador)
+    {
+        int index = GameManager.Instance.GetIndexOfPlayer(ganador);
+
+        _listaSliders[index].value++;
+    }
+
+    //testeo
+    public void AumentaSlider(int index)
+    {
+        _listaSliders[index].value++;
+        Debug.Log("tu vieja");
+    }
+
     #endregion
 }

@@ -26,7 +26,14 @@ public class GameManager : MonoBehaviour
     {
         get { return _infoPlayerTransform; }
     }
-    public List<PlayerInput> playerList = new List<PlayerInput>();
+
+    //lista de los jugadores
+    private List<PlayerInput> playerList = new List<PlayerInput>();
+
+    //lista de las rondas ganadas de cada jugador, los indices se corresponden con la lista de jugadores
+    private List<int> rondasGanadasJugadores = new List<int>();
+
+
     public List<WeaponScriptable> AlWeaponsList = new List<WeaponScriptable>();
 
     [HideInInspector]
@@ -62,4 +69,44 @@ public class GameManager : MonoBehaviour
         ChangeNPlayers?.Invoke(num + 1);
         _playersNumber = num + 1;
     }
+
+
+
+    #region Añadir y quitar jugador
+
+    public void AñadeJugador(PlayerInput player)
+    {
+        playerList.Add(player);
+        rondasGanadasJugadores.Add(0);
+    }
+
+    public void QuitaJugador(PlayerInput player)
+    {
+        int index = playerList.IndexOf(player);
+
+        playerList.RemoveAt(index);
+        rondasGanadasJugadores.RemoveAt(index);
+    }
+
+    #endregion
+
+
+    public void IncrementaRondasGanadas(PlayerInput player)
+    {
+        int index = playerList.IndexOf(player);
+
+        rondasGanadasJugadores[index]++;
+    }
+
+    public int GetPlayerListCount()
+    {
+        return playerList.Count;
+    }
+
+    public int GetIndexOfPlayer(PlayerInput player)
+    {
+        return playerList.IndexOf(player);
+    }
+
+   
 }

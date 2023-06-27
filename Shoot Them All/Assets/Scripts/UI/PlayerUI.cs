@@ -53,7 +53,7 @@ public class PlayerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _percentage.text = _playerPercentage.Percentage + "%";
+        _percentage.text = _playerPercentage?.Percentage + "%";
     }
 
 }
