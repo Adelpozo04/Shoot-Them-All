@@ -8,6 +8,7 @@ public class Choque : MonoBehaviour
     protected int _damage;
     [SerializeField]
     protected bool _progresive;
+    [SerializeField]
     protected bool _stun = false;
     public bool Stun
     {
@@ -37,7 +38,7 @@ public class Choque : MonoBehaviour
     {
         if (_stun)
         {
-            objective.Stun(3);
+            StartCoroutine(objective.Stun(3));
         }
     }
 }

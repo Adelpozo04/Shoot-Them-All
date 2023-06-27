@@ -10,6 +10,7 @@ public class StunComponent : MonoBehaviour
 
     private PlayerInput _myPlayerInput;
     private Vector2 _direction;
+    [SerializeField]
     private bool _stunned = false;
     [SerializeField] private float _stunTime = 1;       // Seguramente "stunTime" habrá que cambiarlo a otro sitio
     public bool Stunned
@@ -21,19 +22,22 @@ public class StunComponent : MonoBehaviour
     {                                                   // se vienen cositas
         _stunned = true;
 
-        _myPlayerInput.currentActionMap.Disable();      // Desactivamos el Input que nos interesa (battle)
+        _myPlayerInput?.actions.FindActionMap("Battle").Disable();     // Desactivamos el Input que nos interesa (battle)
 
         yield return new WaitForSeconds(_stunTime);    // Esperamos los segundos que deseemos
 
-        _myPlayerInput.currentActionMap.Enable();       // Volvemos a actuar el input
+        _myPlayerInput?.actions.FindActionMap("Battle").Enable();       // Volvemos a actuar el input
 
         _stunned = false;                               // Final estado de Stun
 
-        //_myKnockBackComponent.Knockback(_direction, _myPercentageComponent.Percentage);     // Llamada al knockback final postStun
+        _myKnockBackComponent.Knockback(_direction, _myPercentageComponent.Percentage);     // Llamada al knockback final postStun
 
         //Hemos desactivado la linea de arriba y funka diferente pero hay que ver como desactivar bien el input
     }
-
+    public void SetDirecction(Vector2 direction)
+    {
+        _direction = direction;
+    }
     private void Start()
     {
         _myPlayerInput = GetComponent<PlayerInput>();

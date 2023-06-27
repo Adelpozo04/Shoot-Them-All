@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4668379581296155067}
   - component: {fileID: -4258268309016032837}
   - component: {fileID: 7785095293079937410}
-  - component: {fileID: -9055930548930548050}
   - component: {fileID: -8887465026505157147}
   m_Layer: 0
   m_Name: Progresivo
@@ -161,36 +160,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &-9055930548930548050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3010583664416582109}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2167c089de943944819c4c138d23ef1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ps: {fileID: 8503332253584853299}
-  _explotionTime: 0.5
-  _acitonRange: 1
-  _explotionSprite: {fileID: 21300000, guid: 7c461a9acdbdaa14ea1f5ae40fc9fe79, type: 3}
-  _playerLayer:
-    useTriggers: 0
-    useLayerMask: 1
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 512
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
 --- !u!114 &-8887465026505157147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb9dc63c7e02504d8430b6d095666b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _progresive: 0
   _progresie: 1
 --- !u!1001 &1691748631369023537
 PrefabInstance:

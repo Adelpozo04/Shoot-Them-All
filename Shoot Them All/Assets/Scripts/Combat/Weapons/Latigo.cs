@@ -18,8 +18,6 @@ public class Latigo : AttackGeneral
     [Tooltip("Tiempo que debe pasar entre cada ataque")]
     [SerializeField] private float _enfriamiento;
 
-    [Tooltip("Fuerza con la que sale la bala ")]
-    [SerializeField] private float _force;
     #endregion
 
 
@@ -32,38 +30,34 @@ public class Latigo : AttackGeneral
 
     public override void AtaquePrincipal()          // Ataque Básico
     {
-
+        if (ataqueMelee.AttackCondition() && !WeaponWallDetector())
+        {
+            base.AtaquePrincipal();
+            meleeDamage.Stun = false;
+            ataqueMelee.PerformAttack();
+        }
     }
 
     public override void AtaqueSecundario()         // Stun
     {
-        if (ataqueMelee.AttackCondition())
+        if (ataqueMelee.AttackCondition() && !WeaponWallDetector())
         {
             base.AtaqueSecundario();
             meleeDamage.Stun = true;
-            meleeDamage.SetDamage(_damagePri);
             ataqueMelee.PerformAttack();
-            meleeDamage.Stun = false;
         }
-
-        // Aumentar Porcentaje
-
-        // Knockback del último golpe
-
     }
 
 
     #endregion
-    public bool AttackCondition()
-    {
-        return _elapsedTime > _enfriamiento;
-    }
     // Start is called before the first frame update
     void Start()
     {
         StartMethod();
         ataqueMelee = GetComponent<AtaqueMelee>();
         meleeDamage = GetComponent<MeleeDamageComponent>();
+        meleeDamage.SetDamage(_damagePri);
+
     }
 
     // Update is called once per frame
