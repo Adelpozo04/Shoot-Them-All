@@ -87,11 +87,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c8c0a05d7a696b4789cad1d4a286d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damagePri: 20
-  _damageSec: 5
+  _coolDownPri: 0
+  _coolDownSec: 0
+  _damagePri: 9
+  _damageSec: 2
   _force: 15
   _tiempoRegresoFueraLimites: 3
-  _enfriamiento: 2
+  _enfriamiento: 0.5
   _bulletPrefab: {fileID: 6777782951466673763, guid: 05cb949e3e68db3468c32fcbf0706ec1, type: 3}
   _maxBullets: 3
 --- !u!114 &3525883304604187449
@@ -111,7 +113,7 @@ MonoBehaviour:
   _attackPosition: 0
   _distance: 0.5
   timer: 0.2
-  cooldown: 0.5
+  cooldown: 2
 --- !u!114 &-8821523197759231554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55437dcae7fc5b242afab912c5b24708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _progresive: 0
 --- !u!114 &-933654913763572914
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -50,8 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coolDownPri: 2
   _coolDownSec: 0
-  _damagePri: 5
-  _damageSec: 5
+  _damagePri: 3
+  _damageSec: 2
   _dashingPower: 5
   _dashingTime: 0.2
   _force: 10

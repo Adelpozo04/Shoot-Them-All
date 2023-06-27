@@ -27,6 +27,7 @@ public class FollowWhoThrow : MonoBehaviour
     private Vector3 _direction;
     private Rigidbody2D _myRigidBody;
     private float _elapsedTime = 0;
+    private Choque _choqueComponent;
 
     #endregion
 
@@ -61,7 +62,8 @@ public class FollowWhoThrow : MonoBehaviour
     {
         _myCollider= GetComponent<Collider2D>();
         _following = false;
-        _myRigidBody = GetComponent<Rigidbody2D>(); 
+        _myRigidBody = GetComponent<Rigidbody2D>();
+        _choqueComponent = GetComponent<Choque>();
     }
 
     // Update is called once per frame

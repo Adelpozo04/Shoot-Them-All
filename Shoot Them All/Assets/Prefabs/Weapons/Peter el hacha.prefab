@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55437dcae7fc5b242afab912c5b24708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _progresive: 0
 --- !u!114 &3071890403169482800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,7 +78,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e820f92bd9fe7374887b4406415d96d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponCollider: {fileID: 0}
   meshRays: 6
   _attackWidth: 30
   _attackPosition: 0
@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272efc46a400d804c952d21288deddf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _coolDownPri: 0
+  _coolDownSec: 0
   _damagePri: 5
   _damageSec: 2
 --- !u!33 &7922742123677892476

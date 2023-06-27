@@ -23,10 +23,11 @@ public class ChoqueArrojadiza : Choque
         {
             _rigidbody.isKinematic = true;
             _rigidbody.velocity = Vector2.zero;
+            enabled = false;
         }
         //Deteccion de golpeo normal
         if (collision.gameObject.GetComponent<KnockbackComponent>() != null && 
-            collision.GetComponent<PointsComponent>() != _playerFather && !_followWhoThrow.Following)            // Si la bala colisiona con otro jugador        
+            collision.GetComponent<PointsComponent>() != _playerFather && !_followWhoThrow.Following && enabled)            // Si la bala colisiona con otro jugador        
         {
             collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().
                 ApplyConsecuencies(_damage, _rigidbody.velocity.normalized, _playerFather);

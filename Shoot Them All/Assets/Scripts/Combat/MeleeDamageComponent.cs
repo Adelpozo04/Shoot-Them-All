@@ -14,14 +14,14 @@ public class MeleeDamageComponent : Choque
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<KnockbackComponent>() != null && !_stun)                   
+        if (collision.gameObject.GetComponent<KnockbackComponent>() != null /*&& !_stun*/)                   
         {
             Debug.Log("y tu padre essssss" + _playerFather);
             Debug.Log(_damage);
             collision.gameObject.GetComponent<WeaponConsecuenciesComponent>().
             ApplyConsecuencies(_damage, _weaponTransform.position - _playerFather.transform.position, _playerFather);
         }
-        CallStun(transform.root.GetComponent<StunComponent>());
+        //CallStun(transform.root.GetComponent<StunComponent>());
     }
     #endregion
 

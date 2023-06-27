@@ -45,12 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3896b996ce8c843a7c16faed19b574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _coolDownPri: 0
+  _coolDownSec: 0
   _damagePri: 5
   _damageSec: 5
   _disparoRectoBehaviour: {fileID: 0}
   _maxBalas: 5
   _enfriamiento: 0.2
-  _speed: 4
+  _speed: 7
   _infiniteAmo: 0
   _bulletPrefab: {fileID: 8045010264843042468, guid: dee240b6ded548b4c8463faa531be77e, type: 3}
 --- !u!114 &7930944469559887482
