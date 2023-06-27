@@ -11,17 +11,25 @@ public class Rugby : AttackGeneral
 
     [Tooltip("Tiempo en el que esta haciendo dash")]
     [SerializeField] private float _dashingTime;
+
+    [Tooltip("Tiempo que tarda en recargar el arma si esta se sale del mapa")]
+    [SerializeField] private float _tiempoRegresoFueraLimites;
+
     [SerializeField] private float _force;
+
     [SerializeField] GameObject _bulletPrefab;
+
+    [SerializeField] private int _maxBullets;
     #endregion
 
 
     #region properties
     private int _currentBullets;
-    private float _elapsedTime;
     private ChoqueArmaDashComponent _choqueDash;
     private DisparoParabolico _parabolicoComponent;
     private DashComponent _dashComponent;
+
+    private GameObject[] _bullets;
 
     private GameObject _jugador;
 
@@ -47,21 +55,34 @@ public class Rugby : AttackGeneral
     }
     public override void AtaqueSecundario()
     {
-        base.AtaqueSecundario();
-        if (!WeaponWallDetector())
+        if (!WeaponWallDetector() && _timerSec > _coolDownSec && _currentBullets > 0)
         {
             base.AtaqueSecundario();
-            GameObject bullet = _parabolicoComponent.PerfomShoot(_bulletPrefab, _playerFather,
-                AngleToDirection(), transform.position, ref _currentBullets, ref _elapsedTime, _force);
-
-            bullet.GetComponent<Choque>().SetDamage(_damageSec);
+            _bullets[_maxBullets - _currentBullets] =
+                _parabolicoComponent.PerfomShoot(_bulletPrefab, _playerFather,
+                AngleToDirection(), transform.position, ref _currentBullets, ref _timerSec, _force);
+            _bullets[_maxBullets - (_currentBullets + 1)].GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(GetPlayer()); //Cambiar por padre
+                                                                                                                              //Es un poco chapuza lo de +1 pero sino habria que hacer contador individual aparte
+            _bullets[_maxBullets - (_currentBullets + 1)].GetComponent<Choque>().SetDamage(_damageSec);
         }
 
     }
-
+    public void Recargar()
+    {
+        if (_currentBullets < _maxBullets)
+        {
+            _currentBullets++;
+        }
+    }
     #endregion
 
-
+    private void Update()
+    {
+        if(_timerSec < _coolDownSec)
+        {
+            _timerSec += Time.deltaTime;
+        }
+    }
     void Start()
     {
         StartMethod();
@@ -75,7 +96,8 @@ public class Rugby : AttackGeneral
         _choqueDash = GetComponent<ChoqueArmaDashComponent>();
         _choqueDash.SetDamage(_damagePri);
         _choqueDash.Player = _jugador;
-        
+        _currentBullets = _maxBullets;
+        _bullets = new GameObject[_maxBullets];
     }
 
 }

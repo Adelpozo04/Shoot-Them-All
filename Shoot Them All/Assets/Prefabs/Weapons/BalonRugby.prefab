@@ -48,14 +48,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bae95e19fdd58e448556e5a60e56f39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coolDownPri: 2
-  _coolDownSec: 0
+  _coolDownPri: 1
+  _coolDownSec: 1
   _damagePri: 3
   _damageSec: 2
   _dashingPower: 5
   _dashingTime: 0.2
+  _tiempoRegresoFueraLimites: 5
   _force: 10
   _bulletPrefab: {fileID: 6777782951466673763, guid: 705c296b0dd71604c9d36a29b998eb28, type: 3}
+  _maxBullets: 5
 --- !u!70 &2042716875276493731
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -85,6 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _progresive: 0
+  _stun: 0
 --- !u!114 &-3524098897765096208
 MonoBehaviour:
   m_ObjectHideFlags: 0

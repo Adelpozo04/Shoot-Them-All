@@ -12,6 +12,12 @@ public class AnimatorsManager : MonoBehaviour
     private Animator _bodyAnimator;
     [SerializeField]
     private Animator _weaponAnimator;
+    [SerializeField]
+    private SpriteRenderer _spriteRenderer;
+    public SpriteRenderer SpriteRenderer
+    {
+        get { return _spriteRenderer; }
+    }
 
     private int Floor = Animator.StringToHash("Floor");
     private int Walking = Animator.StringToHash("Walking");

@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _progresive: 0
+  _stun: 0
 --- !u!114 &3071890403169482800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,11 +80,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshRays: 6
-  _attackWidth: 30
-  _attackPosition: 0
-  _distance: 0.69
-  timer: 1
-  cooldown: 0.5
+  _attackWidth: 60
+  _attackPosition: 45
+  _distance: 0.6
+  timer: 0.3
+  cooldown: 0.1
 --- !u!114 &4903320208775626697
 MonoBehaviour:
   m_ObjectHideFlags: 0

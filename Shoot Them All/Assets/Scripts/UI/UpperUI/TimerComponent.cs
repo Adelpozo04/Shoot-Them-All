@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class TimerComponent : MonoBehaviour
 {
     private Text _myTimerText;
+    //pasar a un manager
+    [SerializeField]
     private float _timer = 75;
     [SerializeField] private bool _timerCanCount = false;       // Quitar SerializeField de testeo
 

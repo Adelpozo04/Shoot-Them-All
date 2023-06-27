@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4731112152672729605}
   - component: {fileID: 1627967450109571786}
   - component: {fileID: 567272442408609380}
-  - component: {fileID: 1628906916747314454}
   - component: {fileID: 5641510969659258238}
+  - component: {fileID: -6314879126383577618}
+  - component: {fileID: -3087790455174809763}
   m_Layer: 0
   m_Name: BalonRugby
   m_TagString: Untagged
@@ -108,20 +109,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1628906916747314454
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6777782951466673763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb9dc63c7e02504d8430b6d095666b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _progresive: 0
-  _progresie: 0
 --- !u!70 &5641510969659258238
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -138,3 +125,31 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.47, y: 0.25}
   m_Direction: 1
+--- !u!114 &-6314879126383577618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6777782951466673763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8716ec83a0466c42a200981360a6a9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _followingSpeed: 15
+  _tiempoRegreso: 2
+--- !u!114 &-3087790455174809763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6777782951466673763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a54d0a067883594bab4e333af8976b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _progresive: 0
+  _stun: 0

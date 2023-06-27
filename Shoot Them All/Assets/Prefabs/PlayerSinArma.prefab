@@ -361,6 +361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bodyAnimator: {fileID: 5461082874006337263}
   _weaponAnimator: {fileID: 5570440905456523839}
+  _spriteRenderer: {fileID: 3179608076679092859}
 --- !u!114 &6202089724193138840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,6 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77b06240ef0f93e47a0699182eb18bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _stunned: 0
   _stunTime: 5
 --- !u!1001 &218764340034358529
 PrefabInstance:
@@ -593,7 +595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4065716600269903919, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.0004682839
+      value: 0.0004685223
       objectReference: {fileID: 0}
     - target: {fileID: 5100736643935801917, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -601,7 +603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5100736643935801917, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.00000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5124327672491889899, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
       propertyPath: m_Bounds.m_Center.x
@@ -621,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5973006382438501493, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.00000023841858
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6912826388983398962, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
       propertyPath: m_RootOrder
@@ -673,7 +675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7831700555856668579, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.0039216354
+      value: 0.003921874
       objectReference: {fileID: 0}
     - target: {fileID: 7831700555856668579, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
       propertyPath: m_Bounds.m_Extent.y
@@ -681,6 +683,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
+--- !u!212 &3179608076679092859 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3398258050013779834, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
+  m_PrefabInstance: {fileID: 218764340034358529}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &5461082874006337263 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5242362531658906606, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}

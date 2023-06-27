@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public class RoundManager : MonoBehaviour
 {
     [SerializeField]
-    private Transform _spawnPoint;
+    private Transform[]  _spawnPoints;
     [SerializeField]
     private GameObject _playerUIPrefab;
     [SerializeField]
@@ -62,11 +62,12 @@ public class RoundManager : MonoBehaviour
     }
     public void OnPlayerJoined(PlayerInput player)
     {
-        player.transform.position = _spawnPoint.position;
+        player.transform.position = _spawnPoints[player.playerIndex].position;
 
 
         //el numero de elementos en la lista
         int playerListCount = GameManager.Instance.GetPlayerListCount();
+        player.GetComponent<AnimatorsManager>().SpriteRenderer.color = _playerColor[playerListCount];
 
         //instaciciacion del arma
         Transform weapon = Instantiate(_weaponsPrefabs[playerListCount].Weapon,player.transform.GetChild(1)).transform;
