@@ -57,7 +57,7 @@ public class DashComponent : MonoBehaviour
         _horizontalComponent.enabled = false;
         _jumpComponent.enabled = false;
         _edgeComponet.enabled = false;
-        _myFatherRB.velocity += direction * dashingPower * _horizontalComponent.SpeedToAcelerate;
+        _myFatherRB.velocity += direction * dashingPower * _horizontalComponent._speedToAcelerate;
 
 
         _trailRenderer.emitting = true;
