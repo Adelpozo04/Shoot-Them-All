@@ -7,7 +7,6 @@ using UnityEngine.InputSystem;
 //cambiar el nombre de la clase por cañon
 public class ArmaCañon : AttackGeneral
 {
-    [SerializeField]
     private DisparoRectoBeheaviour _disparoRectoBehaviour;
 
     #region parameters

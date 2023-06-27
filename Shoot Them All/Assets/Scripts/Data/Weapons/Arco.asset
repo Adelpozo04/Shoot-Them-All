@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c5313dfe5e7844e8464425fed2f19d, type: 3}
+  m_Name: Arco
+  m_EditorClassIdentifier: 
+  Weapon: {fileID: 8065318908256642667, guid: 2b44becf182a4b6438b4fe55f23b6441, type: 3}
+  _weaponDistance: 0.2
+  NumberInAnimator: 3
+  WeaponSpriteIcon: {fileID: 5778726223950135714, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+  HabiltyL: {fileID: 5657127192941523028, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
+  HabilyR: {fileID: 5657127192941523028, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}

@@ -531,6 +531,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: "L\xE1tigo"
       m_Image: {fileID: 0}
+    - m_Text: Arco
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2132,6 +2134,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 0d2ef0e05915b334cb4e788993a8f170, type: 2}
   - {fileID: 11400000, guid: c30dcb7c741b9484cb577edebe9da6dd, type: 2}
   - {fileID: 11400000, guid: 59b86017e3b019542b08c591f30d7e5c, type: 2}
+  - {fileID: 11400000, guid: 83d5bde61501e7c4593226c2513e1dfa, type: 2}
   ChangeNPlayers:
     m_PersistentCalls:
       m_Calls: []
@@ -3735,6 +3738,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: "L\xE1tigo"
       m_Image: {fileID: 0}
+    - m_Text: Arco
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4584,6 +4589,8 @@ MonoBehaviour:
     - m_Text: Sable
       m_Image: {fileID: 0}
     - m_Text: "L\xE1tigo"
+      m_Image: {fileID: 0}
+    - m_Text: Arco
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6489,6 +6496,8 @@ MonoBehaviour:
     - m_Text: Sable
       m_Image: {fileID: 0}
     - m_Text: "L\xE1tigo"
+      m_Image: {fileID: 0}
+    - m_Text: Arco
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

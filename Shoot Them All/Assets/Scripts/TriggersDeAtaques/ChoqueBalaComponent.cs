@@ -9,7 +9,6 @@ public class ChoqueBalaComponent : Choque
 
     private LayerMask _floor;
     private LayerMask _limit;
-    [SerializeField] private bool _progresie;
     #endregion
 
     #region methods
@@ -27,15 +26,11 @@ public class ChoqueBalaComponent : Choque
         {
             gameObjectAux.GetComponent<WeaponConsecuenciesComponent>().
             ApplyConsecuencies(_damage, GetComponent<Rigidbody2D>().velocity.normalized, _playerFather);
-            Destroy(gameObject);
-            //se ha hecho un metodo en la calse padre para hacer esto y que se pueda hacer en cualquier componente de choque
-            if (_progresie)
+            if (_progresive)
             {
-                if (gameObjectAux.GetComponent<ProgresiveDamage>() != null)
-                {
-                    gameObjectAux.GetComponent<ProgresiveDamage>().IniciaDaño();
-                }
+                CallProgresive(collision.GetComponent<ProgresiveDamage>());
             }
+            Destroy(gameObject);
         }
     }
     
