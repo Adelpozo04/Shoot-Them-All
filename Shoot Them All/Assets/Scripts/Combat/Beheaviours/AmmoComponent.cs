@@ -5,6 +5,7 @@ using UnityEngine;
 public class AmmoComponent : MonoBehaviour
 {
     #region references
+    private HorizontalComponent _speedComponent;
     #endregion
 
     #region parameters
@@ -15,6 +16,7 @@ public class AmmoComponent : MonoBehaviour
     [SerializeField]
     private float _rechargeTime;
     [SerializeField]
+    [Range(0f, 1f)]
     private float _rechargeSlowdown;
     [Tooltip("Establece si recarga todas las balas a la vez (false) o de una en una (true)")]
     [SerializeField]
@@ -41,6 +43,7 @@ public class AmmoComponent : MonoBehaviour
     {
         if (_currentAmmo < _maxAmmo)
         {
+            _speedComponent._speedToAcelerate = _speedComponent._speedToAcelerate * _rechargeSlowdown;
             enabled = true;
             _currentTime = 0;
         }
@@ -58,6 +61,13 @@ public class AmmoComponent : MonoBehaviour
     public void Dispara()
     {
         _currentAmmo--;
+        Cancela();
+    }
+
+    public void Cancela()
+    {
+        enabled = false;
+        _speedComponent._speedToAcelerate = _speedComponent._speedToAcelerate / _rechargeSlowdown;
     }
     #endregion
 
@@ -79,7 +89,7 @@ public class AmmoComponent : MonoBehaviour
             RecargaUna();
             if (_currentAmmo == _maxAmmo)
             {
-                enabled = false;
+                Cancela();
             }
             else
             {
@@ -89,7 +99,7 @@ public class AmmoComponent : MonoBehaviour
         else
         {
             RecargaTodas();
-            enabled = false;
+            Cancela();
         }
     }
 }

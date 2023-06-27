@@ -69,7 +69,7 @@ public class JumpComponent : MonoBehaviour
         _animatorsManager = GetComponent<AnimatorsManager>();
         _horizontalComponent = GetComponent<HorizontalComponent>();
         _edgeComponet = GetComponent<EdgeComponet>();
-        _horizontalSpeedInAir = _horizontalComponent.SpeedToAcelerate;
+        _horizontalSpeedInAir = _horizontalComponent._speedToAcelerate;
     }
 
     void FixedUpdate()

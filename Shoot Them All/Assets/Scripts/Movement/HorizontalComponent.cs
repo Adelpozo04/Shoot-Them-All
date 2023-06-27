@@ -28,11 +28,7 @@ public class HorizontalComponent : MonoBehaviour
 
     [Tooltip("Velocidad máxima que alcanza el jugador")]
     [SerializeField]
-    private float _speedToAcelerate;
-    public float SpeedToAcelerate
-    {
-        get { return _speedToAcelerate; }
-    }
+    public float _speedToAcelerate;
 
     [Tooltip("Tamaño de la caja para detectar muros")]
     [SerializeField]
