@@ -5,12 +5,16 @@ using UnityEngine.U2D.Animation;
 
 public class Customization : MonoBehaviour
 {
+    //array de nombres de sombreros
     [SerializeField]
-    private string[] HatName; 
+    private string[] HatName;
+    //array auxiliar (se descartara mas adelante)
     [SerializeField]
     private string[] NamesParts;
+    //indice del array de sombreros
     [SerializeField]
     int index;
+    //Arary de sprite resolvers
     [SerializeField]
     private SpriteResolver[] SpriteResolver;
     // Start is called before the first frame update
