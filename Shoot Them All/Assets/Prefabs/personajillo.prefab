@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6481846347982332170}
   - component: {fileID: 4666359434309315885}
   - component: {fileID: 7831700555856668579}
+  - component: {fileID: 2549320403938807986}
   m_Layer: 0
   m_Name: Foot_Izq
   m_TagString: Untagged
@@ -141,6 +142,21 @@ MonoBehaviour:
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
+--- !u!114 &2549320403938807986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686619699443446866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: -0.0000069327125
 --- !u!1 &2603271858361924363
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +230,7 @@ GameObject:
   - component: {fileID: 325196251253827401}
   - component: {fileID: 3788109432061263347}
   - component: {fileID: 5100736643935801917}
+  - component: {fileID: 5425764245932307675}
   m_Layer: 0
   m_Name: Foot_Der
   m_TagString: Untagged
@@ -309,6 +326,21 @@ MonoBehaviour:
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
+--- !u!114 &5425764245932307675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5333331901575343052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: 4.1073783e-10
 --- !u!1 &5506831657346996969
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +457,7 @@ GameObject:
   - component: {fileID: 4950977029734647066}
   - component: {fileID: 1532839577204725346}
   - component: {fileID: 4065716600269903919}
+  - component: {fileID: 4386289919823145411}
   m_Layer: 0
   m_Name: Hat_Merch
   m_TagString: Untagged
@@ -520,6 +553,21 @@ MonoBehaviour:
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
+--- !u!114 &4386289919823145411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6190283376655857192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: 0.000012062794
 --- !u!1 &6894086958831841776
 GameObject:
   m_ObjectHideFlags: 0
