@@ -183,6 +183,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Customization",
+            "id": "040dfffa-48f2-4fa8-a6c6-fdc8be3cdc0a",
+            "actions": [
+                {
+                    "name": "ChangeHat",
+                    "type": "Value",
+                    "id": "9703b002-280d-4b06-9f9a-c82f691d174f",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c433d43f-e291-4c35-9205-52551639fff8",
+                    "path": "<Gamepad>/dpad/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeHat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

@@ -593,6 +593,10 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Center.y
       value: -0.00000023841858
       objectReference: {fileID: 0}
+    - target: {fileID: 3788109432061263347, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 646944026544536809, guid: 4ba0c76c198929c4f87348d30b669d66, type: 3}
     - target: {fileID: 4065716600269903919, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.0004685223
@@ -612,6 +616,10 @@ PrefabInstance:
     - target: {fileID: 5124327672491889899, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
       propertyPath: m_Bounds.m_Center.y
       value: 0.0033750087
+      objectReference: {fileID: 0}
+    - target: {fileID: 5425764245932307675, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
+      propertyPath: m_SpriteKey
+      value: 4.1073783e-10
       objectReference: {fileID: 0}
     - target: {fileID: 5703618907064375889, guid: 30b2365738cc9e647baa6edcd8845d65, type: 3}
       propertyPath: m_Name
