@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: TierraAnimadaIzq
+  m_Name: ArenaAnimadaBordeIzq
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 848218455, guid: 5d3bbc7a1aa3fb64db8590b0b3eed409, type: 3}
-  - {fileID: 2046449530, guid: 5d3bbc7a1aa3fb64db8590b0b3eed409, type: 3}
-  m_MinSpeed: 3
-  m_MaxSpeed: 3
+  - {fileID: 1550939272, guid: 5d3bbc7a1aa3fb64db8590b0b3eed409, type: 3}
+  - {fileID: 254526269, guid: 5d3bbc7a1aa3fb64db8590b0b3eed409, type: 3}
+  - {fileID: 1859733773, guid: 5d3bbc7a1aa3fb64db8590b0b3eed409, type: 3}
+  m_MinSpeed: 6.5
+  m_MaxSpeed: 6.5
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
-  m_TileColliderType: 0
+  m_TileColliderType: 2
