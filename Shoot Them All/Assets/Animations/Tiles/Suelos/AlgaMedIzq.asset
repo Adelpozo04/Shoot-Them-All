@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: TierraAnimation
+  m_Name: AlgaMedIzq
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -343260411, guid: 5d3bbc7a1aa3fb64db8590b0b3eed409, type: 3}
-  - {fileID: 1532290305, guid: 5d3bbc7a1aa3fb64db8590b0b3eed409, type: 3}
-  m_MinSpeed: 3
-  m_MaxSpeed: 3
+  - {fileID: 200781688, guid: 5d3bbc7a1aa3fb64db8590b0b3eed409, type: 3}
+  - {fileID: -822654988, guid: 5d3bbc7a1aa3fb64db8590b0b3eed409, type: 3}
+  - {fileID: 1548038713, guid: 5d3bbc7a1aa3fb64db8590b0b3eed409, type: 3}
+  - {fileID: -822654988, guid: 5d3bbc7a1aa3fb64db8590b0b3eed409, type: 3}
+  m_MinSpeed: 6
+  m_MaxSpeed: 6
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
