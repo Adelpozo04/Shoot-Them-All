@@ -596,30 +596,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asset: {fileID: 7108339969198208228, guid: 5d3df415b7232cb47a23cf5d4a6a7761, type: 3}
-  HatName:
-  - Hat_Merch
-  - Hat_Platano
-  - Hat_Ya_Antojaste
-  - Hat_Vikingo
-  - Hat_Troll_Face
-  - Hat_Timoteo
-  - Hat_Super_Heroe
-  - Hat_sombrero_Paja
   NamesParts:
-  - Hat
-  - 1
-  - 1
-  index: 1
+  - 
+  - 0
+  - 0
   SpriteResolver:
   - {fileID: 871074434}
   - {fileID: 2116135958}
   - {fileID: 1992018549}
   _panelTransform: {fileID: 921035096}
   _imagePrefab: {fileID: 4592953229828760623, guid: 88fdb11aa0520094ea4287e554aa2f37, type: 3}
-  _spritesArray: []
-  SetImageInPlayer:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!4 &1050124925
 Transform:
   m_ObjectHideFlags: 0
