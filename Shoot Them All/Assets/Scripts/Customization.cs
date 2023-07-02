@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +22,22 @@ public class Customization : MonoBehaviour
     //Arary de sprite resolvers
     [SerializeField]
     private SpriteResolver[] SpriteResolver;
+    //transfomr del panel
     [SerializeField]
     private Transform _panelTransform;
+    //prefab de las imagenes en el panel
     [SerializeField]
     private GameObject _imagePrefab;
+
+
+
+    //sprite renderer del cuerpo
+    [SerializeField]
+    private SpriteRenderer _bodySprite;
+    [SerializeField]
+    private Color[] _colorArray;
+    [SerializeField]
+    private Image _buttonImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -57,4 +70,10 @@ public class Customization : MonoBehaviour
         Debug.Log("Recibido");
         SpriteResolver[0].SetCategoryAndLabel(SpriteResolver[0].GetCategory(), HatName[index]);
     }
+    public void ChangeBodyColor(Int32 value)
+    {
+        _bodySprite.color = _colorArray[value% _colorArray.Length];
+        _buttonImage.color = _colorArray[value % _colorArray.Length];
+    }
+
 }
