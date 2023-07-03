@@ -51,11 +51,12 @@ public class Hacha1 : AttackGeneral
         {
             base.AtaqueSecundario();
             _bullets[_maxBullets - _currentBullets] = 
-                _disparoParabolico.PerfomShoot(_bulletPrefab, _playerFather, 
-                AngleToDirection(), _spawnpointBullet.position, ref _currentBullets, ref _elapsedTime, _force);
-            _bullets[_maxBullets - (_currentBullets + 1)].GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(GetPlayer()); //Cambiar por padre
-                                                                                                                              //Es un poco chapuza lo de +1 pero sino habria que hacer contador individual aparte
-            _bullets[_maxBullets - (_currentBullets + 1)].GetComponent<Choque>().SetDamage(_damageSec);
+                _disparoParabolico.PerfomShoot(_bulletPrefab, _playerPoints, 
+                AngleToDirection(), _spawnpointBullet.position, ref _timerSec, _force);
+            _elapsedTime = 0;
+            _bullets[_maxBullets - _currentBullets].GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(GetPlayer());
+            _bullets[_maxBullets - _currentBullets].GetComponent<Choque>().SetDamage(_damageSec);
+            _currentBullets--;
         }
     }
 
