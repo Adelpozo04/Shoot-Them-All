@@ -38,8 +38,7 @@ public class ArmaCañon : AttackGeneral
             base.AtaquePrincipal();
             _myAmmo.Dispara();
             GameObject bullet = _disparoRectoBehaviour.PerfomShoot(_bulletPrefab, _playerPoints, _raycastDir,
-                _myTransform.position, _speed);
-            _elapsedTime = 0;
+                _myTransform.position, ref _elapsedTime, _speed);
             bullet.GetComponent<ChoqueBalaComponent>().SetDamage(_damagePri);
         }
     }

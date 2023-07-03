@@ -23,13 +23,6 @@ public class LanzaPiñatas : AttackGeneral
     [Tooltip("Tiempo que debe pasar entre un disparo y otro")]
     [SerializeField] private float _enfriamiento;
 
-    [Tooltip("Incia si el arma tiene municion infinita")]
-    [SerializeField]
-    private bool _infiniteAmo;
-
-    //[SerializeField]
-    //private PointsComponent _playerFather;
-
     [Tooltip("Fuerza con la que sale la bala ")]
     [SerializeField] private float _force;
     #endregion
@@ -57,8 +50,7 @@ public class LanzaPiñatas : AttackGeneral
             }
 
             GameObject proyectile = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerPoints, _raycastDir,
-                _bulletSpawnPoint.position, ref _currentBullets, ref _elapsedTime, _force);
-
+                _bulletSpawnPoint.position, ref _elapsedTime, _force);
             proyectile.GetComponent<ExplotionIgnition>().SetDamage(_damagePri);
             _bullets.Enqueue(proyectile.GetComponent<ExplotionIgnition>());
         } 
@@ -88,7 +80,7 @@ public class LanzaPiñatas : AttackGeneral
     #endregion
     public bool ShootCondition()
     {
-        return _elapsedTime > _enfriamiento && _infiniteAmo;
+        return _elapsedTime > _enfriamiento;
     }
     // Start is called before the first frame update
     void Start()

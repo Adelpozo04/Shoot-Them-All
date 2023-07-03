@@ -15,7 +15,7 @@ public class DisparoParabolico : MonoBehaviour
     /// <param name="bulletPrefab"></param>
     /// <param name="player"></param>
     public GameObject PerfomShoot(GameObject bulletPrefab, PointsComponent player, Vector2 direction,
-                        Vector3 spawnPosition, ref int currentBullets, ref float elapsedTime, float force)
+                        Vector3 spawnPosition, ref float time, float force)
     {
         Debug.Log("instanciando " + bulletPrefab);
         GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
@@ -24,9 +24,7 @@ public class DisparoParabolico : MonoBehaviour
         //configuracion de lanzamiento
         bullet.transform.rotation = transform.rotation;
         bullet.GetComponent<Rigidbody2D>().AddForce(direction*force,ForceMode2D.Impulse);
-
-        currentBullets--;
-        elapsedTime = 0;
+        time = 0;
         return bullet;
     }
 
