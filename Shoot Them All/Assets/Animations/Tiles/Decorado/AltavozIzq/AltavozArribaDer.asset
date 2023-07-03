@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: AltavozArribaDer
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 695282310, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: -1470168480, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: -559157403, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: 1568185145, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
   m_MinSpeed: 5
   m_MaxSpeed: 5
   m_AnimationStartTime: 0

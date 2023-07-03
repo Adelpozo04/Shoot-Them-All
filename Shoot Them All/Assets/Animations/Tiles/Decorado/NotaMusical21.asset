@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: NotaMusical2
+  m_Name: NotaMusical21
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 116582958, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: 116582958, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: 116582958, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: -454050762, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: 404861782, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: 995023487, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: 404861782, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: 665397098, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
   m_MinSpeed: 5
   m_MaxSpeed: 5
   m_AnimationStartTime: 0

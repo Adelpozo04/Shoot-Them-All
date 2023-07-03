@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: AltavozAbajoIzq
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -867994675, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: 5774854, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: 553009796, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: 878376598, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
   m_MinSpeed: 5
   m_MaxSpeed: 5
   m_AnimationStartTime: 0
