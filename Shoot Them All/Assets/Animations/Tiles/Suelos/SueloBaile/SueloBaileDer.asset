@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: SueloBaileDer
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 504756829, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: 2079922118, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: -780355911, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: 1261914762, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: -1748006665, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: 457058934, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: -598976866, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: -235058267, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: -1850609581, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: 39534671, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: 684041745, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: -670458315, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
   m_MinSpeed: 6
   m_MaxSpeed: 9
   m_AnimationStartTime: 0

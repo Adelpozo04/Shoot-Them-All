@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: SueloBaileIzq
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1265147233, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: -1922112284, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: 1183861462, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: -249046486, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: 602937652, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
-  - {fileID: 1798853365, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: -1021590996, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: 1503332014, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: 2006373849, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: -518870208, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: -1393863381, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
+  - {fileID: -537075234, guid: 95024574a50bf2141a696a47a4feb3cd, type: 3}
   m_MinSpeed: 6
   m_MaxSpeed: 9
   m_AnimationStartTime: 0
