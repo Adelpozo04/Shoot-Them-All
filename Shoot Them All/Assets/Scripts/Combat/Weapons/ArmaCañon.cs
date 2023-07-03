@@ -7,49 +7,39 @@ using UnityEngine.InputSystem;
 //cambiar el nombre de la clase por cañon
 public class ArmaCañon : AttackGeneral
 {
-    private DisparoRectoBeheaviour _disparoRectoBehaviour;
 
     #region parameters
-
-    //mas adelante estos parametros deberian ser cambiados por codigo igual hasta hacer un struct para estos ? ya no hace falta creo
-    [Tooltip("Número de balas máximas del cargador")]
-    [SerializeField] private int _maxBalas;
-
     [Tooltip("Tiempo que debe pasar entre un disparo y otro")]
     [SerializeField] private float _enfriamiento;
 
     [Tooltip("Velocidad que lleva la bala ")]
     [SerializeField] private float _speed;
 
-    [SerializeField]
-    private bool _infiniteAmo;
     //[SerializeField]
-    //private PointsComponent _playerFather;
+    //private bool _infiniteAmo;
     #endregion
 
     #region references
     [SerializeField] private GameObject _bulletPrefab;
+    private AmmoComponent _myAmmo;
+    private DisparoRectoBeheaviour _disparoRectoBehaviour;
     #endregion
 
     #region properties
-
-    private int _currentBullets;
     private float _elapsedTime;
-
     #endregion
 
     #region methods
 
     public override void AtaquePrincipal()
     {
-        Debug.Log("ataque 1");
-
-        Debug.Log("condition" + ShootCondition());
         if(ShootCondition() && !WeaponWallDetector())
         {
             base.AtaquePrincipal();
-            GameObject bullet = _disparoRectoBehaviour.PerfomShoot(_bulletPrefab, _playerFather, _raycastDir,
-                _myTransform.position,ref _currentBullets,ref _elapsedTime,_speed);
+            _myAmmo.Dispara();
+            GameObject bullet = _disparoRectoBehaviour.PerfomShoot(_bulletPrefab, _playerPoints, _raycastDir,
+                _myTransform.position, _speed);
+            _elapsedTime = 0;
             bullet.GetComponent<ChoqueBalaComponent>().SetDamage(_damagePri);
         }
     }
@@ -58,7 +48,7 @@ public class ArmaCañon : AttackGeneral
     public override void AtaqueSecundario()
     {
         base.AtaqueSecundario();
-        _disparoRectoBehaviour.Reload(ref _currentBullets,_maxBalas);
+        _myAmmo.Recargar();
     }
 
     /// <summary>
@@ -67,7 +57,7 @@ public class ArmaCañon : AttackGeneral
     /// <returns></returns>
     private bool ShootCondition()
     {
-        return _elapsedTime > _enfriamiento && (_infiniteAmo || _currentBullets > 0);
+        return _elapsedTime > _enfriamiento && _myAmmo.PuedeDisparar(); ;
     }
     #endregion
 
@@ -77,8 +67,8 @@ public class ArmaCañon : AttackGeneral
         StartMethod();
         _myTransform = transform;
         _disparoRectoBehaviour = GetComponent<DisparoRectoBeheaviour>();
+        _myAmmo = GetComponent<AmmoComponent>();
         _elapsedTime = 0;
-        _currentBullets = _maxBalas;
     }
 
 

@@ -59,7 +59,7 @@ public class Rugby : AttackGeneral
         {
             base.AtaqueSecundario();
             _bullets[_maxBullets - _currentBullets] =
-                _parabolicoComponent.PerfomShoot(_bulletPrefab, _playerFather,
+                _parabolicoComponent.PerfomShoot(_bulletPrefab, _playerPoints,
                 AngleToDirection(), transform.position, ref _currentBullets, ref _timerSec, _force);
             _bullets[_maxBullets - (_currentBullets + 1)].GetComponent<FollowWhoThrow>().RegisterPlayerWhoThrow(GetPlayer()); //Cambiar por padre
                                                                                                                               //Es un poco chapuza lo de +1 pero sino habria que hacer contador individual aparte

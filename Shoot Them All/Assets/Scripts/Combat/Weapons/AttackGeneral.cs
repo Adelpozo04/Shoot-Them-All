@@ -11,7 +11,7 @@ public class AttackGeneral : MonoBehaviour
 
     private Transform _player;
     protected Transform _myTransform;
-    protected PointsComponent _playerFather;
+    protected PointsComponent _playerPoints;
 
     private RaycastHit2D raycast;
     protected Vector3 _raycastDir;
@@ -111,7 +111,7 @@ public class AttackGeneral : MonoBehaviour
         _myTransform = transform;
         _player = transform.parent;
         _animatorsManager = GetComponentInParent<AnimatorsManager>();
-        _playerFather = transform.parent.parent.GetComponent<PointsComponent>();
+        _playerPoints = transform.parent.parent.GetComponent<PointsComponent>();
         _floorLayer = LayerMask.GetMask("Floor");
         _raycastDir = _myTransform.position - _player.position;
     }

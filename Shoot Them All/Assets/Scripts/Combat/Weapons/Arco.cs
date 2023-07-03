@@ -29,7 +29,7 @@ public class Arco : AttackGeneral
         if (ShootConditionPri() && !WeaponWallDetector())
         {
             base.AtaquePrincipal();
-            GameObject bullet = _disparoParabolicoBehaviour.PerfomShoot(_bulletPrefab, _playerFather, _raycastDir,
+            GameObject bullet = _disparoParabolicoBehaviour.PerfomShoot(_bulletPrefab, _playerPoints, _raycastDir,
                 _myTransform.position, ref _currentBullets, ref _timerPri, _force);
             bullet.GetComponent<ChoqueBalaComponent>().SetDamage(_damagePri);
         }
@@ -41,7 +41,7 @@ public class Arco : AttackGeneral
         if (ShootConditionSec() && !WeaponWallDetector())
         {
             base.AtaquePrincipal();
-            GameObject bullet = _disparoParabolicoBehaviour.PerfomShoot(_burningBulletPrefab, _playerFather, _raycastDir,
+            GameObject bullet = _disparoParabolicoBehaviour.PerfomShoot(_burningBulletPrefab, _playerPoints, _raycastDir,
                 _myTransform.position, ref _currentBullets, ref _timerSec, _force);
             bullet.GetComponent<ChoqueBalaComponent>().SetDamage(_damageSec);
         }

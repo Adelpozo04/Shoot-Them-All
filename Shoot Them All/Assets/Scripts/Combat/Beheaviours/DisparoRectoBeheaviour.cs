@@ -12,7 +12,7 @@ public class DisparoRectoBeheaviour : MonoBehaviour
     /// <param name="bulletPrefab"></param>
     /// <param name="player"></param>
     public GameObject PerfomShoot(GameObject bulletPrefab, PointsComponent player, Vector2 direction,
-                        Vector3 spawnPosition,ref int currentBullets,ref float elapsedTime,float speed)
+                        Vector3 spawnPosition, float speed)
     {
         GameObject bullet = Instantiate(bulletPrefab, spawnPosition, Quaternion.identity);
 
@@ -25,13 +25,6 @@ public class DisparoRectoBeheaviour : MonoBehaviour
         {
             bullet.transform.localEulerAngles += new Vector3(0, 0, 180);
         }
-
-        currentBullets--;
-        elapsedTime = 0;
         return bullet;
-    }
-    public void Reload(ref int currentBullets, int maxBalas)
-    {
-        currentBullets = maxBalas;
     }
 }
