@@ -112,14 +112,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee468d3baec8ac64db43c92e03286564
-      internalID: 1860612109
+      spriteID: dbf79efe8cbd7084d974ae7bdc132aa4
+      internalID: -938871987
       vertices: []
       indices: 
       edges: []
@@ -133,14 +133,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3f19fd7ccb1ba94d93f42fb44a7ff6a
-      internalID: 1231496123
+      spriteID: d9404e2b6ddce2e4984371caaf54a5eb
+      internalID: -1021596136
       vertices: []
       indices: 
       edges: []
@@ -154,14 +154,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64f0c97ca6038134f8af43adf3328ac0
-      internalID: -1675100960
+      spriteID: 3e1e1ffc8edb37f489714b0bdb49f2cc
+      internalID: 1512151234
       vertices: []
       indices: 
       edges: []
@@ -175,14 +175,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d67045d45a7036242a76fb417c1ab798
-      internalID: -1691669183
+      spriteID: cf8a0e24ada272747adb767b646ee4e8
+      internalID: 615680931
       vertices: []
       indices: 
       edges: []
@@ -196,14 +196,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cd885b7879b81643bc6858f90faf8b3
-      internalID: -2077040595
+      spriteID: d54921b5dc6a27240be649fbb2bbb857
+      internalID: -1367305745
       vertices: []
       indices: 
       edges: []
@@ -217,14 +217,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb99f3028f823f246b20d4a6f576e910
-      internalID: -1441875729
+      spriteID: 78d800f54a33b5f4c980a5a31f4d195e
+      internalID: -2010231214
       vertices: []
       indices: 
       edges: []
@@ -238,14 +238,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62f408452b5414d4c80a2736e9081ee5
-      internalID: -268927170
+      spriteID: 2a6ad2f021e90c3468e4e4a13ac49604
+      internalID: 1604516757
       vertices: []
       indices: 
       edges: []
@@ -259,14 +259,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 755439b173040c04d8815c02ef3ebeab
-      internalID: 182526547
+      spriteID: 785ff38eada9b1f469913c406309c5b8
+      internalID: 1442604393
       vertices: []
       indices: 
       edges: []
@@ -280,14 +280,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53900ab13f74e214095deee6bd98644c
-      internalID: 1617108505
+      spriteID: 8bb51dffc366af043a346de189ecca8a
+      internalID: 531791699
       vertices: []
       indices: 
       edges: []
@@ -301,14 +301,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93e8638b18880fc4fa3958171306b6d9
-      internalID: 1205405518
+      spriteID: b0000732cf78f594ba1b82d242224f4b
+      internalID: 420518248
       vertices: []
       indices: 
       edges: []
@@ -322,14 +322,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d55dd535af57abb49ab81648c0aaf768
-      internalID: 1929645690
+      spriteID: 80f8005df5c6add42b1c1cdc4b6fa2f0
+      internalID: -1791505007
       vertices: []
       indices: 
       edges: []
@@ -343,14 +343,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e74b2e3911477745b0c8d29cc3c5de6
-      internalID: 152969169
+      spriteID: 46eabba48ec2b7b4db11adb385b5c97f
+      internalID: 893640293
       vertices: []
       indices: 
       edges: []
@@ -364,14 +364,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78a34347e704b56488ffce6777f676a3
-      internalID: -900689118
+      spriteID: bc2ed67d8bbc73246bb9f951b306b932
+      internalID: 272543394
       vertices: []
       indices: 
       edges: []
@@ -385,14 +385,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e1283196f9f00444b986a9a1db84286
-      internalID: -1972824540
+      spriteID: d9d1fbdd0d679124981dd8a8ce300a39
+      internalID: -2005670656
       vertices: []
       indices: 
       edges: []
@@ -406,14 +406,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 323fdde9c0d83134c8bdd7525f85fbaf
-      internalID: 725567890
+      spriteID: 63141813c18d2e740bfff4e9111f87e1
+      internalID: -1747541229
       vertices: []
       indices: 
       edges: []
@@ -427,14 +427,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 795849dc02a87d74590d12a506e4695d
-      internalID: -1454257486
+      spriteID: ebaca958fb88ac54399e0a92f5f87990
+      internalID: 1022764801
       vertices: []
       indices: 
       edges: []
@@ -448,14 +448,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e1b1ecae9d73c14c87930c589ed9747
-      internalID: 55362431
+      spriteID: b6527f9471b6545429bffcd0f6ac5264
+      internalID: -881585171
       vertices: []
       indices: 
       edges: []
@@ -469,14 +469,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 585d5d6705041b349a06dd4027da2c8c
-      internalID: -320860650
+      spriteID: d94dc9feb455f614589f1843533dbb44
+      internalID: 1378283126
       vertices: []
       indices: 
       edges: []
@@ -490,14 +490,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c66b14df93da1946b0666be8243068f
-      internalID: 942127742
+      spriteID: 801575ab50490114485eb10381447cf9
+      internalID: -38235727
       vertices: []
       indices: 
       edges: []
@@ -511,14 +511,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b48e414e63348bf4a837430e37288d34
-      internalID: 766018448
+      spriteID: 7e7bd6fc0dadc694b81e0c9ccd22b37b
+      internalID: 147157320
       vertices: []
       indices: 
       edges: []
@@ -532,14 +532,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b078429bf64908d4f9f930bf21bcd374
-      internalID: -1673621279
+      spriteID: 65e91412a8182a245b49cfed54d6a098
+      internalID: 1277433976
       vertices: []
       indices: 
       edges: []
@@ -553,14 +553,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 682263ded0b0d3841a546e33ea7f57e9
-      internalID: -1824773216
+      spriteID: b7face1d3422eed44b1ea1cbde3763bb
+      internalID: 540632565
       vertices: []
       indices: 
       edges: []
@@ -574,14 +574,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59cd99fc76badca41b9acc02a7da7591
-      internalID: -341518087
+      spriteID: 6a18a38d2279c15408faac3b87d6d1ac
+      internalID: -406424876
       vertices: []
       indices: 
       edges: []
@@ -595,14 +595,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d60ab1554b407bc4b842ae967d123fda
-      internalID: 1237329341
+      spriteID: 74a72fb8052d68943b956edacb32fc17
+      internalID: 1909875312
       vertices: []
       indices: 
       edges: []
@@ -616,14 +616,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e42b022177f09744a8363a3b378f5dce
-      internalID: -1946008792
+      spriteID: 825c0e21527568c448465e31308a3dfa
+      internalID: 234021994
       vertices: []
       indices: 
       edges: []
@@ -637,14 +637,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b59117065cfed54eb658503779a9ca9
-      internalID: 1248727606
+      spriteID: 0020a04808c57804ab857ed038c9b769
+      internalID: -1719047823
       vertices: []
       indices: 
       edges: []
@@ -658,14 +658,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c6ad8944bf14b745b329b499fdf0c05
-      internalID: 53267369
+      spriteID: 98468a0e66a7b8e4b891dfacb35fae02
+      internalID: 1909160439
       vertices: []
       indices: 
       edges: []
@@ -679,14 +679,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab2cc0896439e974a854f644c2e7646e
-      internalID: 2126797178
+      spriteID: 89791f522d4bbdf46b4261826b015c02
+      internalID: 1899883122
       vertices: []
       indices: 
       edges: []
@@ -700,14 +700,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b2e060537690924a919c2a7bea67c7b
-      internalID: 1123906266
+      spriteID: 0c08d2c932cc3d24dad66ed2c717bc67
+      internalID: -1109069090
       vertices: []
       indices: 
       edges: []
@@ -721,14 +721,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 502282e854afc6f49a4cbeb01b4d77fb
-      internalID: -1118880952
+      spriteID: f38a193b4691dfa4991ec99e96772531
+      internalID: 111023139
       vertices: []
       indices: 
       edges: []
@@ -742,14 +742,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1eb228324c033bc4cb1462c7a2c8f8d1
-      internalID: -513130817
+      spriteID: 7073e1d4dc505a745a9863a491d07121
+      internalID: 485502438
       vertices: []
       indices: 
       edges: []
@@ -763,14 +763,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 119a151932647724aa415afafaf20dcc
-      internalID: 375683059
+      spriteID: 7c3db88d4cf7e964f86d7c4b431ccc93
+      internalID: -627973352
       vertices: []
       indices: 
       edges: []
@@ -784,14 +784,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f345ff0f91a40e4cac5f72061f08a14
-      internalID: 861467682
+      spriteID: 1f5cd8a3fdfa866449fcd6462f88b75c
+      internalID: 103213412
       vertices: []
       indices: 
       edges: []
@@ -805,14 +805,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7981042c78654f40b534daca00ec95c
-      internalID: 705036164
+      spriteID: 70f58ce2cb7291c42a540588aed99ee2
+      internalID: 873019183
       vertices: []
       indices: 
       edges: []
@@ -826,14 +826,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbbcd7bcb5ce79b4caec05d18b6c78b1
-      internalID: 1887473964
+      spriteID: d9ec40f2586a11f4489ff404367fc4c4
+      internalID: 2099701963
       vertices: []
       indices: 
       edges: []
@@ -842,19 +842,19 @@ TextureImporter:
       name: GarabatoMap_35
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 144
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 114441b11e9039348a5f3ae9c2035342
-      internalID: -410781960
+      spriteID: 0c17f2f99ab7da44290b9a116934a0ea
+      internalID: -687907187
       vertices: []
       indices: 
       edges: []
@@ -863,19 +863,19 @@ TextureImporter:
       name: GarabatoMap_36
       rect:
         serializedVersion: 2
-        x: 64
+        x: 80
         y: 144
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ed2ae124238439458312ac6535b74a3
-      internalID: 1129856325
+      spriteID: 16a355a11afd0904aa8cb9d327182f96
+      internalID: -334323444
       vertices: []
       indices: 
       edges: []
@@ -884,19 +884,19 @@ TextureImporter:
       name: GarabatoMap_37
       rect:
         serializedVersion: 2
-        x: 80
+        x: 96
         y: 144
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feb382b10e002fa4b9d641841f6c3634
-      internalID: 974271421
+      spriteID: 22f6027c5379149469d8a53a140d77d6
+      internalID: 494502800
       vertices: []
       indices: 
       edges: []
@@ -905,19 +905,19 @@ TextureImporter:
       name: GarabatoMap_38
       rect:
         serializedVersion: 2
-        x: 96
+        x: 112
         y: 144
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3921765ddcf8454a9fce350eb7074fe
-      internalID: -918551067
+      spriteID: 10ac2e03f9e85c744b4d621708849373
+      internalID: 1907124550
       vertices: []
       indices: 
       edges: []
@@ -926,19 +926,19 @@ TextureImporter:
       name: GarabatoMap_39
       rect:
         serializedVersion: 2
-        x: 112
-        y: 144
+        x: 0
+        y: 128
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aeb3ba36b2e77b54ea5041ee927ffcee
-      internalID: 1315509238
+      spriteID: 588f3e4c336056943b56c8f72fa06f2b
+      internalID: 403744343
       vertices: []
       indices: 
       edges: []
@@ -947,19 +947,19 @@ TextureImporter:
       name: GarabatoMap_40
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 128
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83c62987f1c4085448cf84b76e3c1f25
-      internalID: -278659595
+      spriteID: 46d899f1c946cb84f9ac7594ac7f2abc
+      internalID: -1007556799
       vertices: []
       indices: 
       edges: []
@@ -968,19 +968,19 @@ TextureImporter:
       name: GarabatoMap_41
       rect:
         serializedVersion: 2
-        x: 16
+        x: 32
         y: 128
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cae0209820c9b2f41bab42adcb7ab71c
-      internalID: 387501079
+      spriteID: 9ee91ee0fa105fb47bfc125d8852e6ed
+      internalID: 785694793
       vertices: []
       indices: 
       edges: []
@@ -989,19 +989,19 @@ TextureImporter:
       name: GarabatoMap_42
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 128
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8e139ebb58cfb947b355b521f97621a
-      internalID: 78722299
+      spriteID: 98e77d15043e616419c8a5d0fb9492eb
+      internalID: 1746427551
       vertices: []
       indices: 
       edges: []
@@ -1010,19 +1010,19 @@ TextureImporter:
       name: GarabatoMap_43
       rect:
         serializedVersion: 2
-        x: 48
+        x: 80
         y: 128
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d2fe0a1867e8d7479166ac7d71751a0
-      internalID: 1776740877
+      spriteID: adf0e63bc33ad324b80a7ff6d554d9bf
+      internalID: 1125151460
       vertices: []
       indices: 
       edges: []
@@ -1031,19 +1031,19 @@ TextureImporter:
       name: GarabatoMap_44
       rect:
         serializedVersion: 2
-        x: 64
+        x: 96
         y: 128
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a492d8c6a83a3445b500b6a75b05455
-      internalID: 1090417746
+      spriteID: 73f008438914ee44f9396fd66fdde6fd
+      internalID: 754616958
       vertices: []
       indices: 
       edges: []
@@ -1052,19 +1052,19 @@ TextureImporter:
       name: GarabatoMap_45
       rect:
         serializedVersion: 2
-        x: 80
+        x: 112
         y: 128
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 572a01ea33a8efd42ae27966c4894c14
-      internalID: 763530708
+      spriteID: 77c912424273f67498b7e67995b53b25
+      internalID: -1498343237
       vertices: []
       indices: 
       edges: []
@@ -1073,19 +1073,19 @@ TextureImporter:
       name: GarabatoMap_46
       rect:
         serializedVersion: 2
-        x: 96
-        y: 128
+        x: 0
+        y: 112
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf6991e32b4531845a527088709a97b5
-      internalID: 862332256
+      spriteID: d140dfc6ad8872e4aac7c06f25da937f
+      internalID: -1256479525
       vertices: []
       indices: 
       edges: []
@@ -1094,19 +1094,19 @@ TextureImporter:
       name: GarabatoMap_47
       rect:
         serializedVersion: 2
-        x: 112
-        y: 128
+        x: 16
+        y: 112
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb801b9004e68e14f964980c9487efbf
-      internalID: 1492915189
+      spriteID: e9adfb8fec31dbb429d077700bbc7671
+      internalID: -310796094
       vertices: []
       indices: 
       edges: []
@@ -1115,19 +1115,19 @@ TextureImporter:
       name: GarabatoMap_48
       rect:
         serializedVersion: 2
-        x: 0
+        x: 32
         y: 112
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6321ddfe86943284a9aee8ea8ef3d4ea
-      internalID: 1493685660
+      spriteID: 4df35f03bf080cc42930dc0c93eabab4
+      internalID: -111225836
       vertices: []
       indices: 
       edges: []
@@ -1136,19 +1136,19 @@ TextureImporter:
       name: GarabatoMap_49
       rect:
         serializedVersion: 2
-        x: 16
+        x: 48
         y: 112
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 274e245ed061d254cb3298fefd6aea13
-      internalID: -1691831388
+      spriteID: a8d89540cf409644c9f49b12a6f525cc
+      internalID: -1955215528
       vertices: []
       indices: 
       edges: []
@@ -1157,19 +1157,19 @@ TextureImporter:
       name: GarabatoMap_50
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 112
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a060dd15ea18a5945b56612db77d2568
-      internalID: 1431482894
+      spriteID: ad244f993ab618d40a484d12ee385d96
+      internalID: 1263691863
       vertices: []
       indices: 
       edges: []
@@ -1178,19 +1178,19 @@ TextureImporter:
       name: GarabatoMap_51
       rect:
         serializedVersion: 2
-        x: 48
+        x: 80
         y: 112
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f15a1412f900081489103afc8efb496d
-      internalID: 2135271516
+      spriteID: 9073d257f380f1d4d8a01bb142db2458
+      internalID: 2790695
       vertices: []
       indices: 
       edges: []
@@ -1199,19 +1199,19 @@ TextureImporter:
       name: GarabatoMap_52
       rect:
         serializedVersion: 2
-        x: 64
+        x: 96
         y: 112
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0a237d7741d117499121404b4a25337
-      internalID: 1580671240
+      spriteID: e3a043d8f0d09374990cde86490243fa
+      internalID: -783422456
       vertices: []
       indices: 
       edges: []
@@ -1220,19 +1220,19 @@ TextureImporter:
       name: GarabatoMap_53
       rect:
         serializedVersion: 2
-        x: 80
+        x: 112
         y: 112
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4fa53ff5f2074442b66196bf3d4511c
-      internalID: 787660058
+      spriteID: 69e88bfac0ba4ce4597abcf2dda83b89
+      internalID: 335062446
       vertices: []
       indices: 
       edges: []
@@ -1241,19 +1241,19 @@ TextureImporter:
       name: GarabatoMap_54
       rect:
         serializedVersion: 2
-        x: 96
-        y: 112
+        x: 0
+        y: 96
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9af58af0b97deee40aff8f1fc7e64935
-      internalID: -170450974
+      spriteID: ce01d3772bd738c48b62cbfdecc12eaa
+      internalID: -1141218760
       vertices: []
       indices: 
       edges: []
@@ -1262,19 +1262,19 @@ TextureImporter:
       name: GarabatoMap_55
       rect:
         serializedVersion: 2
-        x: 112
-        y: 112
+        x: 16
+        y: 96
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ce243e1a045bd54f95ad93a83b95fe0
-      internalID: 744785292
+      spriteID: aad17de094dd74c4897ff0f5b956b478
+      internalID: -1905308528
       vertices: []
       indices: 
       edges: []
@@ -1283,19 +1283,19 @@ TextureImporter:
       name: GarabatoMap_56
       rect:
         serializedVersion: 2
-        x: 0
+        x: 32
         y: 96
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f148fd54a303d14fb7cd8e79015ef10
-      internalID: 953680924
+      spriteID: 6dc05349bafe57547ba763b785b7d752
+      internalID: 282170710
       vertices: []
       indices: 
       edges: []
@@ -1304,19 +1304,19 @@ TextureImporter:
       name: GarabatoMap_57
       rect:
         serializedVersion: 2
-        x: 16
+        x: 64
         y: 96
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b64088b1eff495448f8ba5138f7f4e0
-      internalID: 1744105964
+      spriteID: dd5dc96cfc4998f45b0de2391e0dfeb6
+      internalID: 2099494318
       vertices: []
       indices: 
       edges: []
@@ -1325,19 +1325,19 @@ TextureImporter:
       name: GarabatoMap_58
       rect:
         serializedVersion: 2
-        x: 32
+        x: 80
         y: 96
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a61fcc8b1b8303c489bd27828303804d
-      internalID: -1048704421
+      spriteID: d27f7649fbc9d3648baf129a2ef1f164
+      internalID: 231877484
       vertices: []
       indices: 
       edges: []
@@ -1346,19 +1346,19 @@ TextureImporter:
       name: GarabatoMap_59
       rect:
         serializedVersion: 2
-        x: 64
+        x: 96
         y: 96
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1273d1dbbbba9aa4485d7e65c5f799fd
-      internalID: -1220388082
+      spriteID: a002daa9c4c1bf346bd9371308cdbdfe
+      internalID: 1012835392
       vertices: []
       indices: 
       edges: []
@@ -1367,19 +1367,19 @@ TextureImporter:
       name: GarabatoMap_60
       rect:
         serializedVersion: 2
-        x: 80
+        x: 112
         y: 96
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46f792a6137c0034f8b2a0df2b8f5771
-      internalID: -720074076
+      spriteID: 3c6b40c7009d8d046ac557622510d187
+      internalID: -1206728277
       vertices: []
       indices: 
       edges: []
@@ -1388,19 +1388,19 @@ TextureImporter:
       name: GarabatoMap_61
       rect:
         serializedVersion: 2
-        x: 96
-        y: 96
+        x: 0
+        y: 80
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf521c08781a0c34d852bedc9ac8ccac
-      internalID: 302525299
+      spriteID: eb620f796e960f04aad7ed653db5ef41
+      internalID: -1310168015
       vertices: []
       indices: 
       edges: []
@@ -1409,19 +1409,19 @@ TextureImporter:
       name: GarabatoMap_62
       rect:
         serializedVersion: 2
-        x: 112
-        y: 96
+        x: 16
+        y: 80
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b81875e8168edf74596761acfbd25f9f
-      internalID: -522279016
+      spriteID: 739336981a5296b4c99c0ee5343c2f10
+      internalID: -1521441755
       vertices: []
       indices: 
       edges: []
@@ -1430,19 +1430,19 @@ TextureImporter:
       name: GarabatoMap_63
       rect:
         serializedVersion: 2
-        x: 0
+        x: 32
         y: 80
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5e345fd48a80d9439a8fdeb629d6c9e
-      internalID: -1708699714
+      spriteID: 0b568e353e9477a40b3969d8734314ad
+      internalID: -733407572
       vertices: []
       indices: 
       edges: []
@@ -1451,19 +1451,19 @@ TextureImporter:
       name: GarabatoMap_64
       rect:
         serializedVersion: 2
-        x: 16
+        x: 48
         y: 80
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbd1793167f9a4d438b0a58220c29a53
-      internalID: -810272872
+      spriteID: 11732c18a69d82541ab900c13689ecf7
+      internalID: 2070545537
       vertices: []
       indices: 
       edges: []
@@ -1472,19 +1472,19 @@ TextureImporter:
       name: GarabatoMap_65
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 80
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72903c5652f766d488d1475fc65ab6fe
-      internalID: -926355558
+      spriteID: bee6f693f4389284c86c80d4edcbe66a
+      internalID: -1719115550
       vertices: []
       indices: 
       edges: []
@@ -1493,19 +1493,19 @@ TextureImporter:
       name: GarabatoMap_66
       rect:
         serializedVersion: 2
-        x: 48
-        y: 80
+        x: 16
+        y: 64
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a098b58dd5a70342af04db82bd2a48b
-      internalID: 365383780
+      spriteID: b95a3eb34bdb0424baa334e4e8be5d17
+      internalID: 68366970
       vertices: []
       indices: 
       edges: []
@@ -1514,19 +1514,19 @@ TextureImporter:
       name: GarabatoMap_67
       rect:
         serializedVersion: 2
-        x: 64
-        y: 80
+        x: 32
+        y: 64
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78de9e18b9c927f49b483194c4fc3bdb
-      internalID: 899784169
+      spriteID: 23fde6d23a96856419488aef5c98deda
+      internalID: -2097365007
       vertices: []
       indices: 
       edges: []
@@ -1536,18 +1536,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 64
+        y: 48
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44fdb57edc41e8f4b87339bdc2c92c03
-      internalID: -563962950
+      spriteID: 101dfd486c73d0b41be6f5e3aa68f664
+      internalID: 1055244876
       vertices: []
       indices: 
       edges: []
@@ -1557,18 +1557,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 64
+        y: 48
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e50e9e9a1a2f96438941585abd5e03e
-      internalID: -1856191636
+      spriteID: b6975a7fd10d3b642992ba79929285e5
+      internalID: 4655057
       vertices: []
       indices: 
       edges: []
@@ -1577,19 +1577,19 @@ TextureImporter:
       name: GarabatoMap_70
       rect:
         serializedVersion: 2
-        x: 16
-        y: 48
+        x: 0
+        y: 32
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1844d10e7a689340a9f0089f6d5fb29
-      internalID: 868731565
+      spriteID: ef54c6731836fba49aa0b7ef2ecad5dd
+      internalID: 221293832
       vertices: []
       indices: 
       edges: []
@@ -1598,19 +1598,19 @@ TextureImporter:
       name: GarabatoMap_71
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
+        x: 16
+        y: 32
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26cc6d068b9d83a4eb0f2fd700a8a3be
-      internalID: -1819610220
+      spriteID: 0657c60c7f2e8f84c99fc511bad4a628
+      internalID: -938664480
       vertices: []
       indices: 
       edges: []
@@ -1619,19 +1619,19 @@ TextureImporter:
       name: GarabatoMap_72
       rect:
         serializedVersion: 2
-        x: 0
+        x: 32
         y: 32
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b089ad85f79ae534c923ced2c2d1863a
-      internalID: -965711344
+      spriteID: 87a6c6ec20f52da4fb4935e0e1db03c9
+      internalID: -1554156649
       vertices: []
       indices: 
       edges: []
@@ -1640,19 +1640,19 @@ TextureImporter:
       name: GarabatoMap_73
       rect:
         serializedVersion: 2
-        x: 16
+        x: 48
         y: 32
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dc5293292542e24ba44629c835f7771
-      internalID: 1775354886
+      spriteID: 4eeaaa9a5f49c894f97fa8c146c994d8
+      internalID: -767785682
       vertices: []
       indices: 
       edges: []
@@ -1661,19 +1661,19 @@ TextureImporter:
       name: GarabatoMap_74
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82847aa5fb82662409c0fffbe92c5232
-      internalID: -1491155839
+      spriteID: 8d5fc8f75b0e7d1499d6f55ecf666884
+      internalID: 637962700
       vertices: []
       indices: 
       edges: []
@@ -1682,19 +1682,19 @@ TextureImporter:
       name: GarabatoMap_75
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
+        x: 16
+        y: 16
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4167af901fc5d1149a450926218dcd50
-      internalID: 1843473514
+      spriteID: 28798383acd4a344f91e710e8b5d391f
+      internalID: -1183545221
       vertices: []
       indices: 
       edges: []
@@ -1703,19 +1703,19 @@ TextureImporter:
       name: GarabatoMap_76
       rect:
         serializedVersion: 2
-        x: 0
+        x: 32
         y: 16
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3686c6c0f6893f947bae1ba5a73d691b
-      internalID: -389439095
+      spriteID: 63b62dafccdef004dbfd9b7c07b8e52f
+      internalID: -267280389
       vertices: []
       indices: 
       edges: []
@@ -1724,19 +1724,19 @@ TextureImporter:
       name: GarabatoMap_77
       rect:
         serializedVersion: 2
-        x: 16
+        x: 48
         y: 16
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a576d7e360450cc49bf1d82e6500ddb4
-      internalID: -58462513
+      spriteID: 979f469662976f44fac2657a69d2189b
+      internalID: -527109250
       vertices: []
       indices: 
       edges: []
@@ -1745,19 +1745,19 @@ TextureImporter:
       name: GarabatoMap_78
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 16
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a9b667bb34262e439016883fb83233e
-      internalID: 925464377
+      spriteID: f8f2748c52f3ec84bb56d34dab7bd53d
+      internalID: -1361666773
       vertices: []
       indices: 
       edges: []
@@ -1766,19 +1766,19 @@ TextureImporter:
       name: GarabatoMap_79
       rect:
         serializedVersion: 2
-        x: 48
+        x: 80
         y: 16
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dd033dc094de074f9905485e2312cee
-      internalID: -1053922053
+      spriteID: 4bc92ef95eb733543a42989fa5e3a0c4
+      internalID: 755176012
       vertices: []
       indices: 
       edges: []
@@ -1787,19 +1787,19 @@ TextureImporter:
       name: GarabatoMap_80
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 96
+        y: 16
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4c903d36d470c3409b1c9a2d56d9f74
-      internalID: 667536567
+      spriteID: b7edff2a9cdac14498eaf9e2190cd3a3
+      internalID: -542140134
       vertices: []
       indices: 
       edges: []
@@ -1808,19 +1808,19 @@ TextureImporter:
       name: GarabatoMap_81
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 0
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08428286026b22b4f84e74c70d8f438b
-      internalID: -1401985101
+      spriteID: 57df117716b8a8942a78effa8f762a77
+      internalID: -606170830
       vertices: []
       indices: 
       edges: []
@@ -1829,19 +1829,19 @@ TextureImporter:
       name: GarabatoMap_82
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 0
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 262a2d1b58b6bcd43a707a009c81d2ea
-      internalID: -1473158695
+      spriteID: 9fba1244c2765d44689c24227fae324b
+      internalID: -1028421984
       vertices: []
       indices: 
       edges: []
@@ -1850,19 +1850,103 @@ TextureImporter:
       name: GarabatoMap_83
       rect:
         serializedVersion: 2
-        x: 48
+        x: 32
         y: 0
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 441c77fd1858bf5438681fbd92644da9
-      internalID: -535563549
+      spriteID: 4a090e3dd9e6b784bb3bad30ef972f23
+      internalID: -109555640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GarabatoMap_84
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d60790376d6854d9b9b80e416bb45c
+      internalID: 1777592019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GarabatoMap_85
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769de697a240fa341b3f97dd3f65f8e0
+      internalID: 1928767631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GarabatoMap_86
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d81c09a53f02c4fad5bac714529876
+      internalID: 1882635224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GarabatoMap_87
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff6dd0b84e15564b87a8c45939d3e17
+      internalID: -1442832665
       vertices: []
       indices: 
       edges: []
@@ -1878,90 +1962,94 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      GarabatoMap_60: -720074076
-      GarabatoMap_12: -900689118
-      GarabatoMap_61: 302525299
-      GarabatoMap_6: -268927170
-      GarabatoMap_80: 667536567
-      GarabatoMap_39: 1315509238
-      GarabatoMap_51: 2135271516
-      GarabatoMap_78: 925464377
-      GarabatoMap_77: -58462513
-      GarabatoMap_49: -1691831388
-      GarabatoMap_38: -918551067
-      GarabatoMap_0: 1860612109
-      GarabatoMap_31: 375683059
-      GarabatoMap_17: -320860650
-      GarabatoMap_81: -1401985101
-      GarabatoMap_7: 182526547
-      GarabatoMap_64: -810272872
-      GarabatoMap_57: 1744105964
-      GarabatoMap_74: -1491155839
-      GarabatoMap_58: -1048704421
-      GarabatoMap_29: -1118880952
-      GarabatoMap_68: -563962950
-      GarabatoMap_43: 1776740877
-      GarabatoMap_56: 953680924
-      GarabatoMap_27: 2126797178
-      GarabatoMap_44: 1090417746
-      GarabatoMap_52: 1580671240
-      GarabatoMap_53: 787660058
-      GarabatoMap_34: 1887473964
-      GarabatoMap_37: 974271421
-      GarabatoMap_62: -522279016
-      GarabatoMap_63: -1708699714
-      GarabatoMap_69: -1856191636
-      GarabatoMap_26: 53267369
-      GarabatoMap_18: 942127742
-      GarabatoMap_1: 1231496123
-      GarabatoMap_24: -1946008792
-      GarabatoMap_32: 861467682
-      GarabatoMap_40: -278659595
-      GarabatoMap_41: 387501079
-      GarabatoMap_65: -926355558
-      GarabatoMap_28: 1123906266
-      GarabatoMap_73: 1775354886
-      GarabatoMap_15: -1454257486
-      GarabatoMap_3: -1691669183
-      GarabatoMap_9: 1205405518
-      GarabatoMap_8: 1617108505
-      GarabatoMap_33: 705036164
-      GarabatoMap_71: -1819610220
-      GarabatoMap_23: 1237329341
-      GarabatoMap_82: -1473158695
-      GarabatoMap_79: -1053922053
-      GarabatoMap_75: 1843473514
-      GarabatoMap_47: 1492915189
-      GarabatoMap_72: -965711344
-      GarabatoMap_19: 766018448
-      GarabatoMap_2: -1675100960
-      GarabatoMap_70: 868731565
-      GarabatoMap_36: 1129856325
-      GarabatoMap_50: 1431482894
-      GarabatoMap_4: -2077040595
-      GarabatoMap_59: -1220388082
-      GarabatoMap_45: 763530708
-      GarabatoMap_66: 365383780
-      GarabatoMap_20: -1673621279
-      GarabatoMap_55: 744785292
-      GarabatoMap_30: -513130817
-      GarabatoMap_11: 152969169
-      GarabatoMap_35: -410781960
-      GarabatoMap_10: 1929645690
-      GarabatoMap_76: -389439095
-      GarabatoMap_25: 1248727606
-      GarabatoMap_83: -535563549
-      GarabatoMap_67: 899784169
-      GarabatoMap_21: -1824773216
-      GarabatoMap_5: -1441875729
-      GarabatoMap_16: 55362431
-      GarabatoMap_46: 862332256
-      GarabatoMap_22: -341518087
-      GarabatoMap_13: -1972824540
-      GarabatoMap_54: -170450974
-      GarabatoMap_42: 78722299
-      GarabatoMap_14: 725567890
-      GarabatoMap_48: 1493685660
+      GarabatoMap_60: -1206728277
+      GarabatoMap_12: 272543394
+      GarabatoMap_80: -542140134
+      GarabatoMap_51: 2790695
+      GarabatoMap_0: -938871987
+      GarabatoMap_17: 1378283126
+      GarabatoMap_87: -1442832665
+      GarabatoMap_74: 637962700
+      GarabatoMap_29: 111023139
+      GarabatoMap_52: -783422456
+      GarabatoMap_53: 335062446
+      GarabatoMap_34: 2099701963
+      GarabatoMap_37: 494502800
+      GarabatoMap_62: -1521441755
+      GarabatoMap_69: 4655057
+      GarabatoMap_18: -38235727
+      GarabatoMap_1: -1021596136
+      GarabatoMap_24: 234021994
+      GarabatoMap_40: -1007556799
+      GarabatoMap_65: -1719115550
+      GarabatoMap_73: -767785682
+      GarabatoMap_28: -1109069090
+      GarabatoMap_15: 1022764801
+      GarabatoMap_3: 615680931
+      GarabatoMap_9: 420518248
+      GarabatoMap_71: -938664480
+      GarabatoMap_8: 531791699
+      GarabatoMap_82: -1028421984
+      GarabatoMap_33: 873019183
+      GarabatoMap_79: 755176012
+      GarabatoMap_47: -310796094
+      GarabatoMap_72: -1554156649
+      GarabatoMap_2: 1512151234
+      GarabatoMap_4: -1367305745
+      GarabatoMap_59: 1012835392
+      GarabatoMap_20: 1277433976
+      GarabatoMap_11: 893640293
+      GarabatoMap_35: -687907187
+      GarabatoMap_10: -1791505007
+      GarabatoMap_25: -1719047823
+      GarabatoMap_67: -2097365007
+      GarabatoMap_49: -1955215528
+      GarabatoMap_21: 540632565
+      GarabatoMap_46: -1256479525
+      GarabatoMap_22: -406424876
+      GarabatoMap_54: -1141218760
+      GarabatoMap_42: 1746427551
+      GarabatoMap_58: 231877484
+      GarabatoMap_61: -1310168015
+      GarabatoMap_6: 1604516757
+      GarabatoMap_39: 403744343
+      GarabatoMap_78: -1361666773
+      GarabatoMap_77: -527109250
+      GarabatoMap_81: -606170830
+      GarabatoMap_38: 1907124550
+      GarabatoMap_31: -627973352
+      GarabatoMap_57: 2099494318
+      GarabatoMap_7: 1442604393
+      GarabatoMap_64: 2070545537
+      GarabatoMap_68: 1055244876
+      GarabatoMap_85: 1928767631
+      GarabatoMap_43: 1125151460
+      GarabatoMap_56: 282170710
+      GarabatoMap_27: 1899883122
+      GarabatoMap_44: 754616958
+      GarabatoMap_63: -733407572
+      GarabatoMap_26: 1909160439
+      GarabatoMap_86: 1882635224
+      GarabatoMap_32: 103213412
+      GarabatoMap_41: 785694793
+      GarabatoMap_23: 1909875312
+      GarabatoMap_75: -1183545221
+      GarabatoMap_84: 1777592019
+      GarabatoMap_19: 147157320
+      GarabatoMap_70: 221293832
+      GarabatoMap_36: -334323444
+      GarabatoMap_50: 1263691863
+      GarabatoMap_83: -109555640
+      GarabatoMap_45: -1498343237
+      GarabatoMap_66: 68366970
+      GarabatoMap_55: -1905308528
+      GarabatoMap_30: 485502438
+      GarabatoMap_76: -267280389
+      GarabatoMap_5: -2010231214
+      GarabatoMap_16: -881585171
+      GarabatoMap_13: -2005670656
+      GarabatoMap_14: -1747541229
+      GarabatoMap_48: -111225836
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
