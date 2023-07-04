@@ -45,7 +45,7 @@ public class JumpComponent : MonoBehaviour
     #region Properties
     Vector2 _gravity;
     float _initialSpeed = 4;
-    LayerMask _layerMask;
+    LayerMask _layerMask1;
     float _additionalSpeedTime;
     bool _salto;
     bool _floor;
@@ -64,7 +64,7 @@ public class JumpComponent : MonoBehaviour
         //empleamos nuestra propia gravedad
         //que borracho que sos pero dale
         _rigidBody.gravityScale = 0;
-        _layerMask = LayerMask.GetMask("Floor");
+        _layerMask1 = LayerMask.GetMask("Floor");
         _foot.localPosition = Vector2.up * -0.1f;
         _animatorsManager = GetComponent<AnimatorsManager>();
         _horizontalComponent = GetComponent<HorizontalComponent>();
@@ -94,9 +94,9 @@ public class JumpComponent : MonoBehaviour
             _additionalSpeedTime += Time.fixedDeltaTime;
         }
         //Varios rayos para detectar el suelo
-        _floor = Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask) || 
-            Physics2D.Raycast(_foot.position + Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask) ||
-            Physics2D.Raycast(_foot.position - Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask);
+        _floor = Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask1) ||
+            Physics2D.Raycast(_foot.position + Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask1) ||
+            Physics2D.Raycast(_foot.position - Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask1);
         _animatorsManager?.ChangeFloor(_floor);
         if (!_floor)
         {
