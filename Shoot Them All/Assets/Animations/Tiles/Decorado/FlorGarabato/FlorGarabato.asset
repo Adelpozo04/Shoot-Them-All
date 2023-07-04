@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: FlorGarabato
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -1708699714, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
-  - {fileID: -810272872, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
-  - {fileID: -1708699714, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
-  - {fileID: -926355558, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
+  - {fileID: -1310168015, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
+  - {fileID: -1521441755, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
+  - {fileID: -1310168015, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
+  - {fileID: -733407572, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
   m_MinSpeed: 6.5
   m_MaxSpeed: 6.5
   m_AnimationStartTime: 0

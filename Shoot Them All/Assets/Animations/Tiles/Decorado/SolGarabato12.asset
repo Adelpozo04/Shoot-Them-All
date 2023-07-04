@@ -10,15 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: PajaroHorizonte
+  m_Name: SolGarabato12
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 1746427551, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
-  - {fileID: 1125151460, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
-  - {fileID: 754616958, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
-  - {fileID: 1125151460, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
-  m_MinSpeed: 8
-  m_MaxSpeed: 8
+  - {fileID: 1909160439, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
+  - {fileID: -111225836, guid: 57007aace9ef38847977fcc6e8cc8c31, type: 3}
+  m_MinSpeed: 4
+  m_MaxSpeed: 4
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
