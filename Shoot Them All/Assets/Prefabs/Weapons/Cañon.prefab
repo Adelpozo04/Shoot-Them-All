@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3890155791971203698}
   - component: {fileID: 4861267454050266236}
   - component: {fileID: 7930944469559887482}
+  - component: {fileID: -8021335003949876145}
   m_Layer: 0
   m_Name: "Ca\xF1on"
   m_TagString: Untagged
@@ -45,15 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a3896b996ce8c843a7c16faed19b574, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coolDownPri: 0
+  _coolDownPri: 0.2
   _coolDownSec: 0
   _damagePri: 5
   _damageSec: 5
-  _disparoRectoBehaviour: {fileID: 0}
-  _maxBalas: 5
   _enfriamiento: 0.2
   _speed: 7
-  _infiniteAmo: 0
   _bulletPrefab: {fileID: 8045010264843042468, guid: dee240b6ded548b4c8463faa531be77e, type: 3}
 --- !u!114 &7930944469559887482
 MonoBehaviour:
@@ -67,3 +65,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb4e6bd29a518343ab0a11fd449d016, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-8021335003949876145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3890155791971203699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa53ebc889231a469f13b8e05f26921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxAmmo: 5
+  _rechargeTime: 1
+  _rechargeSlowdown: 0.491
+  _multipleBulletReload: 1

@@ -15,6 +15,7 @@ public class AmmoComponent : MonoBehaviour
 
     [SerializeField]
     private float _rechargeTime;
+    [Tooltip("Proporción a la que se verá reducida la velocidad el jugador al recargar")]
     [SerializeField]
     [Range(0f, 1f)]
     private float _rechargeSlowdown;
@@ -23,6 +24,7 @@ public class AmmoComponent : MonoBehaviour
     private bool _multipleBulletReload;
 
     private float _currentTime;
+    private float _initialSpeed;
     #endregion
 
     #region methods
@@ -41,12 +43,9 @@ public class AmmoComponent : MonoBehaviour
 
     public void Recargar()
     {
-        if (_currentAmmo < _maxAmmo)
-        {
-            _speedComponent._speedToAcelerate = _speedComponent._speedToAcelerate * _rechargeSlowdown;
-            enabled = true;
-            _currentTime = 0;
-        }
+        _speedComponent._speedToAcelerate = _speedComponent._speedToAcelerate * _rechargeSlowdown;
+        enabled = true;
+        _currentTime = 0;
     }
 
     /// <summary>
@@ -67,7 +66,8 @@ public class AmmoComponent : MonoBehaviour
     public void Cancela()
     {
         enabled = false;
-        _speedComponent._speedToAcelerate = _speedComponent._speedToAcelerate / _rechargeSlowdown;
+        //se puede guardar en una variable el valor de la velocidad original y asi no nos arriesgamos
+        _speedComponent._speedToAcelerate = _initialSpeed;
     }
     #endregion
 
@@ -75,6 +75,9 @@ public class AmmoComponent : MonoBehaviour
     void Start()
     {
         _currentAmmo = _maxAmmo;
+        _speedComponent = GetComponentInParent<HorizontalComponent>();
+        _initialSpeed = _speedComponent._speedToAcelerate;
+        enabled = false;
     }
 
     // Update is called once per frame
@@ -84,7 +87,7 @@ public class AmmoComponent : MonoBehaviour
         {
             _currentTime += Time.deltaTime;
         }
-        else if (_multipleBulletReload && _currentAmmo < _maxAmmo)
+        else if (!_multipleBulletReload && _currentAmmo < _maxAmmo)
         {
             RecargaUna();
             if (_currentAmmo == _maxAmmo)
@@ -96,7 +99,7 @@ public class AmmoComponent : MonoBehaviour
                 _currentTime = 0;
             }
         }
-        else
+        else if(_currentAmmo < _maxAmmo)
         {
             RecargaTodas();
             Cancela();
