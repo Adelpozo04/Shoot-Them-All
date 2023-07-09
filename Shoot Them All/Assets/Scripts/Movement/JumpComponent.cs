@@ -46,6 +46,7 @@ public class JumpComponent : MonoBehaviour
     Vector2 _gravity;
     float _initialSpeed = 4;
     LayerMask _layerMask1;
+    LayerMask _layerMask2;
     float _additionalSpeedTime;
     bool _salto;
     bool _floor;
@@ -65,6 +66,7 @@ public class JumpComponent : MonoBehaviour
         //que borracho que sos pero dale
         _rigidBody.gravityScale = 0;
         _layerMask1 = LayerMask.GetMask("Floor");
+        _layerMask2 = LayerMask.GetMask("Atravesable");
         _foot.localPosition = Vector2.up * -0.1f;
         _animatorsManager = GetComponent<AnimatorsManager>();
         _horizontalComponent = GetComponent<HorizontalComponent>();
@@ -97,6 +99,9 @@ public class JumpComponent : MonoBehaviour
         _floor = Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask1) ||
             Physics2D.Raycast(_foot.position + Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask1) ||
             Physics2D.Raycast(_foot.position - Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask1);
+            //|| Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask2) ||
+            //Physics2D.Raycast(_foot.position + Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask2) ||
+            //Physics2D.Raycast(_foot.position - Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask2);
         _animatorsManager?.ChangeFloor(_floor);
         if (!_floor)
         {

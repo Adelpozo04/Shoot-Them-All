@@ -17,7 +17,7 @@ TagManager:
   - Bullet
   - Player
   - C4
-  - 
+  - Atravesable
   - 
   - 
   - 
@@ -41,4 +41,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Bordes camara
+    uniqueID: 493351491
     locked: 0

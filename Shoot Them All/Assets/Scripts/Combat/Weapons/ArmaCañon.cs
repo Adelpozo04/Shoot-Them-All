@@ -9,9 +9,6 @@ public class ArmaCañon : AttackGeneral
 {
 
     #region parameters
-    [Tooltip("Tiempo que debe pasar entre un disparo y otro")]
-    [SerializeField] private float _enfriamiento;
-
     [Tooltip("Velocidad que lleva la bala ")]
     [SerializeField] private float _speed;
 
@@ -56,7 +53,7 @@ public class ArmaCañon : AttackGeneral
     /// <returns></returns>
     private bool ShootCondition()
     {
-        return _elapsedTime > _enfriamiento && _myAmmo.PuedeDisparar(); ;
+        return _elapsedTime > _coolDownPri && _myAmmo.PuedeDisparar(); ;
     }
     #endregion
 
@@ -74,7 +71,7 @@ public class ArmaCañon : AttackGeneral
     // Update is called once per frame
     void Update()
     {
-        if (_elapsedTime < _enfriamiento)
+        if (_elapsedTime < _coolDownPri)
         {
             _elapsedTime += Time.deltaTime;
         }
