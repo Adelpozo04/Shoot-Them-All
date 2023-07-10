@@ -55,7 +55,7 @@ public class EdgeComponet : MonoBehaviour
         _ray2 = new Ray2D(_hit1.point + new Vector2(_ray1.direction.x * _ray2OffSetX,1), Vector2.down * _ray2Length);
         _hit2 = Physics2D.Raycast(_ray2.origin, _ray2.direction, 1, _floorLayer);
 
-        _onEdge = _hit1 && _hit2 && _hit1.collider.gameObject.GetComponent<PlatformEffector2D>() == null;
+        _onEdge = _hit1 && _hit2; //&& _hit1.collider.gameObject.GetComponent<PlatformAtravesable>() == null;
 
         if (_onEdge && !_jumpComponent.Floor)
         {

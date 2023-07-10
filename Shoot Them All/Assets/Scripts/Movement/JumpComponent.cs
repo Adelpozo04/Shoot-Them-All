@@ -9,6 +9,7 @@ public class JumpComponent : MonoBehaviour
     #region References
     [SerializeField]
     Transform _foot;
+    public Transform Feet { get { return _foot; } }
     Rigidbody2D _rigidBody;
     HorizontalComponent _horizontalComponent;
     AnimatorsManager _animatorsManager;
@@ -40,6 +41,7 @@ public class JumpComponent : MonoBehaviour
     [Tooltip("La mitad del ancho de detección de los pies")]
     [SerializeField]
     float _lateralFootOffset;
+    public float FootOffset { get { return _lateralFootOffset; } }
     #endregion
 
     #region Properties
@@ -54,6 +56,9 @@ public class JumpComponent : MonoBehaviour
     {
         get { return _floor; }
     }
+
+    bool _atravesando;
+    public bool Atravesando { set { _atravesando = value; } }
     #endregion
 
     #region UnityMethods
@@ -72,6 +77,7 @@ public class JumpComponent : MonoBehaviour
         _horizontalComponent = GetComponent<HorizontalComponent>();
         _edgeComponet = GetComponent<EdgeComponet>();
         _horizontalSpeedInAir = _horizontalComponent._speedToAcelerate;
+        _atravesando = false;
     }
 
     void FixedUpdate()
@@ -96,12 +102,22 @@ public class JumpComponent : MonoBehaviour
             _additionalSpeedTime += Time.fixedDeltaTime;
         }
         //Varios rayos para detectar el suelo
-        _floor = Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask1) ||
+        if (!_atravesando)
+        {
+            _floor = Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask1) ||
+            Physics2D.Raycast(_foot.position + Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask1) ||
+            Physics2D.Raycast(_foot.position - Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask1) || 
+            Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask2) ||
+            Physics2D.Raycast(_foot.position + Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask2) ||
+            Physics2D.Raycast(_foot.position - Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask2);
+        }
+        else
+        {
+            _floor = Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask1) ||
             Physics2D.Raycast(_foot.position + Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask1) ||
             Physics2D.Raycast(_foot.position - Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask1);
-            //|| Physics2D.Raycast(_foot.position, Vector2.down, 0.5f, _layerMask2) ||
-            //Physics2D.Raycast(_foot.position + Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask2) ||
-            //Physics2D.Raycast(_foot.position - Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerMask2);
+        }
+
         _animatorsManager?.ChangeFloor(_floor);
         if (!_floor)
         {

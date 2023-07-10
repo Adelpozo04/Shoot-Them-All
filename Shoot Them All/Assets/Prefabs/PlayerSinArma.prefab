@@ -53,7 +53,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 5147396364705179266}
   - component: {fileID: -8066995890712689938}
   - component: {fileID: 9144655400016719075}
+  - component: {fileID: -6421272728185798162}
   m_Layer: 9
   m_Name: PlayerSinArma
   m_TagString: Untagged
@@ -342,6 +343,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9bd4c0e1-6ff9-4e24-897c-18bcd5846d03
     m_ActionName: Battle/Sprint[/XInputControllerWindows/leftStick/right,/XInputControllerWindows/leftStick/left]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9703b002-280d-4b06-9f9a-c82f691d174f
+    m_ActionName: Customization/ChangeHat[/XInputControllerWindows/dpad/x]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Battle
@@ -582,6 +587,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _stunned: 0
   _stunTime: 5
+--- !u!114 &-6421272728185798162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6202089724193138842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca2da6c94f8156d4c8a68dfffe6a629d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  segso: 0
 --- !u!1001 &218764340034358529
 PrefabInstance:
   m_ObjectHideFlags: 0
