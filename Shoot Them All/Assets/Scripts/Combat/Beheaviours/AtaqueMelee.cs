@@ -35,10 +35,11 @@ public class AtaqueMelee : MonoBehaviour
 
     [Tooltip("Duración del pollazo")]
     [SerializeField]
-    private float timer;
-    [Tooltip("Duración del cuwuldown")]
-    [SerializeField]
-    private float cooldown;
+    private float _hitTime;
+    public float HitTime
+    {
+        get { return _hitTime; }
+    }
     private float thisTime;
 
     private Mesh _weaponMesh;
@@ -122,11 +123,6 @@ public class AtaqueMelee : MonoBehaviour
         isAttacking = true;
         thisTime = 0;
     }
-
-    public bool AttackCondition()
-    {
-        return thisTime > cooldown + timer;
-    }
     #endregion 
 
     void Start()
@@ -137,22 +133,27 @@ public class AtaqueMelee : MonoBehaviour
         _weaponMesh = CreateMesh(_attackWidth, meshRays, _attackPosition, _distance);
         EstablishCollider();
         GetComponent<MeshFilter>().mesh = _weaponMesh;      
-        thisTime = cooldown + timer + 1;
+        //thisTime = cooldown + _hitTime + 1;
         isAttacking = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (thisTime < cooldown + timer)
+
+        if(thisTime < _hitTime)
         {
             thisTime += Time.deltaTime;
         }
 
-        if(isAttacking && thisTime > timer)
+        if(isAttacking && thisTime > _hitTime)
         {
             _weaponCollider.enabled = false;
             isAttacking = false;
         }
+        //Movido por propositos de balanceo
+        _weaponMesh = CreateMesh(_attackWidth, meshRays, _attackPosition, _distance);
+        EstablishCollider();
+        GetComponent<MeshFilter>().mesh = _weaponMesh;
     }
 }

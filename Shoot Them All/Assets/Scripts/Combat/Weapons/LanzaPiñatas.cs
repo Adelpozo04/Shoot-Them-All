@@ -20,9 +20,6 @@ public class LanzaPiñatas : AttackGeneral
     [Tooltip("Número de balas máximas del cargador")]
     [SerializeField] private int _maxBalasInScreen;
 
-    [Tooltip("Tiempo que debe pasar entre un disparo y otro")]
-    [SerializeField] private float _enfriamiento;
-
     [Tooltip("Fuerza con la que sale la bala ")]
     [SerializeField] private float _force;
     #endregion
@@ -31,8 +28,6 @@ public class LanzaPiñatas : AttackGeneral
     #region properties
 
     private GameObject bullet;
-    private int _currentBullets;
-    private float _elapsedTime;
     private Queue<ExplotionIgnition> _bullets;
     #endregion
 
@@ -40,7 +35,7 @@ public class LanzaPiñatas : AttackGeneral
 
     public override void AtaquePrincipal()
     {
-        if(ShootCondition() && !WeaponWallDetector())
+        if(PriTimeCondition() && !WeaponWallDetector())
         {
             base.AtaquePrincipal();
 
@@ -50,7 +45,7 @@ public class LanzaPiñatas : AttackGeneral
             }
 
             GameObject proyectile = _disparoParabolico.PerfomShoot(_bulletPrefab, _playerPoints, _raycastDir,
-                _bulletSpawnPoint.position, ref _elapsedTime, _force);
+                _bulletSpawnPoint.position, ref _timerPri, _force);
             proyectile.GetComponent<ExplotionIgnition>().SetDamage(_damagePri);
             _bullets.Enqueue(proyectile.GetComponent<ExplotionIgnition>());
         } 
@@ -78,10 +73,6 @@ public class LanzaPiñatas : AttackGeneral
 
 
     #endregion
-    public bool ShootCondition()
-    {
-        return _elapsedTime > _enfriamiento;
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -92,9 +83,6 @@ public class LanzaPiñatas : AttackGeneral
     // Update is called once per frame
     void Update()
     {
-        if (_elapsedTime < _enfriamiento)
-        {
-            _elapsedTime += Time.deltaTime;
-        }
+        RunTimerPri();
     }
 }

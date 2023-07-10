@@ -48,11 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef8f189bdba691f4493ac7bf87c07fca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coolDownPri: 0
+  _coolDownPri: 0.2
   _coolDownSec: 0
   _damagePri: 2
   _damageSec: 2
-  _enfriamiento: 0.2
 --- !u!114 &8946475006151123939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +119,6 @@ MonoBehaviour:
   meshRays: 6
   _attackWidth: 10
   _attackPosition: 5
-  _distance: 2
-  timer: 0.2
+  _distance: 1.5
+  _hitTime: 0.1
   cooldown: 0.5

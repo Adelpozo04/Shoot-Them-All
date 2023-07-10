@@ -13,10 +13,11 @@ public class Hacha : AttackGeneral
     #region methods
     public override void AtaquePrincipal()
     {
-        if (ataqueMelee.AttackCondition() && !spinAttack.IsAttacking())
+        if (PriTimeCondition() && !spinAttack.IsAttacking())
         {
             base.AtaquePrincipal();
             meleeDamage.SetDamage(_damagePri);
+            _timerPri = 0;
             ataqueMelee.PerformAttack();
         }       
         //queso      
@@ -28,6 +29,7 @@ public class Hacha : AttackGeneral
         {
             base.AtaqueSecundario();
             meleeDamage.SetDamage(_damageSec);
+            _timerSec = 0;
             spinAttack.StartSpin();
         }
         
@@ -40,12 +42,13 @@ public class Hacha : AttackGeneral
         ataqueMelee = GetComponent<AtaqueMelee>();
         spinAttack = GetComponent<SpinAttack>();
         meleeDamage = GetComponent<MeleeDamageComponent>();
+        _coolDownPri += ataqueMelee.HitTime;
         StartMethod();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        RunTimerPri();
     }
 }

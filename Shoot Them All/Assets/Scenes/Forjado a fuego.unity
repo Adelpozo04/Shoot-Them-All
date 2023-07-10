@@ -533,6 +533,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Arco
       m_Image: {fileID: 0}
+    - m_Text: Chancla
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -979,10 +981,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b16c6f78230fa4964a222622d8aae332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 1646700466}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
-  m_PlayerRoot: {fileID: 1646700466}
+  m_PlayerRoot: {fileID: 0}
 --- !u!4 &197445135
 Transform:
   m_ObjectHideFlags: 0
@@ -2175,6 +2177,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c30dcb7c741b9484cb577edebe9da6dd, type: 2}
   - {fileID: 11400000, guid: 59b86017e3b019542b08c591f30d7e5c, type: 2}
   - {fileID: 11400000, guid: 83d5bde61501e7c4593226c2513e1dfa, type: 2}
+  - {fileID: 11400000, guid: b5eee6a356a02e645bd9a996a34ec8d8, type: 2}
   ChangeNPlayers:
     m_PersistentCalls:
       m_Calls: []
@@ -4218,6 +4221,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Arco
       m_Image: {fileID: 0}
+    - m_Text: Chancla
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -5082,6 +5087,8 @@ MonoBehaviour:
     - m_Text: "L\xE1tigo"
       m_Image: {fileID: 0}
     - m_Text: Arco
+      m_Image: {fileID: 0}
+    - m_Text: Chancla
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6991,6 +6998,8 @@ MonoBehaviour:
     - m_Text: "L\xE1tigo"
       m_Image: {fileID: 0}
     - m_Text: Arco
+      m_Image: {fileID: 0}
+    - m_Text: Chancla
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

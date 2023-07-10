@@ -103,6 +103,36 @@ public class AttackGeneral : MonoBehaviour
         raycast = Physics2D.Raycast(_player.transform.position, _raycastDir, _raycastDir.magnitude, _floorLayer);
         return raycast;
     }
+    /// <summary>
+    /// Condición de tiempo para hacer la habilidad 1
+    /// </summary>
+    /// <returns></returns>
+    protected bool PriTimeCondition()
+    {
+        return _timerPri >= _coolDownPri;
+    }
+    /// <summary>
+    /// Condición de tiempo para hacer la habilidad 2
+    /// </summary>
+    /// <returns></returns>
+    protected bool SecTimeCondition()
+    {
+        return _timerSec >= _coolDownSec;
+    }
+    /// <summary>
+    /// Metodo en el update para acutalizar el tiempo primero
+    /// </summary>
+    protected void RunTimerPri()
+    {
+        if(!PriTimeCondition()) _timerPri += Time.deltaTime;
+    }
+    /// <summary>
+    /// Metodo en el update para acutalizar el tiempo segundo
+    /// </summary>
+    protected void RunTimerSec()
+    {
+        if(!SecTimeCondition()) _timerSec += Time.deltaTime;
+    }
     #endregion
 
     #region InsertInUnityMethods

@@ -55,7 +55,7 @@ public class Rugby : AttackGeneral
     }
     public override void AtaqueSecundario()
     {
-        if (!WeaponWallDetector() && _timerSec > _coolDownSec && _currentBullets > 0)
+        if (!WeaponWallDetector() && SecTimeCondition() && _currentBullets > 0)
         {
             base.AtaqueSecundario();
             _bullets[_maxBullets - _currentBullets] =
@@ -79,10 +79,7 @@ public class Rugby : AttackGeneral
 
     private void Update()
     {
-        if(_timerSec < _coolDownSec)
-        {
-            _timerSec += Time.deltaTime;
-        }
+        RunTimerSec();
     }
     void Start()
     {

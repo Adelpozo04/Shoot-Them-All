@@ -30,7 +30,7 @@ public class ArmaCañon : AttackGeneral
 
     public override void AtaquePrincipal()
     {
-        if(ShootCondition() && !WeaponWallDetector())
+        if(PriTimeCondition() && !WeaponWallDetector() && _myAmmo.PuedeDisparar())
         {
             base.AtaquePrincipal();
             _myAmmo.Dispara();
@@ -45,15 +45,6 @@ public class ArmaCañon : AttackGeneral
     {
         base.AtaqueSecundario();
         _myAmmo.Recargar();
-    }
-
-    /// <summary>
-    /// Metodo para las condiciones de disparo normales del disparo recto
-    /// </summary>
-    /// <returns></returns>
-    private bool ShootCondition()
-    {
-        return _elapsedTime > _coolDownPri && _myAmmo.PuedeDisparar(); ;
     }
     #endregion
 
@@ -71,10 +62,7 @@ public class ArmaCañon : AttackGeneral
     // Update is called once per frame
     void Update()
     {
-        if (_elapsedTime < _coolDownPri)
-        {
-            _elapsedTime += Time.deltaTime;
-        }
+        RunTimerPri();
     }
 
 }

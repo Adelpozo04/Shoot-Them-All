@@ -80,10 +80,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meshRays: 6
-  _attackWidth: 60
-  _attackPosition: 45
-  _distance: 0.6
-  timer: 0.3
+  _attackWidth: 68
+  _attackPosition: 40
+  _distance: 0.65
+  _hitTime: 0.2
   cooldown: 0.1
 --- !u!114 &4903320208775626697
 MonoBehaviour:
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 272efc46a400d804c952d21288deddf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coolDownPri: 0
+  _coolDownPri: 3
   _coolDownSec: 0
   _damagePri: 5
   _damageSec: 2

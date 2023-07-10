@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56300886ccc5ffe4dbc342c6325c0ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coolDownPri: 0
-  _coolDownSec: 0
+  _coolDownPri: 1.5
+  _coolDownSec: 0.1
   _damagePri: 10
   _damageSec: 5
   _bulletPrefab: {fileID: 3010583664416582109, guid: 7ad9b3252dc16ea43898f1980876c022, type: 3}
@@ -54,7 +54,6 @@ MonoBehaviour:
   _disparoParabolico: {fileID: 1807273314531179197}
   _maxBalasInScreen: 3
   _enfriamiento: 1
-  _infiniteAmo: 1
   _force: 50
 --- !u!114 &1807273314531179197
 MonoBehaviour:

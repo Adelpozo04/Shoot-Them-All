@@ -26,7 +26,7 @@ public class Arco : AttackGeneral
 
     public override void AtaquePrincipal()
     {
-        if (ShootConditionPri() && !WeaponWallDetector())
+        if (PriTimeCondition() && !WeaponWallDetector())
         {
             base.AtaquePrincipal();
             GameObject bullet = _disparoParabolicoBehaviour.PerfomShoot(_bulletPrefab, _playerPoints, _raycastDir,
@@ -38,27 +38,14 @@ public class Arco : AttackGeneral
     //TODO
     public override void AtaqueSecundario()
     {
-        if (ShootConditionSec() && !WeaponWallDetector())
+        if (SecTimeCondition() && !WeaponWallDetector())
         {
             base.AtaquePrincipal();
             GameObject bullet = _disparoParabolicoBehaviour.PerfomShoot(_burningBulletPrefab, _playerPoints, _raycastDir,
                 _myTransform.position, ref _timerSec, _force);
             bullet.GetComponent<ChoqueBalaComponent>().SetDamage(_damageSec);
         }
-    }
-
-    /// <summary>
-    /// Metodo para las condiciones de disparo normales del disparo recto
-    /// </summary>
-    /// <returns></returns>
-    private bool ShootConditionPri()
-    {
-        return _timerPri > _coolDownPri;
-    }
-    private bool ShootConditionSec()
-    {
-        return _timerSec > _coolDownSec;
-    }    
+    }  
     #endregion
 
     // Start is called before the first frame update
@@ -75,13 +62,7 @@ public class Arco : AttackGeneral
     // Update is called once per frame
     void Update()
     {
-        if (_timerPri < _coolDownPri)
-        {
-            _timerPri += Time.deltaTime;
-        }
-        if (_timerSec < _coolDownSec)
-        {
-            _timerSec += Time.deltaTime;
-        }
+        RunTimerPri();
+        RunTimerSec();
     }
 }
