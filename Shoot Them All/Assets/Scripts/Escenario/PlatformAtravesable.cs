@@ -11,11 +11,16 @@ public class PlatformAtravesable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _myCollider = GetComponent<Collider2D>();
+        _myCollider = transform.parent.GetComponent<Collider2D>();
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Physics2D.IgnoreCollision(collision, _myCollider, false);
+        if (collision.GetComponent<JumpComponent>() != null)
+        {
+            Physics2D.IgnoreCollision(collision, _myCollider, false);
+            collision.GetComponent<JumpComponent>().Atravesando = false;
+            Debug.Log("exit");
+        }
     }
 }

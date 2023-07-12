@@ -46,15 +46,21 @@ public class DescentComponent : MonoBehaviour
         hit3 = Physics2D.Raycast(_loQueLeGustaAJosé.position - Vector3.right * _lateralFootOffset, Vector2.down, 0.5f, _layerAtravesar);
         if (hit1)
         {
+            Debug.Log("centro");
             Physics2D.IgnoreCollision(hit1.collider, _myCollider);
+            _jumpComponent.Atravesando = true;
         }
         if (hit2)
         {
+            Debug.Log("chambear");
             Physics2D.IgnoreCollision(hit2.collider, _myCollider);
+            _jumpComponent.Atravesando = true;
         }
         if (hit3)
         {
+            Debug.Log("comunismo");
             Physics2D.IgnoreCollision(hit3.collider, _myCollider);
+            _jumpComponent.Atravesando = true;
         }
     }
     #endregion
@@ -68,6 +74,7 @@ public class DescentComponent : MonoBehaviour
         _loQueLeGustaAJosé = _jumpComponent.Feet;
         _lateralFootOffset = _jumpComponent.FootOffset;
         _myCollider = GetComponent<Collider2D>();
+        _layerAtravesar = LayerMask.GetMask("Atravesable");
     }
 
     // Update is called once per frame
